@@ -5,7 +5,7 @@
 $bodybg: #eee;
 $tweetbackgroundcolor: #ffffffff;
 $tweet_border_color: #160a82ff;
-$usernamegap: 10px;
+$usernamegap: 16px;
 $pfp_size: 100px;
 $blurbify_width: 900px;
 
@@ -135,6 +135,7 @@ body {
           align-items: flex-start;
 
           div.align_them_div {
+            margin-top: 5px;
             @include flexrow;
             justify-content: flex-start;
 
@@ -170,7 +171,7 @@ body {
             #username {
               color: grey;
               font-size: 28px;
-              margin-bottom: 2px;
+              margin-bottom: 4px;
             }
           }
         }
@@ -179,7 +180,7 @@ body {
         padding: 30px;
         padding-left: $usernamegap + $pfp_size + 10px;
 
-        margin-top: -67px;
+        margin-top: -79px;
         font-size: 28px;
         padding-bottom: 0px;
         padding-top: 10px;

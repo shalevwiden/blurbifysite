@@ -51,6 +51,7 @@
 }
 
 @keyframes spin {
+  // this is for the blurb
   0% {
     transform: scale(1) rotate(0deg);
   }
@@ -69,6 +70,7 @@
 }
 
 @keyframes spin_lin {
+  // this for pfp
   0% {
     transform: scale(1) rotate(0deg);
   }
@@ -101,5 +103,6 @@
 }
 
 .spin_class {
+  // for entire blurb
   animation: spin_lin 5s ease infinite;
 }
