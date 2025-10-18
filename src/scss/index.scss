@@ -25,7 +25,15 @@ body {
     -webkit-background-clip: text; /* show background only inside text */
     -webkit-text-fill-color: transparent; /* make text itself transparent */
     font-weight: bold;
-    font-size: 60px;
+
+    font-size: 150px;
+    @media (max-width: 600px) {
+      font-size: 100px;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 60px;
+    }
   }
   a#makeblurb {
     width: 80%;
