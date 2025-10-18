@@ -362,7 +362,7 @@ body .sitecontainer div.inputdiv #submitBtn {
   width: 250px;
   height: 150px;
   border: 6px solid rgb(15, 15, 126);
-  background-color: rgb(76, 139, 242);
+  background-color: rgb(117, 165, 242);
   color: white;
   border-radius: 30px;
   font-weight: bold;
@@ -373,12 +373,13 @@ body .sitecontainer div.inputdiv #submitBtn:hover {
   cursor: pointer;
   background-color: rgb(51, 112, 181);
   border: 6px solid rgb(54, 17, 15);
-  transform: translateY(-3px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
 }
 body .sitecontainer div.inputdiv #submitBtn:active {
   transform: translateY(1px);
   box-shadow: none;
+  background-color: rgb(51, 170, 181);
+  border: 6px solid rgb(10, 96, 73);
 }
 @media (max-width: 700px) {
   body .sitecontainer div.inputdiv {

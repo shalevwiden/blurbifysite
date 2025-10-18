@@ -267,7 +267,7 @@ body {
         width: 250px;
         height: 150px;
         border: 6px solid rgb(15, 15, 126);
-        background-color: rgb(76, 139, 242);
+        background-color: rgba(117, 165, 242, 1);
         color: white;
         border-radius: 30px;
         font-weight: bold;
@@ -278,13 +278,14 @@ body {
           cursor: pointer;
           background-color: rgba(51, 112, 181, 1);
           border: 6px solid rgba(54, 17, 15, 1);
-          transform: translateY(-3px);
-          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+          transform: translateY(-5px);
         }
 
         &:active {
           transform: translateY(1px);
           box-shadow: none;
+          background-color: rgba(51, 170, 181, 1);
+          border: 6px solid rgba(10, 96, 73, 1);
         }
       }
 
@@ -316,6 +317,7 @@ body {
       }
     }
 
+    // now the styling for the Blurb, which is in Blurbify Div
     .blurbifydiv {
       height: auto;
 
