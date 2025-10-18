@@ -4,6 +4,7 @@ const blurbifybutton = buttonsDiv.querySelector("#blurbifybutton");
 const Backgroundbutton = buttonsDiv.querySelector("#Backgroundbutton");
 const flyingbutton = buttonsDiv.querySelector("#flyingbutton");
 const spinbutton = buttonsDiv.querySelector("#spin");
+const viewsbutton = buttonsDiv.querySelector("#viewsbutton");
 
 const blurbifydiv = document.querySelector(".blurbifydiv");
 const pfpid = document.querySelector("#pfpid");
@@ -33,6 +34,7 @@ function easeOutQuad(t) {
 }
 
 function countUp(element, target, duration = 2000) {
+  // this makes the view count animation
   const start = 0;
   const range = target - start;
   const startTime = performance.now();
@@ -61,8 +63,24 @@ const viewcount = parseInt(views.textContent.replace(/,/g, ""));
 blurbifybutton.addEventListener("click", () => {
   setTimeout(() => {
     console.log("toggling blurbify");
+    blurbifydiv.classList.toggle("blurbify_class");
+
+    // READ THIS - this line applies spin to the pfp
+    // pfpid.classList.toggle("spin_class");
+
+    // this line adds the view count delay
+    // countUp(views, viewcount, 5000);
+  }, 1000); // 1000ms = 1 second
+});
+
+// Make the duration a little slower
+const duration = 10000;
+
+viewsbutton.addEventListener("click", () => {
+  setTimeout(() => {
+    console.log("toggling viewsbutton");
     // blurbifydiv.classList.toggle("blurbify_class");
     // pfpid.classList.toggle("spin_class");
-    countUp(views, viewcount, 5000);
-  }, 2000); // 2000ms = 2 seconds
+    countUp(views, viewcount, duration);
+  }, 3000);
 });
