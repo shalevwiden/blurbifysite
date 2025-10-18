@@ -43,12 +43,34 @@ body {
       font-weight: bold;
 
       font-size: 150px;
-      @media (max-width: 600px) {
-        font-size: 100px;
+      @media (max-width: 1000px) {
+        font-size: 120px;
       }
 
       @media (max-width: 600px) {
         font-size: 60px;
+      }
+    }
+    #input_ul {
+      border: 3px solid black;
+      border-radius: 20px;
+      width: 80%;
+      height: auto;
+      @include flexcol;
+      align-items: flex-start;
+      padding: 100px 0;
+      list-style: none;
+      padding-left: 30px;
+
+      li {
+        @include flexcol;
+        height: 100px;
+
+        p {
+          font-size: 30px;
+          font-family: Helvetica, sans-serif;
+          font-weight: bold;
+        }
       }
     }
 
@@ -219,21 +241,25 @@ body {
 
         .fa-heart {
           color: #f10000ff;
+          font-size: 25px;
+        }
+        .fa-comment {
+          font-size: 25px;
         }
         .stats {
           font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 0, "opsz" 24;
-          font-size: 27px;
+          font-size: 34px;
         }
 
         .bookmark {
           font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 40;
-          font-size: 37px;
+          font-size: 40px;
 
           margin-top: 4px;
         }
         .share {
           font-variation-settings: "FILL" 0, "wght" 500, "GRAD" 0, "opsz" 20;
-          font-size: 37px;
+          font-size: 40px;
           margin-top: -1px;
         }
 
@@ -246,6 +272,7 @@ body {
             margin-top: 5px;
           }
         }
+        // this is share and bookmark
         .righticons {
           @include flexrow;
           gap: 3px;

@@ -41,21 +41,30 @@
         <!-- make all of these lis flex cols -->
         <li>
           <p>Add text that will be the name</p>
-          <input type="text" placeholder="Add your name" />
+          <input type="text" placeholder="Add your name" id="nameInput" />
         </li>
         <li>
           <p>Verified?</p>
-          <input type="checkbox" name="" id="" />
+          <input type="checkbox" name="" id="verifiedInput" />
         </li>
         <li>
           <p>Add text that will be the username</p>
-          <input type="text" placeholder="username" />
+          <input type="text" placeholder="username" id="usernameInput" />
         </li>
         <li>
           <p>Add text content</p>
-          <input type="text" placeholder="content of the Blurb here" />
+          <input
+            type="text"
+            placeholder="content of the Blurb here"
+            id="contentInput"
+          />
         </li>
       </ul>
+      <!-- submit -->
+      <button id="submitBtn">Submit Blurb</button>
+
+      <!-- output of the form -->
+
       <div class="blurbifydiv">
         <div id="pfp_and_username">
           <div class="pfpdiv" id="pfpid">
@@ -122,5 +131,6 @@
       </div>
     </div>
     <script src="../static/js/toggleanimations.js"></script>
+    <script src="../static/js/inputs.js"></script>
   </body>
 </html>

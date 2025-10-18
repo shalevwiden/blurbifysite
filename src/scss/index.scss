@@ -27,8 +27,8 @@ body {
     font-weight: bold;
 
     font-size: 150px;
-    @media (max-width: 600px) {
-      font-size: 0px;
+    @media (max-width: 1000px) {
+      font-size: 120px;
     }
     @media (max-width: 600px) {
       font-size: 60px;

@@ -133,9 +133,9 @@ body {
   font-weight: bold;
   font-size: 150px;
 }
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
   .sitecontainer #heading {
-    font-size: 0px;
+    font-size: 120px;
   }
 }
 @media (max-width: 600px) {
