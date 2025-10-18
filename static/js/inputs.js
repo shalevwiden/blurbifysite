@@ -4,6 +4,8 @@ const submitBtn = document.getElementById("submitBtn");
 const blurb = document.querySelector(".blurbifydiv");
 
 submitBtn.addEventListener("click", () => {
+  console.log("Submit clicked!"); //
+
   const nameinput = document.getElementById("nameInput").value;
   //   verified is a boolean
   // make display none on the verified icon if the user selects no for the verification
@@ -17,11 +19,23 @@ submitBtn.addEventListener("click", () => {
   const username = blurb.querySelector("#username");
   const textcontent = blurb.querySelector(".textcontent");
   //   now change it
+  verified_icon =
+    ' <img src="../images/verified.png" alt="" id="verified" /> </span>';
+
   function changeBlurb() {
-    name.innerText = nameinput;
+    if (verifiedinput) {
+      name.innerHTML = `${nameinput}${verified_icon}`;
+    } else {
+      name.innerHTML = `${nameinput}`;
+    }
 
     username.innerText = `@${usernameinput}`;
-    textcontent.innerText = contentinput;
+
+    console.log(`Content input:\n${contentinput}`);
+
+    textcontent.innerHTML = `<p>${contentinput}</p>`;
+
+    // now change the verified or not
   }
   changeBlurb();
   // Example: dynamically show it
