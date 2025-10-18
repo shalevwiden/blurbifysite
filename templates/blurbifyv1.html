@@ -37,31 +37,38 @@
     <div class="sitecontainer">
       <h1 id="heading">Blurbify</h1>
       <!-- inputs to change whats in the blurb -->
-      <ul id="input_ul">
-        <!-- make all of these lis flex cols -->
-        <li>
-          <p>Add text that will be the name</p>
-          <input type="text" placeholder="Add your name" id="nameInput" />
-        </li>
-        <li>
-          <p>Verified?</p>
-          <input type="checkbox" name="" id="verifiedInput" />
-        </li>
-        <li>
-          <p>Add text that will be the username</p>
-          <input type="text" placeholder="username" id="usernameInput" />
-        </li>
-        <li>
-          <p>Add text content</p>
-          <input
-            type="text"
-            placeholder="content of the Blurb here"
-            id="contentInput"
-          />
-        </li>
-      </ul>
-      <!-- submit -->
-      <button id="submitBtn">Submit Blurb</button>
+      <div class="inputdiv">
+        <ul id="input_ul">
+          <!-- make all of these lis flex cols -->
+          <li>
+            <p>Add text that will be the name</p>
+            <input type="text" placeholder="Add your name" id="nameInput" />
+          </li>
+          <li>
+            <p>Verified?</p>
+            <!-- custom checkbox -->
+            <label class="checkbox-container">
+              <input type="checkbox" id="verifiedInput" />
+              <span class="checkmark"></span>
+              <span class="checkbox-label">Yes</span>
+            </label>
+          </li>
+          <li>
+            <p>Add text that will be the username</p>
+            <input type="text" placeholder="username" id="usernameInput" />
+          </li>
+          <li>
+            <p>Add text content</p>
+            <input
+              type="text"
+              placeholder="content of the Blurb here"
+              id="contentInput"
+            />
+          </li>
+        </ul>
+        <!-- submit, need to style this mf -->
+        <button id="submitBtn">Submit Blurb</button>
+      </div>
 
       <!-- output of the form -->
 
