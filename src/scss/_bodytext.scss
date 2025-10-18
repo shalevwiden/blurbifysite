@@ -30,46 +30,28 @@ body {
     width: 100%;
     border: 3px solid black;
 
-    .buttons {
-      width: 90%;
-      @include flexrow;
-      border: 3px solid black;
-      height: auto;
-      padding: 50px;
-      margin-bottom: 400px;
+    #heading {
+      margin-top: 50px;
+      background: linear-gradient(
+        90deg,
+        #425d84ff,
+        #605bf7ff,
+        #60c4ffff
+      ); /* standard gradient */
+      -webkit-background-clip: text; /* show background only inside text */
+      -webkit-text-fill-color: transparent; /* make text itself transparent */
+      font-weight: bold;
 
-      button {
-        height: 100px;
-        width: 200px;
-        background-color: rgb(74, 74, 193);
-        color: white;
-        border-radius: 20px;
-
-        &:hover {
-          cursor: pointer;
-          background-color: rgb(41, 41, 91);
-        }
+      font-size: 150px;
+      @media (max-width: 600px) {
+        font-size: 100px;
       }
 
-      @media (max-width: 1050px) {
-        // this is good
-        flex-direction: column;
-        button {
-          height: 100px;
-          width: 70%;
-          background-color: rgba(226, 47, 20, 1);
-          color: white;
-          border-radius: 20px;
-          font-size: 20px;
-          font-weight: bold;
-
-          &:hover {
-            cursor: pointer;
-            background-color: rgba(255, 192, 116, 1);
-          }
-        }
+      @media (max-width: 600px) {
+        font-size: 60px;
       }
     }
+
     .blurbifydiv {
       height: auto;
 
@@ -506,7 +488,47 @@ body {
         }
       }
     }
+    .buttons {
+      width: 90%;
+      @include flexrow;
+      border: 3px solid black;
+      height: auto;
+      padding: 50px;
+      margin-top: 200px;
+      margin-bottom: 200px;
 
+      button {
+        height: 100px;
+        width: 200px;
+        background-color: rgb(74, 74, 193);
+        color: white;
+        border-radius: 20px;
+
+        &:hover {
+          cursor: pointer;
+          background-color: rgb(41, 41, 91);
+        }
+      }
+
+      @media (max-width: 1050px) {
+        // this is good
+        flex-direction: column;
+        button {
+          height: 100px;
+          width: 70%;
+          background-color: rgba(226, 47, 20, 1);
+          color: white;
+          border-radius: 20px;
+          font-size: 20px;
+          font-weight: bold;
+
+          &:hover {
+            cursor: pointer;
+            background-color: rgba(255, 192, 116, 1);
+          }
+        }
+      }
+    }
     a#homebutton {
       width: 40%;
       text-decoration: none;

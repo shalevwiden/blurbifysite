@@ -35,14 +35,27 @@
   </head>
   <body>
     <div class="sitecontainer">
-      <div class="buttons">
-        <button id="blurbifybutton">Toggle Blurbify Animations</button>
-        <button id="Backgroundbutton">Toggle Background Animations</button>
-        <button id="flyingbutton">Toggle Flying Object</button>
-        <button id="spin">Spin the Blurb</button>
-        <button id="wildbutton">Wild animations</button>
-        <button id="viewsbutton">Animate Views (3 sec delay)</button>
-      </div>
+      <h1 id="heading">Blurbify</h1>
+      <!-- inputs to change whats in the blurb -->
+      <ul id="input_ul">
+        <!-- make all of these lis flex cols -->
+        <li>
+          <p>Add text that will be the name</p>
+          <input type="text" placeholder="Add your name" />
+        </li>
+        <li>
+          <p>Verified?</p>
+          <input type="checkbox" name="" id="" />
+        </li>
+        <li>
+          <p>Add text that will be the username</p>
+          <input type="text" placeholder="username" />
+        </li>
+        <li>
+          <p>Add text content</p>
+          <input type="text" placeholder="content of the Blurb here" />
+        </li>
+      </ul>
       <div class="blurbifydiv">
         <div id="pfp_and_username">
           <div class="pfpdiv" id="pfpid">
@@ -84,6 +97,15 @@
             <span class="material-symbols-outlined share"> ios_share </span>
           </div>
         </div>
+      </div>
+      <!-- buttons to add animations -->
+      <div class="buttons">
+        <button id="blurbifybutton">Toggle Blurbify Animations</button>
+        <button id="Backgroundbutton">Toggle Background Animations</button>
+        <button id="flyingbutton">Toggle Flying Object</button>
+        <button id="spin">Spin the Blurb</button>
+        <button id="wildbutton">Wild animations</button>
+        <button id="viewsbutton">Animate Views (3 sec delay)</button>
       </div>
       <!-- return home button -->
 
