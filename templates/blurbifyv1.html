@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Blurbify your content 
+    "
+    />
+    <title>Blurbify V1</title>
+
+    <link rel="stylesheet" href="../static/css/main.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-…(hash)…"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- material icons -->
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <!-- Rounded up in here too -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <body>
+    <div class="sitecontainer">
+      <div class="buttons">
+        <button id="blurbifybutton">Toggle Blurbify Animations</button>
+        <button id="Backgroundbutton">Toggle Background Animations</button>
+        <button id="flyingbutton">Toggle Flying Object</button>
+        <button id="spin">Spin the Blurb</button>
+        <button id="wildbutton">Wild animations</button>
+      </div>
+      <div class="blurbifydiv">
+        <div id="pfp_and_username">
+          <div class="pfpdiv" id="pfpid">
+            <img src="../images/pfp1.png" alt="" />
+          </div>
+          <div class="usernamediv">
+            <div class="align_them_div">
+              <span id="name"
+                >Shalev
+                <img src="../images/verified.png" alt="" id="verified" /> </span
+              ><span id="username">@swiden.mp4</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="textcontent">
+          <!-- use .gradient_text to add gradienttext -->
+          <p>
+            A picture of a video of a video of a video <br /><br />More text to
+            test.
+          </p>
+          <!-- use span with class of bottom to add margin top lmao -->
+        </div>
+        <section id="imagesection">
+          <img src="../images/blurbception.png" alt="" id="tweetimage" />
+          <!-- <video src="../images/demovid.mov" controls id="tweetvid"></video> -->
+        </section>
+
+        <!-- icons here -->
+
+        <div class="iconsdiv">
+          <!-- can change everything in these icons and animate the fuck out of them lets goo -->
+          <i class="fa-regular fa-comment"></i>
+
+          <i class="fa-regular fa-heart"></i>
+          <div class="statsarea">
+            <span class="material-symbols-outlined stats"> bar_chart </span>
+            <span id="count">10,152,025</span>
+          </div>
+          <div class="righticons">
+            <span class="material-symbols-rounded bookmark"> bookmark </span>
+            <span class="material-symbols-outlined share"> ios_share </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flyingimagesdiv">
+        <img
+          src="../images/flyingimages/airbus-removebg-preview.png"
+          alt="FLYING"
+          id="flyingimage1"
+          class="flyingimage"
+        />
+      </div>
+    </div>
+    <script src="../static/js/toggleanimations.js"></script>
+  </body>
+</html>
