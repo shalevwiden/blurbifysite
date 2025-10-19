@@ -75,6 +75,9 @@
   50% {
     transform: scale(1.3) rotate(360deg);
   }
+  92% {
+    transform: scale(0.8) rotate(0deg);
+  }
   100% {
     transform: scale(1) rotate(0deg);
   }
@@ -261,7 +264,7 @@ body .sitecontainer div.inputdiv #input_ul li {
   padding: 10px 0;
 }
 body .sitecontainer div.inputdiv #input_ul li p {
-  font-size: 22px;
+  font-size: 29px;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-weight: 600;
   color: #2b2f42;

@@ -42,7 +42,7 @@
           <!-- make all of these lis flex cols -->
           <li>
             <p>Add text that will be the name</p>
-            <input type="text" placeholder="Add your name" id="nameInput" />
+            <input type="text" placeholder="Add name" id="nameInput" />
           </li>
           <li>
             <p>Verified?</p>
@@ -55,7 +55,7 @@
           </li>
           <li>
             <p>Add text that will be the username</p>
-            <input type="text" placeholder="username" id="usernameInput" />
+            <input type="text" placeholder="Add username" id="usernameInput" />
           </li>
           <li>
             <p>Add text content</p>
@@ -74,6 +74,12 @@
               <span class="slider round"></span>
             </label>
           </li>
+          <li>
+            <p>Add a pfp to the Blurb</p>
+            <!-- client side uploading only -->
+            <input type="file" id="imageInput" accept="image/*" />
+            <img id="preview" />
+          </li>
         </ul>
         <!-- submit, need to style this mf -->
         <button id="submitBtn">Submit Blurb</button>
@@ -84,7 +90,7 @@
       <div class="blurbifydiv">
         <div id="pfp_and_username">
           <div class="pfpdiv" id="pfpid">
-            <img src="../images/pfp1.png" alt="" />
+            <img src="../images/pfp1.png" alt="pfp gone" id="pfpimage" />
           </div>
           <div class="usernamediv">
             <div class="align_them_div">

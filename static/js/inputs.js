@@ -74,3 +74,29 @@ function change_icons() {
   });
 }
 change_icons();
+
+// now handle the image input stuff
+// its the last one in the form
+
+const imageInput = document.getElementById("imageInput");
+const preview = document.getElementById("preview");
+
+imageInput.addEventListener("change", () => {
+  const file = imageInput.files[0]; // get the first selected file
+  if (!file) return;
+
+  const reader = new FileReader();
+
+  // when file is read, show preview
+  reader.onload = (e) => {
+    preview.src = e.target.result; // this is a base64 data URL
+  };
+
+  reader.readAsDataURL(file); // reads file as Base64
+});
+
+submitBtn.addEventListener("click", () => {
+  const pfpimage = blurb.querySelector("#pfpimage");
+  // just take the src from preview
+  pfpimage.src = preview.src;
+});
