@@ -352,6 +352,37 @@ body .sitecontainer div.inputdiv #input_ul li .checkbox-container .checkbox-labe
   font-weight: 500;
   font-size: 30px;
 }
+body .sitecontainer div.inputdiv #input_ul li#imageli {
+  /* Custom styled button to trigger file input */
+}
+body .sitecontainer div.inputdiv #input_ul li#imageli input[type=file] {
+  display: none;
+}
+body .sitecontainer div.inputdiv #input_ul li#imageli .file-label {
+  display: inline-block;
+  padding: 14px 18px;
+  font-size: 18px;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 500;
+  color: #1f1f1f;
+  background-color: #f9f9fb;
+  border: 2px solid rgba(100, 110, 130, 0.4);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+body .sitecontainer div.inputdiv #input_ul li#imageli .file-label:hover {
+  border-color: rgba(60, 100, 220, 0.6);
+  background-color: #ffffff;
+}
+body .sitecontainer div.inputdiv #input_ul li#imageli .file-label:active {
+  background-color: #e0e6f0;
+}
+body .sitecontainer div.inputdiv #input_ul li#imageli #preview {
+  margin-top: 10px;
+  width: 50%;
+  height: auto;
+}
 body .sitecontainer div.inputdiv #submitBtn {
   width: 250px;
   height: 150px;

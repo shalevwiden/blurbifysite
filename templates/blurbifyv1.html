@@ -74,9 +74,13 @@
               <span class="slider round"></span>
             </label>
           </li>
-          <li>
+          <li id="imageli">
             <p>Add a pfp to the Blurb</p>
+
+            <!-- the label for file uploads -->
+            <label class="file-label" for="imageInput">Choose Image</label>
             <!-- client side uploading only -->
+
             <input type="file" id="imageInput" accept="image/*" />
             <img id="preview" />
           </li>
@@ -90,7 +94,7 @@
       <div class="blurbifydiv">
         <div id="pfp_and_username">
           <div class="pfpdiv" id="pfpid">
-            <img src="../images/pfp1.png" alt="pfp gone" id="pfpimage" />
+            <img src="../images/pfp1.png" alt="pfp gone" id="pfpimageg" />
           </div>
           <div class="usernamediv">
             <div class="align_them_div">
