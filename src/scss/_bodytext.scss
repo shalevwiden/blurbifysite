@@ -880,10 +880,14 @@ body {
       #flyingimage1 {
         visibility: hidden;
         width: 450px;
-        height: auto;
         transform: translateY(100px);
         position: relative;
         z-index: 2;
+
+        @media (max-width: 400px) {
+          width: 200px;
+          height: auto;
+        }
       }
     }
   }

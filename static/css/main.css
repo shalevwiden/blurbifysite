@@ -5,6 +5,11 @@
   transition: all 0.3s ease;
 }
 
+:root {
+  --flyingy: -1550px;
+  --flyingymobile: -2190px;
+}
+
 @keyframes blurbify_animation {
   0% {
     border-color: red;
@@ -42,13 +47,24 @@
 }
 @keyframes flyingobject {
   0% {
-    transform: translateX(-50vw) translateY(-300px);
+    transform: translateX(-50vw) translateY(var(--flyingy));
   }
   50% {
-    transform: translateX(8vw) translateY(-250px);
+    transform: translateX(8vw) translateY(calc(var(--flyingy) + 50px));
   }
   100% {
-    transform: translateX(63vw) translateY(-310px);
+    transform: translateX(63vw) translateY(calc(var(--flyingy) - 10px));
+  }
+}
+@keyframes flyingobject_mobile {
+  0% {
+    transform: translateX(-50vw) translateY(var(--flyingymobile));
+  }
+  50% {
+    transform: translateX(8vw) translateY(calc(var(--flyingymobile) + 50px));
+  }
+  100% {
+    transform: translateX(63vw) translateY(calc(var(--flyingymobile) - 10px));
   }
 }
 @keyframes spin {
@@ -94,6 +110,11 @@
   display: block;
   visibility: visible !important;
   animation: flyingobject 5s normal linear infinite;
+}
+@media (max-width: 400px) {
+  .flying_class {
+    animation: flyingobject_mobile 5s linear infinite;
+  }
 }
 
 .spin_class {
@@ -960,10 +981,15 @@ body .sitecontainer div.flyingimagesdiv .flyingimage {
 body .sitecontainer div.flyingimagesdiv #flyingimage1 {
   visibility: hidden;
   width: 450px;
-  height: auto;
   transform: translateY(100px);
   position: relative;
   z-index: 2;
+}
+@media (max-width: 400px) {
+  body .sitecontainer div.flyingimagesdiv #flyingimage1 {
+    width: 200px;
+    height: auto;
+  }
 }
 
 @page {
