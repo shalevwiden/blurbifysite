@@ -584,11 +584,12 @@ body .sitecontainer .blurbifydiv div#pfp_and_username .usernamediv div.align_the
 }
 body .sitecontainer .blurbifydiv div.textcontent {
   padding: 30px;
-  padding-left: 126px;
+  padding-left: 120px;
   margin-top: -79px;
   font-size: 28px;
   padding-bottom: 0px;
-  padding-top: 10px;
+  padding-top: 35px;
+  padding-right: 20px;
 }
 body .sitecontainer .blurbifydiv div.textcontent .bottom {
   display: block;
@@ -756,12 +757,12 @@ body .sitecontainer .blurbifydiv div.iconsdiv .righticons {
     margin-bottom: 2px;
   }
   body .sitecontainer .blurbifydiv div.textcontent {
-    padding: 30px;
     padding-left: 0px;
-    margin-top: -43px;
+    margin-top: -6px;
     font-size: 28px;
     padding-bottom: 0px;
     padding-top: 0px;
+    padding-right: 0px;
   }
   body .sitecontainer .blurbifydiv div.textcontent .bottom {
     display: block;
@@ -967,16 +968,16 @@ body .sitecontainer .buttons button:hover {
 @media (max-width: 1050px) {
   body .sitecontainer .buttons {
     flex-direction: column;
-    height: 1000px;
+    height: 1100px;
   }
   body .sitecontainer .buttons button {
-    height: 130px;
+    height: 150px;
     flex: none;
     width: 70%;
     background-color: rgb(226, 47, 20);
     color: white;
     border-radius: 20px;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
   }
   body .sitecontainer .buttons button:hover {

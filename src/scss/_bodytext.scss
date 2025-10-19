@@ -454,12 +454,13 @@ body {
       }
       div.textcontent {
         padding: 30px;
-        padding-left: $usernamegap + $pfp_size + 10px;
+        padding-left: $usernamegap + $pfp_size + 4px;
 
         margin-top: -79px;
         font-size: 28px;
         padding-bottom: 0px;
-        padding-top: 10px;
+        padding-top: 35px;
+        padding-right: 20px;
 
         .bottom {
           display: block;
@@ -648,14 +649,14 @@ body {
           }
         }
         div.textcontent {
-          padding: 30px;
           // make text content to go to a new place
           padding-left: 0px;
 
-          margin-top: -43px;
+          margin-top: -6px;
           font-size: 28px;
           padding-bottom: 0px;
           padding-top: 0px;
+          padding-right: 0px;
 
           .bottom {
             display: block;
@@ -882,17 +883,17 @@ body {
       @media (max-width: 1050px) {
         // this is good
         flex-direction: column;
-        height: 1000px;
+        height: 1100px;
 
         button {
-          height: 130px;
+          height: 150px;
           flex: none; // important - stop flex auto sizing
 
           width: 70%;
           background-color: rgba(226, 47, 20, 1);
           color: white;
           border-radius: 20px;
-          font-size: 20px;
+          font-size: 15px;
           font-weight: bold;
 
           &:hover {
