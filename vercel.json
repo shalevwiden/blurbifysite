@@ -1,4 +1,4 @@
 {
   "cleanUrls": true,
-  "rewrites": [{ "source": "/:path*", "destination": "/templates/:path*" }]
+  "rewrites": [{ "source": "/templates/:path*", "destination": "/:path*" }]
 }
