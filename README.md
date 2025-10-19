@@ -11,4 +11,7 @@ Inputs to change the username, name, text content, and pfp without writing any c
 
 Next I need to add google analytics tracking
 
-Fuk it I wanna make this a site other people can use. Get a lil bit of users lol.
+### Oct 19
+
+Added form so users can submit data.
+It is deployed on Vercel at [this link](https://blurbifysite.vercel.app/)
