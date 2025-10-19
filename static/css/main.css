@@ -6,7 +6,7 @@
 }
 
 :root {
-  --flyingy: -1350px;
+  --flyingy: -1340px;
   --flyingymobile: -2190px;
 }
 
@@ -1032,14 +1032,14 @@ body .sitecontainer div.flyingimagesdiv .flyingimage {
 }
 body .sitecontainer div.flyingimagesdiv #flyingimage1 {
   display: none;
-  width: 450px;
+  width: 330px;
   transform: translateY(100px);
   position: relative;
   z-index: 2;
 }
 @media (max-width: 400px) {
   body .sitecontainer div.flyingimagesdiv #flyingimage1 {
-    width: 200px;
+    width: 180px;
     height: auto;
   }
 }
