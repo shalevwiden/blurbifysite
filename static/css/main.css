@@ -382,6 +382,7 @@ body .sitecontainer div.inputdiv #input_ul li#imageli #preview {
   margin-top: 10px;
   width: 50%;
   height: auto;
+  border-radius: 15px;
 }
 body .sitecontainer div.inputdiv #submitBtn {
   width: 250px;
