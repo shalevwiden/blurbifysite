@@ -12,7 +12,7 @@ submitBtn.addEventListener("click", () => {
 
   const verifiedinput = document.getElementById("verifiedInput").checked;
   const usernameinput = document.getElementById("usernameInput").value;
-  const contentinput = document.getElementById("contentInput").value;
+  let contentinput = document.getElementById("contentInput").value;
 
   //   now get the blurb variables
   const name = blurb.querySelector("#name");
@@ -33,6 +33,9 @@ submitBtn.addEventListener("click", () => {
     username.innerText = `@${usernameinput}`;
 
     console.log(`Content input:\n${contentinput}`);
+
+    // make it so new lines show up
+    contentinput = contentinput.replace(/\n/g, "<br>");
 
     textcontent.innerHTML = `<p>${contentinput}</p>`;
   }
