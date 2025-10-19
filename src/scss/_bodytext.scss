@@ -14,6 +14,7 @@ $blurbify_width: 900px;
 // these are great
 $debugborders: false;
 $hideicons: false;
+$personal: false;
 
 * {
   box-sizing: border-box;
@@ -333,11 +334,22 @@ body {
           overflow: hidden;
           z-index: 1;
           flex-shrink: 0;
+
+          background-color: #c2d9ffff;
           @include flexcol;
           img {
             margin-bottom: 10px;
             width: 135%; /* scale image to parent width */
-            aspect-ratio: 1 / 1;
+
+            @if $personal {
+              width: 135%;
+              aspect-ratio: 1 / 1;
+            } @else {
+              width: 100%;
+              height: auto;
+              margin-bottom: 0;
+            }
+            // this worked for swiden
           }
         }
         .usernamediv {
