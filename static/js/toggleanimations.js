@@ -1,3 +1,7 @@
+// this handles alot of animations and the views stuff
+
+//
+
 const buttonsDiv = document.querySelector(".buttons");
 
 const blurbifybutton = buttonsDiv.querySelector("#blurbifybutton");
@@ -55,8 +59,25 @@ function countUp(element, target, duration = 2000) {
   requestAnimationFrame(update);
 }
 
-const views = document.querySelector("#count");
-const viewcount = parseInt(views.textContent.replace(/,/g, ""));
+function getViews() {
+  const views = document.querySelector("#count");
+  if (!views) return 0;
+
+  const date = new Date();
+  const month = date.getMonth() + 1; //months are 0 indexed
+  const day = date.getDate();
+  let year = date.getFullYear();
+
+  year = date.getFullYear().toString().slice(1);
+
+  // combine and format
+  const formatted = `${month},${day}2,${year}`;
+
+  views.innerText = formatted;
+  const viewcount = parseInt(views.textContent.replace(/,/g, ""));
+  return viewcount;
+}
+const viewcount = getViews();
 
 // starting up the animation will do a viewcount animation
 // add "yes this is what I do instead of sleeping..."

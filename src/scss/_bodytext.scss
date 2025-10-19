@@ -2,6 +2,7 @@
 @use "../utils/icons" as *;
 @use "../utils/animations" as *;
 @use "../utils/slider" as *;
+@use "../utils/hidestuff" as *;
 
 $bodybg: #eee;
 $tweetbackgroundcolor: #ffffffff;
@@ -400,13 +401,17 @@ body {
         justify-content: space-between;
 
         margin-top: 15px;
+        // this is lowered with the hidden-icons class in hidestuff.scss
         height: 50px;
 
         margin-left: $usernamegap + $pfp_size + 10px;
+
         @if $hideicons {
           visibility: hidden;
+          height: 40px;
         }
 
+        // now icon styling
         .fa-heart {
           color: #f10000ff;
           font-size: 25px;
@@ -436,7 +441,7 @@ body {
           gap: 5px;
 
           #count {
-            font-size: 15px;
+            font-size: 17px;
             margin-top: 5px;
           }
         }

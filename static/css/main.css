@@ -152,6 +152,16 @@ input:checked + .slider::before {
   border-radius: 50%;
 }
 
+.icons-hidden {
+  visibility: hidden;
+  height: 0px !important;
+}
+
+.icons-visible {
+  visibility: visible;
+  height: auto;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -547,7 +557,7 @@ body .sitecontainer .blurbifydiv div.iconsdiv .statsarea {
   gap: 5px;
 }
 body .sitecontainer .blurbifydiv div.iconsdiv .statsarea #count {
-  font-size: 15px;
+  font-size: 17px;
   margin-top: 5px;
 }
 body .sitecontainer .blurbifydiv div.iconsdiv .righticons {
