@@ -780,7 +780,11 @@ body {
           }
           // this is share and bookmark
           .righticons {
-            border: 3px solid purple;
+            @if $debugborders {
+              @include border(rgb(237, 132, 66));
+            } @else {
+              @include border(transparent);
+            }
             @include flexrow;
             // move it to the right
             justify-content: flex-start;
