@@ -527,7 +527,7 @@ body .sitecontainer .blurbifydiv div#pfp_and_username .pfpdiv {
 body .sitecontainer .blurbifydiv div#pfp_and_username .pfpdiv img {
   margin-bottom: 10px;
   width: 135%; /* scale image to parent width */
-  width: 100%;
+  width: 120%;
   height: auto;
   margin-bottom: 0;
 }
