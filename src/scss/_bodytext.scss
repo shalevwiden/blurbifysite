@@ -915,6 +915,7 @@ body {
       .linkdiv {
         width: 100%;
         height: 300px;
+        padding: 30px;
 
         @include flexcol;
         border: 6px solid #665e59ff;
@@ -929,6 +930,15 @@ body {
           color: white;
           border: 6px solid #d50303ff;
         }
+      }
+      @media (max-width: 1000px) {
+        .linkdiv {
+          font-size: 35px;
+        }
+      }
+      @media (max-width: 600px) {
+        font-size: 32px;
+        width: 60%;
       }
     }
     div.flyingimagesdiv {
