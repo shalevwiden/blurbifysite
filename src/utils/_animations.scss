@@ -120,10 +120,10 @@
   animation: background_animations 5s normal infinite;
 }
 .flying_class {
-  display: block;
-  visibility: visible !important;
+  display: block !important;
   animation: flyingobject 5s normal linear infinite;
 
+  // for mobile theres a diferent animation class
   @media (max-width: 400px) {
     animation: flyingobject_mobile 5s linear infinite;
   }

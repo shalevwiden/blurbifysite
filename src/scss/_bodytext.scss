@@ -18,6 +18,8 @@ $personal: false;
 
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 :root {
   --border-thickness: 9px;
@@ -62,6 +64,7 @@ body {
       @include flexcol;
       gap: 40px;
       margin-bottom: 150px;
+      margin-top: 80px;
 
       #input_ul {
         border: 9px solid rgba(90, 100, 120, 0.4);
@@ -855,13 +858,13 @@ body {
       height: auto;
       padding: 50px;
       margin-top: 200px;
-      margin-bottom: 200px;
+      margin-bottom: 50px;
 
       background-color: rgba(255, 255, 255, 1);
 
       button {
-        height: 100px;
-        width: 200px;
+        height: 150px;
+        flex: 1;
         color: white;
         border-radius: 20px;
 
@@ -879,8 +882,12 @@ body {
       @media (max-width: 1050px) {
         // this is good
         flex-direction: column;
+        height: 1000px;
+
         button {
-          height: 100px;
+          height: 130px;
+          flex: none; // important - stop flex auto sizing
+
           width: 70%;
           background-color: rgba(226, 47, 20, 1);
           color: white;
@@ -899,10 +906,14 @@ body {
       width: 40%;
       text-decoration: none;
       color: navy;
+
+      // spacing from buttonsdiv
+      margin-top: 10px;
+      margin-bottom: 50px;
+
       .linkdiv {
         width: 100%;
         height: 300px;
-        margin-top: 200px;
 
         @include flexcol;
         border: 6px solid #665e59ff;
@@ -921,11 +932,12 @@ body {
     }
     div.flyingimagesdiv {
       margin-top: 40px;
+
       .flyingimage {
         max-width: 1000px;
       }
       #flyingimage1 {
-        visibility: hidden;
+        display: none;
         width: 450px;
         transform: translateY(100px);
         position: relative;

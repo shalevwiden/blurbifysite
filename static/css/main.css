@@ -107,8 +107,7 @@
 }
 
 .flying_class {
-  display: block;
-  visibility: visible !important;
+  display: block !important;
   animation: flyingobject 5s normal linear infinite;
 }
 @media (max-width: 400px) {
@@ -188,6 +187,8 @@ input:checked + .slider::before {
 
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 :root {
@@ -248,6 +249,7 @@ body .sitecontainer div.inputdiv {
   gap: 20px;
   gap: 40px;
   margin-bottom: 150px;
+  margin-top: 80px;
   /* 📱 Responsiveness */
 }
 body .sitecontainer div.inputdiv #input_ul {
@@ -945,12 +947,12 @@ body .sitecontainer .buttons {
   height: auto;
   padding: 50px;
   margin-top: 200px;
-  margin-bottom: 200px;
+  margin-bottom: 50px;
   background-color: rgb(255, 255, 255);
 }
 body .sitecontainer .buttons button {
-  height: 100px;
-  width: 200px;
+  height: 150px;
+  flex: 1;
   color: white;
   border-radius: 20px;
   background-color: rgb(62, 61, 131);
@@ -965,9 +967,11 @@ body .sitecontainer .buttons button:hover {
 @media (max-width: 1050px) {
   body .sitecontainer .buttons {
     flex-direction: column;
+    height: 1000px;
   }
   body .sitecontainer .buttons button {
-    height: 100px;
+    height: 130px;
+    flex: none;
     width: 70%;
     background-color: rgb(226, 47, 20);
     color: white;
@@ -984,11 +988,12 @@ body .sitecontainer a#homebutton {
   width: 40%;
   text-decoration: none;
   color: navy;
+  margin-top: 10px;
+  margin-bottom: 50px;
 }
 body .sitecontainer a#homebutton .linkdiv {
   width: 100%;
   height: 300px;
-  margin-top: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1012,7 +1017,7 @@ body .sitecontainer div.flyingimagesdiv .flyingimage {
   max-width: 1000px;
 }
 body .sitecontainer div.flyingimagesdiv #flyingimage1 {
-  visibility: hidden;
+  display: none;
   width: 450px;
   transform: translateY(100px);
   position: relative;
