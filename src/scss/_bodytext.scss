@@ -262,6 +262,7 @@ body {
         -webkit-text-fill-color: transparent;
         font-style: italic;
       }
+
       div#pfp_and_username {
         @include flexrow;
 
@@ -606,8 +607,12 @@ body {
         }
       }
       @media (max-width: 400px) {
+        // by default blurbify div is flexcol
         width: 90%;
         border: 3px solid $tweet_border_color;
+
+        padding: 18px;
+        padding-left: 15px;
 
         div#pfp_and_username {
           @include flexrow;
@@ -643,6 +648,8 @@ body {
           .usernamediv {
             height: 100%;
             width: 400px;
+            // for the small screen it needs to pushed up
+            margin-top: -13px;
 
             @if $debugborders {
               @include border(#f02c7eff);
@@ -661,7 +668,7 @@ body {
 
               align-items: flex-start;
 
-              row-gap: 7px;
+              row-gap: 2px;
 
               #name {
                 font-weight: bold;
