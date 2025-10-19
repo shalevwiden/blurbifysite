@@ -266,7 +266,8 @@ body .sitecontainer div.inputdiv #input_ul li p {
   font-weight: 600;
   color: #2b2f42;
 }
-body .sitecontainer div.inputdiv #input_ul li input[type=text] {
+body .sitecontainer div.inputdiv #input_ul li input[type=text],
+body .sitecontainer div.inputdiv #input_ul li .textarea_input {
   width: 90%;
   padding: 14px 18px;
   font-size: 18px;
@@ -277,20 +278,28 @@ body .sitecontainer div.inputdiv #input_ul li input[type=text] {
   outline: none;
   transition: all 0.25s ease;
 }
-body .sitecontainer div.inputdiv #input_ul li input[type=text]::-moz-placeholder {
+body .sitecontainer div.inputdiv #input_ul li input[type=text]::-moz-placeholder, body .sitecontainer div.inputdiv #input_ul li .textarea_input::-moz-placeholder {
   color: rgba(100, 100, 120, 0.6);
 }
-body .sitecontainer div.inputdiv #input_ul li input[type=text]::placeholder {
+body .sitecontainer div.inputdiv #input_ul li input[type=text]::placeholder,
+body .sitecontainer div.inputdiv #input_ul li .textarea_input::placeholder {
   color: rgba(100, 100, 120, 0.6);
 }
-body .sitecontainer div.inputdiv #input_ul li input[type=text]:hover {
+body .sitecontainer div.inputdiv #input_ul li input[type=text]:hover,
+body .sitecontainer div.inputdiv #input_ul li .textarea_input:hover {
   border-color: rgba(60, 100, 220, 0.6);
   background-color: #ffffff;
 }
-body .sitecontainer div.inputdiv #input_ul li input[type=text]:focus {
+body .sitecontainer div.inputdiv #input_ul li input[type=text]:focus,
+body .sitecontainer div.inputdiv #input_ul li .textarea_input:focus {
   border-color: #3b6df2;
   background-color: #ffffff;
   box-shadow: 0 0 0 3px rgba(59, 109, 242, 0.2);
+}
+body .sitecontainer div.inputdiv #input_ul li .textarea_input {
+  resize: vertical; /* only vertical resize */
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 18px;
 }
 body .sitecontainer div.inputdiv #input_ul li .checkbox-container {
   display: flex;

@@ -101,7 +101,8 @@ body {
             color: #2b2f42;
           }
 
-          input[type="text"] {
+          input[type="text"],
+          .textarea_input {
             width: 90%;
             padding: 14px 18px;
             font-size: 18px;
@@ -126,6 +127,13 @@ body {
               background-color: #ffffff;
               box-shadow: 0 0 0 3px rgba(59, 109, 242, 0.2);
             }
+          }
+          // only text area styling now
+          .textarea_input {
+            resize: vertical; /* only vertical resize */
+
+            font-family: "Helvetica Neue", Helvetica, sans-serif;
+            font-size: 18px;
           }
 
           // now the custom checkbox
