@@ -1,22 +1,26 @@
-/* --- switches stuff from W3 schools --- */
+// Switch dimensions
+$switchwidth: 75px;
+$sliderwidth: 40px;
 
-/* The switch - the box around the slider */
+// Derived variable
+$movewidth: $switchwidth - $sliderwidth;
 
+// Switch container
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
+  width: $switchwidth;
+  height: $sliderwidth;
 }
 
-/* Hide default HTML checkbox */
+// Hide default HTML checkbox
 .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-/* The slider */
+// The slider background
 .slider {
   position: absolute;
   cursor: pointer;
@@ -25,41 +29,43 @@
   right: 0;
   bottom: 0;
   background-color: #ccc;
-  -webkit-transition: 0.4s;
   transition: 0.4s;
+
+  // border: 3px solid rgb(10, 10, 54);
 }
 
-.slider:before {
+// The circle handle
+.slider::before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
+  height: $sliderwidth;
+  width: $sliderwidth;
+  left: 0;
+  bottom: 0;
   background-color: white;
-  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
+// Checked state background
 input:checked + .slider {
   background-color: #2196f3;
 }
 
+// Focus outline
 input:focus + .slider {
   box-shadow: 0 0 1px #2196f3;
 }
 
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+// Move the circle when checked
+input:checked + .slider::before {
+  transform: translateX($movewidth);
 }
 
-/* Rounded sliders */
+// Rounded style option
 .slider.round {
   border-radius: 34px;
 }
 
-.slider.round:before {
+.slider.round::before {
   border-radius: 50%;
 }

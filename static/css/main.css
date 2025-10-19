@@ -97,6 +97,61 @@
   animation: spin_lin 5s ease;
 }
 
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 75px;
+  height: 40px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 40px;
+  width: 40px;
+  left: 0;
+  bottom: 0;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider::before {
+  transform: translateX(35px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round::before {
+  border-radius: 50%;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -159,61 +214,6 @@ body .sitecontainer div.inputdiv {
   gap: 20px;
   gap: 40px;
   margin-bottom: 150px;
-}
-body .sitecontainer div.inputdiv #input_ul {
-  border: 3px solid black;
-  border-radius: 20px;
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  align-items: flex-start;
-  padding: 100px 0;
-  list-style: none;
-  padding-left: 30px;
-}
-body .sitecontainer div.inputdiv #input_ul li {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  height: 100px;
-  align-items: flex-start;
-}
-body .sitecontainer div.inputdiv #input_ul li p {
-  font-size: 30px;
-  font-family: Helvetica, sans-serif;
-  font-weight: bold;
-}
-body .sitecontainer div.inputdiv #submitBtn {
-  width: 250px;
-  height: 150px;
-  border: 6px solid rgb(15, 15, 126);
-  background-color: rgb(76, 139, 242);
-  color: white;
-  border-radius: 30px;
-  font-weight: bold;
-  font-size: 40px;
-}
-body .sitecontainer div.inputdiv #submitBtn:hover {
-  cursor: pointer;
-  background-color: rgb(51, 112, 181);
-  border: 6px solid rgb(54, 17, 15);
-}
-body .sitecontainer div.inputdiv {
-  width: 80%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  gap: 40px;
-  margin-bottom: 150px;
   /* 📱 Responsiveness */
 }
 body .sitecontainer div.inputdiv #input_ul {
@@ -247,6 +247,8 @@ body .sitecontainer div.inputdiv #input_ul li {
   gap: 12px;
   margin-bottom: 25px;
   align-items: flex-start;
+  height: auto;
+  padding: 10px 0;
 }
 body .sitecontainer div.inputdiv #input_ul li p {
   font-size: 22px;

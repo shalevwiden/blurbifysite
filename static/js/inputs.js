@@ -13,6 +13,7 @@ submitBtn.addEventListener("click", () => {
   const verifiedinput = document.getElementById("verifiedInput").checked;
   const usernameinput = document.getElementById("usernameInput").value;
   const contentinput = document.getElementById("contentInput").value;
+  const iconsCheckbox = document.getElementById("icons_checkbox");
 
   //   now get the blurb variables
   const name = blurb.querySelector("#name");

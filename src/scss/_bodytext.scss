@@ -52,58 +52,7 @@ body {
         font-size: 60px;
       }
     }
-    div.inputdiv {
-      // input div contains the input ul and the submit button
 
-      width: 80%;
-      height: auto;
-      @include flexcol;
-      gap: 40px;
-      margin-bottom: 150px;
-
-      #input_ul {
-        border: 3px solid black;
-        border-radius: 20px;
-        width: 100%;
-        height: auto;
-        @include flexcol;
-        align-items: flex-start;
-        padding: 100px 0;
-        list-style: none;
-        padding-left: 30px;
-
-        li {
-          @include flexcol;
-          height: 100px;
-          align-items: flex-start;
-
-          p {
-            font-size: 30px;
-            font-family: Helvetica, sans-serif;
-            font-weight: bold;
-          }
-        }
-      }
-      #submitBtn {
-        width: 250px;
-        height: 150px;
-
-        border: 6px solid rgb(15, 15, 126);
-        background-color: rgb(76, 139, 242);
-        color: white;
-
-        border-radius: 30px;
-
-        font-weight: bold;
-        font-size: 40px;
-
-        &:hover {
-          cursor: pointer;
-          background-color: rgba(51, 112, 181, 1);
-          border: 6px solid rgba(54, 17, 15, 1);
-        }
-      }
-    }
     // new styling
     div.inputdiv {
       width: 80%;
@@ -141,6 +90,8 @@ body {
           gap: 12px;
           margin-bottom: 25px;
           align-items: flex-start;
+          height: auto;
+          padding: 10px 0;
 
           p {
             font-size: 22px;
