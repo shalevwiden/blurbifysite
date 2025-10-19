@@ -1,6 +1,7 @@
 @use "../utils/mixins" as *;
 @use "../utils/icons" as *;
 @use "../utils/animations" as *;
+@use "../utils/slider" as *;
 
 $bodybg: #eee;
 $tweetbackgroundcolor: #ffffffff;
@@ -112,10 +113,11 @@ body {
       margin-bottom: 150px;
 
       #input_ul {
-        border: 2px solid rgba(90, 100, 120, 0.4);
+        border: 9px solid rgba(90, 100, 120, 0.4);
         border-radius: 20px;
         width: 100%;
         height: auto;
+
         @include flexcol;
         align-items: flex-start;
         padding: 60px 30px;
@@ -210,7 +212,7 @@ body {
 
             // when checkbox is checked
             input[type="checkbox"]:checked + .checkmark {
-              background: rgb(17, 167, 17);
+              background: rgba(210, 246, 210, 1);
               border-color: transparent;
             }
 
@@ -220,7 +222,7 @@ body {
               position: absolute;
               top: 2px;
               left: 4px;
-              font-size: 38px; // fits inside 50x50 box
+              font-size: 40px;
               line-height: 1;
             }
 

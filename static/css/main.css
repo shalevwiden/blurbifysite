@@ -217,7 +217,7 @@ body .sitecontainer div.inputdiv {
   /* 📱 Responsiveness */
 }
 body .sitecontainer div.inputdiv #input_ul {
-  border: 2px solid rgba(90, 100, 120, 0.4);
+  border: 9px solid rgba(90, 100, 120, 0.4);
   border-radius: 20px;
   width: 100%;
   height: auto;
@@ -312,7 +312,7 @@ body .sitecontainer div.inputdiv #input_ul li .checkbox-container:hover .checkma
   background: #eaf0ff;
 }
 body .sitecontainer div.inputdiv #input_ul li .checkbox-container input[type=checkbox]:checked + .checkmark {
-  background: rgb(17, 167, 17);
+  background: rgb(210, 246, 210);
   border-color: transparent;
 }
 body .sitecontainer div.inputdiv #input_ul li .checkbox-container input[type=checkbox]:checked + .checkmark::after {
@@ -320,7 +320,7 @@ body .sitecontainer div.inputdiv #input_ul li .checkbox-container input[type=che
   position: absolute;
   top: 2px;
   left: 4px;
-  font-size: 38px;
+  font-size: 40px;
   line-height: 1;
 }
 body .sitecontainer div.inputdiv #input_ul li .checkbox-container .checkbox-label {
