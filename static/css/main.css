@@ -468,10 +468,13 @@ body .sitecontainer div.pointerdiv h2#blurbpointer {
   text-decoration: underline;
   text-decoration-color: navy;
   text-decoration-thickness: 4px;
-  background: linear-gradient(90deg, #6f3022, #6f7cd2, #07051e, #2f93d6);
+  text-underline-offset: 10px;
+  padding-left: 100px;
+}
+body .sitecontainer div.pointerdiv h2#blurbpointer span {
+  background: linear-gradient(90deg, #5a21e1, #6f7cd2, #cc3737, #2f93d6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  padding-left: 100px;
 }
 @media (max-width: 400px) {
   body .sitecontainer div.pointerdiv h2#blurbpointer {

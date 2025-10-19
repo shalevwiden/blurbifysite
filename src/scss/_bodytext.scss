@@ -311,16 +311,19 @@ body {
         text-decoration: underline;
         text-decoration-color: navy;
         text-decoration-thickness: 4px;
+        text-underline-offset: 10px;
 
-        background: linear-gradient(
-          90deg,
-          #6f3022ff,
-          #6f7cd2ff,
-          #07051eff,
-          #2f93d6ff
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        span {
+          background: linear-gradient(
+            90deg,
+            #5a21e1ff,
+            #6f7cd2ff,
+            #cc3737ff,
+            #2f93d6ff
+          );
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
 
         padding-left: 100px;
       }
