@@ -100,6 +100,8 @@ pfpInput.addEventListener("change", () => {
 
 const postimageToggle = document.getElementById("postimage_checkbox");
 let post_image_li = document.querySelector("#post_image_li");
+postimagepreview = document.getElementById("post_image_preview");
+postimage = blurb.querySelector("#postimage");
 
 function toggle_imageselecting() {
   console.log("Trying to toggle icons");
@@ -107,9 +109,15 @@ function toggle_imageselecting() {
     if (postimageToggle.checked) {
       post_image_li.classList.remove("post_image_li-hidden");
       post_image_li.classList.add("post_image_li-visible");
+
+      postimagepreview.style.display = "inline";
+      postimage.style.display = "inline";
     } else {
       post_image_li.classList.remove("post_image_li-visible");
       post_image_li.classList.add("post_image_li-hidden");
+
+      postimagepreview.style.display = "none";
+      postimage.style.display = "none";
     }
   });
 }
@@ -117,10 +125,10 @@ function toggle_imageselecting() {
 toggle_imageselecting();
 
 const postimageInput = document.getElementById("postimageInput");
-const postimagepreview = document.getElementById("post_image_preview");
+postimagepreview = document.getElementById("post_image_preview");
 
 postimageInput.addEventListener("change", () => {
-  const file = pfpInput.files[0]; // get the first selected file
+  const file = postimageInput.files[0]; // get the post image uploaded file
   if (!file) return;
 
   const reader = new FileReader();
@@ -138,6 +146,8 @@ postimageInput.addEventListener("change", () => {
 submitBtn.addEventListener("click", () => {
   const pfpimage = blurb.querySelector("#pfpimage");
   // just take the src from preview
+  const path = window.location.pathname;
+
   if (path.endsWith("swiden.html") || path.endsWith("swiden")) {
     // now the default pfp for my template should be my pfp
     if (pfppreview) {
@@ -146,10 +156,19 @@ submitBtn.addEventListener("click", () => {
       pfpimage.src = "../images/pfp.png";
     }
   } else {
-    // pass for now
+    // pass for now - this is for other templates not swiden
+    if (pfppreview) {
+      pfpimage.src = pfppreview.src;
+    } else {
+      pfpimage.style.visibility = "hidden";
+    }
   }
-  const postimage = blurb.querySelector("#postimage");
+  postimage = blurb.querySelector("#postimage");
   // just take the src from preview
   postimage.src = postimagepreview.src;
-  postimage.style.display = "inline";
+  postimage.style.height = "auto";
+
+  // it should fade in
+  // using this same logic I can add other animations as we submit it
+  postimage.style.opacity = "1";
 });

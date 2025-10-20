@@ -15,3 +15,15 @@ Next I need to add google analytics tracking
 
 Added form so users can submit data.
 It is deployed on Vercel at [this link](https://blurbifysite.vercel.app/)
+
+### Oct 20
+
+Added post image functionality
+Also line 514
+
+in the img#postimage thats where animations for when the image shows up can be set
+Options
+
+- make it drop down
+- make it blur in
+- Many more

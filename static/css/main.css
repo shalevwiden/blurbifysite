@@ -623,14 +623,10 @@ body .sitecontainer .blurbifydiv section#imagesection {
 }
 body .sitecontainer .blurbifydiv section#imagesection img#postimage {
   width: 100%;
-  height: auto;
+  height: 0;
   border-radius: 30px;
   opacity: 0;
-  transition: opacity 0.4s ease;
-}
-body .sitecontainer .blurbifydiv section#imagesection .imagehidden {
-  opacity: 0;
-  display: none;
+  transition: opacity 4s ease;
 }
 body .sitecontainer .blurbifydiv section#imagesection video#postvid {
   width: 100%;

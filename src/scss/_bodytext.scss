@@ -504,15 +504,14 @@ body {
         img#postimage {
           width: 100%;
           // height scales nice
-          height: auto;
+          height: 0;
           border-radius: 30px;
-          opacity: 0;
-          transition: opacity 0.4s ease;
-        }
-        .imagehidden {
+          // starts opacity 0
+          // added to 1 in the JS
           opacity: 0;
 
-          display: none;
+          // set this to set the timing on the animation
+          transition: opacity 4s ease;
         }
         video#postvid {
           width: 100%;
