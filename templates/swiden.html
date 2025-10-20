@@ -53,6 +53,33 @@
     />
   </head>
   <body>
+    <style>
+      /* this is just the image styling */
+      .pfpdiv img {
+        width: 206px !important;
+        margin-right: 10px !important;
+        margin-top: 5px !important;
+        /*  */
+      }
+      @media (max-width: 400px) {
+        .pfpdiv {
+          width: 70px !important;
+          aspect-ratio: 1 / 1 !important;
+          border: 0px solid black !important;
+          border-radius: 50% !important;
+
+          overflow: hidden !important;
+          z-index: 1 !important;
+          flex-shrink: 0 !important;
+        }
+        .pfpdiv img#pfpimage {
+          margin-bottom: 10px !important;
+          width: 172% !important; /* scale image to parent width */
+          margin-right: 7px !important;
+          margin-top: 11px !important;
+        }
+      }
+    </style>
     <div class="sitecontainer">
       <h1 id="heading">Blurbify</h1>
       <!-- inputs to change whats in the blurb -->
@@ -149,12 +176,7 @@
       <div class="blurbifydiv">
         <div id="pfp_and_username">
           <div class="pfpdiv" id="pfpid">
-            <img
-              src="../images/pfpoct.png"
-              alt="pfp gone"
-              id="pfpimage"
-              style="width: 206px; margin-right: 10px; margin-top: 5px"
-            />
+            <img src="../images/pfpoct.png" alt="pfp gone" id="pfpimage" />
             <!-- turns out I can use inline styling for different templates lets go lmaoooo 
             above is good for the linkedin pfp 
             -->

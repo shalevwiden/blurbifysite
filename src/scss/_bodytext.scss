@@ -400,6 +400,7 @@ body {
           img {
             margin-bottom: 10px;
             width: 135%; /* scale image to parent width */
+            height: auto;
 
             @if $personal {
               width: 135%;
@@ -603,7 +604,7 @@ body {
           gap: 1px;
 
           .pfpdiv {
-            width: 70px;
+            width: 90px;
             aspect-ratio: 1 / 1;
             border: 0px solid black;
             border-radius: 50%;
@@ -615,7 +616,6 @@ body {
             img {
               margin-bottom: 10px;
               width: 135%; /* scale image to parent width */
-              aspect-ratio: 1 / 1;
             }
           }
           .usernamediv {
@@ -770,7 +770,6 @@ body {
             img {
               margin-bottom: 10px;
               width: 135%; /* scale image to parent width */
-              aspect-ratio: 1 / 1;
             }
           }
           .usernamediv {

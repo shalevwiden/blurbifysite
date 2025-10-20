@@ -544,6 +544,7 @@ body .sitecontainer .blurbifydiv div#pfp_and_username .pfpdiv {
 body .sitecontainer .blurbifydiv div#pfp_and_username .pfpdiv img {
   margin-bottom: 10px;
   width: 135%; /* scale image to parent width */
+  height: auto;
   width: 120%;
   height: auto;
   margin-bottom: 0;
@@ -708,7 +709,7 @@ body .sitecontainer .blurbifydiv div.iconsdiv .righticons {
     gap: 1px;
   }
   body .sitecontainer .blurbifydiv div#pfp_and_username .pfpdiv {
-    width: 70px;
+    width: 90px;
     aspect-ratio: 1/1;
     border: 0px solid black;
     border-radius: 50%;
@@ -724,7 +725,6 @@ body .sitecontainer .blurbifydiv div.iconsdiv .righticons {
   body .sitecontainer .blurbifydiv div#pfp_and_username .pfpdiv img {
     margin-bottom: 10px;
     width: 135%; /* scale image to parent width */
-    aspect-ratio: 1/1;
   }
   body .sitecontainer .blurbifydiv div#pfp_and_username .usernamediv {
     height: 100%;
@@ -859,7 +859,6 @@ body .sitecontainer .blurbifydiv div.iconsdiv .righticons {
   body .sitecontainer .blurbifydiv div#pfp_and_username .pfpdiv img {
     margin-bottom: 10px;
     width: 135%; /* scale image to parent width */
-    aspect-ratio: 1/1;
   }
   body .sitecontainer .blurbifydiv div#pfp_and_username .usernamediv {
     height: 100%;
