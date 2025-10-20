@@ -190,6 +190,7 @@ submitBtn.addEventListener("click", () => {
   // untoggle this (just remove the if) to have the alt show up
   if (postimagesrcexists) {
     postimage.src = postimagepreview.src;
+    // make it visible
     postimage.style.height = "auto";
 
     // it should fade in
