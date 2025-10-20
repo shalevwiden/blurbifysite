@@ -5,7 +5,7 @@
 }
 
 :root {
-  --flyingy: -1550px;
+  --flyingy: -1340px;
   --flyingymobile: -2190px;
 }
 
@@ -106,8 +106,7 @@
 }
 
 .flying_class {
-  display: block;
-  visibility: visible !important;
+  display: block !important;
   animation: flyingobject 5s normal linear infinite;
 }
 @media (max-width: 400px) {
@@ -177,6 +176,7 @@ body {
   width: 80%;
   text-decoration: none;
   color: navy;
+  margin-top: 200px;
 }
 .sitecontainer a#makeblurb .linkdiv {
   width: 100%;

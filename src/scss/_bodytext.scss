@@ -460,7 +460,7 @@ body {
       }
       div.textcontent {
         padding: 30px;
-        padding-left: $usernamegap + $pfp_size + 4px;
+        padding-left: $usernamegap + $pfp_size + 6px;
 
         margin-top: -79px;
         font-size: 28px;
@@ -489,10 +489,12 @@ body {
         width: 80%;
         height: auto;
 
+        margin-top: 6px;
+
         img#tweetimage {
           width: 100%;
           height: auto;
-          border-radius: 25px;
+          border-radius: 30px;
         }
         video#tweetvid {
           width: 100%;

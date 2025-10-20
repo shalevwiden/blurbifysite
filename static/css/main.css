@@ -585,7 +585,7 @@ body .sitecontainer .blurbifydiv div#pfp_and_username .usernamediv div.align_the
 }
 body .sitecontainer .blurbifydiv div.textcontent {
   padding: 30px;
-  padding-left: 120px;
+  padding-left: 122px;
   margin-top: -79px;
   font-size: 28px;
   padding-bottom: 0px;
@@ -603,11 +603,12 @@ body .sitecontainer .blurbifydiv section#imagesection {
   border-radius: 26px;
   width: 80%;
   height: auto;
+  margin-top: 6px;
 }
 body .sitecontainer .blurbifydiv section#imagesection img#tweetimage {
   width: 100%;
   height: auto;
-  border-radius: 25px;
+  border-radius: 30px;
 }
 body .sitecontainer .blurbifydiv section#imagesection video#tweetvid {
   width: 100%;
