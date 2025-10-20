@@ -93,14 +93,37 @@
               <span class="slider round"></span>
             </label>
           </li>
-          <li id="imageli">
+          <li class="imageli" id="pfp_li">
             <p>Add a pfp to the Blurb</p>
 
             <!-- the label for file uploads -->
             <label class="file-label" for="imageInput">Choose Image</label>
             <!-- client side uploading only -->
 
-            <input type="file" id="imageInput" accept="image/*" />
+            <input type="file" id="pfpInput" accept="image/*" />
+            <img id="preview" />
+          </li>
+          <li>
+            <p>Add an image to the post?</p>
+            <label class="switch" for="postimage_checkbox">
+              <input
+                type="checkbox"
+                name="icons"
+                id="postimage_checkbox"
+                checked
+              />
+              <span class="slider round"></span>
+            </label>
+          </li>
+
+          <li class="imageli" id="post_image_li">
+            <p>Upload Post Image</p>
+
+            <!-- the label for file uploads -->
+            <label class="file-label" for="imageInput">Choose Image</label>
+            <!-- client side uploading only -->
+
+            <input type="file" id="pfpInput" accept="image/*" />
             <img id="preview" />
           </li>
         </ul>

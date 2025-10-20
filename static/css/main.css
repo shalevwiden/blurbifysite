@@ -375,13 +375,13 @@ body .sitecontainer div.inputdiv #input_ul li .checkbox-container .checkbox-labe
   font-weight: 500;
   font-size: 30px;
 }
-body .sitecontainer div.inputdiv #input_ul li#imageli {
+body .sitecontainer div.inputdiv #input_ul li.imageli {
   /* Custom styled button to trigger file input */
 }
-body .sitecontainer div.inputdiv #input_ul li#imageli input[type=file] {
+body .sitecontainer div.inputdiv #input_ul li.imageli input[type=file] {
   display: none;
 }
-body .sitecontainer div.inputdiv #input_ul li#imageli .file-label {
+body .sitecontainer div.inputdiv #input_ul li.imageli .file-label {
   display: inline-block;
   padding: 14px 18px;
   font-size: 18px;
@@ -394,14 +394,14 @@ body .sitecontainer div.inputdiv #input_ul li#imageli .file-label {
   cursor: pointer;
   transition: all 0.25s ease;
 }
-body .sitecontainer div.inputdiv #input_ul li#imageli .file-label:hover {
+body .sitecontainer div.inputdiv #input_ul li.imageli .file-label:hover {
   border-color: rgba(60, 100, 220, 0.6);
   background-color: #ffffff;
 }
-body .sitecontainer div.inputdiv #input_ul li#imageli .file-label:active {
+body .sitecontainer div.inputdiv #input_ul li.imageli .file-label:active {
   background-color: #e0e6f0;
 }
-body .sitecontainer div.inputdiv #input_ul li#imageli #preview {
+body .sitecontainer div.inputdiv #input_ul li.imageli #preview {
   margin-top: 10px;
   width: 50%;
   height: auto;

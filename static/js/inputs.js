@@ -78,11 +78,11 @@ change_icons();
 // now handle the image input stuff
 // its the last one in the form
 
-const imageInput = document.getElementById("imageInput");
+const pfpInput = document.getElementById("pfpInput");
 const preview = document.getElementById("preview");
 
-imageInput.addEventListener("change", () => {
-  const file = imageInput.files[0]; // get the first selected file
+pfpInput.addEventListener("change", () => {
+  const file = pfpInput.files[0]; // get the first selected file
   if (!file) return;
 
   const reader = new FileReader();
