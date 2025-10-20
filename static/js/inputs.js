@@ -96,6 +96,26 @@ pfpInput.addEventListener("change", () => {
   reader.readAsDataURL(file); // reads file as Base64
 });
 
+// now handle the toggle for an image or not
+
+const postimageToggle = document.getElementById("postimage_checkbox");
+let post_image_li = document.querySelector("#post_image_li");
+
+function toggle_imageselecting() {
+  console.log("Trying to toggle icons");
+  postimageToggle.addEventListener("change", () => {
+    if (postimageToggle.checked) {
+      post_image_li.classList.remove("post_image_li-hidden");
+      post_image_li.classList.add("post_image_li-visible");
+    } else {
+      post_image_li.classList.remove("post_image_li-visible");
+      post_image_li.classList.add("post_image_li-hidden");
+    }
+  });
+}
+
+toggle_imageselecting();
+
 const postimageInput = document.getElementById("postimageInput");
 const postimagepreview = document.getElementById("post_image_preview");
 
@@ -113,11 +133,23 @@ postimageInput.addEventListener("change", () => {
   reader.readAsDataURL(file); // reads file as Base64
 });
 
+// now handle submit logic for pfp and post images
+
 submitBtn.addEventListener("click", () => {
   const pfpimage = blurb.querySelector("#pfpimage");
   // just take the src from preview
-  pfpimage.src = pfppreview.src;
+  if (path.endsWith("swiden.html") || path.endsWith("swiden")) {
+    // now the default pfp for my template should be my pfp
+    if (pfppreview) {
+      pfpimage.src = pfppreview.src;
+    } else {
+      pfpimage.src = "../images/pfp.png";
+    }
+  } else {
+    // pass for now
+  }
   const postimage = blurb.querySelector("#postimage");
   // just take the src from preview
   postimage.src = postimagepreview.src;
+  postimage.style.display = "inline";
 });

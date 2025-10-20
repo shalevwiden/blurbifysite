@@ -9,3 +9,14 @@
   visibility: visible;
   height: auto;
 }
+// hide post image li
+
+.post_image_li-hidden {
+  visibility: hidden;
+  height: 0px !important;
+}
+
+.post_image_li-visible {
+  visibility: visible;
+  height: auto;
+}

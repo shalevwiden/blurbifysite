@@ -185,6 +185,16 @@ input:checked + .slider::before {
   height: auto;
 }
 
+.post_image_li-hidden {
+  visibility: hidden;
+  height: 0px !important;
+}
+
+.post_image_li-visible {
+  visibility: visible;
+  height: auto;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -392,7 +402,7 @@ body .sitecontainer div.inputdiv #input_ul li.imageli .file-label {
   border: 2px solid rgba(100, 110, 130, 0.4);
   border-radius: 12px;
   cursor: pointer;
-  transition: all 0.25s ease;
+  transition: border-color 0.25s ease, background-color 0.25s ease;
 }
 body .sitecontainer div.inputdiv #input_ul li.imageli .file-label:hover {
   border-color: rgba(60, 100, 220, 0.6);
@@ -533,8 +543,9 @@ body .sitecontainer .blurbifydiv div#pfp_and_username .pfpdiv {
 body .sitecontainer .blurbifydiv div#pfp_and_username .pfpdiv img {
   margin-bottom: 10px;
   width: 135%; /* scale image to parent width */
-  width: 135%;
-  aspect-ratio: 1/1;
+  width: 120%;
+  height: auto;
+  margin-bottom: 0;
 }
 body .sitecontainer .blurbifydiv div#pfp_and_username .usernamediv {
   height: 100%;
@@ -614,6 +625,12 @@ body .sitecontainer .blurbifydiv section#imagesection img#postimage {
   width: 100%;
   height: auto;
   border-radius: 30px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+body .sitecontainer .blurbifydiv section#imagesection .imagehidden {
+  opacity: 0;
+  display: none;
 }
 body .sitecontainer .blurbifydiv section#imagesection video#postvid {
   width: 100%;
