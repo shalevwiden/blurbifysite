@@ -77,6 +77,7 @@ change_icons();
 
 // now handle the image input stuff
 // its the last one in the form
+// now dealing with all the image stuff right here
 
 const pfpInput = document.getElementById("pfpInput");
 const pfppreview = document.getElementById("pfp_preview");
@@ -89,17 +90,16 @@ pfpInput.addEventListener("change", () => {
 
   // when file is read, show preview
   reader.onload = (e) => {
-    preview.src = e.target.result; // this is a base64 data URL
-    preview.display = None;
+    pfppreview.src = e.target.result; // this is a base64 data URL
   };
 
   reader.readAsDataURL(file); // reads file as Base64
 });
 
-const postimageInput = document.getElementById("pfpInput");
+const postimageInput = document.getElementById("postimageInput");
 const postimagepreview = document.getElementById("post_image_preview");
 
-pfpInput.addEventListener("change", () => {
+postimageInput.addEventListener("change", () => {
   const file = pfpInput.files[0]; // get the first selected file
   if (!file) return;
 
@@ -107,8 +107,7 @@ pfpInput.addEventListener("change", () => {
 
   // when file is read, show preview
   reader.onload = (e) => {
-    preview.src = e.target.result; // this is a base64 data URL
-    preview.display = None;
+    postimagepreview.src = e.target.result; // this is a base64 data URL
   };
 
   reader.readAsDataURL(file); // reads file as Base64
@@ -117,5 +116,8 @@ pfpInput.addEventListener("change", () => {
 submitBtn.addEventListener("click", () => {
   const pfpimage = blurb.querySelector("#pfpimage");
   // just take the src from preview
-  pfpimage.src = preview.src;
+  pfpimage.src = pfppreview.src;
+  const postimage = blurb.querySelector("#postimage");
+  // just take the src from preview
+  postimage.src = postimagepreview.src;
 });

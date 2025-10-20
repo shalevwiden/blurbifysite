@@ -229,12 +229,19 @@ body {
             }
           }
 
+          #pfp_preview {
+            margin-top: 10px;
+
+            width: 25%;
+            height: auto;
+            border-radius: 35px;
+          }
           #post_image_preview {
             margin-top: 10px;
 
             width: 50%;
             height: auto;
-            border-radius: 15px;
+            border-radius: 20px;
           }
         }
       }
@@ -492,7 +499,7 @@ body {
 
         margin-top: 6px;
 
-        img#tweetimage {
+        img#postimage {
           width: 100%;
           height: auto;
           border-radius: 30px;
@@ -690,7 +697,7 @@ body {
           width: 100%;
           height: auto;
 
-          img#tweetimage {
+          img#postimage {
             width: 100%;
             height: auto;
             border-radius: 25px;
