@@ -172,16 +172,16 @@ body {
     font-size: 60px;
   }
 }
-.sitecontainer a#makeblurb {
+.sitecontainer a.indexbutton {
   width: 80%;
   text-decoration: none;
   color: navy;
-  margin-top: 200px;
+  margin-top: 100px;
+  margin-bottom: 26px;
 }
-.sitecontainer a#makeblurb .linkdiv {
+.sitecontainer a.indexbutton .linkdiv {
   width: 100%;
   height: 300px;
-  margin-top: 200px;
   padding: 30px;
   display: flex;
   flex-direction: column;
@@ -194,17 +194,17 @@ body {
   font-size: 40px;
   background-color: #7daef8;
 }
-.sitecontainer a#makeblurb .linkdiv:hover {
+.sitecontainer a.indexbutton .linkdiv:hover {
   background-color: rgb(248, 67, 67);
   color: white;
   border: 6px solid #d50303;
 }
 @media (max-width: 400px) {
-  .sitecontainer a#makeblurb {
+  .sitecontainer a.indexbutton {
     width: 70%;
   }
-  .sitecontainer a#makeblurb .linkdiv {
-    height: 200px;
+  .sitecontainer a.indexbutton .linkdiv {
+    height: 100px;
     margin-top: 150px;
     font-size: 30px;
   }
