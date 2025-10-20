@@ -59,6 +59,11 @@ function countUp(element, target, duration = 2000) {
   requestAnimationFrame(update);
 }
 
+// if its true set the views in the html
+
+const views = document.querySelector("#count");
+const originalviews = views.innerText;
+
 function getViews(views) {
   if (!views) return 0;
 
@@ -70,19 +75,22 @@ function getViews(views) {
   year = date.getFullYear().toString().slice(1);
 
   // combine and format
-  const formatted = `${month},${day}2,${year}`;
+  const output = `${month},${day}2,${year}`;
 
-  views.innerText = formatted;
-  const viewcount = parseInt(views.textContent.replace(/,/g, ""));
+  // this should set it
+  views.innerText = output;
+
+  manualviews = false;
+
+  if (manualviews) {
+    views.innerText = originalviews;
+  }
+
+  viewcount = output;
   return viewcount;
+  //
 }
 const viewcount = getViews(views);
-
-// if its true set the views in the html
-manualviews = false;
-if (manualviews) {
-  const views = document.querySelector("#count");
-}
 
 // starting up the animation will do a viewcount animation
 // add "yes this is what I do instead of sleeping..."
