@@ -167,8 +167,9 @@ submitBtn.addEventListener("click", () => {
       console.log("on swiden but not setting default");
       pfpimage.src = pfppreview.src;
     } else {
+      // this is where you set it lmao
       console.log("on swiden setting default pfp");
-      pfpimage.src = "../images/pfp1.png";
+      pfpimage.src = "../images/pfpoct.png";
     }
   } else {
     // pass for now - this is for other templates not swiden
