@@ -85,8 +85,8 @@ function getViews(views) {
   if (manualviews) {
     views.innerText = originalviews;
   }
+  let viewcount = parseInt(output.replace(/,/g, ""), 10);
 
-  viewcount = output;
   return viewcount;
   //
 }
