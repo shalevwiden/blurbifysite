@@ -401,11 +401,17 @@ body .sitecontainer div.inputdiv #input_ul li.imageli .file-label:hover {
 body .sitecontainer div.inputdiv #input_ul li.imageli .file-label:active {
   background-color: #e0e6f0;
 }
-body .sitecontainer div.inputdiv #input_ul li.imageli #preview {
+body .sitecontainer div.inputdiv #input_ul li.imageli #pfp_preview {
+  margin-top: 10px;
+  width: 25%;
+  height: auto;
+  border-radius: 35px;
+}
+body .sitecontainer div.inputdiv #input_ul li.imageli #post_image_preview {
   margin-top: 10px;
   width: 50%;
   height: auto;
-  border-radius: 15px;
+  border-radius: 20px;
 }
 body .sitecontainer div.inputdiv #submitBtn {
   width: 250px;
@@ -527,9 +533,8 @@ body .sitecontainer .blurbifydiv div#pfp_and_username .pfpdiv {
 body .sitecontainer .blurbifydiv div#pfp_and_username .pfpdiv img {
   margin-bottom: 10px;
   width: 135%; /* scale image to parent width */
-  width: 120%;
-  height: auto;
-  margin-bottom: 0;
+  width: 135%;
+  aspect-ratio: 1/1;
 }
 body .sitecontainer .blurbifydiv div#pfp_and_username .usernamediv {
   height: 100%;
@@ -605,12 +610,12 @@ body .sitecontainer .blurbifydiv section#imagesection {
   height: auto;
   margin-top: 6px;
 }
-body .sitecontainer .blurbifydiv section#imagesection img#tweetimage {
+body .sitecontainer .blurbifydiv section#imagesection img#postimage {
   width: 100%;
   height: auto;
   border-radius: 30px;
 }
-body .sitecontainer .blurbifydiv section#imagesection video#tweetvid {
+body .sitecontainer .blurbifydiv section#imagesection video#postvid {
   width: 100%;
   height: auto;
   border-radius: 20px;
@@ -779,7 +784,7 @@ body .sitecontainer .blurbifydiv div.iconsdiv .righticons {
     width: 100%;
     height: auto;
   }
-  body .sitecontainer .blurbifydiv section#imagesection img#tweetimage {
+  body .sitecontainer .blurbifydiv section#imagesection img#postimage {
     width: 100%;
     height: auto;
     border-radius: 25px;

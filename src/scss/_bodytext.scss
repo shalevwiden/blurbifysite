@@ -236,6 +236,7 @@ body {
             height: auto;
             border-radius: 35px;
           }
+
           #post_image_preview {
             margin-top: 10px;
 
@@ -494,6 +495,7 @@ body {
         }
         // @include border(rgb(74, 192, 228));
 
+        // this sets the actual width, post width
         width: 80%;
         height: auto;
 
@@ -501,10 +503,11 @@ body {
 
         img#postimage {
           width: 100%;
+          // height scales nice
           height: auto;
           border-radius: 30px;
         }
-        video#tweetvid {
+        video#postvid {
           width: 100%;
           height: auto;
           border-radius: 20px;
