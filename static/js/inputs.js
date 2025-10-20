@@ -79,7 +79,7 @@ change_icons();
 // its the last one in the form
 
 const pfpInput = document.getElementById("pfpInput");
-const preview = document.getElementById("preview");
+const pfppreview = document.getElementById("pfp_preview");
 
 pfpInput.addEventListener("change", () => {
   const file = pfpInput.files[0]; // get the first selected file
@@ -90,6 +90,25 @@ pfpInput.addEventListener("change", () => {
   // when file is read, show preview
   reader.onload = (e) => {
     preview.src = e.target.result; // this is a base64 data URL
+    preview.display = None;
+  };
+
+  reader.readAsDataURL(file); // reads file as Base64
+});
+
+const postimageInput = document.getElementById("pfpInput");
+const postimagepreview = document.getElementById("post_image_preview");
+
+pfpInput.addEventListener("change", () => {
+  const file = pfpInput.files[0]; // get the first selected file
+  if (!file) return;
+
+  const reader = new FileReader();
+
+  // when file is read, show preview
+  reader.onload = (e) => {
+    preview.src = e.target.result; // this is a base64 data URL
+    preview.display = None;
   };
 
   reader.readAsDataURL(file); // reads file as Base64
