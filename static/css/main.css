@@ -501,7 +501,7 @@ body .sitecontainer .blurbifydiv {
   height: auto;
   padding: 30px;
   padding-bottom: 10px;
-  border: var(--border-thickness) solid #bf5700;
+  border: var(--border-thickness) solid #0f62df;
   border-radius: 30px;
   width: 900px;
   background-color: white;
@@ -692,7 +692,7 @@ body .sitecontainer .blurbifydiv div.iconsdiv .righticons {
 @media (max-width: 1050px) {
   body .sitecontainer .blurbifydiv {
     width: 90%;
-    border: 3px solid #bf5700;
+    border: 3px solid #0f62df;
   }
   body .sitecontainer .blurbifydiv div#pfp_and_username {
     display: flex;
@@ -825,7 +825,7 @@ body .sitecontainer .blurbifydiv div.iconsdiv .righticons {
 @media (max-width: 400px) {
   body .sitecontainer .blurbifydiv {
     width: 90%;
-    border: 3px solid #bf5700;
+    border: 3px solid #0f62df;
     padding: 18px;
     padding-left: 15px;
   }
