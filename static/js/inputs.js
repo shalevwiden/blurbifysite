@@ -148,12 +148,19 @@ submitBtn.addEventListener("click", () => {
   // just take the src from preview
   const path = window.location.pathname;
 
+  srcexists =
+    pfppreview.src &&
+    pfppreview.src.trim() !== "" &&
+    !pfppreview.src.endsWith("/");
+
   if (path.endsWith("swiden.html") || path.endsWith("swiden")) {
     // now the default pfp for my template should be my pfp
-    if (pfppreview) {
+    if (srcexists) {
+      console.log("on swiden but not setting default");
       pfpimage.src = pfppreview.src;
     } else {
-      pfpimage.src = "../images/pfp.png";
+      console.log("on swiden setting default pfp");
+      pfpimage.src = "../images/pfp1.png";
     }
   } else {
     // pass for now - this is for other templates not swiden
