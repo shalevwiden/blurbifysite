@@ -6,7 +6,7 @@
 
 $bodybg: #eee;
 $tweetbackgroundcolor: #ffffffff;
-$tweet_border_color: #160a82ff;
+$tweet_border_color: #bf5700;
 $usernamegap: 16px;
 $pfp_size: 100px;
 $blurbify_width: 900px;
@@ -22,7 +22,7 @@ $personal: false;
   margin: 0;
 }
 :root {
-  --border-thickness: 9px;
+  --border-thickness: 8px;
 }
 body {
   @include bodyStyling;
@@ -513,7 +513,7 @@ body {
           opacity: 0;
 
           // set this to set the timing on the animation
-          transition: opacity 4s ease;
+          transition: opacity 2s ease;
         }
         video#postvid {
           width: 100%;

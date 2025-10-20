@@ -59,8 +59,6 @@ function countUp(element, target, duration = 2000) {
   requestAnimationFrame(update);
 }
 
-const views = document.querySelector("#count");
-
 function getViews(views) {
   if (!views) return 0;
 
@@ -79,6 +77,12 @@ function getViews(views) {
   return viewcount;
 }
 const viewcount = getViews(views);
+
+// if its true set the views in the html
+manualviews = true;
+if (manualviews) {
+  const views = document.querySelector("#count");
+}
 
 // starting up the animation will do a viewcount animation
 // add "yes this is what I do instead of sleeping..."

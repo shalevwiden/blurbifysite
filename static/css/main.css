@@ -202,7 +202,7 @@ input:checked + .slider::before {
 }
 
 :root {
-  --border-thickness: 9px;
+  --border-thickness: 8px;
 }
 
 body {
@@ -501,7 +501,7 @@ body .sitecontainer .blurbifydiv {
   height: auto;
   padding: 30px;
   padding-bottom: 10px;
-  border: var(--border-thickness) solid #160a82;
+  border: var(--border-thickness) solid #bf5700;
   border-radius: 30px;
   width: 900px;
   background-color: white;
@@ -692,7 +692,7 @@ body .sitecontainer .blurbifydiv div.iconsdiv .righticons {
 @media (max-width: 1050px) {
   body .sitecontainer .blurbifydiv {
     width: 90%;
-    border: 3px solid #160a82;
+    border: 3px solid #bf5700;
   }
   body .sitecontainer .blurbifydiv div#pfp_and_username {
     display: flex;
@@ -802,7 +802,6 @@ body .sitecontainer .blurbifydiv div.iconsdiv .righticons {
     width: 100%;
     height: auto;
     border-radius: 25px;
-    border: 3px solid green;
   }
   body .sitecontainer .blurbifydiv section#imagesection video#tweetvid {
     width: 100%;
@@ -826,7 +825,7 @@ body .sitecontainer .blurbifydiv div.iconsdiv .righticons {
 @media (max-width: 400px) {
   body .sitecontainer .blurbifydiv {
     width: 90%;
-    border: 3px solid #160a82;
+    border: 3px solid #bf5700;
     padding: 18px;
     padding-left: 15px;
   }

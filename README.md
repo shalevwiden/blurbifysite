@@ -27,3 +27,5 @@ Options
 - make it drop down
 - make it blur in
 - Many more
+
+Added view count setting
