@@ -550,7 +550,7 @@ body .sitecontainer .blurbifydiv div#pfp_and_username .pfpdiv img {
 }
 body .sitecontainer .blurbifydiv div#pfp_and_username .usernamediv {
   height: 100%;
-  width: 400px;
+  width: auto;
   border: 4px solid transparent;
   border-radius: 26px;
   display: flex;
@@ -576,8 +576,8 @@ body .sitecontainer .blurbifydiv div#pfp_and_username .usernamediv div.align_the
   height: 40%;
   padding: 0 4px;
   padding-left: 10px;
-  -moz-column-gap: 16px;
-       column-gap: 16px;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
 }
 body .sitecontainer .blurbifydiv div#pfp_and_username .usernamediv div.align_them_div #name {
   font-weight: bold;
@@ -602,7 +602,7 @@ body .sitecontainer .blurbifydiv div#pfp_and_username .usernamediv div.align_the
 }
 body .sitecontainer .blurbifydiv div.textcontent {
   padding: 30px;
-  padding-left: 122px;
+  padding-left: 116px;
   margin-top: -79px;
   font-size: 28px;
   padding-bottom: 0px;
@@ -615,7 +615,7 @@ body .sitecontainer .blurbifydiv div.textcontent .bottom {
 }
 body .sitecontainer .blurbifydiv section#imagesection {
   padding: 10px;
-  margin-left: 111px;
+  margin-left: 105px;
   border: 4px solid transparent;
   border-radius: 26px;
   width: 80%;
@@ -627,7 +627,7 @@ body .sitecontainer .blurbifydiv section#imagesection img#postimage {
   height: 0;
   border-radius: 30px;
   opacity: 0;
-  transition: opacity 4s ease;
+  transition: opacity 2s ease;
 }
 body .sitecontainer .blurbifydiv section#imagesection video#postvid {
   width: 100%;
@@ -645,7 +645,7 @@ body .sitecontainer .blurbifydiv div.iconsdiv {
   justify-content: space-between;
   margin-top: 15px;
   height: 50px;
-  margin-left: 126px;
+  margin-left: 120px;
 }
 body .sitecontainer .blurbifydiv div.iconsdiv .fa-heart {
   color: #f10000;
@@ -819,7 +819,7 @@ body .sitecontainer .blurbifydiv div.iconsdiv .righticons {
     justify-content: space-between;
     margin-top: 15px;
     height: 50px;
-    margin-left: 126px;
+    margin-left: 120px;
   }
 }
 @media (max-width: 400px) {

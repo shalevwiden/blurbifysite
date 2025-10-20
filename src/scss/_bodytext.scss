@@ -6,8 +6,8 @@
 
 $bodybg: #eee;
 $tweetbackgroundcolor: #ffffffff;
-$tweet_border_color: #bf5700;
-$usernamegap: 16px;
+$tweet_border_color: #0f62dfff;
+$usernamegap: 10px;
 $pfp_size: 100px;
 $blurbify_width: 900px;
 
@@ -414,7 +414,7 @@ body {
         }
         .usernamediv {
           height: 100%;
-          width: 400px;
+          width: auto;
 
           @if $debugborders {
             @include border(#f02c7eff);

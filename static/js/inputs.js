@@ -11,7 +11,9 @@ submitBtn.addEventListener("click", () => {
   // make display none on the verified icon if the user selects no for the verification
 
   const verifiedinput = document.getElementById("verifiedInput").checked;
-  const usernameinput = document.getElementById("usernameInput").value;
+  const usernameinput = document
+    .getElementById("usernameInput")
+    .value.toLowerCase();
   let contentinput = document.getElementById("contentInput").value;
 
   //   now get the blurb variables

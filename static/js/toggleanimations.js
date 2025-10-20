@@ -79,7 +79,7 @@ function getViews(views) {
 const viewcount = getViews(views);
 
 // if its true set the views in the html
-manualviews = true;
+manualviews = false;
 if (manualviews) {
   const views = document.querySelector("#count");
 }
