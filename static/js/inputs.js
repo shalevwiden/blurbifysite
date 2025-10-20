@@ -148,14 +148,20 @@ submitBtn.addEventListener("click", () => {
   // just take the src from preview
   const path = window.location.pathname;
 
-  srcexists =
+  pfpsrcexists =
     pfppreview.src &&
     pfppreview.src.trim() !== "" &&
     !pfppreview.src.endsWith("/");
 
+  postimagesrcexists =
+    postimagepreview.src &&
+    postimagepreview.src.trim() !== "" &&
+    !postimagepreview.src.endsWith("/");
+
+  //
   if (path.endsWith("swiden.html") || path.endsWith("swiden")) {
     // now the default pfp for my template should be my pfp
-    if (srcexists) {
+    if (pfpsrcexists) {
       console.log("on swiden but not setting default");
       pfpimage.src = pfppreview.src;
     } else {
@@ -164,18 +170,28 @@ submitBtn.addEventListener("click", () => {
     }
   } else {
     // pass for now - this is for other templates not swiden
-    if (pfppreview) {
+    if (pfpsrcexists) {
+      console.log("setting src to user pfp");
+
       pfpimage.src = pfppreview.src;
     } else {
-      pfpimage.style.visibility = "hidden";
+      // pfpimage.style.visibility = "hidden";
+      // the default one that people don't have
+      console.log("setting default grey pfp");
+      pfpimage.src = "../images/nopfp.webp";
     }
   }
   postimage = blurb.querySelector("#postimage");
   // just take the src from preview
-  postimage.src = postimagepreview.src;
-  postimage.style.height = "auto";
 
-  // it should fade in
-  // using this same logic I can add other animations as we submit it
-  postimage.style.opacity = "1";
+  // now opacity only becomes 1 if the src exists
+  // untoggle this (just remove the if) to have the alt show up
+  if (postimagesrcexists) {
+    postimage.src = postimagepreview.src;
+    postimage.style.height = "auto";
+
+    // it should fade in
+    // using this same logic I can add other animations as we submit it
+    postimage.style.opacity = "1";
+  }
 });

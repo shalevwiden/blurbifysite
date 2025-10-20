@@ -478,6 +478,7 @@ body .sitecontainer div.pointerdiv {
   justify-content: flex-start;
   border: 1px solid transparent;
   width: 100%;
+  margin-bottom: 50px;
 }
 body .sitecontainer div.pointerdiv h2#blurbpointer {
   font-size: 50px;
