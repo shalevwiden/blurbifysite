@@ -14,9 +14,11 @@
 .post_image_li-hidden {
   visibility: hidden;
   height: 0px !important;
+  padding: 0px !important;
 }
 
 .post_image_li-visible {
   visibility: visible;
   height: auto;
+  padding: 10px;
 }
