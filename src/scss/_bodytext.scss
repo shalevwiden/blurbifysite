@@ -422,6 +422,9 @@ body {
       // hide for now
       display: none;
     }
+    .specsdiv#color_specs {
+      margin-bottom: 6px;
+    }
     div.pointerdiv {
       @include flexrow;
       height: auto;
@@ -436,7 +439,7 @@ body {
 
       width: 100%;
       // distance above the BLurb
-      margin-bottom: 250px;
+      margin-bottom: 10px;
 
       h2#blurbpointer {
         font-size: 50px;
@@ -471,243 +474,34 @@ body {
     }
 
     // now the styling for the Blurb, which is in Blurbify Div
-    .blurbifydiv {
+    div.blurbify_bg_div {
       height: auto;
+      width: 100%;
+      // this should add
+      padding: 250px 0px;
+      border: 5px solid pink;
+      // background is changed responsively in JavaScript
+      background-color: $bodybg;
+      @include flexcol;
 
-      padding: 30px;
-      padding-bottom: 10px;
-      border: var(--border-thickness) solid $tweet_border_color;
-      border-radius: 30px;
-
-      width: $blurbify_width;
-
-      background-color: $tweetbackgroundcolor;
-      margin-bottom: 200px;
-
-      .gradient_text {
-        background: linear-gradient(90deg, #ff0080, #7928ca, #2afadf);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-style: italic;
-      }
-
-      div#pfp_and_username {
-        @include flexrow;
-
-        align-items: flex-start;
-
-        @if $debugborders {
-          border: 3px solid rgb(20, 101, 20);
-        } @else {
-          border: 3px solid transparent;
-        }
-        justify-content: flex-start;
-        padding-right: 20px;
-        height: 100px;
-        gap: 1px;
-
-        .pfpdiv {
-          width: $pfp_size;
-          aspect-ratio: 1 / 1;
-          border: 0px solid black;
-          border-radius: 50%;
-
-          overflow: hidden;
-          z-index: 1;
-          flex-shrink: 0;
-
-          background-color: #c2d9ffff;
-          @include flexcol;
-          img {
-            margin-bottom: 10px;
-            width: 135%; /* scale image to parent width */
-            height: auto;
-
-            @if $personal {
-              width: 135%;
-              aspect-ratio: 1 / 1;
-            } @else {
-              width: 120%;
-              height: auto;
-              margin-bottom: 0;
-            }
-            // this worked for swiden
-          }
-        }
-        .usernamediv {
-          height: 100%;
-          width: auto;
-
-          @if $debugborders {
-            @include border(#f02c7eff);
-          } @else {
-            @include border(transparent);
-          }
-
-          @include flexrow;
-          justify-content: flex-start;
-
-          align-items: flex-start;
-
-          div.align_them_div {
-            margin-top: 5px;
-            @include flexrow;
-            justify-content: flex-start;
-
-            align-items: flex-end;
-
-            @if $debugborders {
-              @include border(pink);
-            } @else {
-              @include border(transparent);
-            }
-            width: 100%;
-            height: 40%;
-
-            padding: 0 4px;
-            padding-left: 10px;
-            column-gap: $usernamegap;
-
-            #name {
-              font-weight: bold;
-              font-size: 35px;
-              @include flexrow;
-              gap: 3px;
-
-              img#verified {
-                width: 27px;
-                aspect-ratio: 1 / 1;
-                // this is alright but not optimal
-                // vertical-align: middle;
-                position: relative;
-                top: 1px;
-              }
-            }
-            #username {
-              color: grey;
-              font-size: 28px;
-              margin-bottom: 4px;
-            }
-          }
-        }
-      }
-      div.textcontent {
-        padding: 30px;
-        padding-left: $usernamegap + $pfp_size + 6px;
-
-        margin-top: -79px;
-        font-size: 28px;
-        padding-bottom: 0px;
-        padding-top: 35px;
-        padding-right: 20px;
-
-        .bottom {
-          display: block;
-          margin-top: 200px;
-        }
-      }
-      section#imagesection {
-        padding: 10px;
-
-        margin-left: $usernamegap + $pfp_size - 5px;
-
-        // this uses my mixin and if else logic
-        @if $debugborders {
-          @include border(purple);
-        } @else {
-          @include border(transparent);
-        }
-        // @include border(rgb(74, 192, 228));
-
-        // this sets the actual width, post width
-        width: 80%;
+      .blurbifydiv {
         height: auto;
 
-        margin-top: 6px;
+        padding: 30px;
+        padding-bottom: 10px;
+        border: var(--border-thickness) solid $tweet_border_color;
+        border-radius: 30px;
 
-        img#postimage {
-          width: 100%;
-          // height scales nice
-          height: 0;
-          border-radius: 30px;
-          // starts opacity 0
-          // added to 1 in the JS
-          opacity: 0;
+        width: $blurbify_width;
 
-          // set this to set the timing on the animation
-          transition: opacity 2s ease;
-        }
-        video#postvid {
-          width: 100%;
-          height: auto;
-          border-radius: 20px;
-        }
-      }
-      div.iconsdiv {
-        @include flexrow;
-        @if $debugborders {
-          @include border(rgb(255, 0, 0));
-        } @else {
-          @include border(transparent);
-        }
-        justify-content: space-between;
+        background-color: $tweetbackgroundcolor;
 
-        margin-top: 15px;
-        // this is lowered with the hidden-icons class in hidestuff.scss
-        height: 50px;
-
-        margin-left: $usernamegap + $pfp_size + 10px;
-
-        @if $hideicons {
-          visibility: hidden;
-          height: 40px;
+        .gradient_text {
+          background: linear-gradient(90deg, #ff0080, #7928ca, #2afadf);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          font-style: italic;
         }
-
-        // now icon styling
-        .fa-heart {
-          color: #f10000ff;
-          font-size: 25px;
-        }
-        .fa-comment {
-          font-size: 25px;
-        }
-        .stats {
-          font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 0, "opsz" 24;
-          font-size: 34px;
-        }
-
-        .bookmark {
-          font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 40;
-          font-size: 40px;
-
-          margin-top: 4px;
-        }
-        .share {
-          font-variation-settings: "FILL" 0, "wght" 500, "GRAD" 0, "opsz" 20;
-          font-size: 40px;
-          margin-top: -1px;
-        }
-
-        .statsarea {
-          @include flexrow;
-          gap: 5px;
-
-          #count {
-            font-size: 17px;
-            margin-top: 5px;
-          }
-        }
-        // this is share and bookmark
-        .righticons {
-          @include flexrow;
-          gap: 3px;
-          margin-right: 30px;
-        }
-      }
-
-      @media (max-width: 1050px) {
-        width: 90%;
-        border: 3px solid $tweet_border_color;
 
         div#pfp_and_username {
           @include flexrow;
@@ -725,7 +519,7 @@ body {
           gap: 1px;
 
           .pfpdiv {
-            width: 90px;
+            width: $pfp_size;
             aspect-ratio: 1 / 1;
             border: 0px solid black;
             border-radius: 50%;
@@ -733,15 +527,28 @@ body {
             overflow: hidden;
             z-index: 1;
             flex-shrink: 0;
+
+            background-color: #c2d9ffff;
             @include flexcol;
             img {
               margin-bottom: 10px;
               width: 135%; /* scale image to parent width */
+              height: auto;
+
+              @if $personal {
+                width: 135%;
+                aspect-ratio: 1 / 1;
+              } @else {
+                width: 120%;
+                height: auto;
+                margin-bottom: 0;
+              }
+              // this worked for swiden
             }
           }
           .usernamediv {
             height: 100%;
-            width: 400px;
+            width: auto;
 
             @if $debugborders {
               @include border(#f02c7eff);
@@ -755,6 +562,7 @@ body {
             align-items: flex-start;
 
             div.align_them_div {
+              margin-top: 5px;
               @include flexrow;
               justify-content: flex-start;
 
@@ -769,18 +577,17 @@ body {
               height: 40%;
 
               padding: 0 4px;
-              // make these smaller if I need to
-              padding-left: 5px;
-              column-gap: 7px;
+              padding-left: 10px;
+              column-gap: $usernamegap;
 
               #name {
                 font-weight: bold;
-                font-size: 23px;
+                font-size: 35px;
                 @include flexrow;
                 gap: 3px;
 
                 img#verified {
-                  width: 21px;
+                  width: 27px;
                   aspect-ratio: 1 / 1;
                   // this is alright but not optimal
                   // vertical-align: middle;
@@ -790,21 +597,21 @@ body {
               }
               #username {
                 color: grey;
-                font-size: 19px;
-                margin-bottom: 2px;
+                font-size: 28px;
+                margin-bottom: 4px;
               }
             }
           }
         }
         div.textcontent {
-          // make text content to go to a new place
-          padding-left: 0px;
+          padding: 30px;
+          padding-left: $usernamegap + $pfp_size + 6px;
 
-          margin-top: -6px;
+          margin-top: -79px;
           font-size: 28px;
           padding-bottom: 0px;
-          padding-top: 0px;
-          padding-right: 0px;
+          padding-top: 35px;
+          padding-right: 20px;
 
           .bottom {
             display: block;
@@ -812,10 +619,9 @@ body {
           }
         }
         section#imagesection {
-          padding: 0px;
+          padding: 10px;
 
-          margin-left: 0;
-          padding-left: 1px;
+          margin-left: $usernamegap + $pfp_size - 5px;
 
           // this uses my mixin and if else logic
           @if $debugborders {
@@ -825,16 +631,25 @@ body {
           }
           // @include border(rgb(74, 192, 228));
 
-          // for the 400-1050 one
-          width: 100%;
+          // this sets the actual width, post width
+          width: 80%;
           height: auto;
+
+          margin-top: 6px;
 
           img#postimage {
             width: 100%;
+            // height scales nice
             height: 0;
-            border-radius: 25px;
+            border-radius: 30px;
+            // starts opacity 0
+            // added to 1 in the JS
+            opacity: 0;
+
+            // set this to set the timing on the animation
+            transition: opacity 2s ease;
           }
-          video#tweetvid {
+          video#postvid {
             width: 100%;
             height: auto;
             border-radius: 20px;
@@ -850,124 +665,38 @@ body {
           justify-content: space-between;
 
           margin-top: 15px;
+          // this is lowered with the hidden-icons class in hidestuff.scss
           height: 50px;
 
           margin-left: $usernamegap + $pfp_size + 10px;
-        }
-      }
-      @media (max-width: 400px) {
-        // by default blurbify div is flexcol
-        width: 90%;
-        border: 3px solid $tweet_border_color;
 
-        padding: 18px;
-        padding-left: 15px;
-
-        div#pfp_and_username {
-          @include flexrow;
-
-          align-items: flex-start;
-
-          @if $debugborders {
-            border: 3px solid rgb(20, 101, 20);
-          } @else {
-            border: 3px solid transparent;
+          @if $hideicons {
+            visibility: hidden;
+            height: 40px;
           }
-          justify-content: flex-start;
-          padding-right: 20px;
-          height: 100px;
-          gap: 1px;
 
-          .pfpdiv {
-            width: 70px;
-            aspect-ratio: 1 / 1;
-            border: 0px solid black;
-            border-radius: 50%;
-
-            overflow: hidden;
-            z-index: 1;
-            flex-shrink: 0;
-            @include flexcol;
-            img {
-              margin-bottom: 10px;
-              width: 135%; /* scale image to parent width */
-            }
-          }
-          .usernamediv {
-            height: 100%;
-            width: 400px;
-            // for the small screen it needs to pushed up
-            margin-top: -13px;
-
-            @if $debugborders {
-              @include border(#f02c7eff);
-            } @else {
-              @include border(transparent);
-            }
-
-            @include flexrow;
-            justify-content: flex-start;
-
-            align-items: flex-start;
-
-            div.align_them_div {
-              @include flexcol;
-              justify-content: flex-start;
-
-              align-items: flex-start;
-
-              row-gap: 2px;
-
-              #name {
-                font-weight: bold;
-                font-size: 23px;
-                @include flexrow;
-                gap: 3px;
-
-                img#verified {
-                  width: 17px;
-                  aspect-ratio: 1 / 1;
-                  // this is alright but not optimal
-                  // vertical-align: middle;
-                  position: relative;
-                  top: 1px;
-                }
-              }
-              #username {
-                color: grey;
-                font-size: 19px;
-                margin-bottom: 2px;
-              }
-            }
-          }
-        }
-        div.iconsdiv {
           // now icon styling
-          // change sizes for mobile - remove margin left
-          margin-left: 0px;
-          justify-content: space-between;
-
           .fa-heart {
             color: #f10000ff;
-            font-size: 21px;
+            font-size: 25px;
           }
           .fa-comment {
-            font-size: 21px;
+            font-size: 25px;
           }
           .stats {
             font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 0, "opsz" 24;
-            font-size: 25px;
+            font-size: 34px;
           }
 
           .bookmark {
             font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 40;
-            font-size: 31px;
+            font-size: 40px;
 
             margin-top: 4px;
           }
           .share {
             font-variation-settings: "FILL" 0, "wght" 500, "GRAD" 0, "opsz" 20;
-            font-size: 31px;
+            font-size: 40px;
             margin-top: -1px;
           }
 
@@ -976,27 +705,312 @@ body {
             gap: 5px;
 
             #count {
-              font-size: 14px;
+              font-size: 17px;
               margin-top: 5px;
             }
           }
           // this is share and bookmark
           .righticons {
+            @include flexrow;
+            gap: 3px;
+            margin-right: 30px;
+          }
+        }
+
+        @media (max-width: 1050px) {
+          width: 90%;
+          border: 3px solid $tweet_border_color;
+
+          div#pfp_and_username {
+            @include flexrow;
+
+            align-items: flex-start;
+
             @if $debugborders {
-              @include border(rgb(237, 132, 66));
+              border: 3px solid rgb(20, 101, 20);
+            } @else {
+              border: 3px solid transparent;
+            }
+            justify-content: flex-start;
+            padding-right: 20px;
+            height: 100px;
+            gap: 1px;
+
+            .pfpdiv {
+              width: 90px;
+              aspect-ratio: 1 / 1;
+              border: 0px solid black;
+              border-radius: 50%;
+
+              overflow: hidden;
+              z-index: 1;
+              flex-shrink: 0;
+              @include flexcol;
+              img {
+                margin-bottom: 10px;
+                width: 135%; /* scale image to parent width */
+              }
+            }
+            .usernamediv {
+              height: 100%;
+              width: 400px;
+
+              @if $debugborders {
+                @include border(#f02c7eff);
+              } @else {
+                @include border(transparent);
+              }
+
+              @include flexrow;
+              justify-content: flex-start;
+
+              align-items: flex-start;
+
+              div.align_them_div {
+                @include flexrow;
+                justify-content: flex-start;
+
+                align-items: flex-end;
+
+                @if $debugborders {
+                  @include border(pink);
+                } @else {
+                  @include border(transparent);
+                }
+                width: 100%;
+                height: 40%;
+
+                padding: 0 4px;
+                // make these smaller if I need to
+                padding-left: 5px;
+                column-gap: 7px;
+
+                #name {
+                  font-weight: bold;
+                  font-size: 23px;
+                  @include flexrow;
+                  gap: 3px;
+
+                  img#verified {
+                    width: 21px;
+                    aspect-ratio: 1 / 1;
+                    // this is alright but not optimal
+                    // vertical-align: middle;
+                    position: relative;
+                    top: 1px;
+                  }
+                }
+                #username {
+                  color: grey;
+                  font-size: 19px;
+                  margin-bottom: 2px;
+                }
+              }
+            }
+          }
+          div.textcontent {
+            // make text content to go to a new place
+            padding-left: 0px;
+
+            margin-top: -6px;
+            font-size: 28px;
+            padding-bottom: 0px;
+            padding-top: 0px;
+            padding-right: 0px;
+
+            .bottom {
+              display: block;
+              margin-top: 200px;
+            }
+          }
+          section#imagesection {
+            padding: 0px;
+
+            margin-left: 0;
+            padding-left: 1px;
+
+            // this uses my mixin and if else logic
+            @if $debugborders {
+              @include border(purple);
             } @else {
               @include border(transparent);
             }
+            // @include border(rgb(74, 192, 228));
+
+            // for the 400-1050 one
+            width: 100%;
+            height: auto;
+
+            img#postimage {
+              width: 100%;
+              height: 0;
+              border-radius: 25px;
+            }
+            video#tweetvid {
+              width: 100%;
+              height: auto;
+              border-radius: 20px;
+            }
+          }
+          div.iconsdiv {
             @include flexrow;
-            // move it to the right
+            @if $debugborders {
+              @include border(rgb(255, 0, 0));
+            } @else {
+              @include border(transparent);
+            }
+            justify-content: space-between;
+
+            margin-top: 15px;
+            height: 50px;
+
+            margin-left: $usernamegap + $pfp_size + 10px;
+          }
+        }
+        @media (max-width: 400px) {
+          // by default blurbify div is flexcol
+          width: 90%;
+          border: 3px solid $tweet_border_color;
+
+          padding: 18px;
+          padding-left: 15px;
+
+          div#pfp_and_username {
+            @include flexrow;
+
+            align-items: flex-start;
+
+            @if $debugborders {
+              border: 3px solid rgb(20, 101, 20);
+            } @else {
+              border: 3px solid transparent;
+            }
             justify-content: flex-start;
-            gap: 3px;
-            // no need for extra spacing. In big screen this is 30
-            margin-right: 0px;
+            padding-right: 20px;
+            height: 100px;
+            gap: 1px;
+
+            .pfpdiv {
+              width: 70px;
+              aspect-ratio: 1 / 1;
+              border: 0px solid black;
+              border-radius: 50%;
+
+              overflow: hidden;
+              z-index: 1;
+              flex-shrink: 0;
+              @include flexcol;
+              img {
+                margin-bottom: 10px;
+                width: 135%; /* scale image to parent width */
+              }
+            }
+            .usernamediv {
+              height: 100%;
+              width: 400px;
+              // for the small screen it needs to pushed up
+              margin-top: -13px;
+
+              @if $debugborders {
+                @include border(#f02c7eff);
+              } @else {
+                @include border(transparent);
+              }
+
+              @include flexrow;
+              justify-content: flex-start;
+
+              align-items: flex-start;
+
+              div.align_them_div {
+                @include flexcol;
+                justify-content: flex-start;
+
+                align-items: flex-start;
+
+                row-gap: 2px;
+
+                #name {
+                  font-weight: bold;
+                  font-size: 23px;
+                  @include flexrow;
+                  gap: 3px;
+
+                  img#verified {
+                    width: 17px;
+                    aspect-ratio: 1 / 1;
+                    // this is alright but not optimal
+                    // vertical-align: middle;
+                    position: relative;
+                    top: 1px;
+                  }
+                }
+                #username {
+                  color: grey;
+                  font-size: 19px;
+                  margin-bottom: 2px;
+                }
+              }
+            }
+          }
+          div.iconsdiv {
+            // now icon styling
+            // change sizes for mobile - remove margin left
+            margin-left: 0px;
+            justify-content: space-between;
+
+            .fa-heart {
+              color: #f10000ff;
+              font-size: 21px;
+            }
+            .fa-comment {
+              font-size: 21px;
+            }
+            .stats {
+              font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 0, "opsz" 24;
+              font-size: 25px;
+            }
+
+            .bookmark {
+              font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 40;
+              font-size: 31px;
+
+              margin-top: 4px;
+            }
+            .share {
+              font-variation-settings: "FILL" 0, "wght" 500, "GRAD" 0, "opsz" 20;
+              font-size: 31px;
+              margin-top: -1px;
+            }
+
+            .statsarea {
+              @include flexrow;
+              gap: 5px;
+
+              #count {
+                font-size: 14px;
+                margin-top: 5px;
+              }
+            }
+            // this is share and bookmark
+            .righticons {
+              @if $debugborders {
+                @include border(rgb(237, 132, 66));
+              } @else {
+                @include border(transparent);
+              }
+              @include flexrow;
+              // move it to the right
+              justify-content: flex-start;
+              gap: 3px;
+              // no need for extra spacing. In big screen this is 30
+              margin-right: 0px;
+            }
           }
         }
       }
     }
+
     .buttons {
       width: 90%;
       @include flexrow;

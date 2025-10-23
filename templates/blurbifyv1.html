@@ -142,11 +142,11 @@
           <li>
             <p>Change Blurb Background Color</p>
 
-            <input type="color" name="blurb_bg" id="blurb_bg" />
+            <input type="color" name="blurb_bg_input" id="blurb_bg_input" />
           </li>
           <li>
             <p>Change Blurb Border Color</p>
-            <input type="color" name="blurb_border" id="blurb_border" />
+            <input type="color" name="blurb_border" id="blurb_border_input" />
           </li>
           <li>
             <p>Change Blurb Border Thickness</p>
@@ -175,48 +175,55 @@
         <!-- add an icon here that will add more margin bottom better -->
       </div>
 
-      <div class="blurbifydiv">
-        <div id="pfp_and_username">
-          <div class="pfpdiv" id="pfpid">
-            <img src="../images/nopfp.webp" alt="pfp gone" id="pfpimage" />
+      <div class="blurbify_bg_div">
+        <div class="blurbifydiv">
+          <div id="pfp_and_username">
+            <div class="pfpdiv" id="pfpid">
+              <img src="../images/nopfp.webp" alt="pfp gone" id="pfpimage" />
+            </div>
+            <div class="usernamediv">
+              <div class="align_them_div">
+                <span id="name"
+                  >Placeholder
+                  <img
+                    src="../images/verified.png"
+                    alt=""
+                    id="verified"
+                  /> </span
+                ><span id="username">@placeholder</span>
+              </div>
+            </div>
           </div>
-          <div class="usernamediv">
-            <div class="align_them_div">
-              <span id="name"
-                >Placeholder
-                <img src="../images/verified.png" alt="" id="verified" /> </span
-              ><span id="username">@placeholder</span>
+
+          <div class="textcontent">
+            <!-- use .gradient_text to add gradienttext -->
+            <p>This is where the text content of the blurb will go.</p>
+            <!-- use span with class of bottom to add margin top lmao -->
+          </div>
+          <section id="imagesection">
+            <img src="" alt="not here yet" id="postimage" />
+            <!-- <video src="../images/demovid.mov" controls id="postvid"></video> -->
+          </section>
+
+          <!-- icons here -->
+
+          <div class="iconsdiv">
+            <!-- can change everything in these icons and animate the fuck out of them lets goo -->
+            <i class="fa-regular fa-comment"></i>
+
+            <i class="fa-regular fa-heart"></i>
+            <div class="statsarea">
+              <span class="material-symbols-outlined stats"> bar_chart </span>
+              <span id="count">2.6k</span>
+            </div>
+            <div class="righticons">
+              <span class="material-symbols-rounded bookmark"> bookmark </span>
+              <span class="material-symbols-outlined share"> ios_share </span>
             </div>
           </div>
         </div>
-
-        <div class="textcontent">
-          <!-- use .gradient_text to add gradienttext -->
-          <p>This is where the text content of the blurb will go.</p>
-          <!-- use span with class of bottom to add margin top lmao -->
-        </div>
-        <section id="imagesection">
-          <img src="" alt="not here yet" id="postimage" />
-          <!-- <video src="../images/demovid.mov" controls id="postvid"></video> -->
-        </section>
-
-        <!-- icons here -->
-
-        <div class="iconsdiv">
-          <!-- can change everything in these icons and animate the fuck out of them lets goo -->
-          <i class="fa-regular fa-comment"></i>
-
-          <i class="fa-regular fa-heart"></i>
-          <div class="statsarea">
-            <span class="material-symbols-outlined stats"> bar_chart </span>
-            <span id="count">2.6k</span>
-          </div>
-          <div class="righticons">
-            <span class="material-symbols-rounded bookmark"> bookmark </span>
-            <span class="material-symbols-outlined share"> ios_share </span>
-          </div>
-        </div>
       </div>
+
       <!-- buttons to add animations -->
       <div class="buttons">
         <button id="blurbifybutton">Toggle Blurb Animations</button>

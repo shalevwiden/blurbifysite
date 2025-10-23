@@ -586,6 +586,9 @@ body .sitecontainer div.specsdiv .specs_ul li input[type=color]::-webkit-color-s
 body .sitecontainer .specsdiv#sizing_specs {
   display: none;
 }
+body .sitecontainer .specsdiv#color_specs {
+  margin-bottom: 6px;
+}
 body .sitecontainer div.pointerdiv {
   display: flex;
   flex-direction: row;
@@ -597,7 +600,7 @@ body .sitecontainer div.pointerdiv {
   justify-content: flex-start;
   border: 1px solid transparent;
   width: 100%;
-  margin-bottom: 250px;
+  margin-bottom: 10px;
 }
 body .sitecontainer div.pointerdiv h2#blurbpointer {
   font-size: 50px;
@@ -616,7 +619,19 @@ body .sitecontainer div.pointerdiv h2#blurbpointer span {
     padding-left: 50px;
   }
 }
-body .sitecontainer .blurbifydiv {
+body .sitecontainer div.blurbify_bg_div {
+  height: auto;
+  width: 100%;
+  padding: 250px 0px;
+  border: 5px solid pink;
+  background-color: #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+body .sitecontainer div.blurbify_bg_div .blurbifydiv {
   height: auto;
   padding: 30px;
   padding-bottom: 10px;
@@ -624,15 +639,14 @@ body .sitecontainer .blurbifydiv {
   border-radius: 30px;
   width: 900px;
   background-color: white;
-  margin-bottom: 200px;
 }
-body .sitecontainer .blurbifydiv .gradient_text {
+body .sitecontainer div.blurbify_bg_div .blurbifydiv .gradient_text {
   background: linear-gradient(90deg, #ff0080, #7928ca, #2afadf);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-style: italic;
 }
-body .sitecontainer .blurbifydiv div#pfp_and_username {
+body .sitecontainer div.blurbify_bg_div .blurbifydiv div#pfp_and_username {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -645,7 +659,7 @@ body .sitecontainer .blurbifydiv div#pfp_and_username {
   height: 100px;
   gap: 1px;
 }
-body .sitecontainer .blurbifydiv div#pfp_and_username .pfpdiv {
+body .sitecontainer div.blurbify_bg_div .blurbifydiv div#pfp_and_username .pfpdiv {
   width: 100px;
   aspect-ratio: 1/1;
   border: 0px solid black;
@@ -660,7 +674,7 @@ body .sitecontainer .blurbifydiv div#pfp_and_username .pfpdiv {
   justify-content: center;
   gap: 20px;
 }
-body .sitecontainer .blurbifydiv div#pfp_and_username .pfpdiv img {
+body .sitecontainer div.blurbify_bg_div .blurbifydiv div#pfp_and_username .pfpdiv img {
   margin-bottom: 10px;
   width: 135%; /* scale image to parent width */
   height: auto;
@@ -668,7 +682,7 @@ body .sitecontainer .blurbifydiv div#pfp_and_username .pfpdiv img {
   height: auto;
   margin-bottom: 0;
 }
-body .sitecontainer .blurbifydiv div#pfp_and_username .usernamediv {
+body .sitecontainer div.blurbify_bg_div .blurbifydiv div#pfp_and_username .usernamediv {
   height: 100%;
   width: auto;
   border: 4px solid transparent;
@@ -681,7 +695,7 @@ body .sitecontainer .blurbifydiv div#pfp_and_username .usernamediv {
   justify-content: flex-start;
   align-items: flex-start;
 }
-body .sitecontainer .blurbifydiv div#pfp_and_username .usernamediv div.align_them_div {
+body .sitecontainer div.blurbify_bg_div .blurbifydiv div#pfp_and_username .usernamediv div.align_them_div {
   margin-top: 5px;
   display: flex;
   flex-direction: row;
@@ -699,7 +713,7 @@ body .sitecontainer .blurbifydiv div#pfp_and_username .usernamediv div.align_the
   -moz-column-gap: 10px;
        column-gap: 10px;
 }
-body .sitecontainer .blurbifydiv div#pfp_and_username .usernamediv div.align_them_div #name {
+body .sitecontainer div.blurbify_bg_div .blurbifydiv div#pfp_and_username .usernamediv div.align_them_div #name {
   font-weight: bold;
   font-size: 35px;
   display: flex;
@@ -709,18 +723,18 @@ body .sitecontainer .blurbifydiv div#pfp_and_username .usernamediv div.align_the
   gap: 20px;
   gap: 3px;
 }
-body .sitecontainer .blurbifydiv div#pfp_and_username .usernamediv div.align_them_div #name img#verified {
+body .sitecontainer div.blurbify_bg_div .blurbifydiv div#pfp_and_username .usernamediv div.align_them_div #name img#verified {
   width: 27px;
   aspect-ratio: 1/1;
   position: relative;
   top: 1px;
 }
-body .sitecontainer .blurbifydiv div#pfp_and_username .usernamediv div.align_them_div #username {
+body .sitecontainer div.blurbify_bg_div .blurbifydiv div#pfp_and_username .usernamediv div.align_them_div #username {
   color: grey;
   font-size: 28px;
   margin-bottom: 4px;
 }
-body .sitecontainer .blurbifydiv div.textcontent {
+body .sitecontainer div.blurbify_bg_div .blurbifydiv div.textcontent {
   padding: 30px;
   padding-left: 116px;
   margin-top: -79px;
@@ -729,11 +743,11 @@ body .sitecontainer .blurbifydiv div.textcontent {
   padding-top: 35px;
   padding-right: 20px;
 }
-body .sitecontainer .blurbifydiv div.textcontent .bottom {
+body .sitecontainer div.blurbify_bg_div .blurbifydiv div.textcontent .bottom {
   display: block;
   margin-top: 200px;
 }
-body .sitecontainer .blurbifydiv section#imagesection {
+body .sitecontainer div.blurbify_bg_div .blurbifydiv section#imagesection {
   padding: 10px;
   margin-left: 105px;
   border: 4px solid transparent;
@@ -742,19 +756,19 @@ body .sitecontainer .blurbifydiv section#imagesection {
   height: auto;
   margin-top: 6px;
 }
-body .sitecontainer .blurbifydiv section#imagesection img#postimage {
+body .sitecontainer div.blurbify_bg_div .blurbifydiv section#imagesection img#postimage {
   width: 100%;
   height: 0;
   border-radius: 30px;
   opacity: 0;
   transition: opacity 2s ease;
 }
-body .sitecontainer .blurbifydiv section#imagesection video#postvid {
+body .sitecontainer div.blurbify_bg_div .blurbifydiv section#imagesection video#postvid {
   width: 100%;
   height: auto;
   border-radius: 20px;
 }
-body .sitecontainer .blurbifydiv div.iconsdiv {
+body .sitecontainer div.blurbify_bg_div .blurbifydiv div.iconsdiv {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -767,28 +781,28 @@ body .sitecontainer .blurbifydiv div.iconsdiv {
   height: 50px;
   margin-left: 120px;
 }
-body .sitecontainer .blurbifydiv div.iconsdiv .fa-heart {
+body .sitecontainer div.blurbify_bg_div .blurbifydiv div.iconsdiv .fa-heart {
   color: #f10000;
   font-size: 25px;
 }
-body .sitecontainer .blurbifydiv div.iconsdiv .fa-comment {
+body .sitecontainer div.blurbify_bg_div .blurbifydiv div.iconsdiv .fa-comment {
   font-size: 25px;
 }
-body .sitecontainer .blurbifydiv div.iconsdiv .stats {
+body .sitecontainer div.blurbify_bg_div .blurbifydiv div.iconsdiv .stats {
   font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 0, "opsz" 24;
   font-size: 34px;
 }
-body .sitecontainer .blurbifydiv div.iconsdiv .bookmark {
+body .sitecontainer div.blurbify_bg_div .blurbifydiv div.iconsdiv .bookmark {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 40;
   font-size: 40px;
   margin-top: 4px;
 }
-body .sitecontainer .blurbifydiv div.iconsdiv .share {
+body .sitecontainer div.blurbify_bg_div .blurbifydiv div.iconsdiv .share {
   font-variation-settings: "FILL" 0, "wght" 500, "GRAD" 0, "opsz" 20;
   font-size: 40px;
   margin-top: -1px;
 }
-body .sitecontainer .blurbifydiv div.iconsdiv .statsarea {
+body .sitecontainer div.blurbify_bg_div .blurbifydiv div.iconsdiv .statsarea {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -796,11 +810,11 @@ body .sitecontainer .blurbifydiv div.iconsdiv .statsarea {
   gap: 20px;
   gap: 5px;
 }
-body .sitecontainer .blurbifydiv div.iconsdiv .statsarea #count {
+body .sitecontainer div.blurbify_bg_div .blurbifydiv div.iconsdiv .statsarea #count {
   font-size: 17px;
   margin-top: 5px;
 }
-body .sitecontainer .blurbifydiv div.iconsdiv .righticons {
+body .sitecontainer div.blurbify_bg_div .blurbifydiv div.iconsdiv .righticons {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -810,11 +824,11 @@ body .sitecontainer .blurbifydiv div.iconsdiv .righticons {
   margin-right: 30px;
 }
 @media (max-width: 1050px) {
-  body .sitecontainer .blurbifydiv {
+  body .sitecontainer div.blurbify_bg_div .blurbifydiv {
     width: 90%;
     border: 3px solid #0f62df;
   }
-  body .sitecontainer .blurbifydiv div#pfp_and_username {
+  body .sitecontainer div.blurbify_bg_div .blurbifydiv div#pfp_and_username {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -827,7 +841,7 @@ body .sitecontainer .blurbifydiv div.iconsdiv .righticons {
     height: 100px;
     gap: 1px;
   }
-  body .sitecontainer .blurbifydiv div#pfp_and_username .pfpdiv {
+  body .sitecontainer div.blurbify_bg_div .blurbifydiv div#pfp_and_username .pfpdiv {
     width: 90px;
     aspect-ratio: 1/1;
     border: 0px solid black;
@@ -841,11 +855,11 @@ body .sitecontainer .blurbifydiv div.iconsdiv .righticons {
     justify-content: center;
     gap: 20px;
   }
-  body .sitecontainer .blurbifydiv div#pfp_and_username .pfpdiv img {
+  body .sitecontainer div.blurbify_bg_div .blurbifydiv div#pfp_and_username .pfpdiv img {
     margin-bottom: 10px;
     width: 135%; /* scale image to parent width */
   }
-  body .sitecontainer .blurbifydiv div#pfp_and_username .usernamediv {
+  body .sitecontainer div.blurbify_bg_div .blurbifydiv div#pfp_and_username .usernamediv {
     height: 100%;
     width: 400px;
     border: 4px solid transparent;
@@ -858,7 +872,7 @@ body .sitecontainer .blurbifydiv div.iconsdiv .righticons {
     justify-content: flex-start;
     align-items: flex-start;
   }
-  body .sitecontainer .blurbifydiv div#pfp_and_username .usernamediv div.align_them_div {
+  body .sitecontainer div.blurbify_bg_div .blurbifydiv div#pfp_and_username .usernamediv div.align_them_div {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -875,7 +889,7 @@ body .sitecontainer .blurbifydiv div.iconsdiv .righticons {
     -moz-column-gap: 7px;
          column-gap: 7px;
   }
-  body .sitecontainer .blurbifydiv div#pfp_and_username .usernamediv div.align_them_div #name {
+  body .sitecontainer div.blurbify_bg_div .blurbifydiv div#pfp_and_username .usernamediv div.align_them_div #name {
     font-weight: bold;
     font-size: 23px;
     display: flex;
@@ -885,18 +899,18 @@ body .sitecontainer .blurbifydiv div.iconsdiv .righticons {
     gap: 20px;
     gap: 3px;
   }
-  body .sitecontainer .blurbifydiv div#pfp_and_username .usernamediv div.align_them_div #name img#verified {
+  body .sitecontainer div.blurbify_bg_div .blurbifydiv div#pfp_and_username .usernamediv div.align_them_div #name img#verified {
     width: 21px;
     aspect-ratio: 1/1;
     position: relative;
     top: 1px;
   }
-  body .sitecontainer .blurbifydiv div#pfp_and_username .usernamediv div.align_them_div #username {
+  body .sitecontainer div.blurbify_bg_div .blurbifydiv div#pfp_and_username .usernamediv div.align_them_div #username {
     color: grey;
     font-size: 19px;
     margin-bottom: 2px;
   }
-  body .sitecontainer .blurbifydiv div.textcontent {
+  body .sitecontainer div.blurbify_bg_div .blurbifydiv div.textcontent {
     padding-left: 0px;
     margin-top: -6px;
     font-size: 28px;
@@ -904,11 +918,11 @@ body .sitecontainer .blurbifydiv div.iconsdiv .righticons {
     padding-top: 0px;
     padding-right: 0px;
   }
-  body .sitecontainer .blurbifydiv div.textcontent .bottom {
+  body .sitecontainer div.blurbify_bg_div .blurbifydiv div.textcontent .bottom {
     display: block;
     margin-top: 200px;
   }
-  body .sitecontainer .blurbifydiv section#imagesection {
+  body .sitecontainer div.blurbify_bg_div .blurbifydiv section#imagesection {
     padding: 0px;
     margin-left: 0;
     padding-left: 1px;
@@ -917,17 +931,17 @@ body .sitecontainer .blurbifydiv div.iconsdiv .righticons {
     width: 100%;
     height: auto;
   }
-  body .sitecontainer .blurbifydiv section#imagesection img#postimage {
+  body .sitecontainer div.blurbify_bg_div .blurbifydiv section#imagesection img#postimage {
     width: 100%;
     height: 0;
     border-radius: 25px;
   }
-  body .sitecontainer .blurbifydiv section#imagesection video#tweetvid {
+  body .sitecontainer div.blurbify_bg_div .blurbifydiv section#imagesection video#tweetvid {
     width: 100%;
     height: auto;
     border-radius: 20px;
   }
-  body .sitecontainer .blurbifydiv div.iconsdiv {
+  body .sitecontainer div.blurbify_bg_div .blurbifydiv div.iconsdiv {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -942,13 +956,13 @@ body .sitecontainer .blurbifydiv div.iconsdiv .righticons {
   }
 }
 @media (max-width: 400px) {
-  body .sitecontainer .blurbifydiv {
+  body .sitecontainer div.blurbify_bg_div .blurbifydiv {
     width: 90%;
     border: 3px solid #0f62df;
     padding: 18px;
     padding-left: 15px;
   }
-  body .sitecontainer .blurbifydiv div#pfp_and_username {
+  body .sitecontainer div.blurbify_bg_div .blurbifydiv div#pfp_and_username {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -961,7 +975,7 @@ body .sitecontainer .blurbifydiv div.iconsdiv .righticons {
     height: 100px;
     gap: 1px;
   }
-  body .sitecontainer .blurbifydiv div#pfp_and_username .pfpdiv {
+  body .sitecontainer div.blurbify_bg_div .blurbifydiv div#pfp_and_username .pfpdiv {
     width: 70px;
     aspect-ratio: 1/1;
     border: 0px solid black;
@@ -975,11 +989,11 @@ body .sitecontainer .blurbifydiv div.iconsdiv .righticons {
     justify-content: center;
     gap: 20px;
   }
-  body .sitecontainer .blurbifydiv div#pfp_and_username .pfpdiv img {
+  body .sitecontainer div.blurbify_bg_div .blurbifydiv div#pfp_and_username .pfpdiv img {
     margin-bottom: 10px;
     width: 135%; /* scale image to parent width */
   }
-  body .sitecontainer .blurbifydiv div#pfp_and_username .usernamediv {
+  body .sitecontainer div.blurbify_bg_div .blurbifydiv div#pfp_and_username .usernamediv {
     height: 100%;
     width: 400px;
     margin-top: -13px;
@@ -993,7 +1007,7 @@ body .sitecontainer .blurbifydiv div.iconsdiv .righticons {
     justify-content: flex-start;
     align-items: flex-start;
   }
-  body .sitecontainer .blurbifydiv div#pfp_and_username .usernamediv div.align_them_div {
+  body .sitecontainer div.blurbify_bg_div .blurbifydiv div#pfp_and_username .usernamediv div.align_them_div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1003,7 +1017,7 @@ body .sitecontainer .blurbifydiv div.iconsdiv .righticons {
     align-items: flex-start;
     row-gap: 2px;
   }
-  body .sitecontainer .blurbifydiv div#pfp_and_username .usernamediv div.align_them_div #name {
+  body .sitecontainer div.blurbify_bg_div .blurbifydiv div#pfp_and_username .usernamediv div.align_them_div #name {
     font-weight: bold;
     font-size: 23px;
     display: flex;
@@ -1013,43 +1027,43 @@ body .sitecontainer .blurbifydiv div.iconsdiv .righticons {
     gap: 20px;
     gap: 3px;
   }
-  body .sitecontainer .blurbifydiv div#pfp_and_username .usernamediv div.align_them_div #name img#verified {
+  body .sitecontainer div.blurbify_bg_div .blurbifydiv div#pfp_and_username .usernamediv div.align_them_div #name img#verified {
     width: 17px;
     aspect-ratio: 1/1;
     position: relative;
     top: 1px;
   }
-  body .sitecontainer .blurbifydiv div#pfp_and_username .usernamediv div.align_them_div #username {
+  body .sitecontainer div.blurbify_bg_div .blurbifydiv div#pfp_and_username .usernamediv div.align_them_div #username {
     color: grey;
     font-size: 19px;
     margin-bottom: 2px;
   }
-  body .sitecontainer .blurbifydiv div.iconsdiv {
+  body .sitecontainer div.blurbify_bg_div .blurbifydiv div.iconsdiv {
     margin-left: 0px;
     justify-content: space-between;
   }
-  body .sitecontainer .blurbifydiv div.iconsdiv .fa-heart {
+  body .sitecontainer div.blurbify_bg_div .blurbifydiv div.iconsdiv .fa-heart {
     color: #f10000;
     font-size: 21px;
   }
-  body .sitecontainer .blurbifydiv div.iconsdiv .fa-comment {
+  body .sitecontainer div.blurbify_bg_div .blurbifydiv div.iconsdiv .fa-comment {
     font-size: 21px;
   }
-  body .sitecontainer .blurbifydiv div.iconsdiv .stats {
+  body .sitecontainer div.blurbify_bg_div .blurbifydiv div.iconsdiv .stats {
     font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 0, "opsz" 24;
     font-size: 25px;
   }
-  body .sitecontainer .blurbifydiv div.iconsdiv .bookmark {
+  body .sitecontainer div.blurbify_bg_div .blurbifydiv div.iconsdiv .bookmark {
     font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 40;
     font-size: 31px;
     margin-top: 4px;
   }
-  body .sitecontainer .blurbifydiv div.iconsdiv .share {
+  body .sitecontainer div.blurbify_bg_div .blurbifydiv div.iconsdiv .share {
     font-variation-settings: "FILL" 0, "wght" 500, "GRAD" 0, "opsz" 20;
     font-size: 31px;
     margin-top: -1px;
   }
-  body .sitecontainer .blurbifydiv div.iconsdiv .statsarea {
+  body .sitecontainer div.blurbify_bg_div .blurbifydiv div.iconsdiv .statsarea {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -1057,11 +1071,11 @@ body .sitecontainer .blurbifydiv div.iconsdiv .righticons {
     gap: 20px;
     gap: 5px;
   }
-  body .sitecontainer .blurbifydiv div.iconsdiv .statsarea #count {
+  body .sitecontainer div.blurbify_bg_div .blurbifydiv div.iconsdiv .statsarea #count {
     font-size: 14px;
     margin-top: 5px;
   }
-  body .sitecontainer .blurbifydiv div.iconsdiv .righticons {
+  body .sitecontainer div.blurbify_bg_div .blurbifydiv div.iconsdiv .righticons {
     border: 4px solid transparent;
     border-radius: 26px;
     display: flex;
