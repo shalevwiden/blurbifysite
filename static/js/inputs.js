@@ -150,6 +150,8 @@ submitBtn.addEventListener("click", () => {
   // just take the src from preview
   const path = window.location.pathname;
 
+  // check if the srcs exist if they dont then we set the defaults
+  // which for me is my pfp for others the grey one
   pfpsrcexists =
     pfppreview.src &&
     pfppreview.src.trim() !== "" &&
