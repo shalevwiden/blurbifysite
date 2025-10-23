@@ -264,6 +264,30 @@ function rangeInputs() {
   contenttext_size_input.addEventListener("input", () => {
     textcontent.style.fontSize = contenttext_size_input.value + "px";
   });
+
+  function resetbuttons() {
+    reset_border = document.getElementById("reset_border");
+    reset_text = document.getElementById("reset_text");
+
+    // now heres the logic for them
+
+    reset_border.addEventListener("click", () => {
+      blurb.style.removeProperty("border-width");
+
+      // re-sync slider to CSS value
+      border_size_input.value = parseInt(getComputedStyle(blurb).borderWidth);
+    });
+
+    reset_text.addEventListener("click", () => {
+      textcontent.style.removeProperty("font-size");
+
+      // re-sync slider to CSS value
+      contenttext_size_input.value = parseInt(
+        getComputedStyle(textcontent).fontSize
+      );
+    });
+  }
+  resetbuttons();
 }
 
 rangeInputs();

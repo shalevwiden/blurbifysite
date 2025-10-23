@@ -393,8 +393,16 @@ body {
               border-radius: 8px;
             }
           }
-          .sliderinput {
-            width: 500px;
+          div.sliderdiv {
+            @include flexrow;
+
+            .sliderinput {
+              width: 500px;
+            }
+
+            .resetbutton {
+              // add styling here
+            }
           }
         }
       }
