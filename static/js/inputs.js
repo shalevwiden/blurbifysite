@@ -241,7 +241,29 @@ function colorInputs() {
   });
 }
 
+colorInputs();
+
 // now deal with the slider inputs
 function rangeInputs() {
-  const border_size_input = document.getElementById(" border_size_input");
+  const textcontent = blurb.querySelector(".textcontent");
+  const border_size_input = document.getElementById("border_size_input");
+
+  const contenttext_size_input = document.getElementById(
+    "contenttext_size_input"
+  );
+
+  // set default border width
+
+  const blurb_border_width = getComputedStyle(blurb).borderWidth;
+  border_size_input.value = parseInt(blurb_border_width);
+
+  border_size_input.addEventListener("input", () => {
+    blurb.style.borderWidth = border_size_input.value + "px";
+  });
+
+  contenttext_size_input.addEventListener("input", () => {
+    textcontent.style.fontSize = contenttext_size_input.value + "px";
+  });
 }
+
+rangeInputs();

@@ -5,8 +5,8 @@
 @use "../utils/hidestuff" as *;
 
 $bodybg: #eee;
-$tweetbackgroundcolor: #ffffffff;
-$tweet_border_color: #0f62dfff;
+$blurbbackgroundcolor: #ffffffff;
+$blurb_border_color: #0f62dfff;
 $usernamegap: 10px;
 $pfp_size: 100px;
 $blurbify_width: 900px;
@@ -393,7 +393,8 @@ body {
               border-radius: 8px;
             }
           }
-          input[type="range"] {
+          .sliderinput {
+            width: 500px;
           }
         }
       }
@@ -491,12 +492,12 @@ body {
 
         padding: 30px;
         padding-bottom: 10px;
-        border: var(--border-thickness) solid $tweet_border_color;
+        border: var(--border-thickness) solid $blurb_border_color;
         border-radius: 30px;
 
         width: $blurbify_width;
 
-        background-color: $tweetbackgroundcolor;
+        background-color: $blurbbackgroundcolor;
 
         .gradient_text {
           background: linear-gradient(90deg, #ff0080, #7928ca, #2afadf);
@@ -721,7 +722,7 @@ body {
 
         @media (max-width: 1050px) {
           width: 90%;
-          border: 3px solid $tweet_border_color;
+          border: 3px solid $blurb_border_color;
 
           div#pfp_and_username {
             @include flexrow;
@@ -872,7 +873,7 @@ body {
         @media (max-width: 400px) {
           // by default blurbify div is flexcol
           width: 90%;
-          border: 3px solid $tweet_border_color;
+          border: 3px solid $blurb_border_color;
 
           padding: 18px;
           padding-left: 15px;
