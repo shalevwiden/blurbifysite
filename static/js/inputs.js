@@ -292,4 +292,5 @@ function rangeInputs() {
 
 rangeInputs();
 
-export { blurbify_bg_div };
+// makes it global
+window.blurbify_bg_div = blurbify_bg_div;

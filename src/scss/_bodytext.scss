@@ -510,6 +510,10 @@ body {
 
         margin-top: 8px;
 
+        // for animations
+        transition: transform 1s ease;
+        display: inline-block;
+
         &:hover {
           cursor: pointer;
           transform: scale(1.07);
@@ -532,6 +536,7 @@ body {
       border: 5px solid pink;
       // background is changed responsively in JavaScript
       background-color: $bodybg;
+
       @include flexcol;
 
       .blurbifydiv {
