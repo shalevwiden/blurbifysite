@@ -24,6 +24,7 @@ $personal: false;
 }
 :root {
   --border-thickness: 8px;
+  --dropdown_time: 1s;
 }
 body {
   @include bodyStyling;
@@ -511,18 +512,24 @@ body {
         margin-top: 8px;
 
         // for animations
-        transition: transform 1s ease;
+        transition: transform var(--dropdown_time) ease;
         display: inline-block;
 
-        &:hover {
-          cursor: pointer;
+        &:not(.rotated):hover {
+          // only scales doesnt hover
           transform: scale(1.07);
+          cursor: pointer;
+        }
+
+        &.rotated {
+          transform: rotate(-90deg);
+          cursor: pointer;
         }
       }
       @media (max-width: 400px) {
         h2#blurbpointer {
           font-size: 35px;
-          padding-left: 50px;
+          padding-left: 30px;
         }
       }
     }
@@ -538,6 +545,10 @@ body {
       background-color: $bodybg;
 
       @include flexcol;
+
+      // for animations
+
+      transition: padding-top var(--dropdown_time) ease;
 
       .blurbifydiv {
         height: auto;

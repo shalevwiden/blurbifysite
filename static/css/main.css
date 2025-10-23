@@ -202,6 +202,10 @@ input:checked + .slider::before {
   margin-top: -10px;
 }
 
+#circle_down.rotated {
+  transform: rotate(-90deg); /* rotate 90° clockwise */
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -210,6 +214,7 @@ input:checked + .slider::before {
 
 :root {
   --border-thickness: 8px;
+  --dropdown_time: 1s;
 }
 
 body {
@@ -659,15 +664,21 @@ body .sitecontainer div.pointerdiv #circle_down {
   font-size: 50px;
   color: black;
   margin-top: 8px;
+  transition: transform var(--dropdown_time) ease;
+  display: inline-block;
 }
-body .sitecontainer div.pointerdiv #circle_down:hover {
-  cursor: pointer;
+body .sitecontainer div.pointerdiv #circle_down:not(.rotated):hover {
   transform: scale(1.07);
+  cursor: pointer;
+}
+body .sitecontainer div.pointerdiv #circle_down.rotated {
+  transform: rotate(-90deg);
+  cursor: pointer;
 }
 @media (max-width: 400px) {
   body .sitecontainer div.pointerdiv h2#blurbpointer {
     font-size: 35px;
-    padding-left: 50px;
+    padding-left: 30px;
   }
 }
 body .sitecontainer div.blurbify_bg_div {
@@ -681,6 +692,7 @@ body .sitecontainer div.blurbify_bg_div {
   align-items: center;
   justify-content: center;
   gap: 20px;
+  transition: padding-top var(--dropdown_time) ease;
 }
 body .sitecontainer div.blurbify_bg_div .blurbifydiv {
   height: auto;

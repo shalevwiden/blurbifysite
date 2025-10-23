@@ -5,3 +5,7 @@
   padding-top: 0px !important;
   margin-top: -10px;
 }
+
+#circle_down.rotated {
+  transform: rotate(-90deg); /* rotate 90° clockwise */
+}
