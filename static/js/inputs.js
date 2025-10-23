@@ -205,36 +205,43 @@ submitBtn.addEventListener("click", () => {
 // now deal with all the specsdiv stuff
 
 const blurbify_bg_div = document.querySelector(".blurbify_bg_div");
-const blurb_bg_input = document.getElementById("blurb_bg_input");
+function colorInputs() {
+  const blurb_bg_input = document.getElementById("blurb_bg_input");
 
-// get the actual bg and make the color picker styled that way
-const blurb_bg_color = getComputedStyle(blurbify_bg_div).backgroundColor;
-function rgbToHex(rgb) {
-  const match = rgb.match(/\d+/g);
-  if (!match) return "#000000";
-  return (
-    "#" +
-    match
-      .slice(0, 3)
-      .map((x) => {
-        const hex = parseInt(x).toString(16);
-        return hex.length === 1 ? "0" + hex : hex;
-      })
-      .join("")
-  );
+  // get the actual bg and make the color picker styled that way
+  const blurb_bg_color = getComputedStyle(blurbify_bg_div).backgroundColor;
+  function rgbToHex(rgb) {
+    const match = rgb.match(/\d+/g);
+    if (!match) return "#000000";
+    return (
+      "#" +
+      match
+        .slice(0, 3)
+        .map((x) => {
+          const hex = parseInt(x).toString(16);
+          return hex.length === 1 ? "0" + hex : hex;
+        })
+        .join("")
+    );
+  }
+
+  console.log(`bgcolor is ${blurb_bg_color}`);
+  blurb_bg_input.value = rgbToHex(blurb_bg_color);
+
+  blurb_bg_input.addEventListener("input", () => {
+    blurbify_bg_div.style.background = blurb_bg_input.value;
+  });
+
+  const blurb_border_input = document.getElementById("blurb_border_input");
+  const blurb_border_color = getComputedStyle(blurb).borderColor;
+  blurb_border_input.value = rgbToHex(blurb_border_color);
+
+  blurb_border_input.addEventListener("input", () => {
+    blurb.style.borderColor = blurb_border_input.value;
+  });
 }
 
-console.log(`bgcolor is ${blurb_bg_color}`);
-blurb_bg_input.value = rgbToHex(blurb_bg_color);
-
-blurb_bg_input.addEventListener("input", () => {
-  blurbify_bg_div.style.background = blurb_bg_input.value;
-});
-
-const blurb_border_input = document.getElementById("blurb_border_input");
-const blurb_border_color = getComputedStyle(blurb).borderColor;
-blurb_border_input.value = rgbToHex(blurb_border_color);
-
-blurb_border_input.addEventListener("input", () => {
-  blurb.style.borderColor = blurb_border_input.value;
-});
+// now deal with the slider inputs
+function rangeInputs() {
+  const border_size_input = document.getElementById(" border_size_input");
+}
