@@ -3,6 +3,7 @@
 @use "../utils/animations" as *;
 @use "../utils/slider" as *;
 @use "../utils/hidestuff" as *;
+@use "../utils/dropdown" as *;
 
 $bodybg: #eee;
 $blurbbackgroundcolor: #ffffffff;
@@ -399,9 +400,34 @@ body {
             .sliderinput {
               width: 500px;
             }
-
             .resetbutton {
-              // add styling here
+              padding: 12px 24px;
+              font-size: 18px;
+              font-weight: 600;
+              border: 2px solid #3b6df2; // primary blue border
+              border-radius: 12px;
+              background-color: #eaf0ff; // light blue background
+              color: #1f1f1f;
+              cursor: pointer;
+              transition: all 0.25s ease;
+
+              &:hover {
+                background-color: #d0e2ff; // slightly darker blue
+                border-color: #2a54c3; // darker blue border
+                color: #000; // optional text color change
+              }
+
+              &:focus {
+                outline: none;
+                background-color: #c6dbff; // even darker on focus
+                border-color: #1d3fa8;
+                color: #000;
+              }
+
+              &:active {
+                background-color: #b0ccff;
+                border-color: #17317d;
+              }
             }
           }
         }
@@ -475,6 +501,19 @@ body {
         }
 
         padding-left: 100px;
+      }
+      #circle_down {
+        font-variation-settings: "FILL" 0, /* filled */ "wght" 700,
+          /* bold weight */ "GRAD" 0, /* gradient */ "opsz" 48; /* optical size */
+        font-size: 50px;
+        color: #000000ff;
+
+        margin-top: 8px;
+
+        &:hover {
+          cursor: pointer;
+          transform: scale(1.07);
+        }
       }
       @media (max-width: 400px) {
         h2#blurbpointer {

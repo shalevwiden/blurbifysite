@@ -291,3 +291,5 @@ function rangeInputs() {
 }
 
 rangeInputs();
+
+export { blurbify_bg_div };

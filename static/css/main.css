@@ -567,8 +567,41 @@ body .sitecontainer div.specsdiv .specs_ul li input[type=color]::-webkit-color-s
   border: none;
   border-radius: 8px;
 }
-body .sitecontainer div.specsdiv .specs_ul li .sliderinput {
+body .sitecontainer div.specsdiv .specs_ul li div.sliderdiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+body .sitecontainer div.specsdiv .specs_ul li div.sliderdiv .sliderinput {
   width: 500px;
+}
+body .sitecontainer div.specsdiv .specs_ul li div.sliderdiv .resetbutton {
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: 600;
+  border: 2px solid #3b6df2;
+  border-radius: 12px;
+  background-color: #eaf0ff;
+  color: #1f1f1f;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+body .sitecontainer div.specsdiv .specs_ul li div.sliderdiv .resetbutton:hover {
+  background-color: #d0e2ff;
+  border-color: #2a54c3;
+  color: #000;
+}
+body .sitecontainer div.specsdiv .specs_ul li div.sliderdiv .resetbutton:focus {
+  outline: none;
+  background-color: #c6dbff;
+  border-color: #1d3fa8;
+  color: #000;
+}
+body .sitecontainer div.specsdiv .specs_ul li div.sliderdiv .resetbutton:active {
+  background-color: #b0ccff;
+  border-color: #17317d;
 }
 @media (max-width: 700px) {
   body .sitecontainer div.specsdiv {
@@ -615,6 +648,16 @@ body .sitecontainer div.pointerdiv h2#blurbpointer {
 }
 body .sitecontainer div.pointerdiv h2#blurbpointer span {
   color: rgb(36, 110, 221);
+}
+body .sitecontainer div.pointerdiv #circle_down {
+  font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 0, "opsz" 48; /* optical size */
+  font-size: 50px;
+  color: black;
+  margin-top: 8px;
+}
+body .sitecontainer div.pointerdiv #circle_down:hover {
+  cursor: pointer;
+  transform: scale(1.07);
 }
 @media (max-width: 400px) {
   body .sitecontainer div.pointerdiv h2#blurbpointer {
