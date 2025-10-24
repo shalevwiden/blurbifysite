@@ -19,18 +19,21 @@ function blurb_bg_padding() {
   });
 }
 blurb_bg_padding();
-let specsdivcolor = document.querySelector("#color_specs");
+let specs_color_ul = document.querySelector(".specs_ul");
 
 function specsdiv_dropdown() {
   const circle_down_colorspec = document.getElementById(
-    "circle_down_colorspec"
+    "circle_down_colorspecs"
   );
+
+  circle_down_colorspec.addEventListener("click", () => {
+    console.log("colorspec circle clicked");
+
+    // classes are defined in _dropdown.scss
+
+    specs_color_ul.classList.toggle("no_height");
+    circle_down_colorspec.classList.toggle("rotated");
+  });
 }
-circle_down_colorspec.addEventListener("click", () => {
-  console.log("circle down circle clicked");
 
-  // classes are defined in _dropdown.scss
-
-  specsdivcolor.classList.toggle(".no_height");
-  circle_down_blurb.classList.toggle("rotated");
-});
+specsdiv_dropdown();

@@ -25,6 +25,7 @@ $personal: false;
 :root {
   --border-thickness: 8px;
   --dropdown_time: 1s;
+  --specs_droptime_time: 0.5s;
 }
 body {
   @include bodyStyling;
@@ -312,7 +313,9 @@ body {
       gap: 0px;
       margin-bottom: 80px;
       margin-top: 80px;
-      border: 3px solid green;
+      border: 9px solid rgba(75, 97, 221, 1);
+      border-radius: 30px;
+
       .toggle_menu {
         // do it here lmao
         @include flexrow;
@@ -327,17 +330,23 @@ body {
         }
       }
       .specs_ul {
-        border: 9px solid rgba(90, 100, 120, 0.4);
-        border-radius: 20px;
         width: 100%;
-        height: auto;
+        border-top: 3px solid rgb(23, 27, 100);
 
+        // needs to be max height so it can animate
+        max-height: 800px; // enough for full content
         @include flexcol;
         align-items: flex-start;
         padding: 60px 30px;
         list-style: none;
         background: #9cc4eaff;
-        transition: all 0.3s ease;
+        transition: all 0.5s ease;
+        transition: max-height var(--specs_droptime_time) ease,
+          padding var(--specs_droptime_time) ease;
+
+        // for the transition
+
+        overflow: hidden;
 
         &:hover {
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
@@ -468,12 +477,18 @@ body {
         }
       }
     }
+
+    .specsdiv#color_specs {
+      margin-bottom: 6px;
+    }
+
     .specsdiv#sizing_specs {
       // hide for now
       display: none;
     }
-    .specsdiv#color_specs {
-      margin-bottom: 6px;
+    .specsdiv#pfp_specs {
+      // hide for now
+      display: none;
     }
     div.pointerdiv {
       @include flexrow;
@@ -530,7 +545,9 @@ body {
       width: 100%;
       // this should add
       padding: 250px 0px;
-      border: 5px solid pink;
+
+      // faded but noticable border
+      border: 2px solid rgb(169, 131, 137);
       // background is changed responsively in JavaScript
       background-color: $bodybg;
 
