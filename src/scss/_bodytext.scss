@@ -338,7 +338,7 @@ body {
         z-index: 1;
 
         // needs to be max height so it can animate
-        max-height: 800px; // enough for full content
+        max-height: 980px; // enough for full content
         @include flexcol;
         align-items: flex-start;
         padding: 60px 30px;
