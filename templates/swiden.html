@@ -88,12 +88,7 @@
           <!-- make all of these lis flex cols -->
           <li>
             <p>Add text that will be the name</p>
-            <input
-              type="text"
-              placeholder="Add name"
-              id="nameInput"
-              value="Shalev"
-            />
+            <input type="text" placeholder="Add name" id="nameInput" />
           </li>
           <li>
             <p>Verified?</p>
@@ -106,12 +101,7 @@
           </li>
           <li>
             <p>Add text that will be the username</p>
-            <input
-              type="text"
-              placeholder="Add username"
-              id="usernameInput"
-              value="swiden.mp4"
-            />
+            <input type="text" placeholder="Add username" id="usernameInput" />
           </li>
           <li>
             <p>Add content text</p>
@@ -168,58 +158,144 @@
         <button id="submitBtn">Submit Blurb</button>
       </div>
 
+      <!-- there can be multiple specs divs. 
+       
+      -->
+      <!-- the specs divs will be drop down menus -->
+
+      <div class="specsdiv" id="color_specs">
+        <!-- specs ul has the stuff -->
+        <div class="toggle_menu">
+          <h2>Customization Panel</h2>
+          <span
+            class="material-symbols-outlined circle_down"
+            id="circle_down_colorspecs"
+          >
+            expand_circle_down
+          </span>
+        </div>
+        <ul class="specs_ul">
+          <li>
+            <p>Change Blurb Background Color</p>
+
+            <input type="color" name="blurb_bg_input" id="blurb_bg_input" />
+          </li>
+          <li>
+            <p>Change Blurb Border Color</p>
+            <input type="color" name="blurb_border" id="blurb_border_input" />
+          </li>
+          <li>
+            <p>Change Blurb Border Thickness</p>
+            <div class="sliderdiv">
+              <input
+                type="range"
+                id="border_size_input"
+                class="sliderinput"
+                min="0"
+                max="20"
+                value="5"
+                step="1"
+              />
+              <button class="resetbutton" id="reset_border">Reset</button>
+            </div>
+          </li>
+          <li>
+            <p>Change Content Text Size</p>
+            <div class="sliderdiv">
+              <input
+                type="range"
+                id="contenttext_size_input"
+                class="sliderinput"
+                min="10"
+                max="50"
+                value="28"
+                step="1"
+              />
+              <button class="resetbutton" id="reset_text">Reset</button>
+            </div>
+          </li>
+          <li></li>
+        </ul>
+      </div>
+      <!-- hmmm I think this one is gonna be commetned out for now -->
+      <div class="specsdiv" id="pfp_specs">
+        <!-- this one is necessary fr. To get the pfps on lock ngl -->
+
+        <ul class="spec_sul">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+      <div class="specsdiv" id="sizing_specs">
+        <ul class="spec_sul">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+
+      <!-- add another specs div for pfp stuff -->
       <!-- output of the form -->
       <div class="pointerdiv">
         <h2 id="blurbpointer">The <span>Blurb</span>:</h2>
+        <span class="material-symbols-outlined" id="circle_down_blurb">
+          expand_circle_down
+        </span>
+        <!-- add an icon here that will add more margin bottom better -->
       </div>
 
-      <div class="blurbifydiv">
-        <div id="pfp_and_username">
-          <div class="pfpdiv" id="pfpid">
-            <img src="../images/pfpoct.png" alt="pfp gone" id="pfpimage" />
-            <!-- turns out I can use inline styling for different templates lets go lmaoooo 
-            above is good for the linkedin pfp 
-            -->
-
-            <!-- also imma make people blurbs already lmao -->
+      <div class="blurbify_bg_div">
+        <div class="blurbifydiv">
+          <div id="pfp_and_username">
+            <div class="pfpdiv" id="pfpid">
+              <img src="../images/nopfp.webp" alt="pfp gone" id="pfpimage" />
+            </div>
+            <div class="usernamediv">
+              <div class="align_them_div">
+                <span id="name"
+                  >Placeholder
+                  <img
+                    src="../images/verified.png"
+                    alt=""
+                    id="verified"
+                  /> </span
+                ><span id="username">@placeholder</span>
+              </div>
+            </div>
           </div>
-          <div class="usernamediv">
-            <div class="align_them_div">
-              <span id="name"
-                >Shalev
-                <img src="../images/verified.png" alt="" id="verified" /> </span
-              ><span id="username">@swiden.mp4</span>
+
+          <div class="textcontent">
+            <!-- use .gradient_text to add gradienttext -->
+            <p>This is where the text content of the blurb will go.</p>
+            <!-- use span with class of bottom to add margin top lmao -->
+          </div>
+          <section id="imagesection">
+            <img src="" alt="not here yet" id="postimage" />
+            <!-- <video src="../images/demovid.mov" controls id="postvid"></video> -->
+          </section>
+
+          <!-- icons here -->
+
+          <div class="iconsdiv">
+            <!-- can change everything in these icons and animate the fuck out of them lets goo -->
+            <i class="fa-regular fa-comment"></i>
+
+            <i class="fa-regular fa-heart"></i>
+            <div class="statsarea">
+              <span class="material-symbols-outlined stats"> bar_chart </span>
+              <span id="count">2.6k</span>
+            </div>
+            <div class="righticons">
+              <span class="material-symbols-rounded bookmark"> bookmark </span>
+              <span class="material-symbols-outlined share"> ios_share </span>
             </div>
           </div>
         </div>
-
-        <div class="textcontent">
-          <!-- use .gradient_text to add gradienttext -->
-          <p>This is where the text content of the blurb will go.</p>
-          <!-- use span with class of bottom to add margin top lmao -->
-        </div>
-        <section id="imagesection">
-          <img src="../images/cooking2.png" alt="" id="postimage" />
-          <!-- <video src="../images/demovid.mov" controls id="postvid"></video> -->
-        </section>
-
-        <!-- icons here -->
-
-        <div class="iconsdiv">
-          <!-- can change everything in these icons and animate the fuck out of them lets goo -->
-          <i class="fa-regular fa-comment"></i>
-
-          <i class="fa-regular fa-heart"></i>
-          <div class="statsarea">
-            <span class="material-symbols-outlined stats"> bar_chart </span>
-            <span id="count">100</span>
-          </div>
-          <div class="righticons">
-            <span class="material-symbols-rounded bookmark"> bookmark </span>
-            <span class="material-symbols-outlined share"> ios_share </span>
-          </div>
-        </div>
       </div>
+
       <!-- buttons to add animations -->
       <div class="buttons">
         <button id="blurbifybutton">Toggle Blurb Animations</button>
@@ -245,5 +321,6 @@
     </div>
     <script src="../static/js/toggleanimations.js"></script>
     <script src="../static/js/inputs.js"></script>
+    <script src="../static/js/dropdown.js"></script>
   </body>
 </html>
