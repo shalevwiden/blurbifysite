@@ -28,10 +28,16 @@ flyingbutton.addEventListener("click", () => {
   console.log("toggling flying object");
   flyingimage.classList.toggle("flying_class");
 });
-
 spinbutton.addEventListener("click", () => {
   console.log("toggling spin");
-  blurbifydiv.classList.toggle("spin_class");
+
+  // Add the class
+  blurbifydiv.classList.add("spin_class");
+
+  // Remove the class after animation duration so it can be retriggered
+  setTimeout(() => {
+    blurbifydiv.classList.remove("spin_class");
+  }, 5000); // 5000ms = your animation duration
 });
 function easeOutQuad(t) {
   return t * (2 - t);

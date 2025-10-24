@@ -6,6 +6,28 @@
   margin-top: -10px;
 }
 
-#circle_down.rotated {
-  transform: rotate(-90deg); /* rotate 90° clockwise */
+// heres the circle down styling
+
+.circle_down {
+  font-variation-settings: "FILL" 0, /* filled */ "wght" 700,
+    /* bold weight */ "GRAD" 0, /* gradient */ "opsz" 48; /* optical size */
+  font-size: 50px !important;
+  color: #000000ff;
+
+  margin-top: 8px;
+
+  // for animations
+  transition: transform var(--dropdown_time) ease;
+  display: inline-block;
+
+  &:not(.rotated):hover {
+    // only scales doesnt hover
+    transform: scale(1.07);
+    cursor: pointer;
+  }
+
+  &.rotated {
+    transform: rotate(-90deg);
+    cursor: pointer;
+  }
 }

@@ -313,7 +313,16 @@ body {
       margin-bottom: 80px;
       margin-top: 80px;
       border: 3px solid green;
+      .toggle_menu {
+        // do it here lmao
+        @include flexrow;
+        justify-content: flex-start;
+        padding: 10px;
 
+        h2 {
+          color: yellow;
+        }
+      }
       .specs_ul {
         border: 9px solid rgba(90, 100, 120, 0.4);
         border-radius: 20px;
@@ -503,29 +512,7 @@ body {
 
         padding-left: 100px;
       }
-      #circle_down {
-        font-variation-settings: "FILL" 0, /* filled */ "wght" 700,
-          /* bold weight */ "GRAD" 0, /* gradient */ "opsz" 48; /* optical size */
-        font-size: 50px;
-        color: #000000ff;
 
-        margin-top: 8px;
-
-        // for animations
-        transition: transform var(--dropdown_time) ease;
-        display: inline-block;
-
-        &:not(.rotated):hover {
-          // only scales doesnt hover
-          transform: scale(1.07);
-          cursor: pointer;
-        }
-
-        &.rotated {
-          transform: rotate(-90deg);
-          cursor: pointer;
-        }
-      }
       @media (max-width: 400px) {
         h2#blurbpointer {
           font-size: 35px;

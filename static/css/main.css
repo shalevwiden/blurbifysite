@@ -118,6 +118,7 @@
 
 .spin_class {
   animation: spin_lin 5s ease;
+  animation-delay: 2s;
 }
 
 .switch {
@@ -202,8 +203,21 @@ input:checked + .slider::before {
   margin-top: -10px;
 }
 
-#circle_down.rotated {
-  transform: rotate(-90deg); /* rotate 90° clockwise */
+.circle_down {
+  font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 0, "opsz" 48; /* optical size */
+  font-size: 50px !important;
+  color: black;
+  margin-top: 8px;
+  transition: transform var(--dropdown_time) ease;
+  display: inline-block;
+}
+.circle_down:not(.rotated):hover {
+  transform: scale(1.07);
+  cursor: pointer;
+}
+.circle_down.rotated {
+  transform: rotate(-90deg);
+  cursor: pointer;
 }
 
 * {
@@ -493,6 +507,18 @@ body .sitecontainer div.specsdiv {
   border: 3px solid green;
   /* 📱 Responsiveness */
 }
+body .sitecontainer div.specsdiv .toggle_menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  justify-content: flex-start;
+  padding: 10px;
+}
+body .sitecontainer div.specsdiv .toggle_menu h2 {
+  color: yellow;
+}
 body .sitecontainer div.specsdiv .specs_ul {
   border: 9px solid rgba(90, 100, 120, 0.4);
   border-radius: 20px;
@@ -658,22 +684,6 @@ body .sitecontainer div.pointerdiv h2#blurbpointer {
 }
 body .sitecontainer div.pointerdiv h2#blurbpointer span {
   color: rgb(36, 110, 221);
-}
-body .sitecontainer div.pointerdiv #circle_down {
-  font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 0, "opsz" 48; /* optical size */
-  font-size: 50px;
-  color: black;
-  margin-top: 8px;
-  transition: transform var(--dropdown_time) ease;
-  display: inline-block;
-}
-body .sitecontainer div.pointerdiv #circle_down:not(.rotated):hover {
-  transform: scale(1.07);
-  cursor: pointer;
-}
-body .sitecontainer div.pointerdiv #circle_down.rotated {
-  transform: rotate(-90deg);
-  cursor: pointer;
 }
 @media (max-width: 400px) {
   body .sitecontainer div.pointerdiv h2#blurbpointer {
