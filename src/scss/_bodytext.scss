@@ -611,6 +611,8 @@ body {
 
       // faded but noticable border
       border: 2px solid rgb(169, 131, 137);
+      border-left: none;
+      border-right: none;
       // background is changed responsively in JavaScript
       background-color: $bodybg;
 
