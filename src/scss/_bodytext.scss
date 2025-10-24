@@ -22,9 +22,10 @@ $personal: false;
   padding: 0;
   margin: 0;
 }
+// change speeds here
 :root {
   --border-thickness: 8px;
-  --dropdown_time: 1s;
+  --dropdown_time: 0.5s;
   --specs_droptime_time: 0.5s;
 }
 body {
@@ -315,6 +316,7 @@ body {
       margin-top: 80px;
       border: 9px solid rgba(75, 97, 221, 1);
       border-radius: 30px;
+      z-index: 2;
 
       .toggle_menu {
         // do it here lmao
@@ -329,9 +331,11 @@ body {
           font-size: 40px;
         }
       }
+
       .specs_ul {
         width: 100%;
         border-top: 3px solid rgb(23, 27, 100);
+        z-index: 1;
 
         // needs to be max height so it can animate
         max-height: 800px; // enough for full content
@@ -427,7 +431,7 @@ body {
               font-size: 18px;
               font-weight: 600;
               border: 2px solid #3b6df2; // primary blue border
-              border-radius: 12px;
+              border-radius: 18px;
               background-color: #eaf0ff; // light blue background
               color: #1f1f1f;
               cursor: pointer;
@@ -458,20 +462,41 @@ body {
       /* 📱 Responsiveness */
       @media (max-width: 700px) {
         width: 95%;
+        .toggle_menu {
+          // do it here lmao
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-end;
+          //
+          height: 150px;
+          justify-content: space-between;
+          padding: 10px 20px;
 
-        #input_ul {
+          h2 {
+            color: rgba(16, 62, 231, 1);
+            font-size: 30px;
+          }
+        }
+
+        .specs_ul {
           padding: 40px 20px;
 
           li {
             p {
+              // p smaller
               font-size: 18px;
             }
 
             // fix this since theres no text in this styling one.
-            input[type="text"] {
+            div.sliderdiv {
+              flex-direction: column;
+              align-items: flex-start;
+              gap: 20px;
               width: 100%;
-              font-size: 16px;
-              padding: 12px;
+              .sliderinput {
+                margin-top: 10px;
+                width: 90%;
+              }
             }
           }
         }

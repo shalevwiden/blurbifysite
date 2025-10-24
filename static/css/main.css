@@ -257,7 +257,7 @@ input:checked + .slider::before {
 
 :root {
   --border-thickness: 8px;
-  --dropdown_time: 1s;
+  --dropdown_time: 0.5s;
   --specs_droptime_time: 0.5s;
 }
 
@@ -536,6 +536,7 @@ body .sitecontainer div.specsdiv {
   margin-top: 80px;
   border: 9px solid rgb(75, 97, 221);
   border-radius: 30px;
+  z-index: 2;
   /* 📱 Responsiveness */
 }
 body .sitecontainer div.specsdiv .toggle_menu {
@@ -556,6 +557,7 @@ body .sitecontainer div.specsdiv .toggle_menu h2 {
 body .sitecontainer div.specsdiv .specs_ul {
   width: 100%;
   border-top: 3px solid rgb(23, 27, 100);
+  z-index: 1;
   max-height: 800px;
   display: flex;
   flex-direction: column;
@@ -653,7 +655,7 @@ body .sitecontainer div.specsdiv .specs_ul li div.sliderdiv .resetbutton {
   font-size: 18px;
   font-weight: 600;
   border: 2px solid #3b6df2;
-  border-radius: 12px;
+  border-radius: 18px;
   background-color: #eaf0ff;
   color: #1f1f1f;
   cursor: pointer;
@@ -678,16 +680,33 @@ body .sitecontainer div.specsdiv .specs_ul li div.sliderdiv .resetbutton:active 
   body .sitecontainer div.specsdiv {
     width: 95%;
   }
-  body .sitecontainer div.specsdiv #input_ul {
+  body .sitecontainer div.specsdiv .toggle_menu {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    height: 150px;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+  body .sitecontainer div.specsdiv .toggle_menu h2 {
+    color: rgb(16, 62, 231);
+    font-size: 30px;
+  }
+  body .sitecontainer div.specsdiv .specs_ul {
     padding: 40px 20px;
   }
-  body .sitecontainer div.specsdiv #input_ul li p {
+  body .sitecontainer div.specsdiv .specs_ul li p {
     font-size: 18px;
   }
-  body .sitecontainer div.specsdiv #input_ul li input[type=text] {
+  body .sitecontainer div.specsdiv .specs_ul li div.sliderdiv {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
     width: 100%;
-    font-size: 16px;
-    padding: 12px;
+  }
+  body .sitecontainer div.specsdiv .specs_ul li div.sliderdiv .sliderinput {
+    margin-top: 10px;
+    width: 90%;
   }
 }
 body .sitecontainer .specsdiv#color_specs {
