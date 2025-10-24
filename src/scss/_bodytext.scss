@@ -425,6 +425,31 @@ body {
 
             .sliderinput {
               width: 500px;
+              height: 70px; /* optional: change track thickness */
+              -webkit-appearance: none;
+              appearance: none; // <- important for Firefox
+              background: transparent; // optional, hides default styling
+
+              &::-webkit-slider-runnable-track {
+                height: 14px; /* thickness of the line */
+                background: #fef9f9ff; /* track color */
+                border-radius: 3px; /* rounded ends */
+              }
+
+              // this is the circle part of the slider
+              &::-webkit-slider-thumb {
+                // remove default styling
+                // hmmm I can even set an image here lmao now thats funny.
+
+                -webkit-appearance: none;
+
+                width: 25px;
+                height: 25px;
+                background: #1a81caff;
+                border-radius: 50%;
+                cursor: pointer;
+                margin-top: -5px; /* align thumb with track */
+              }
             }
             .resetbutton {
               padding: 12px 24px;
@@ -496,6 +521,17 @@ body {
               .sliderinput {
                 margin-top: 10px;
                 width: 90%;
+
+                // this is where I would change the styling for the mobile screen
+                &::-webkit-slider-runnable-track {
+                  //
+                }
+
+                // this is the circle part of the slider
+                &::-webkit-slider-thumb {
+                  // remove default styling
+                  // hmmm I can even set an im
+                }
               }
             }
           }

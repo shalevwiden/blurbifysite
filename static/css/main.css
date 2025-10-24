@@ -649,6 +649,25 @@ body .sitecontainer div.specsdiv .specs_ul li div.sliderdiv {
 }
 body .sitecontainer div.specsdiv .specs_ul li div.sliderdiv .sliderinput {
   width: 500px;
+  height: 70px; /* optional: change track thickness */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  background: transparent;
+}
+body .sitecontainer div.specsdiv .specs_ul li div.sliderdiv .sliderinput::-webkit-slider-runnable-track {
+  height: 14px; /* thickness of the line */
+  background: #fef9f9; /* track color */
+  border-radius: 3px; /* rounded ends */
+}
+body .sitecontainer div.specsdiv .specs_ul li div.sliderdiv .sliderinput::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #1a81ca;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -5px; /* align thumb with track */
 }
 body .sitecontainer div.specsdiv .specs_ul li div.sliderdiv .resetbutton {
   padding: 12px 24px;
