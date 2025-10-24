@@ -37,7 +37,7 @@ spinbutton.addEventListener("click", () => {
   // Remove the class after animation duration so it can be retriggered
   setTimeout(() => {
     blurbifydiv.classList.remove("spin_class");
-  }, 5000); // 5000ms = your animation duration
+  }, 7000); // 5000ms = your animation duration + the delay
 });
 function easeOutQuad(t) {
   return t * (2 - t);
