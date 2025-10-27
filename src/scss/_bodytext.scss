@@ -112,6 +112,13 @@ body {
             font-weight: 600;
             color: #2b2f42;
           }
+          p.instructions {
+            // a lil spacing
+            margin-bottom: 10px;
+            color: #3e3e3eff;
+            font-size: 19px;
+            font-weight: normal;
+          }
 
           .usernamediv {
             width: 90%;
@@ -392,6 +399,14 @@ body {
             color: #2b2f42;
           }
 
+          p.instructions {
+            // a lil spacing
+            margin-bottom: 10px;
+            color: #3e3e3eff;
+            font-size: 19px;
+            font-weight: normal;
+          }
+
           input[type="text"] {
             width: 90%;
             padding: 14px 18px;
@@ -512,7 +527,7 @@ body {
           // do it here lmao
           flex-direction: column;
           justify-content: center;
-          align-items: flex-end;
+          align-items: flex-start;
           //
           height: 150px;
           justify-content: space-between;
@@ -522,6 +537,10 @@ body {
             color: rgba(16, 62, 231, 1);
             font-size: 30px;
           }
+
+          .circle-down {
+            //
+          }
         }
 
         .specs_ul {
@@ -530,6 +549,9 @@ body {
           li {
             p {
               // p smaller
+              font-size: 23px;
+            }
+            p.instructions {
               font-size: 18px;
             }
 

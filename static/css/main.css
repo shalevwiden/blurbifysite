@@ -377,6 +377,12 @@ body .sitecontainer div.inputdiv #input_ul li p {
   font-weight: 600;
   color: #2b2f42;
 }
+body .sitecontainer div.inputdiv #input_ul li p.instructions {
+  margin-bottom: 10px;
+  color: #3e3e3e;
+  font-size: 19px;
+  font-weight: normal;
+}
 body .sitecontainer div.inputdiv #input_ul li .usernamediv {
   width: 90%;
   display: flex;
@@ -628,6 +634,12 @@ body .sitecontainer div.specsdiv .specs_ul li p {
   font-weight: 600;
   color: #2b2f42;
 }
+body .sitecontainer div.specsdiv .specs_ul li p.instructions {
+  margin-bottom: 10px;
+  color: #3e3e3e;
+  font-size: 19px;
+  font-weight: normal;
+}
 body .sitecontainer div.specsdiv .specs_ul li input[type=text] {
   width: 90%;
   padding: 14px 18px;
@@ -750,6 +762,9 @@ body .sitecontainer div.specsdiv .specs_ul li div.sliderdiv .resetbutton:active 
     padding: 40px 20px;
   }
   body .sitecontainer div.specsdiv .specs_ul li p {
+    font-size: 23px;
+  }
+  body .sitecontainer div.specsdiv .specs_ul li p.instructions {
     font-size: 18px;
   }
   body .sitecontainer div.specsdiv .specs_ul li div.sliderdiv {
