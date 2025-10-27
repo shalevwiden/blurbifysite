@@ -979,7 +979,7 @@ body .sitecontainer div.blurbify_bg_div .blurbifydiv div#pfp_and_username .usern
   top: 1px;
   display: inline-block;
   /* The gradient that will show through the opaque parts */
-  background: linear-gradient(290deg, #425d84 0%, #605bf7 10%, #60c4ff 61%, #529665 100%);
+  background: linear-gradient(90deg, #60c4ff 5%, #ff8a00 38%, #e52e71 67%, #5e9652 92%);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1309,12 +1309,14 @@ body .sitecontainer div.blurbify_bg_div .blurbifydiv div.iconsdiv .righticons {
     aspect-ratio: 1/1;
     position: relative;
     top: 1px;
-    background: linear-gradient(90deg, #ff8a00, #e52e71); /* gradient colors */
+    /* gradient colors */
   }
   body .sitecontainer div.blurbify_bg_div .blurbifydiv div#pfp_and_username .usernamediv div.align_them_div #username {
     color: grey;
     font-size: 19px;
     margin-bottom: 2px;
+    word-break: break-word;
+    overflow-wrap: anywhere;
   }
   body .sitecontainer div.blurbify_bg_div .blurbifydiv div.iconsdiv {
     margin-left: 0px;
