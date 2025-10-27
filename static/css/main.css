@@ -273,6 +273,10 @@ input:checked + .slider::before {
   cursor: pointer;
 }
 
+#flyingimage_specs {
+  display: none !important;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;

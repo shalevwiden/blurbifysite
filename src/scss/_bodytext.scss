@@ -4,6 +4,7 @@
 @use "../utils/slider" as *;
 @use "../utils/hidestuff" as *;
 @use "../utils/dropdown" as *;
+@use "flying_specs" as *;
 
 $bodybg: #eee;
 $blurbbackgroundcolor: #ffffffff;
@@ -835,11 +836,11 @@ body {
                   // url("../../images/verified.png");
                   /* The gradient that will show through the opaque parts */
                   background: linear-gradient(
-                    290deg,
-                    #425d84ff 0%,
-                    #605bf7ff 10%,
-                    #60c4ffff 61%,
-                    #529665ff 100%
+                    90deg,
+                    #60c4ff 5%,
+                    #ff8a00 38%,
+                    #e52e71 67%,
+                    #5e9652 92%
                   );
                   background-repeat: no-repeat;
                   background-size: cover;
@@ -1227,11 +1228,7 @@ body {
                     position: relative;
                     top: 1px;
 
-                    background: linear-gradient(
-                      90deg,
-                      #ff8a00,
-                      #e52e71
-                    ); /* gradient colors */
+                    /* gradient colors */
                   }
                 }
                 #username {
