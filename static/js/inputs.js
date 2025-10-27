@@ -210,6 +210,13 @@ submitBtn.addEventListener("click", () => {
 
     pfpimage_adjustment.src = pfppreview.src;
   }
+
+  // scroll to the blurb pointer I think we'll see
+
+  pointer = document.querySelector("#blurbpointer");
+  pointer.scrollIntoView({
+    behavior: "smooth",
+  });
 });
 
 // now deal with all the specsdiv stuff
