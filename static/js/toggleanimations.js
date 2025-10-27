@@ -2,17 +2,21 @@
 
 //
 
+// icons stuff first
+
+const viewsicon = document.querySelector("#viewchart");
+
 const buttonsDiv = document.querySelector(".buttons");
 
 const blurbifybutton = buttonsDiv.querySelector("#blurbifybutton");
 const Backgroundbutton = buttonsDiv.querySelector("#Backgroundbutton");
 const flyingbutton = buttonsDiv.querySelector("#flyingbutton");
 const spinbutton = buttonsDiv.querySelector("#spin");
-const viewsbutton = buttonsDiv.querySelector("#viewsbutton");
 
 const blurbifydiv = document.querySelector(".blurbifydiv");
 const pfpid = document.querySelector("#pfpid");
 
+// get a whole element
 const body = document.querySelector("body");
 
 const flyingimage = document.querySelector("img.flyingimage");
@@ -116,11 +120,11 @@ blurbifybutton.addEventListener("click", () => {
 // Make the duration a little slower
 const duration = 10000;
 
-viewsbutton.addEventListener("click", () => {
+viewsicon.addEventListener("click", () => {
   setTimeout(() => {
-    console.log("toggling viewsbutton");
-    // blurbifydiv.classList.toggle("blurbify_class");
-    // pfpid.classList.toggle("spin_class");
+    console.log("toggling viewsicon");
+
+    // ok so this is now on the views icon instead of a new button
     countUp(views, viewcount, duration);
-  }, 3000);
+  }, 1000);
 });
