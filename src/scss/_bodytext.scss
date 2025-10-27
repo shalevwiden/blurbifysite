@@ -368,7 +368,7 @@ body {
         border-bottom-right-radius: 20px;
 
         // needs to be max height so it can animate
-        max-height: 980px; // enough for full content
+        max-height: 1100px; // enough for full content
         @include flexcol;
         align-items: flex-start;
         padding: 60px 30px;
@@ -553,6 +553,7 @@ body {
             }
             p.instructions {
               font-size: 18px;
+              margin: 20px 0px;
             }
 
             // fix this since theres no text in this styling one.
