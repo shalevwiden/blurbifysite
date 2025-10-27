@@ -5,6 +5,22 @@
   transition: all 0.3s ease;
 }
 
+@keyframes heart-click {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.heart-filled {
+  font-weight: 600 !important;
+  animation: heart-click 0.5s ease forwards;
+}
+
 :root {
   --flyingy: -1340px;
   --flyingymobile: -2190px;
@@ -259,6 +275,8 @@ input:checked + .slider::before {
   --border-thickness: 8px;
   --dropdown_time: 0.5s;
   --specs_droptime_time: 0.5s;
+  --pfpbackground: #c2d9ffff;
+  --heartcolor: #172ad5ff;
 }
 
 body {
@@ -282,6 +300,7 @@ body .sitecontainer {
   align-items: center;
   justify-content: center;
   gap: 20px;
+  gap: 0;
   justify-content: flex-start;
   min-height: 100vh;
   width: 100%;
@@ -357,6 +376,22 @@ body .sitecontainer div.inputdiv #input_ul li p {
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-weight: 600;
   color: #2b2f42;
+}
+body .sitecontainer div.inputdiv #input_ul li .usernamediv {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-left: 10px;
+}
+body .sitecontainer div.inputdiv #input_ul li .usernamediv p#at {
+  color: grey;
+  font-size: 28px;
+  font-weight: normal;
 }
 body .sitecontainer div.inputdiv #input_ul li input[type=text],
 body .sitecontainer div.inputdiv #input_ul li .textarea_input {
@@ -532,7 +567,6 @@ body .sitecontainer div.specsdiv {
   justify-content: center;
   gap: 20px;
   gap: 0px;
-  margin-bottom: 80px;
   margin-top: 80px;
   border: 9px solid rgb(33, 52, 157);
   background-clip: padding-box;
@@ -654,6 +688,7 @@ body .sitecontainer div.specsdiv .specs_ul li div.sliderdiv .sliderinput {
   -moz-appearance: none;
        appearance: none;
   background: transparent;
+  accent-color: #0e7758;
 }
 body .sitecontainer div.specsdiv .specs_ul li div.sliderdiv .sliderinput::-webkit-slider-runnable-track {
   height: 14px; /* thickness of the line */
@@ -735,7 +770,39 @@ body .sitecontainer .specsdiv#sizing_specs {
   display: none;
 }
 body .sitecontainer .specsdiv#pfp_specs {
-  display: none;
+  border: 9px solid rgb(64, 129, 220);
+  margin-top: 6px;
+  margin-bottom: 80px;
+}
+body .sitecontainer .specsdiv#pfp_specs .specs_ul#specs_pfp_ul {
+  padding: 60px 30px;
+}
+body .sitecontainer .specsdiv#pfp_specs .specs_ul#specs_pfp_ul li div.adjustmentdiv {
+  border: 3px solid rgb(4, 255, 0);
+  border-radius: 50%;
+  width: 200px;
+  aspect-ratio: 1/1;
+  border: 0px solid black;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 1;
+  flex-shrink: 0;
+  background-color: var(--pfpbackground);
+  position: relative;
+  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+body .sitecontainer .specsdiv#pfp_specs .specs_ul#specs_pfp_ul li div.adjustmentdiv img {
+  height: auto;
+  width: 138%;
+  height: auto;
+  position: relative;
+  top: 8px;
+  right: 0px;
 }
 body .sitecontainer div.pointerdiv {
   display: flex;
@@ -748,7 +815,7 @@ body .sitecontainer div.pointerdiv {
   justify-content: flex-start;
   border: 1px solid transparent;
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 body .sitecontainer div.pointerdiv h2#blurbpointer {
   font-size: 50px;
@@ -818,7 +885,7 @@ body .sitecontainer div.blurbify_bg_div .blurbifydiv div#pfp_and_username .pfpdi
   overflow: hidden;
   z-index: 1;
   flex-shrink: 0;
-  background-color: #c2d9ff;
+  background-color: var(--pfpbackground);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -826,12 +893,12 @@ body .sitecontainer div.blurbify_bg_div .blurbifydiv div#pfp_and_username .pfpdi
   gap: 20px;
 }
 body .sitecontainer div.blurbify_bg_div .blurbifydiv div#pfp_and_username .pfpdiv img {
-  margin-bottom: 10px;
-  width: 135%; /* scale image to parent width */
   height: auto;
-  width: 120%;
+  width: 138%;
   height: auto;
-  margin-bottom: 0;
+  position: relative;
+  top: 3px;
+  right: 0px;
 }
 body .sitecontainer div.blurbify_bg_div .blurbifydiv div#pfp_and_username .usernamediv {
   height: 100%;
@@ -933,8 +1000,12 @@ body .sitecontainer div.blurbify_bg_div .blurbifydiv div.iconsdiv {
   margin-left: 120px;
 }
 body .sitecontainer div.blurbify_bg_div .blurbifydiv div.iconsdiv .fa-heart {
-  color: #f10000;
+  color: var(--heartcolor);
   font-size: 25px;
+  font-weight: 500;
+}
+body .sitecontainer div.blurbify_bg_div .blurbifydiv div.iconsdiv .fa-heart:hover {
+  cursor: pointer;
 }
 body .sitecontainer div.blurbify_bg_div .blurbifydiv div.iconsdiv .fa-comment {
   font-size: 25px;
@@ -1141,8 +1212,12 @@ body .sitecontainer div.blurbify_bg_div .blurbifydiv div.iconsdiv .righticons {
     gap: 20px;
   }
   body .sitecontainer div.blurbify_bg_div .blurbifydiv div#pfp_and_username .pfpdiv img {
-    margin-bottom: 10px;
-    width: 135%; /* scale image to parent width */
+    height: auto;
+    width: 138%;
+    height: auto;
+    position: relative;
+    top: 8px;
+    right: 0px;
   }
   body .sitecontainer div.blurbify_bg_div .blurbifydiv div#pfp_and_username .usernamediv {
     height: 100%;
@@ -1194,7 +1269,7 @@ body .sitecontainer div.blurbify_bg_div .blurbifydiv div.iconsdiv .righticons {
     justify-content: space-between;
   }
   body .sitecontainer div.blurbify_bg_div .blurbifydiv div.iconsdiv .fa-heart {
-    color: #f10000;
+    color: var(--heartcolor);
     font-size: 21px;
   }
   body .sitecontainer div.blurbify_bg_div .blurbifydiv div.iconsdiv .fa-comment {

@@ -15,7 +15,6 @@ $blurbify_width: 900px;
 // these are great
 $debugborders: false;
 $hideicons: false;
-$personal: false;
 
 * {
   box-sizing: border-box;
@@ -27,6 +26,8 @@ $personal: false;
   --border-thickness: 8px;
   --dropdown_time: 0.5s;
   --specs_droptime_time: 0.5s;
+  --pfpbackground: #c2d9ffff;
+  --heartcolor: #172ad5ff;
 }
 body {
   @include bodyStyling;
@@ -34,6 +35,8 @@ body {
 
   .sitecontainer {
     @include flexcol();
+    // override default gap in my flexcol mixin
+    gap: 0;
     justify-content: flex-start;
     min-height: 100vh;
     width: 100%;
@@ -110,6 +113,20 @@ body {
             color: #2b2f42;
           }
 
+          .usernamediv {
+            width: 90%;
+            @include flexrow;
+            justify-content: flex-start;
+            gap: 10px;
+            margin-left: 10px;
+
+            // the @ sign in front of the username input
+            p#at {
+              color: grey;
+              font-size: 28px;
+              font-weight: normal;
+            }
+          }
           input[type="text"],
           .textarea_input {
             width: 90%;
@@ -307,12 +324,13 @@ body {
 
     // specsdiv is the drop down stuff
     div.specsdiv {
+      // even though there are multiple specs divs, this main styling applies throughout.
+
       width: 80%;
       height: auto;
       @include flexcol;
       // theres only one element so this should not apply
       gap: 0px;
-      margin-bottom: 80px;
       margin-top: 80px;
       border: 9px solid rgba(33, 52, 157, 1);
       // that will fix the border problem
@@ -437,6 +455,7 @@ body {
                 background: #fef9f9ff; /* track color */
                 border-radius: 3px; /* rounded ends */
               }
+              accent-color: #0e7758ff;
 
               // this is the circle part of the slider
               &::-webkit-slider-thumb {
@@ -516,6 +535,7 @@ body {
 
             // fix this since theres no text in this styling one.
             div.sliderdiv {
+              // this div exists to centralize the slider and the reset button. the sliderdiv itself does not style sliders
               flex-direction: column;
               align-items: flex-start;
               gap: 20px;
@@ -551,7 +571,57 @@ body {
     }
     .specsdiv#pfp_specs {
       // hide for now
-      display: none;
+      // different border just for differentiation
+      border: 9px solid rgba(64, 129, 220, 1);
+      // its the last item in the accordian so it will have a margin bottom. small margin top tho
+      margin-top: 6px;
+      margin-bottom: 80px;
+
+      .toggle_menu {
+        // styling
+      }
+      .specs_ul#specs_pfp_ul {
+        // this padding value is critical for a smooth drop down
+        padding: 60px 30px;
+        li {
+          //
+          div.adjustmentdiv {
+            border: 3px solid rgb(4, 255, 0);
+            border-radius: 50%;
+            // since this one is 100px, the real one needs to be subtracted in the javascript
+            width: 200px;
+            aspect-ratio: 1 / 1;
+
+            border: 0px solid black;
+            border-radius: 50%;
+
+            overflow: hidden;
+            z-index: 1;
+            flex-shrink: 0;
+
+            background-color: var(--pfpbackground);
+
+            // for the wrapper
+            position: relative;
+            display: inline-block;
+
+            @include flexcol;
+            img {
+              // same specifications as pfpdiv img
+              // use top and right values for all my templates too
+              height: auto;
+
+              width: 138%;
+              height: auto;
+              position: relative;
+
+              // twice as much top cause twice as big
+              top: 8px;
+              right: 0px;
+            }
+          }
+        }
+      }
     }
     div.pointerdiv {
       @include flexrow;
@@ -567,7 +637,7 @@ body {
 
       width: 100%;
       // distance above the BLurb
-      margin-bottom: 10px;
+      margin-bottom: 20px;
 
       h2#blurbpointer {
         font-size: 50px;
@@ -634,6 +704,7 @@ body {
 
         background-color: $blurbbackgroundcolor;
 
+        // add gradient text every now and then
         .gradient_text {
           background: linear-gradient(90deg, #ff0080, #7928ca, #2afadf);
           -webkit-background-clip: text;
@@ -657,7 +728,7 @@ body {
           gap: 1px;
 
           .pfpdiv {
-            width: $pfp_size;
+            width: 100px;
             aspect-ratio: 1 / 1;
             border: 0px solid black;
             border-radius: 50%;
@@ -666,21 +737,17 @@ body {
             z-index: 1;
             flex-shrink: 0;
 
-            background-color: #c2d9ffff;
+            background-color: var(--pfpbackground);
             @include flexcol;
             img {
-              margin-bottom: 10px;
-              width: 135%; /* scale image to parent width */
               height: auto;
 
-              @if $personal {
-                width: 135%;
-                aspect-ratio: 1 / 1;
-              } @else {
-                width: 120%;
-                height: auto;
-                margin-bottom: 0;
-              }
+              width: 138%;
+              height: auto;
+              position: relative;
+
+              top: 3px;
+              right: 0px;
               // this worked for swiden
             }
           }
@@ -815,8 +882,19 @@ body {
 
           // now icon styling
           .fa-heart {
-            color: #f10000ff;
+            // add an animation to this heart shit to make it a gradient
+
+            // animate views button, also animate heart
+            color: var(--heartcolor);
             font-size: 25px;
+            // thats how you can fill it I guess
+            font-weight: 500;
+
+            &:hover {
+              cursor: pointer;
+            }
+
+            // add click here to make it fill, maybe with JS
           }
           .fa-comment {
             font-size: 25px;
@@ -1039,8 +1117,15 @@ body {
               flex-shrink: 0;
               @include flexcol;
               img {
-                margin-bottom: 10px;
-                width: 135%; /* scale image to parent width */
+                height: auto;
+
+                width: 138%;
+                height: auto;
+                position: relative;
+
+                // twice as much top cause twice as big
+                top: 8px;
+                right: 0px;
               }
             }
             .usernamediv {
@@ -1098,7 +1183,7 @@ body {
             justify-content: space-between;
 
             .fa-heart {
-              color: #f10000ff;
+              color: var(--heartcolor);
               font-size: 21px;
             }
             .fa-comment {

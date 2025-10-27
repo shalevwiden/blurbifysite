@@ -146,7 +146,7 @@ postimageInput.addEventListener("change", () => {
 // now handle submit logic for pfp and post images
 
 submitBtn.addEventListener("click", () => {
-  const pfpimage = blurb.querySelector("#pfpimage");
+  let pfpimage = blurb.querySelector("#pfpimage");
   // just take the src from preview
   const path = window.location.pathname;
 
@@ -163,29 +163,19 @@ submitBtn.addEventListener("click", () => {
     !postimagepreview.src.endsWith("/");
 
   //
-  if (path.endsWith("swiden.html") || path.endsWith("swiden")) {
-    // now the default pfp for my template should be my pfp
-    if (pfpsrcexists) {
-      console.log("on swiden but not setting default");
-      pfpimage.src = pfppreview.src;
-    } else {
-      // this is where you set it lmao
-      console.log("on swiden setting default pfp");
-      pfpimage.src = "../images/pfpoct.png";
-    }
-  } else {
-    // pass for now - this is for other templates not swiden
-    if (pfpsrcexists) {
-      console.log("setting src to user pfp");
 
-      pfpimage.src = pfppreview.src;
-    } else {
-      // pfpimage.style.visibility = "hidden";
-      // the default one that people don't have
-      console.log("setting default grey pfp");
-      pfpimage.src = "../images/nopfp.webp";
-    }
+  // pass for now - this is for other templates not swiden
+  if (pfpsrcexists) {
+    console.log("setting src to user pfp");
+
+    pfpimage.src = pfppreview.src;
+  } else {
+    // pfpimage.style.visibility = "hidden";
+    // the default one that people don't have
+    console.log("setting default grey pfp");
+    pfpimage.src = "../images/nopfp.webp";
   }
+
   postimage = blurb.querySelector("#postimage");
   // just take the src from preview
 
@@ -199,6 +189,12 @@ submitBtn.addEventListener("click", () => {
     // it should fade in
     // using this same logic I can add other animations as we submit it
     postimage.style.opacity = "1";
+  }
+
+  if (pfpsrcexists) {
+    console.log("trying to add new src to pfpimage_adjustment");
+
+    pfpimage_adjustment.src = pfppreview.src;
   }
 });
 
@@ -246,6 +242,7 @@ colorInputs();
 // now deal with the slider inputs
 function rangeInputs() {
   const textcontent = blurb.querySelector(".textcontent");
+  // define inputs first
   const border_size_input = document.getElementById("border_size_input");
 
   const contenttext_size_input = document.getElementById(
@@ -257,6 +254,7 @@ function rangeInputs() {
   const blurb_border_width = getComputedStyle(blurb).borderWidth;
   border_size_input.value = parseInt(blurb_border_width);
 
+  // add event listeners for inputs
   border_size_input.addEventListener("input", () => {
     blurb.style.borderWidth = border_size_input.value + "px";
   });
@@ -292,5 +290,89 @@ function rangeInputs() {
 
 rangeInputs();
 
+function pfpSpecs() {
+  const pfpimage_adjustment = document.querySelector("#pfpimage_adjustment");
+  const pfpimage = blurb.querySelector("#pfpimage");
+
+  // default transform data
+  let rotation = 0;
+  let translateX = 0;
+  let translateY = 0;
+
+  const originalsize = parseInt(getComputedStyle(pfpimage).width);
+
+  const pfp_size_slider = document.querySelector("#pfp_size_slider");
+  const pfp_rotation_slider = document.querySelector("#pfp_rotation_slider");
+
+  // this needs to be done so that the transforms dont override each other
+  function updateTransform(translateX, translateY) {
+    // onl keep rotation global and the other two local I guess
+    pfpimage.style.transform = `translate(${translateX}px, ${translateY}px) rotate(${rotation}deg)`;
+    pfpimage_adjustment.style.transform = `translate(${translateX * 2}px, ${
+      translateY * 2
+    }px) rotate(${rotation}deg)`;
+  }
+
+  // Rotation
+  pfp_rotation_slider.addEventListener("input", () => {
+    rotation = parseInt(pfp_rotation_slider.value);
+    updateTransform(translateX, translateY);
+  });
+
+  // Position (InteractJS) this is the complicated one
+  interact(pfpimage_adjustment).draggable({
+    inertia: true,
+    modifiers: [
+      interact.modifiers.restrictRect({
+        restriction: "parent",
+        endOnly: true,
+      }),
+    ],
+    listeners: {
+      move(event) {
+        translateX += event.dx;
+        translateY += event.dy;
+        updateTransform(translateX, translateY);
+      },
+    },
+  });
+
+  // Size
+  pfp_size_slider.addEventListener("input", () => {
+    const size = parseInt(pfp_size_slider.value);
+    pfpimage.style.width = size + "px";
+    pfpimage_adjustment.style.width = size * 2 + "px";
+  });
+
+  updateTransform(translateX, translateY); // initialize once
+
+  // reset button
+  reset_size_and_position = document.getElementById("reset_pfp_size");
+
+  reset_size_and_position.addEventListener("click", () => {
+    // re-sync slider to CSS value
+    // change this to make it wack
+    console.log("reset size button clicked");
+
+    pfp_size_slider.value = originalsize;
+    pfpimage.style.width = originalsize + "px";
+    pfpimage_adjustment.style.width = originalsize * 2 + "px";
+    // need to update rotation global.
+    updateTransform(0, 0);
+  });
+
+  reset_rotation = document.getElementById("reset_rotation");
+
+  reset_rotation.addEventListener("click", () => {
+    // re-sync slider to CSS value
+    originalvalue = 0;
+    pfp_rotation_slider.value = originalvalue;
+    // need to update rotation global.
+    rotation = originalvalue;
+    updateTransform(translateX, translateY);
+  });
+}
+
+pfpSpecs();
 // makes it global
 window.blurbify_bg_div = blurbify_bg_div;

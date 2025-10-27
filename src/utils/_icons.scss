@@ -4,3 +4,19 @@
   font-size: 36px;
   transition: all 0.3s ease;
 }
+
+@keyframes heart-click {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.heart-filled {
+  font-weight: 600 !important;
+  animation: heart-click 0.5s ease forwards;
+}

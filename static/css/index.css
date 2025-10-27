@@ -117,6 +117,7 @@
 
 .spin_class {
   animation: spin_lin 5s ease;
+  animation-delay: 2s;
 }
 
 * {

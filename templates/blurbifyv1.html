@@ -74,7 +74,14 @@
           </li>
           <li>
             <p>Add text that will be the username</p>
-            <input type="text" placeholder="Add username" id="usernameInput" />
+            <div class="usernamediv">
+              <p id="at">@</p>
+              <input
+                type="text"
+                placeholder="Add username"
+                id="usernameInput"
+              />
+            </div>
           </li>
           <li>
             <p>Add content text</p>
@@ -147,7 +154,7 @@
             expand_circle_down
           </span>
         </div>
-        <ul class="specs_ul">
+        <ul class="specs_ul" id="specs_color_ul">
           <li>
             <p>Change Blurb Background Color</p>
 
@@ -193,14 +200,77 @@
       <div class="specsdiv" id="pfp_specs">
         <!-- this one is necessary fr. To get the pfps on lock ngl -->
         <!-- this one will be incredibly useful fr lmao -->
+        <div class="toggle_menu">
+          <h2>PFP Adjustments</h2>
+          <span
+            class="material-symbols-outlined circle_down"
+            id="circle_down_pfpspecs"
+          >
+            expand_circle_down
+          </span>
+        </div>
+        <!--  -->
+        <!-- style all of this lowkey -->
+        <ul class="specs_ul" id="specs_pfp_ul">
+          <li>
+            <!-- This is going to be the resizing bounding box fr lmao  -->
+            <p>Adjust Profile Picture</p>
 
-        <ul class="spec_sul">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+            <div class="adjustmentdiv">
+              <img
+                src="../images/nopfp.webp"
+                alt="adjustment img"
+                id="pfpimage_adjustment"
+              />
+            </div>
+          </li>
+          <li>
+            <p>Change Profile Picture Size</p>
+
+            <!-- the value here is the adjustment div width -->
+            <div class="sliderdiv">
+              <input
+                type="range"
+                class="sliderinput"
+                name="pfp_size_slider"
+                id="pfp_size_slider"
+                min="70"
+                max="370"
+                value="100"
+                step="1"
+              />
+              <button class="resetbutton" id="reset_pfp_size">Reset</button>
+            </div>
+          </li>
+
+          <li>
+            <!-- this will be the last li since I assume thats what users will use the most.
+            make it a 2px or 3px adjustment per click lmao. 
+            -->
+            <p>Rotate Profile Picture</p>
+
+            <!-- the value here is the adjustment div width -->
+            <div class="sliderdiv">
+              <input
+                type="range"
+                class="sliderinput"
+                name="pfp_rotation slider"
+                id="pfp_rotation_slider"
+                min="0"
+                max="360"
+                value="0"
+                step="1"
+              />
+              <button class="resetbutton" id="reset_rotation">Reset</button>
+            </div>
+          </li>
+          <li>
+            <!-- maybe update all these p's to labels later -->
+            <p></p>
+          </li>
         </ul>
       </div>
+      <!-- 3rd specsdiv -->
       <div class="specsdiv" id="sizing_specs">
         <ul class="spec_sul">
           <li></li>
@@ -256,7 +326,7 @@
             <!-- can change everything in these icons and animate the fuck out of them lets goo -->
             <i class="fa-regular fa-comment"></i>
 
-            <i class="fa-regular fa-heart"></i>
+            <i class="fa-regular fa-heart" id="heart_icon"></i>
             <div class="statsarea">
               <span class="material-symbols-outlined stats"> bar_chart </span>
               <span id="count">2.6k</span>
@@ -293,7 +363,13 @@
       </div>
     </div>
     <script src="../static/js/toggleanimations.js"></script>
+
+    <!-- for profile pictures -->
+
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
     <script src="../static/js/inputs.js"></script>
+
     <script src="../static/js/dropdown.js"></script>
+    <script src="../static/js/icons.js"></script>
   </body>
 </html>
