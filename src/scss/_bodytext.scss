@@ -835,6 +835,7 @@ body {
 
                   // url("../../images/verified.png");
                   /* The gradient that will show through the opaque parts */
+                  // this is the unverified one
                   background: linear-gradient(
                     90deg,
                     #60c4ff 5%,
@@ -853,6 +854,15 @@ body {
                   mask-repeat: no-repeat;
                   mask-size: contain;
                   mask-position: center;
+                }
+                div.blurbverified {
+                  background: linear-gradient(
+                    290deg,
+                    #425d84ff 0%,
+                    #605bf7ff 10%,
+                    #60c4ffff 61%,
+                    #529665ff 100%
+                  ) !important;
                 }
               }
               #username {

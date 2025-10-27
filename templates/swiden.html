@@ -255,7 +255,7 @@
 
             <div class="adjustmentdiv">
               <img
-                src="../images/nopfp.webp"
+                src="../images/pfpoct.png"
                 alt="adjustment img"
                 id="pfpimage_adjustment"
               />
@@ -333,11 +333,10 @@
               <div class="align_them_div">
                 <span id="name"
                   >Shalev
-                  <img
-                    src="../images/verified.png"
-                    alt=""
-                    id="verified"
-                  /> </span
+
+                  <!-- blurb verified -->
+
+                  <div id="verified" class="blurbverified"></div> </span
                 ><span id="username">@swiden.mp4</span>
               </div>
             </div>
@@ -345,7 +344,7 @@
 
           <div class="textcontent">
             <!-- use .gradient_text to add gradienttext -->
-            <p>Shalev Widens Blurb.</p>
+            <p>This is where the text content of the blurb will go.</p>
             <!-- use span with class of bottom to add margin top lmao -->
           </div>
           <section id="imagesection">
@@ -377,10 +376,60 @@
       <!-- buttons to add animations -->
       <div class="buttons">
         <button id="blurbifybutton">Toggle Blurb Animations</button>
-        <button id="Backgroundbutton">Toggle Background Animations</button>
+        <button id="blurb_bg_button">Toggle Blurb Background Animations</button>
         <button id="flyingbutton">Toggle Flying Object</button>
         <button id="spin">Spin the Blurb</button>
         <button id="wildbutton">Wild animations (does nothing for now)</button>
+      </div>
+      <!-- control flying image styling -->
+      <div class="specsdiv" id="flyingimage_specs">
+        <div class="toggle_menu">
+          <h2>PFP Adjustments</h2>
+          <span
+            class="material-symbols-outlined circle_down"
+            id="circle_down_pfpspecs"
+          >
+            expand_circle_down
+          </span>
+        </div>
+        <ul class="specs_ul" id="flying_specs">
+          <li>
+            <p>Adjust flying image size</p>
+          </li>
+          <li>
+            <p>Adjust flying image position (up or down)</p>
+          </li>
+          <li>
+            <p>Set flying image rotations</p>
+            <div class="rotationsdiv">
+              <!-- these will be arrow type buttons -->
+              <button>Rotate image</button
+              ><button>rotate direction of flying</button>
+            </div>
+          </li>
+          <li>
+            <p>Increase flying image count</p>
+            <div class="count_and_spacing"></div>
+          </li>
+
+          <li>
+            <p>Choose from sound effect</p>
+            <div class="soundeffects_div">
+              <button class="soundbutton" id="airplane"></button>
+              <button class="soundbutton" id="falling">
+                Add the pheeeew sound effect
+              </button>
+              <button class="soundbutton" id="aahh">
+                Add the ahhh sound effect
+              </button>
+              <button class="soundbutton" id="f1">
+                Add the f1 car sound effect
+              </button>
+              <!-- no sound effect now -->
+              <button class="soundbutton" id="none">No sound effect</button>
+            </div>
+          </li>
+        </ul>
       </div>
       <!-- return home button -->
 
