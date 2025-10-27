@@ -164,16 +164,30 @@ submitBtn.addEventListener("click", () => {
 
   //
 
-  // pass for now - this is for other templates not swiden
-  if (pfpsrcexists) {
-    console.log("setting src to user pfp");
+  // this logic sets the pfp based on the url
 
-    pfpimage.src = pfppreview.src;
+  if (path.endsWith("swiden.html") || path.endsWith("swiden")) {
+    // now the default pfp for my template should be my pfp
+    if (pfpsrcexists) {
+      console.log("on swiden but not setting default");
+      pfpimage.src = pfppreview.src;
+    } else {
+      // this is where you set it lmao
+      console.log("on swiden setting default pfp");
+      pfpimage.src = "../images/pfpoct.png";
+    }
   } else {
-    // pfpimage.style.visibility = "hidden";
-    // the default one that people don't have
-    console.log("setting default grey pfp");
-    pfpimage.src = "../images/nopfp.webp";
+    // pass for now - this is for other templates not swiden
+    if (pfpsrcexists) {
+      console.log("setting src to user pfp");
+
+      pfpimage.src = pfppreview.src;
+    } else {
+      // pfpimage.style.visibility = "hidden";
+      // the default one that people don't have
+      console.log("setting default grey pfp");
+      pfpimage.src = "../images/nopfp.webp";
+    }
   }
 
   postimage = blurb.querySelector("#postimage");
