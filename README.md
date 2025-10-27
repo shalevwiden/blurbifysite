@@ -29,3 +29,5 @@ Options
 - Many more
 
 Added view count setting
+
+Worth noting is my own image has custom width. 206px small one 412 adjustment one.

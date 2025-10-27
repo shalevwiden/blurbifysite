@@ -21,8 +21,7 @@ submitBtn.addEventListener("click", () => {
   const username = blurb.querySelector("#username");
   const textcontent = blurb.querySelector(".textcontent");
   //   now change it
-  verified_icon =
-    ' <img src="../images/verified.png" alt="" id="verified" /> </span>';
+  verified_icon = '  <div id="verified"></div>';
 
   function changeBlurb() {
     // change the verified or not
