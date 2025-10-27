@@ -26,16 +26,19 @@
   }
 }
 
-@keyframes background_animations {
+@keyframes blurbify_bg_animations {
   0% {
-    background-color: rgba(198, 225, 198, 1);
+    background-color: rgba(8, 212, 8, 1);
   }
 
   50% {
-    background-color: #bfe7ffff;
+    background-color: #085788ff;
   }
-  90% {
-    background-color: rgba(205, 185, 177, 1);
+  70% {
+    background-color: rgba(223, 103, 56, 1);
+  }
+  70% {
+    background-color: rgba(223, 56, 148, 1);
   }
   100% {
     background-color: rgba(198, 225, 198, 1);
@@ -116,8 +119,8 @@
   animation: blurbify_animation 5s normal infinite;
 }
 
-.background_class {
-  animation: background_animations 5s normal infinite;
+.div_background_class {
+  animation: blurbify_bg_animations 5s normal infinite;
 }
 .flying_class {
   display: block !important;

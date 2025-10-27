@@ -14,6 +14,8 @@ const flyingbutton = buttonsDiv.querySelector("#flyingbutton");
 const spinbutton = buttonsDiv.querySelector("#spin");
 
 const blurbifydiv = document.querySelector(".blurbifydiv");
+const blurbify_bg_div = document.querySelector(".blurbify_bg_div");
+
 const pfpid = document.querySelector("#pfpid");
 
 // get a whole element
@@ -25,7 +27,8 @@ const flyingimage = document.querySelector("img.flyingimage");
 
 Backgroundbutton.addEventListener("click", () => {
   console.log("toggling background");
-  body.classList.toggle("background_class");
+  // updates fr
+  blurbify_bg_div.classList.toggle("div_background_class");
 });
 
 flyingbutton.addEventListener("click", () => {
