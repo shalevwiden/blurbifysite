@@ -55,12 +55,24 @@
   <body>
     <style>
       /* this is just the image styling */
+      .adjustmentdiv img {
+        width: 412px !important;
+
+        height: auto !important;
+        position: relative !important;
+
+        /*twice as much top cause twice as big*/
+        margin-right: 14px !important;
+        margin-top: 34px !important;
+        top: 0 !important;
+      }
       .pfpdiv img {
         width: 206px !important;
         margin-right: 10px !important;
         margin-top: 5px !important;
         /*  */
       }
+
       @media (max-width: 400px) {
         .pfpdiv {
           width: 70px !important;
@@ -77,6 +89,7 @@
           width: 196% !important; /* scale image to parent width */
           margin-right: 7px !important;
           margin-top: 17px !important;
+          top: 0 !important;
         }
       }
     </style>
