@@ -715,8 +715,12 @@ body {
       // for animations
 
       transition: padding-top var(--dropdown_time) ease;
+      // filter: blur(20px);
 
       .blurbifydiv {
+        filter: blur(0px);
+        z-index: 1;
+
         height: auto;
 
         padding: 30px;
@@ -813,15 +817,41 @@ body {
                 font-weight: bold;
                 font-size: 35px;
                 @include flexrow;
-                gap: 3px;
+                gap: 6px;
 
-                img#verified {
-                  width: 27px;
+                // change to a div so it can work
+                div#verified {
+                  width: 29px;
                   aspect-ratio: 1 / 1;
                   // this is alright but not optimal
                   // vertical-align: middle;
                   position: relative;
                   top: 1px;
+
+                  // path from html file
+
+                  display: inline-block;
+
+                  // url("../../images/verified.png");
+                  /* The gradient that will show through the opaque parts */
+                  background: linear-gradient(
+                    290deg,
+                    #425d84ff 0%,
+                    #605bf7ff 10%,
+                    #60c4ffff 61%,
+                    #529665ff 100%
+                  );
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                  background-position: center;
+
+                  /* Mask (the PNG shape reveals the gradient/image) */
+                  -webkit-mask-image: url("../../images/verified.png");
+                  mask-image: url("../../images/verified.png");
+                  mask-mode: alpha;
+                  mask-repeat: no-repeat;
+                  mask-size: contain;
+                  mask-position: center;
                 }
               }
               #username {
@@ -1035,9 +1065,9 @@ body {
                   font-weight: bold;
                   font-size: 23px;
                   @include flexrow;
-                  gap: 3px;
+                  gap: 4px;
 
-                  img#verified {
+                  div#verified {
                     width: 21px;
                     aspect-ratio: 1 / 1;
                     // this is alright but not optimal
@@ -1187,15 +1217,21 @@ body {
                   font-weight: bold;
                   font-size: 23px;
                   @include flexrow;
-                  gap: 3px;
+                  gap: 4px;
 
-                  img#verified {
+                  div#verified {
                     width: 17px;
                     aspect-ratio: 1 / 1;
                     // this is alright but not optimal
                     // vertical-align: middle;
                     position: relative;
                     top: 1px;
+
+                    background: linear-gradient(
+                      90deg,
+                      #ff8a00,
+                      #e52e71
+                    ); /* gradient colors */
                   }
                 }
                 #username {

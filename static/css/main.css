@@ -47,18 +47,24 @@
     transform: scale(1);
   }
 }
-@keyframes background_animations {
+@keyframes blurbify_bg_animations {
   0% {
-    background-color: rgb(198, 225, 198);
+    background-color: rgb(60, 125, 60);
   }
   50% {
-    background-color: #bfe7ff;
+    background-color: #085788;
+  }
+  70% {
+    background-color: rgb(223, 103, 56);
+  }
+  70% {
+    background-color: rgb(223, 56, 148);
   }
   90% {
-    background-color: rgb(205, 185, 177);
+    background-color: rgb(220, 112, 30);
   }
   100% {
-    background-color: rgb(198, 225, 198);
+    background-color: rgb(60, 125, 60);
   }
 }
 @keyframes flyingobject {
@@ -118,8 +124,10 @@
   animation: blurbify_animation 5s normal infinite;
 }
 
-.background_class {
-  animation: background_animations 5s normal infinite;
+.div_background_class {
+  animation: blurbify_bg_animations 10s linear infinite;
+  backdrop-filter: blur(2px);
+  background-color: rgba(255, 255, 255, 0.3); /* translucent look */
 }
 
 .flying_class {
@@ -867,6 +875,8 @@ body .sitecontainer div.blurbify_bg_div {
   transition: padding-top var(--dropdown_time) ease;
 }
 body .sitecontainer div.blurbify_bg_div .blurbifydiv {
+  filter: blur(0px);
+  z-index: 1;
   height: auto;
   padding: 30px;
   padding-bottom: 10px;
@@ -956,13 +966,29 @@ body .sitecontainer div.blurbify_bg_div .blurbifydiv div#pfp_and_username .usern
   align-items: center;
   justify-content: center;
   gap: 20px;
-  gap: 3px;
+  gap: 6px;
 }
-body .sitecontainer div.blurbify_bg_div .blurbifydiv div#pfp_and_username .usernamediv div.align_them_div #name img#verified {
-  width: 27px;
+body .sitecontainer div.blurbify_bg_div .blurbifydiv div#pfp_and_username .usernamediv div.align_them_div #name div#verified {
+  width: 29px;
   aspect-ratio: 1/1;
   position: relative;
   top: 1px;
+  display: inline-block;
+  /* The gradient that will show through the opaque parts */
+  background: linear-gradient(290deg, #425d84 0%, #605bf7 10%, #60c4ff 61%, #529665 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  /* Mask (the PNG shape reveals the gradient/image) */
+  -webkit-mask-image: url("../../images/verified.png");
+  mask-image: url("../../images/verified.png");
+  mask-mode: alpha;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  -webkit-mask-position: center;
+          mask-position: center;
 }
 body .sitecontainer div.blurbify_bg_div .blurbifydiv div#pfp_and_username .usernamediv div.align_them_div #username {
   color: grey;
@@ -1140,9 +1166,9 @@ body .sitecontainer div.blurbify_bg_div .blurbifydiv div.iconsdiv .righticons {
     align-items: center;
     justify-content: center;
     gap: 20px;
-    gap: 3px;
+    gap: 4px;
   }
-  body .sitecontainer div.blurbify_bg_div .blurbifydiv div#pfp_and_username .usernamediv div.align_them_div #name img#verified {
+  body .sitecontainer div.blurbify_bg_div .blurbifydiv div#pfp_and_username .usernamediv div.align_them_div #name div#verified {
     width: 21px;
     aspect-ratio: 1/1;
     position: relative;
@@ -1272,13 +1298,14 @@ body .sitecontainer div.blurbify_bg_div .blurbifydiv div.iconsdiv .righticons {
     align-items: center;
     justify-content: center;
     gap: 20px;
-    gap: 3px;
+    gap: 4px;
   }
-  body .sitecontainer div.blurbify_bg_div .blurbifydiv div#pfp_and_username .usernamediv div.align_them_div #name img#verified {
+  body .sitecontainer div.blurbify_bg_div .blurbifydiv div#pfp_and_username .usernamediv div.align_them_div #name div#verified {
     width: 17px;
     aspect-ratio: 1/1;
     position: relative;
     top: 1px;
+    background: linear-gradient(90deg, #ff8a00, #e52e71); /* gradient colors */
   }
   body .sitecontainer div.blurbify_bg_div .blurbifydiv div#pfp_and_username .usernamediv div.align_them_div #username {
     color: grey;

@@ -9,12 +9,14 @@ const viewsicon = document.querySelector("#viewchart");
 const buttonsDiv = document.querySelector(".buttons");
 
 const blurbifybutton = buttonsDiv.querySelector("#blurbifybutton");
-const Backgroundbutton = buttonsDiv.querySelector("#Backgroundbutton");
+const blurb_bg_button = buttonsDiv.querySelector("#blurb_bg_button");
 const flyingbutton = buttonsDiv.querySelector("#flyingbutton");
 const spinbutton = buttonsDiv.querySelector("#spin");
 
 const blurbifydiv = document.querySelector(".blurbifydiv");
-const blurbify_bg_div = document.querySelector(".blurbify_bg_div");
+
+// dont declare it because its already declared in inputs.js and exported
+// const blurbify_bg_div = document.querySelector(".blurbify_bg_div");
 
 const pfpid = document.querySelector("#pfpid");
 
@@ -25,8 +27,8 @@ const flyingimage = document.querySelector("img.flyingimage");
 
 // now the toggling logic here
 
-Backgroundbutton.addEventListener("click", () => {
-  console.log("toggling background");
+blurb_bg_button.addEventListener("click", () => {
+  console.log("toggling bg animations for blurb");
   // updates fr
   blurbify_bg_div.classList.toggle("div_background_class");
 });
