@@ -165,15 +165,16 @@ submitBtn.addEventListener("click", () => {
 
   // this logic sets the pfp based on the url
 
-  if (path.endsWith("swiden.html") || path.endsWith("swiden")) {
+  if (!(path.endsWith("blurbifyv1.html") || path.endsWith("blurbifyv1"))) {
     // now the default pfp for my template should be my pfp
     if (pfpsrcexists) {
-      console.log("on swiden but not setting default");
+      console.log(
+        "on a template besides the main one. But we gonna set the pfp src cause it exists"
+      );
       pfpimage.src = pfppreview.src;
     } else {
       // this is where you set it lmao
-      console.log("on swiden setting default pfp");
-      pfpimage.src = "../images/pfpoct.png";
+      console.log("on other template, leaving default pfp src");
     }
   } else {
     // pass for now - this is for other templates not swiden
@@ -185,6 +186,9 @@ submitBtn.addEventListener("click", () => {
       // pfpimage.style.visibility = "hidden";
       // the default one that people don't have
       console.log("setting default grey pfp");
+      // this is the default for
+      // add a stick figure for the default pfp lol
+      // then mak
       pfpimage.src = "../images/nopfp.webp";
     }
   }
@@ -361,6 +365,7 @@ function pfpSpecs() {
   pfp_size_slider.addEventListener("input", () => {
     const size = parseInt(pfp_size_slider.value);
     pfpimage.style.width = size + "px";
+    // increase the adjustment slider by twice
     pfpimage_adjustment.style.width = size * 2 + "px";
   });
 

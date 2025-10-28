@@ -995,7 +995,7 @@ body .sitecontainer div.blurbify_bg_div .blurbifydiv div#pfp_and_username .usern
           mask-position: center;
 }
 body .sitecontainer div.blurbify_bg_div .blurbifydiv div#pfp_and_username .usernamediv div.align_them_div #name div.blurbverified {
-  background: linear-gradient(290deg, #425d84 0%, #605bf7 10%, #60c4ff 61%, #529665 100%) !important;
+  background: linear-gradient(290deg, #425d84 0%, #605bf7 10%, #60c4ff 49%, #529665 95%) !important;
 }
 body .sitecontainer div.blurbify_bg_div .blurbifydiv div#pfp_and_username .usernamediv div.align_them_div #username {
   color: grey;
