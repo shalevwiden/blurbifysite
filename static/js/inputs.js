@@ -21,7 +21,26 @@ submitBtn.addEventListener("click", () => {
   const username = blurb.querySelector("#username");
   const textcontent = blurb.querySelector(".textcontent");
   //   now change it
-  verified_icon = '  <div id="verified"></div>';
+
+  // in the future this could be read from a database
+
+  // nice this works
+
+  function assignVerifiedIcon() {
+    const path = window.location.pathname;
+
+    const verifiedPages = ["swiden", "blurbify"];
+    let verifiedIcon = '<div id="verified"></div>'; // default
+
+    for (let i of verifiedPages) {
+      if (path.endsWith(`${i}.html`) || path.endsWith(i)) {
+        verifiedIcon = '<div id="verified" class="blurbverified"></div>';
+        break; // stop checking once a match is found
+      }
+    }
+    return verifiedIcon;
+  }
+  verified_icon = assignVerifiedIcon();
 
   function changeBlurb() {
     // change the verified or not
@@ -174,7 +193,7 @@ submitBtn.addEventListener("click", () => {
       pfpimage.src = pfppreview.src;
     } else {
       // this is where you set it lmao
-      console.log("on other template, leaving default pfp src");
+      console.log("on other template, leaving html pfp src");
     }
   } else {
     // pass for now - this is for other templates not swiden
