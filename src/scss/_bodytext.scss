@@ -818,7 +818,7 @@ body {
                 font-weight: bold;
                 font-size: 35px;
                 @include flexrow;
-                gap: 6px;
+                gap: 4px;
 
                 // change to a div so it can work
                 div#verified {
