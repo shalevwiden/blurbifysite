@@ -63,7 +63,7 @@
             <p>Add text that will be the name</p>
             <input type="text" placeholder="Add name" id="nameInput" />
           </li>
-          <li>
+          <li style="display: none">
             <p>Verified?</p>
             <!-- custom checkbox -->
             <label class="checkbox-container">
@@ -293,14 +293,14 @@
       <div class="blurbify_bg_div">
         <div class="blurbifydiv">
           <div id="pfp_and_username">
-            <div class="pfpdiv" id="pfpid">
+            <div class="pfpdiv" id="pfpid" style="border: 3px solid #4781ffff">
               <img src="../images/nopfp.webp" alt="pfp gone" id="pfpimage" />
             </div>
             <div class="usernamediv">
               <div class="align_them_div">
                 <span id="name"
                   >Blurbifyuser
-                  <div id="verified"></div> </span
+                  <div id="verified" style="display: none"></div> </span
                 ><span id="username">@cool_blurbifyuser</span>
               </div>
             </div>
@@ -338,7 +338,7 @@
       </div>
 
       <!-- buttons to add animations -->
-      <div class="buttons">
+      <div class="animation_buttons">
         <button id="blurbifybutton">Toggle Blurb Animations</button>
         <button id="blurb_bg_button">Toggle Blurb Background Animations</button>
         <button id="flyingbutton">Toggle Flying Object</button>

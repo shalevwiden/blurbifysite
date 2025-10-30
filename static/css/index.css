@@ -46,18 +46,24 @@
     transform: scale(1);
   }
 }
-@keyframes background_animations {
+@keyframes blurbify_bg_animations {
   0% {
-    background-color: rgb(198, 225, 198);
+    background-color: rgb(60, 125, 60);
   }
   50% {
-    background-color: #bfe7ff;
+    background-color: #085788;
+  }
+  70% {
+    background-color: rgb(223, 103, 56);
+  }
+  70% {
+    background-color: rgb(223, 56, 148);
   }
   90% {
-    background-color: rgb(205, 185, 177);
+    background-color: rgb(220, 112, 30);
   }
   100% {
-    background-color: rgb(198, 225, 198);
+    background-color: rgb(60, 125, 60);
   }
 }
 @keyframes flyingobject {
@@ -117,8 +123,10 @@
   animation: blurbify_animation 5s normal infinite;
 }
 
-.background_class {
-  animation: background_animations 5s normal infinite;
+.div_background_class {
+  animation: blurbify_bg_animations 10s linear infinite;
+  backdrop-filter: blur(2px);
+  background-color: rgba(255, 255, 255, 0.3); /* translucent look */
 }
 
 .flying_class {

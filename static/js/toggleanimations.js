@@ -6,7 +6,7 @@
 
 const viewsicon = document.querySelector("#viewchart");
 
-const buttonsDiv = document.querySelector(".buttons");
+const buttonsDiv = document.querySelector(".animation_buttons");
 
 const blurbifybutton = buttonsDiv.querySelector("#blurbifybutton");
 const blurb_bg_button = buttonsDiv.querySelector("#blurb_bg_button");

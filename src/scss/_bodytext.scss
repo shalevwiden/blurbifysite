@@ -46,12 +46,9 @@ body {
 
     #heading {
       margin-top: 50px;
-      background: linear-gradient(
-        90deg,
-        #425d84ff,
-        #605bf7ff,
-        #60c4ffff
-      ); /* standard gradient */
+      background: linear-gradient(90deg, #425d84ff, #605bf7ff, #60c4ffff);
+
+      /* standard gradient */
       -webkit-background-clip: text; /* show background only inside text */
       -webkit-text-fill-color: transparent; /* make text itself transparent */
       font-weight: bold;
@@ -1311,7 +1308,7 @@ body {
       }
     }
 
-    .buttons {
+    .animation_buttons {
       width: 90%;
       @include flexrow;
       border: 6px solid rgb(69, 146, 254);

@@ -321,7 +321,8 @@ body .sitecontainer {
 }
 body .sitecontainer #heading {
   margin-top: 50px;
-  background: linear-gradient(90deg, #425d84, #605bf7, #60c4ff); /* standard gradient */
+  background: linear-gradient(90deg, #425d84, #605bf7, #60c4ff);
+  /* standard gradient */
   -webkit-background-clip: text; /* show background only inside text */
   -webkit-text-fill-color: transparent; /* make text itself transparent */
   font-weight: bold;
@@ -970,7 +971,7 @@ body .sitecontainer div.blurbify_bg_div .blurbifydiv div#pfp_and_username .usern
   align-items: center;
   justify-content: center;
   gap: 20px;
-  gap: 6px;
+  gap: 4px;
 }
 body .sitecontainer div.blurbify_bg_div .blurbifydiv div#pfp_and_username .usernamediv div.align_them_div #name div#verified {
   width: 29px;
@@ -1371,7 +1372,7 @@ body .sitecontainer div.blurbify_bg_div .blurbifydiv div.iconsdiv .righticons {
     margin-right: 0px;
   }
 }
-body .sitecontainer .buttons {
+body .sitecontainer .animation_buttons {
   width: 90%;
   display: flex;
   flex-direction: row;
@@ -1386,7 +1387,7 @@ body .sitecontainer .buttons {
   margin-bottom: 50px;
   background-color: rgb(255, 255, 255);
 }
-body .sitecontainer .buttons button {
+body .sitecontainer .animation_buttons button {
   height: 150px;
   flex: 1;
   color: white;
@@ -1396,16 +1397,16 @@ body .sitecontainer .buttons button {
   font-size: 20px;
   font-weight: bold;
 }
-body .sitecontainer .buttons button:hover {
+body .sitecontainer .animation_buttons button:hover {
   cursor: pointer;
   background-color: rgb(41, 41, 91);
 }
 @media (max-width: 1050px) {
-  body .sitecontainer .buttons {
+  body .sitecontainer .animation_buttons {
     flex-direction: column;
     height: 1100px;
   }
-  body .sitecontainer .buttons button {
+  body .sitecontainer .animation_buttons button {
     height: 150px;
     flex: none;
     width: 70%;
@@ -1415,7 +1416,7 @@ body .sitecontainer .buttons button:hover {
     font-size: 15px;
     font-weight: bold;
   }
-  body .sitecontainer .buttons button:hover {
+  body .sitecontainer .animation_buttons button:hover {
     cursor: pointer;
     background-color: rgb(255, 192, 116);
   }
