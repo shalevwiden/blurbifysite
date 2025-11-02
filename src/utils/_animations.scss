@@ -50,21 +50,21 @@
 }
 @keyframes flyingobject {
   0% {
-    transform: translateX(-50vw) translateY(var(--flyingy));
+    transform: translateX(-90vw) translateY(var(--flyingy));
   }
 
   50% {
-    transform: translateX(8vw) translateY(calc(var(--flyingy) + 50px));
+    transform: translateX(-25vw) translateY(calc(var(--flyingy) + 50px));
   }
 
   100% {
-    transform: translateX(63vw) translateY(calc(var(--flyingy) - 10px));
+    transform: translateX(40vw) translateY(calc(var(--flyingy) - 10px));
   }
 }
 
 @keyframes flyingobject_mobile {
   0% {
-    transform: translateX(-50vw) translateY(var(--flyingymobile));
+    transform: translateX(-100vw) translateY(var(--flyingymobile));
   }
 
   50% {

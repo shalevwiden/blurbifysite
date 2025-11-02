@@ -22,8 +22,8 @@
 }
 
 :root {
-  --flyingy: -100px;
-  --flyingymobile: -2190px;
+  --flyingy: 0px;
+  --flyingymobile: 0px;
 }
 
 @keyframes blurbify_animation {
@@ -69,18 +69,18 @@
 }
 @keyframes flyingobject {
   0% {
-    transform: translateX(-50vw) translateY(var(--flyingy));
+    transform: translateX(-90vw) translateY(var(--flyingy));
   }
   50% {
-    transform: translateX(8vw) translateY(calc(var(--flyingy) + 50px));
+    transform: translateX(-25vw) translateY(calc(var(--flyingy) + 50px));
   }
   100% {
-    transform: translateX(63vw) translateY(calc(var(--flyingy) - 10px));
+    transform: translateX(40vw) translateY(calc(var(--flyingy) - 10px));
   }
 }
 @keyframes flyingobject_mobile {
   0% {
-    transform: translateX(-50vw) translateY(var(--flyingymobile));
+    transform: translateX(-100vw) translateY(var(--flyingymobile));
   }
   50% {
     transform: translateX(8vw) translateY(calc(var(--flyingymobile) + 50px));
@@ -342,6 +342,7 @@ div.flyingimagesdiv .flyingimage {
 }
 div.flyingimagesdiv #flyingimage1 {
   position: absolute;
+  transform: translateX(-50vw);
   width: 330px;
   z-index: 2;
 }
@@ -968,6 +969,7 @@ body .sitecontainer div.pointerdiv h2#blurbpointer span {
 }
 body .sitecontainer div.blurbify_bg_div {
   position: relative;
+  overflow: hidden;
   height: auto;
   width: 100%;
   padding: 250px 0px;
