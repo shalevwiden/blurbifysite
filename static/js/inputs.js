@@ -63,7 +63,7 @@ submitBtn.addEventListener("click", () => {
 
   // Example: dynamically show it
 
-  // Optional: save it in localStorage
+  //maybe save it in localStorage
   //   hmmm
   localStorage.setItem(
     "blurbData",
@@ -124,7 +124,7 @@ postimagepreview = document.getElementById("post_image_preview");
 postimage = blurb.querySelector("#postimage");
 
 function toggle_imageselecting() {
-  console.log("Trying to toggle icons");
+  console.log("Trying to toggle image selection");
   postimageToggle.addEventListener("change", () => {
     if (postimageToggle.checked) {
       post_image_li.classList.remove("post_image_li-hidden");

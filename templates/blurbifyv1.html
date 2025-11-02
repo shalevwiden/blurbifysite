@@ -358,14 +358,17 @@
         </div>
         <ul class="specs_ul" id="flying_specs">
           <li class="imageli">
-            <p>Upload flying image</p>
+            <p>Upload a new flying image</p>
             <label class="file-label" for="flyingimageInput"
               >Choose Image</label
             >
             <!-- client side uploading only -->
 
             <input type="file" id="flyingimageInput" accept="image/*" />
-            <img id="flying_image_preview" />
+            <img
+              id="flying_image_preview"
+              src="../images/flyingimages/defaultflying.png"
+            />
           </li>
           <li>
             <!-- by default size will be like 300 or so -->
@@ -462,7 +465,7 @@
       >
       <div class="flyingimagesdiv">
         <img
-          src="../images/flyingimages/airbus-removebg-preview.png"
+          src="../images/flyingimages/defaultflying.png"
           alt="FLYING"
           id="flyingimage1"
           class="flyingimage"
@@ -478,5 +481,6 @@
 
     <script src="../static/js/dropdown.js"></script>
     <script src="../static/js/icons.js"></script>
+    <script src="../static/js/flyingimage.js"></script>
   </body>
 </html>

@@ -276,6 +276,9 @@ input:checked + .slider::before {
 #flyingimage_specs {
   margin-bottom: 100px;
 }
+#flyingimage_specs ul#flying_specs {
+  max-height: 2100px;
+}
 #flyingimage_specs ul#flying_specs li.imageli {
   /* Custom styled button to trigger file input */
 }
@@ -308,13 +311,33 @@ input:checked + .slider::before {
   height: auto;
   border-radius: 35px;
 }
-#flyingimage_specs ul#flying_specs li .count_and_spacing {
+#flyingimage_specs ul#flying_specs li .range_and_number {
   border: 3px solid green;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 20px;
+}
+
+div.flyingimagesdiv {
+  margin-top: 40px;
+}
+div.flyingimagesdiv .flyingimage {
+  max-width: 1000px;
+}
+div.flyingimagesdiv #flyingimage1 {
+  display: none;
+  width: 330px;
+  transform: translateY(100px);
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 400px) {
+  div.flyingimagesdiv #flyingimage1 {
+    width: 180px;
+    height: auto;
+  }
 }
 
 * {
@@ -1496,25 +1519,6 @@ body .sitecontainer a#homebutton .linkdiv:hover {
   body .sitecontainer a#homebutton {
     font-size: 32px;
     width: 60%;
-  }
-}
-body .sitecontainer div.flyingimagesdiv {
-  margin-top: 40px;
-}
-body .sitecontainer div.flyingimagesdiv .flyingimage {
-  max-width: 1000px;
-}
-body .sitecontainer div.flyingimagesdiv #flyingimage1 {
-  display: none;
-  width: 330px;
-  transform: translateY(100px);
-  position: relative;
-  z-index: 2;
-}
-@media (max-width: 400px) {
-  body .sitecontainer div.flyingimagesdiv #flyingimage1 {
-    width: 180px;
-    height: auto;
   }
 }
 

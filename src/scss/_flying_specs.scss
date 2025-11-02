@@ -4,10 +4,14 @@
 
 #flyingimage_specs {
   // this has all the styling of a specs div already
+  // this extends from .specsdiv in bodytext.scss
   margin-bottom: 100px;
   .toggle_menu {
   }
   ul#flying_specs {
+    // max height bigger since the
+    max-height: 2100px; // enough for full content
+
     li.imageli {
       input[type="file"] {
         display: none;
@@ -50,6 +54,27 @@
         border: 3px solid green;
         @include flexcol;
       }
+    }
+  }
+}
+// the flying image itself:
+
+div.flyingimagesdiv {
+  margin-top: 40px;
+
+  .flyingimage {
+    max-width: 1000px;
+  }
+  #flyingimage1 {
+    display: none;
+    width: 330px;
+    transform: translateY(100px);
+    position: relative;
+    z-index: 2;
+
+    @media (max-width: 400px) {
+      width: 180px;
+      height: auto;
     }
   }
 }
