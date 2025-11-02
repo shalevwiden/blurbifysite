@@ -55,3 +55,19 @@ function specsdiv_pfp_dropdown() {
   });
 }
 specsdiv_pfp_dropdown();
+
+let flying_specs_ul = document.querySelector("#flying_specs");
+
+function specsdiv_flying_dropdown() {
+  const circle_down_flying = document.getElementById("circle_down_flying");
+
+  circle_down_flying.addEventListener("click", () => {
+    console.log("pfpspec circle clicked");
+
+    // classes are defined in _dropdown.scss
+
+    flying_specs_ul.classList.toggle("no_height");
+    circle_down_flying.classList.toggle("rotated");
+  });
+}
+specsdiv_flying_dropdown();

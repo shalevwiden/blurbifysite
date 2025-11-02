@@ -13,7 +13,7 @@ const blurb_bg_button = buttonsDiv.querySelector("#blurb_bg_button");
 const flyingbutton = buttonsDiv.querySelector("#flyingbutton");
 const spinbutton = buttonsDiv.querySelector("#spin");
 
-const blurbifydiv = document.querySelector(".blurbifydiv");
+const blurbdiv = document.querySelector(".blurbdiv");
 
 // dont declare it because its already declared in inputs.js and exported
 // const blurbify_bg_div = document.querySelector(".blurbify_bg_div");
@@ -41,11 +41,11 @@ spinbutton.addEventListener("click", () => {
   console.log("toggling spin");
 
   // Add the class
-  blurbifydiv.classList.add("spin_class");
+  blurbdiv.classList.add("spin_class");
 
   // Remove the class after animation duration so it can be retriggered
   setTimeout(() => {
-    blurbifydiv.classList.remove("spin_class");
+    blurbdiv.classList.remove("spin_class");
   }, 7000); // 5000ms = your animation duration + the delay
 });
 function easeOutQuad(t) {
@@ -114,7 +114,7 @@ const viewcount = getViews(views);
 blurbifybutton.addEventListener("click", () => {
   setTimeout(() => {
     console.log("toggling blurbify");
-    blurbifydiv.classList.toggle("blurbify_class");
+    blurbdiv.classList.toggle("blurbify_class");
 
     // READ THIS - this line applies spin to the pfp
     // pfpid.classList.toggle("spin_class");

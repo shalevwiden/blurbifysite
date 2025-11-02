@@ -715,7 +715,7 @@ body {
       transition: padding-top var(--dropdown_time) ease;
       // filter: blur(20px);
 
-      .blurbifydiv {
+      .blurbdiv {
         filter: blur(0px);
         z-index: 1;
 
@@ -1005,7 +1005,7 @@ body {
 
         @media (max-width: 1050px) {
           width: 90%;
-          border: 3px solid $blurb_border_color;
+          border: 7px solid $blurb_border_color;
 
           div#pfp_and_username {
             @include flexrow;
@@ -1156,7 +1156,6 @@ body {
         @media (max-width: 400px) {
           // by default blurbify div is flexcol
           width: 90%;
-          border: 3px solid $blurb_border_color;
 
           padding: 18px;
           padding-left: 15px;

@@ -1,7 +1,7 @@
 // change the content of the Blurb
 
 const submitBtn = document.getElementById("submitBtn");
-const blurb = document.querySelector(".blurbifydiv");
+const blurb = document.querySelector(".blurbdiv");
 
 submitBtn.addEventListener("click", () => {
   console.log("Submit clicked!"); //

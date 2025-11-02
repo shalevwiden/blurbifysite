@@ -291,7 +291,7 @@
       </div>
 
       <div class="blurbify_bg_div">
-        <div class="blurbifydiv">
+        <div class="blurbdiv">
           <div id="pfp_and_username">
             <div class="pfpdiv" id="pfpid" style="border: 3px solid #4781ffff">
               <img src="../images/nopfp.webp" alt="pfp gone" id="pfpimage" />
@@ -348,17 +348,40 @@
       <!-- control flying image styling -->
       <div class="specsdiv" id="flyingimage_specs">
         <div class="toggle_menu">
-          <h2>PFP Adjustments</h2>
+          <h2>Flying Image Adustments</h2>
           <span
             class="material-symbols-outlined circle_down"
-            id="circle_down_pfpspecs"
+            id="circle_down_flying"
           >
             expand_circle_down
           </span>
         </div>
         <ul class="specs_ul" id="flying_specs">
+          <li class="imageli">
+            <p>Upload flying image</p>
+            <label class="file-label" for="flyingimageInput"
+              >Choose Image</label
+            >
+            <!-- client side uploading only -->
+
+            <input type="file" id="flyingimageInput" accept="image/*" />
+            <img id="flying_image_preview" />
+          </li>
           <li>
+            <!-- by default size will be like 300 or so -->
             <p>Adjust flying image size</p>
+            <div class="sliderdiv">
+              <input
+                type="range"
+                id="flyingimage_size_input"
+                class="sliderinput"
+                min="0"
+                max="20"
+                value="5"
+                step="1"
+              />
+              <button class="resetbutton" id="reset_flying_size">Reset</button>
+            </div>
           </li>
           <li>
             <p>Adjust flying image position (up or down)</p>
@@ -373,7 +396,24 @@
           </li>
           <li>
             <p>Increase flying image count</p>
-            <div class="count_and_spacing"></div>
+            <div class="count_and_spacing">
+              <input type="number" />
+              <div class="sliderdiv">
+                <!-- this input will control the margins between the flying images so there can be multiple -->
+                <input
+                  type="range"
+                  id="flyingimage_spacing_input"
+                  class="sliderinput"
+                  min="0"
+                  max="20"
+                  value="5"
+                  step="1"
+                />
+                <button class="resetbutton" id="reset_flying_size">
+                  Reset
+                </button>
+              </div>
+            </div>
           </li>
 
           <li>

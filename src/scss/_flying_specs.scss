@@ -1,5 +1,47 @@
 // this will be the scss for the flying specs specsdiv
 // this div will have ALOT of inputs lol
 #flyingimage_specs {
-  display: none !important;
+  // this has all the styling of a specs div already
+  margin-bottom: 100px;
+  .toggle_menu {
+  }
+  ul#flying_specs {
+    li.imageli {
+      input[type="file"] {
+        display: none;
+      }
+
+      /* Custom styled button to trigger file input */
+      .file-label {
+        display: inline-block;
+        padding: 14px 18px;
+        font-size: 18px;
+        font-family: "Helvetica Neue", Helvetica, sans-serif;
+        font-weight: 500;
+        color: #1f1f1f;
+        background-color: #f9f9fb;
+        border: 2px solid rgba(100, 110, 130, 0.4);
+        border-radius: 12px;
+        cursor: pointer;
+        transition: border-color 0.25s ease, background-color 0.25s ease;
+
+        &:hover {
+          border-color: rgba(60, 100, 220, 0.6);
+          background-color: #ffffff;
+        }
+
+        &:active {
+          background-color: #e0e6f0;
+        }
+      }
+
+      #flying_image_preview {
+        margin-top: 10px;
+
+        width: 25%;
+        height: auto;
+        border-radius: 35px;
+      }
+    }
+  }
 }
