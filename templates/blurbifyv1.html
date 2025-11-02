@@ -385,6 +385,26 @@
           </li>
           <li>
             <p>Adjust flying image position (up or down)</p>
+            <div class="range_and_number">
+              <!-- range and number because you can adjust the number in pixels -->
+              <input type="number" id="flying_y_px" />
+
+              <div class="sliderdiv">
+                <input
+                  type="range"
+                  id="flyingimage_y_position"
+                  class="sliderinput"
+                  min="0"
+                  max="20"
+                  value="5"
+                  step="1"
+                />
+                <!-- this will reset the pixel count in the num input and the slider -->
+                <button class="resetbutton" id="reset_flying_yposition">
+                  Reset
+                </button>
+              </div>
+            </div>
           </li>
           <li>
             <p>Set flying image rotations</p>
@@ -396,7 +416,7 @@
           </li>
           <li>
             <p>Increase flying image count</p>
-            <div class="count_and_spacing">
+            <div class="range_and_number">
               <input type="number" />
               <div class="sliderdiv">
                 <!-- this input will control the margins between the flying images so there can be multiple -->

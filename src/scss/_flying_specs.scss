@@ -1,5 +1,7 @@
 // this will be the scss for the flying specs specsdiv
 // this div will have ALOT of inputs lol
+@use "../utils/mixins" as *;
+
 #flyingimage_specs {
   // this has all the styling of a specs div already
   margin-bottom: 100px;
@@ -41,6 +43,12 @@
         width: 25%;
         height: auto;
         border-radius: 35px;
+      }
+    }
+    li {
+      .range_and_number {
+        border: 3px solid green;
+        @include flexcol;
       }
     }
   }
