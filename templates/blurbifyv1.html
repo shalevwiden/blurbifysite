@@ -432,13 +432,14 @@
             <p>Increase or Decrease Speed</p>
             <div class="range_and_number">
               <!-- range and number because you can adjust the number in pixels -->
+              <!-- min and max affect speed here lol -->
               <input
                 type="number"
                 id="flying_speed"
-                min="-700"
-                max="700"
-                value="0"
-                step="5"
+                min="1"
+                max="20"
+                value="5"
+                step="1"
               />
 
               <div class="sliderdiv">
@@ -446,9 +447,9 @@
                   type="range"
                   id="flying_speed_slider"
                   class="sliderinput"
-                  min="-700"
-                  max="700"
-                  value="0"
+                  min="1"
+                  max="20"
+                  value="5"
                   step="1"
                 />
                 <!-- this will reset the pixel count in the num input and the slider -->

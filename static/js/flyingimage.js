@@ -54,4 +54,29 @@ function flyingposition() {
   });
 }
 
+// need to add reset button still
+
 flyingposition();
+
+function flyingspeed() {
+  let originalspeed = 5;
+  flying_speed = document.querySelector("#flying_speed");
+  flying_speed_slider = document.querySelector("#flying_speed_slider");
+
+  flying_speed_slider.addEventListener("input", () => {
+    speed = parseInt(flying_speed_slider.value);
+    // update the number input value
+    flying_speed.value = speed;
+    flyingimage1.style.animationDuration = speed + "s";
+  });
+
+  flying_speed.addEventListener("input", () => {
+    // make negative for logical moving
+    const speed = parseInt(flying_speed.value);
+    // update the slider value
+    flying_speed_slider.value = speed;
+    flyingimage1.style.animationDuration = speed + "s";
+  });
+}
+
+flyingspeed();
