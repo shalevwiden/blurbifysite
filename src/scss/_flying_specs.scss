@@ -19,6 +19,7 @@
 
       /* Custom styled button to trigger file input */
       .file-label {
+        margin-top: 20px;
         display: inline-block;
         padding: 14px 18px;
         font-size: 18px;
@@ -42,7 +43,8 @@
       }
 
       #flying_image_preview {
-        margin-top: 10px;
+        margin: 50px 0;
+        margin-left: 30px;
 
         width: 25%;
         height: auto;
@@ -53,6 +55,14 @@
       .range_and_number {
         border: 3px solid green;
         @include flexcol;
+        align-items: flex-start;
+
+        input[type="number"] {
+          border-radius: 20px;
+          border: 3px solid blue;
+          width: 100px;
+          height: 50px;
+        }
       }
     }
   }
@@ -60,21 +70,59 @@
 // the flying image itself:
 
 div.flyingimagesdiv {
-  margin-top: 40px;
-
+  position: absolute;
+  top: 396px;
+  right: 502px;
+  border: 3px solid black;
+  height: auto;
+  width: auto;
   .flyingimage {
     max-width: 1000px;
   }
   #flyingimage1 {
-    display: none;
+    // display: none;
+    position: absolute;
+
+    // adjust these 2 to position
+
     width: 330px;
-    transform: translateY(100px);
-    position: relative;
     z-index: 2;
 
     @media (max-width: 400px) {
       width: 180px;
       height: auto;
     }
+  }
+}
+
+// general , non nested, reset button
+
+.resetbutton {
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: 600;
+  border: 2px solid #3b6df2; // primary blue border
+  border-radius: 18px;
+  background-color: #eaf0ff; // light blue background
+  color: #1f1f1f;
+  cursor: pointer;
+  transition: all 0.25s ease;
+
+  &:hover {
+    background-color: #d0e2ff; // slightly darker blue
+    border-color: #2a54c3; // darker blue border
+    color: #000; // optional text color change
+  }
+
+  &:focus {
+    outline: none;
+    background-color: #60a8f0ff; // even darker on focus
+    border-color: #1d3fa8;
+    color: #000;
+  }
+
+  &:active {
+    background-color: #b0ccff;
+    border-color: #17317d;
   }
 }

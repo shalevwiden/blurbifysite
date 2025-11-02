@@ -23,7 +23,7 @@ const pfpid = document.querySelector("#pfpid");
 // get a whole element
 const body = document.querySelector("body");
 
-const flyingimage = document.querySelector("img.flyingimage");
+flyingimage = document.querySelector("#flyingimage1");
 
 // now the toggling logic here
 

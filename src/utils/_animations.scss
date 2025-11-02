@@ -1,7 +1,8 @@
 :root {
   // positive values move down, negative move up
-  --flyingy: -1340px;
-  --flyingymobile: -2190px;
+  // now that its position absolute these can be 0
+  --flyingy: 0px;
+  --flyingymobile: 0px;
 }
 @keyframes blurbify_animation {
   0% {

@@ -22,7 +22,7 @@
 }
 
 :root {
-  --flyingy: -1340px;
+  --flyingy: -100px;
   --flyingymobile: -2190px;
 }
 
@@ -286,6 +286,7 @@ input:checked + .slider::before {
   display: none;
 }
 #flyingimage_specs ul#flying_specs li.imageli .file-label {
+  margin-top: 20px;
   display: inline-block;
   padding: 14px 18px;
   font-size: 18px;
@@ -306,7 +307,8 @@ input:checked + .slider::before {
   background-color: #e0e6f0;
 }
 #flyingimage_specs ul#flying_specs li.imageli #flying_image_preview {
-  margin-top: 10px;
+  margin: 50px 0;
+  margin-left: 30px;
   width: 25%;
   height: auto;
   border-radius: 35px;
@@ -318,19 +320,29 @@ input:checked + .slider::before {
   align-items: center;
   justify-content: center;
   gap: 20px;
+  align-items: flex-start;
+}
+#flyingimage_specs ul#flying_specs li .range_and_number input[type=number] {
+  border-radius: 20px;
+  border: 3px solid blue;
+  width: 100px;
+  height: 50px;
 }
 
 div.flyingimagesdiv {
-  margin-top: 40px;
+  position: absolute;
+  top: 396px;
+  right: 502px;
+  border: 3px solid black;
+  height: auto;
+  width: auto;
 }
 div.flyingimagesdiv .flyingimage {
   max-width: 1000px;
 }
 div.flyingimagesdiv #flyingimage1 {
-  display: none;
+  position: absolute;
   width: 330px;
-  transform: translateY(100px);
-  position: relative;
   z-index: 2;
 }
 @media (max-width: 400px) {
@@ -338,6 +350,33 @@ div.flyingimagesdiv #flyingimage1 {
     width: 180px;
     height: auto;
   }
+}
+
+.resetbutton {
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: 600;
+  border: 2px solid #3b6df2;
+  border-radius: 18px;
+  background-color: #eaf0ff;
+  color: #1f1f1f;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.resetbutton:hover {
+  background-color: #d0e2ff;
+  border-color: #2a54c3;
+  color: #000;
+}
+.resetbutton:focus {
+  outline: none;
+  background-color: #60a8f0;
+  border-color: #1d3fa8;
+  color: #000;
+}
+.resetbutton:active {
+  background-color: #b0ccff;
+  border-color: #17317d;
 }
 
 * {
@@ -678,7 +717,7 @@ body .sitecontainer div.specsdiv .specs_ul {
   z-index: 1;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  max-height: 1100px;
+  max-height: 1400px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -928,6 +967,7 @@ body .sitecontainer div.pointerdiv h2#blurbpointer span {
   }
 }
 body .sitecontainer div.blurbify_bg_div {
+  position: relative;
   height: auto;
   width: 100%;
   padding: 250px 0px;

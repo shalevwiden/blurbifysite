@@ -696,6 +696,9 @@ body {
 
     // now the styling for the Blurb, which is in Blurbify Div
     div.blurbify_bg_div {
+      position: relative;
+      // for flying image, position is relative
+
       height: auto;
       width: 100%;
       // this should add
