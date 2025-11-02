@@ -74,14 +74,15 @@ div.flyingimagesdiv {
   position: absolute;
   top: 396px;
   right: 502px;
-  border: 3px solid black;
+  border: 0px solid black;
   height: auto;
   width: auto;
   .flyingimage {
     max-width: 1000px;
   }
   #flyingimage1 {
-    // display: none;
+    // by default, its hidden so user cant see it
+    display: none;
     position: absolute;
     transform: translateX(-50vw);
 

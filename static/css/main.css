@@ -330,6 +330,7 @@ input:checked + .slider::before {
 }
 
 div.flyingimagesdiv {
+  display: none;
   position: absolute;
   top: 396px;
   right: 502px;
