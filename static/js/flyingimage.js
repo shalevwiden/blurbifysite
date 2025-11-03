@@ -3,7 +3,7 @@
 const flyingimageInput = document.getElementById("flyingimageInput");
 flying_image_preview = document.getElementById("flying_image_preview");
 let flyingimage1 = document.querySelector("#flyingimage1");
-let flying_wrapper1 = document.querySelector("#flying_wrapper1");
+flying_wrapper1 = document.querySelector("#flying_wrapper1");
 
 // for rotations()
 let arrow_preview = document.querySelector("#arrow_preview");
@@ -93,7 +93,7 @@ flyingspeed();
 
 function rotations() {
   // rotations for arrow and for object
-  const currentTransform = getComputedStyle(flying_wrapper).transform;
+  const currentTransform = getComputedStyle(flyingimage1).transform;
 
   function flyingrotations() {
     objectright = document.querySelector("#objectright");

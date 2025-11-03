@@ -22,6 +22,7 @@ const pfpid = document.querySelector("#pfpid");
 
 // get a whole element
 const body = document.querySelector("body");
+let flying_wrapper1 = document.querySelector("#flying_wrapper1");
 
 flyingimage = document.querySelector("#flyingimage1");
 
@@ -35,8 +36,9 @@ blurb_bg_button.addEventListener("click", () => {
 
 flyingbutton.addEventListener("click", () => {
   console.log("toggling flying object");
-  flyingimage.classList.toggle("flying_class");
+  flying_wrapper1.classList.toggle("flying_class");
 });
+
 spinbutton.addEventListener("click", () => {
   console.log("toggling spin");
 

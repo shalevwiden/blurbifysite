@@ -62,6 +62,18 @@
   }
 }
 
+@keyframes flyingobject_flipped {
+  0% {
+    transform: translateX(90vw) translateY(var(--flyingy));
+  }
+  50% {
+    transform: translateX(25vw) translateY(calc(var(--flyingy) + 50px));
+  }
+  100% {
+    transform: translateX(-40vw) translateY(calc(var(--flyingy) - 10px));
+  }
+}
+
 @keyframes flyingobject_mobile {
   0% {
     transform: translateX(-100vw) translateY(var(--flyingymobile));
@@ -134,6 +146,16 @@
   // make it visible
   display: block !important;
   animation: flyingobject 5s normal linear infinite;
+
+  // for mobile theres a diferent animation class
+  @media (max-width: 400px) {
+    animation: flyingobject_mobile 5s linear infinite;
+  }
+}
+
+.flying_class_flipped {
+  display: block !important;
+  animation: flyingobject_flipped 5s normal linear infinite;
 
   // for mobile theres a diferent animation class
   @media (max-width: 400px) {

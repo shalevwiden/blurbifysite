@@ -78,6 +78,17 @@
     transform: translateX(40vw) translateY(calc(var(--flyingy) - 10px));
   }
 }
+@keyframes flyingobject_flipped {
+  0% {
+    transform: translateX(90vw) translateY(var(--flyingy));
+  }
+  50% {
+    transform: translateX(25vw) translateY(calc(var(--flyingy) + 50px));
+  }
+  100% {
+    transform: translateX(-40vw) translateY(calc(var(--flyingy) - 10px));
+  }
+}
 @keyframes flyingobject_mobile {
   0% {
     transform: translateX(-100vw) translateY(var(--flyingymobile));
@@ -136,6 +147,16 @@
 }
 @media (max-width: 400px) {
   .flying_class {
+    animation: flyingobject_mobile 5s linear infinite;
+  }
+}
+
+.flying_class_flipped {
+  display: block !important;
+  animation: flyingobject_flipped 5s normal linear infinite;
+}
+@media (max-width: 400px) {
+  .flying_class_flipped {
     animation: flyingobject_mobile 5s linear infinite;
   }
 }
@@ -405,18 +426,22 @@ div.flyingimagesdiv {
   border: 0px solid black;
   height: auto;
   width: auto;
+  z-index: 3;
 }
 div.flyingimagesdiv .flyingimage {
   max-width: 1000px;
 }
-div.flyingimagesdiv #flyingimage1 {
+div.flyingimagesdiv .flying_wrapper1 {
+  z-index: 3;
+  width: 330px;
+}
+div.flyingimagesdiv .flying_wrapper1 #flyingimage1 {
   position: absolute;
-  transform: translateX(-50vw);
   width: 330px;
   z-index: 2;
 }
 @media (max-width: 400px) {
-  div.flyingimagesdiv #flyingimage1 {
+  div.flyingimagesdiv .flying_wrapper1 #flyingimage1 {
     width: 180px;
     height: auto;
   }

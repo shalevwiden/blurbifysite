@@ -132,16 +132,20 @@ div.flyingimagesdiv {
   border: 0px solid black;
   height: auto;
   width: auto;
+  // change this z index to make it go under or over fr lol
+  z-index: 3;
   .flyingimage {
     max-width: 1000px;
   }
   .flying_wrapper1 {
     // a wrapper to apply styling on fr lol
+    z-index: 3;
+    width: 330px;
+
     #flyingimage1 {
       // by 1default, its hidden so user cant see it
       // display: none;
       position: absolute;
-      transform: translateX(-50vw);
 
       // adjust these 2 to position
 
