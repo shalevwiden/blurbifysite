@@ -444,7 +444,7 @@ input:checked + .slider::before {
 div.flyingimagesdiv {
   position: absolute;
   top: 396px;
-  right: 502px;
+  right: 850px;
   border: 0px solid black;
   height: auto;
   width: 330px;

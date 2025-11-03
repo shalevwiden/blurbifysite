@@ -142,7 +142,7 @@
 div.flyingimagesdiv {
   position: absolute;
   top: 396px;
-  right: 502px;
+  right: 850px;
   border: 0px solid black;
   height: auto;
   width: 330px;
@@ -160,7 +160,7 @@ div.flyingimagesdiv {
     #flyingimage1 {
       // by 1default, its hidden so user cant see it
       // display: none;
-      width: 100%; /* force image width */
+      width: 200%;
 
       height: auto; /* keep aspect ratio */
       max-width: none; /* ignore previous max-width rules */
