@@ -67,7 +67,9 @@ function flyingsize() {
 
   reset_flying_size_button.addEventListener("click", () => {
     // re-sync slider to CSS value
-    originalsize = parseInt(getComputedStyle(flyingimage1).width);
+    console.log("resetting image size");
+    console.log(originalsize);
+
     flying_size_input.value = originalsize;
     flyingimage1.style.width = originalsize + "px";
   });
