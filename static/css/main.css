@@ -299,7 +299,7 @@ input:checked + .slider::before {
   margin-bottom: 100px;
 }
 #flyingimage_specs ul#flying_specs {
-  max-height: 2100px;
+  max-height: 3100px;
 }
 #flyingimage_specs ul#flying_specs li.imageli {
   /* Custom styled button to trigger file input */
@@ -409,9 +409,10 @@ input:checked + .slider::before {
   width: 100%;
   height: auto;
   gap: 70px;
+  margin: 50px 0;
 }
 #flyingimage_specs ul#flying_specs li .rotationsdiv .previewdiv img {
-  width: 40%;
+  width: 33%;
   height: auto;
   transition: transform 0.5s ease;
 }
@@ -453,7 +454,7 @@ div.flyingimagesdiv #flying_wrapper1 {
   width: 330px;
 }
 div.flyingimagesdiv #flying_wrapper1 #flyingimage1 {
-  width: 100% !important; /* force image width */
+  width: 100%; /* force image width */
   height: auto; /* keep aspect ratio */
   max-width: none; /* ignore previous max-width rules */
   position: absolute; /* keep animation working */
@@ -1460,6 +1461,7 @@ body .sitecontainer div.blurbify_bg_div .blurbdiv div.iconsdiv .righticons {
     width: 90%;
     padding: 18px;
     padding-left: 15px;
+    border: 6px solid #0f62df;
   }
   body .sitecontainer div.blurbify_bg_div .blurbdiv div#pfp_and_username {
     display: flex;

@@ -1163,6 +1163,8 @@ body {
 
           padding: 18px;
           padding-left: 15px;
+          // slightly less thick border
+          border: 6px solid $blurb_border_color;
 
           div#pfp_and_username {
             @include flexrow;

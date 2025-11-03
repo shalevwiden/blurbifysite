@@ -44,9 +44,39 @@ function reset_flying_src() {
   });
 }
 reset_flying_src();
+
 function flyingsize() {
+  flying_size_input = document.querySelector("#flying_size_input");
+
+  originalsize = parseInt(getComputedStyle(flyingimage1).width);
+  flying_size_input.value = originalsize;
+  //   establish it right away
+
+  flying_size_input.addEventListener("input", () => {
+    flyingsizeval = parseInt(flying_size_input.value);
+
+    flyingimage1.style.width = flyingsizeval + "px";
+  });
+
   // do later
+
+  function reset_flyingsize() {}
+  reset_flying_size_button = document.getElementById(
+    "reset_flying_size_button"
+  );
+
+  reset_flying_size_button.addEventListener("click", () => {
+    // re-sync slider to CSS value
+    originalsize = parseInt(getComputedStyle(flyingimage1).width);
+    flying_size_input.value = originalsize;
+    flyingimage1.style.width = originalsize + "px";
+  });
+
+  reset_flyingsize();
 }
+
+flyingsize();
+
 function flyingposition() {
   let originalyposition = parseInt(window.getComputedStyle(flyingimage1).top);
   flying_y_px = document.querySelector("#flying_y_px");

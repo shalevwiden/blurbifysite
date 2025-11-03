@@ -11,7 +11,7 @@
   }
   ul#flying_specs {
     // max height bigger since the
-    max-height: 2100px; // enough for full content
+    max-height: 3100px; // enough for full content
 
     li.imageli {
       input[type="file"] {
@@ -110,8 +110,9 @@
           width: 100%;
           height: auto;
           gap: 70px;
+          margin: 50px 0;
           img {
-            width: 40%;
+            width: 33%;
             height: auto;
             // transition for both of them
             transition: transform 0.5s ease;
@@ -159,7 +160,7 @@ div.flyingimagesdiv {
     #flyingimage1 {
       // by 1default, its hidden so user cant see it
       // display: none;
-      width: 100% !important; /* force image width */
+      width: 100%; /* force image width */
 
       height: auto; /* keep aspect ratio */
       max-width: none; /* ignore previous max-width rules */
