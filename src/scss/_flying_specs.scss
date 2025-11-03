@@ -87,6 +87,7 @@
             p {
               font-style: normal;
               font-size: 23px;
+              font-weight: 400;
             }
             .arrowsdiv {
               @include flexrow;
@@ -120,6 +121,16 @@
             gap: 15px;
             margin-top: 30px;
           }
+        }
+      }
+      .radiodiv {
+        width: 100%;
+        @include flexrow;
+        .option {
+          @include flexcol;
+          border: 3px solid orange;
+          width: 50%;
+          height: auto;
         }
       }
     }
