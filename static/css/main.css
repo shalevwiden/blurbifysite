@@ -425,23 +425,21 @@ div.flyingimagesdiv {
   right: 502px;
   border: 0px solid black;
   height: auto;
-  width: auto;
+  width: 330px;
   z-index: 3;
 }
-div.flyingimagesdiv .flyingimage {
-  max-width: 1000px;
-}
-div.flyingimagesdiv .flying_wrapper1 {
-  z-index: 3;
+div.flyingimagesdiv #flying_wrapper1 {
   width: 330px;
 }
-div.flyingimagesdiv .flying_wrapper1 #flyingimage1 {
-  position: absolute;
-  width: 330px;
-  z-index: 2;
+div.flyingimagesdiv #flying_wrapper1 #flyingimage1 {
+  display: none;
+  width: 100% !important; /* force image width */
+  height: auto; /* keep aspect ratio */
+  max-width: none; /* ignore previous max-width rules */
+  position: absolute; /* keep animation working */
 }
 @media (max-width: 400px) {
-  div.flyingimagesdiv .flying_wrapper1 #flyingimage1 {
+  div.flyingimagesdiv #flying_wrapper1 #flyingimage1 {
     width: 180px;
     height: auto;
   }

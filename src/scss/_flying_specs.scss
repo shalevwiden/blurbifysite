@@ -131,26 +131,25 @@ div.flyingimagesdiv {
   right: 502px;
   border: 0px solid black;
   height: auto;
-  width: auto;
+  width: 330px;
   // change this z index to make it go under or over fr lol
+  // add a radio selector with screenshots to show.
   z-index: 3;
-  .flyingimage {
-    max-width: 1000px;
-  }
-  .flying_wrapper1 {
+
+  // .flyingimage {
+  //   max-width: 1000px;
+  // }
+  #flying_wrapper1 {
     // a wrapper to apply styling on fr lol
-    z-index: 3;
     width: 330px;
 
     #flyingimage1 {
       // by 1default, its hidden so user cant see it
       // display: none;
-      position: absolute;
-
-      // adjust these 2 to position
-
-      width: 330px;
-      z-index: 2;
+      width: 100% !important; /* force image width */
+      height: auto; /* keep aspect ratio */
+      max-width: none; /* ignore previous max-width rules */
+      position: absolute; /* keep animation working */
 
       @media (max-width: 400px) {
         width: 180px;

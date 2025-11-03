@@ -93,6 +93,7 @@ flyingspeed();
 
 function rotations() {
   // rotations for arrow and for object
+  //   Im flipping the actual image because the wrapper is what moves across the screen
   const currentTransform = getComputedStyle(flyingimage1).transform;
 
   function flyingrotations() {
