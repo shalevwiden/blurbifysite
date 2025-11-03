@@ -1,4 +1,5 @@
 // this handles alot of animations and the views stuff
+window.flyingon = false;
 
 //
 
@@ -36,7 +37,18 @@ blurb_bg_button.addEventListener("click", () => {
 
 flyingbutton.addEventListener("click", () => {
   console.log("toggling flying object");
-  flying_wrapper1.classList.toggle("flying_class");
+  // switch the state for flyingimage.js to reference
+  window.flyingon = !window.flyingon;
+  // now handle the animations
+  if (!window.switch_animationDirection) {
+    flying_wrapper1.className = "";
+
+    flying_wrapper1.classList.toggle("flying_class");
+  } else {
+    flying_wrapper1.className = "";
+
+    flying_wrapper1.classList.toggle("flying_class_flipped");
+  }
 });
 
 spinbutton.addEventListener("click", () => {

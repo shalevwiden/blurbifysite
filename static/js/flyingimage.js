@@ -1,4 +1,6 @@
 // this will basically deal with the flying_specs stuff
+window.switch_animationDirection = false;
+//
 
 const flyingimageInput = document.getElementById("flyingimageInput");
 flying_image_preview = document.getElementById("flying_image_preview");
@@ -128,15 +130,42 @@ function rotations() {
       arrow_preview.style.transform = "none";
 
       arrow_preview.style.transform = "scaleX(1)";
+      //   now set actual logic for the flyingobject animation
+      //   right is normal
+      window.switch_animationDirection = false;
+
+      if (
+        flying_wrapper1.classList.contains("flying_class_flipped") &&
+        window.flyingon
+      ) {
+        // remove all classes
+        flying_wrapper1.className = "";
+
+        // add the normal flying class
+        flying_wrapper1.classList.add("flying_class");
+      }
     });
 
     arrowleft.addEventListener("click", () => {
       arrow_preview.style.transform = "none";
 
       arrow_preview.style.transform = "scaleX(-1)";
+      window.switch_animationDirection = true;
+
+      if (
+        flying_wrapper1.classList.contains("flying_class") &&
+        window.flyingon
+      ) {
+        // remove all classes
+        flying_wrapper1.className = "";
+
+        // add the normal flying class
+        flying_wrapper1.classList.add("flying_class_flipped");
+      }
     });
   }
   arrowrotations();
 }
 
 rotations();
+window.switch_animationDirection = switch_animationDirection;

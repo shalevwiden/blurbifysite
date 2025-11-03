@@ -83,10 +83,10 @@
     transform: translateX(90vw) translateY(var(--flyingy));
   }
   50% {
-    transform: translateX(25vw) translateY(calc(var(--flyingy) + 50px));
+    transform: translateX(5vw) translateY(calc(var(--flyingy) + 50px));
   }
   100% {
-    transform: translateX(-40vw) translateY(calc(var(--flyingy) - 10px));
+    transform: translateX(-80vw) translateY(calc(var(--flyingy) - 10px));
   }
 }
 @keyframes flyingobject_mobile {
@@ -94,10 +94,10 @@
     transform: translateX(-100vw) translateY(var(--flyingymobile));
   }
   50% {
-    transform: translateX(8vw) translateY(calc(var(--flyingymobile) + 50px));
+    transform: translateX(-5vw) translateY(calc(var(--flyingymobile) + 50px));
   }
   100% {
-    transform: translateX(63vw) translateY(calc(var(--flyingymobile) - 10px));
+    transform: translateX(95vw) translateY(calc(var(--flyingymobile) - 10px));
   }
 }
 @keyframes spin {
@@ -144,6 +144,7 @@
 .flying_class {
   display: block !important;
   animation: flyingobject 5s normal linear infinite;
+  height: auto !important;
 }
 @media (max-width: 400px) {
   .flying_class {
@@ -342,6 +343,7 @@ input:checked + .slider::before {
   justify-content: center;
   gap: 20px;
   align-items: flex-start;
+  width: 100%;
 }
 #flyingimage_specs ul#flying_specs li .range_and_number input[type=number] {
   border-radius: 20px;
@@ -410,7 +412,7 @@ input:checked + .slider::before {
 #flyingimage_specs ul#flying_specs li .rotationsdiv .previewdiv img {
   width: 40%;
   height: auto;
-  transition: transform 1s ease;
+  transition: transform 0.5s ease;
 }
 @media (max-width: 500px) {
   #flyingimage_specs ul#flying_specs li .rotationsdiv .previewdiv {
@@ -432,7 +434,6 @@ div.flyingimagesdiv #flying_wrapper1 {
   width: 330px;
 }
 div.flyingimagesdiv #flying_wrapper1 #flyingimage1 {
-  display: none;
   width: 100% !important; /* force image width */
   height: auto; /* keep aspect ratio */
   max-width: none; /* ignore previous max-width rules */
@@ -440,8 +441,14 @@ div.flyingimagesdiv #flying_wrapper1 #flyingimage1 {
 }
 @media (max-width: 400px) {
   div.flyingimagesdiv #flying_wrapper1 #flyingimage1 {
-    width: 180px;
+    width: 250px !important;
     height: auto;
+  }
+}
+@media (max-width: 400px) {
+  div.flyingimagesdiv {
+    top: 503px;
+    right: 0px;
   }
 }
 

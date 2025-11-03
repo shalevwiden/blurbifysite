@@ -57,6 +57,8 @@
         border: 3px solid green;
         @include flexcol;
         align-items: flex-start;
+        // takes up full specs ul
+        width: 100%;
 
         input[type="number"] {
           border-radius: 20px;
@@ -111,7 +113,7 @@
             width: 40%;
             height: auto;
             // transition for both of them
-            transition: transform 1s ease;
+            transition: transform 0.5s ease;
           }
 
           @media (max-width: 500px) {
@@ -147,15 +149,20 @@ div.flyingimagesdiv {
       // by 1default, its hidden so user cant see it
       // display: none;
       width: 100% !important; /* force image width */
+
       height: auto; /* keep aspect ratio */
       max-width: none; /* ignore previous max-width rules */
       position: absolute; /* keep animation working */
 
       @media (max-width: 400px) {
-        width: 180px;
+        width: 250px !important;
         height: auto;
       }
     }
+  }
+  @media (max-width: 400px) {
+    top: 503px;
+    right: 0px;
   }
 }
 
