@@ -463,11 +463,25 @@
             <p>Set flying image rotations</p>
             <div class="rotationsdiv">
               <!-- these will be arrow type buttons -->
-              <button>Rotate image</button
-              ><button>rotate direction of flying</button>
+              <div class="buttonsdiv">
+                <div class="rotateobject">
+                  <p>Rotate the flying Object</p>
+                  <div class="arrowsdiv"></div>
+                </div>
+                <div class="rotatemotion">
+                  <p>Rotate the Direction of Motion</p>
+                  <div class="arrowsdiv"></div>
+                </div>
+              </div>
+              <div class="previewdiv">
+                <img src="" alt="" id="rotation_object_preview" />
+                <img src="" alt="" id="rotation_motion_preview" />
+              </div>
             </div>
           </li>
-          <li>
+
+          <!-- add this later too -->
+          <li style="display: none">
             <p>Increase flying image count</p>
             <div class="range_and_number">
               <input type="number" id="flyingimage_count_number" />
@@ -489,7 +503,8 @@
             </div>
           </li>
 
-          <li>
+          <!-- add this later -->
+          <li style="display: none">
             <p>Choose from sound effect</p>
             <div class="soundeffects_div">
               <button class="soundbutton" id="airplane"></button>

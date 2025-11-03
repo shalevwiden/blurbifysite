@@ -65,6 +65,11 @@
           height: 50px;
         }
       }
+      .rotationsdiv {
+        border: 3px solid pink;
+        @include flexcol;
+        align-items: flex-start;
+      }
     }
   }
 }
