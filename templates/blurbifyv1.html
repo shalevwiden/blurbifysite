@@ -336,12 +336,14 @@
           </div>
         </div>
         <div class="flyingimagesdiv">
-          <img
-            src="../images/flyingimages/defaultflying.png"
-            alt="FLYING"
-            id="flyingimage1"
-            class="flyingimage"
-          />
+          <div id="flying_wrapper1">
+            <img
+              src="../images/flyingimages/defaultflying.png"
+              alt="FLYING"
+              id="flyingimage1"
+              class="flyingimage"
+            />
+          </div>
         </div>
       </div>
       <!-- flying image -->
@@ -464,18 +466,34 @@
             <div class="rotationsdiv">
               <!-- these will be arrow type buttons -->
               <div class="buttonsdiv">
-                <div class="rotateobject">
+                <div class="rotatesubclass" id="rotateobject">
                   <p>Rotate the flying Object</p>
-                  <div class="arrowsdiv"></div>
+                  <div class="arrowsdiv">
+                    <i class="fa-solid fa-circle-left" id="objectright"></i>
+
+                    <i class="fa-solid fa-circle-right" id="objectleft"></i>
+                  </div>
                 </div>
-                <div class="rotatemotion">
+                <div class="rotatesubclass" id="rotatemotion">
                   <p>Rotate the Direction of Motion</p>
-                  <div class="arrowsdiv"></div>
+                  <div class="arrowsdiv">
+                    <i class="fa-solid fa-circle-left" id="arrowleft"></i>
+
+                    <i class="fa-solid fa-circle-right" id="arrowright"></i>
+                  </div>
                 </div>
               </div>
               <div class="previewdiv">
-                <img src="" alt="" id="rotation_object_preview" />
-                <img src="" alt="" id="rotation_motion_preview" />
+                <img
+                  src="../images/flyingimages/defaultflying.png"
+                  alt=""
+                  id="rotation_object_preview"
+                />
+                <img
+                  src="../images/icons/blurbify_arrow.svg"
+                  alt=""
+                  id="arrow_preview"
+                />
               </div>
             </div>
           </li>

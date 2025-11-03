@@ -67,8 +67,58 @@
       }
       .rotationsdiv {
         border: 3px solid pink;
+        width: 100%;
         @include flexcol;
         align-items: flex-start;
+
+        .buttonsdiv {
+          @include flexrow;
+
+          border: 3px solid green;
+          width: 100%;
+
+          .rotatesubclass {
+            border: 3px solid red;
+            @include flexcol;
+            flex: 1;
+
+            p {
+              font-style: normal;
+              font-size: 23px;
+            }
+            .arrowsdiv {
+              @include flexrow;
+              gap: 10px;
+              i {
+                font-size: 65px;
+
+                color: rgb(17, 17, 184); /* changes the heart to blue */
+                &:hover {
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+        }
+
+        .previewdiv {
+          @include flexrow;
+          align-items: center;
+          width: 100%;
+          height: auto;
+          gap: 70px;
+          img {
+            width: 40%;
+            height: auto;
+            // transition for both of them
+            transition: transform 1s ease;
+          }
+
+          @media (max-width: 500px) {
+            gap: 15px;
+            margin-top: 30px;
+          }
+        }
       }
     }
   }
@@ -85,20 +135,23 @@ div.flyingimagesdiv {
   .flyingimage {
     max-width: 1000px;
   }
-  #flyingimage1 {
-    // by default, its hidden so user cant see it
-    display: none;
-    position: absolute;
-    transform: translateX(-50vw);
+  .flying_wrapper1 {
+    // a wrapper to apply styling on fr lol
+    #flyingimage1 {
+      // by 1default, its hidden so user cant see it
+      // display: none;
+      position: absolute;
+      transform: translateX(-50vw);
 
-    // adjust these 2 to position
+      // adjust these 2 to position
 
-    width: 330px;
-    z-index: 2;
+      width: 330px;
+      z-index: 2;
 
-    @media (max-width: 400px) {
-      width: 180px;
-      height: auto;
+      @media (max-width: 400px) {
+        width: 180px;
+        height: auto;
+      }
     }
   }
 }

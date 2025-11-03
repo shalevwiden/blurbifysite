@@ -31,3 +31,7 @@ Options
 Added view count setting
 
 Worth noting is my own image has custom width. 206px small one 412 adjustment one.
+
+### Nov 2, 2025
+
+Docs may be limited, but I should have a bunch of linkedin posts explaining the technicalities behind this stuff.
