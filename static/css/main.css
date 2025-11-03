@@ -72,10 +72,10 @@
     transform: translateX(-90vw) translateY(var(--flyingy));
   }
   50% {
-    transform: translateX(-25vw) translateY(calc(var(--flyingy) + 50px));
+    transform: translateX(-5vw) translateY(calc(var(--flyingy) + 50px));
   }
   100% {
-    transform: translateX(40vw) translateY(calc(var(--flyingy) - 10px));
+    transform: translateX(80vw) translateY(calc(var(--flyingy) - 10px));
   }
 }
 @keyframes flyingobject_flipped {
