@@ -158,10 +158,7 @@
   display: block !important;
   animation: flyingobject_flipped 5s normal linear infinite;
 
-  // for mobile theres a diferent animation class
-  @media (max-width: 400px) {
-    animation: flyingobject_mobile 5s linear infinite;
-  }
+  //  no mobile cause I think we're good now
 }
 
 .spin_class {

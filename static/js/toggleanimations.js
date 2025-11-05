@@ -39,14 +39,17 @@ flyingbutton.addEventListener("click", () => {
   console.log("toggling flying object");
   // switch the state for flyingimage.js to reference
   window.flyingon = !window.flyingon;
+  console.log(`Window flying on is ${window.flyingon}`);
   // now handle the animations
   if (!window.switch_animationDirection) {
-    flying_wrapper1.className = "";
-
+    // ensure flipped class is removed if present
+    flying_wrapper1.classList.remove("flying_class_flipped");
+    // toggle the normal direction
     flying_wrapper1.classList.toggle("flying_class");
   } else {
-    flying_wrapper1.className = "";
-
+    // ensure normal class is removed if present
+    flying_wrapper1.classList.remove("flying_class");
+    // toggle the flipped direction
     flying_wrapper1.classList.toggle("flying_class_flipped");
   }
 });

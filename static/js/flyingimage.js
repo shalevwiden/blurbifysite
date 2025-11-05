@@ -200,4 +200,3 @@ function rotations() {
 }
 
 rotations();
-window.switch_animationDirection = switch_animationDirection;
