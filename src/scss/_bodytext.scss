@@ -30,6 +30,8 @@ $hideicons: false;
   --specs_droptime_time: 0.5s;
   --pfpbackground: #c2d9ffff;
   --heartcolor: #cd1515ff;
+  --phonepfpsize: 74px;
+  --imagescale: 138%;
 }
 body {
   @include bodyStyling;
@@ -633,13 +635,18 @@ body {
               // use top and right values for all my templates too
               height: auto;
 
-              width: 138%;
+              width: var(--imagescale);
               height: auto;
               position: relative;
 
               // twice as much top cause twice as big
               top: 8px;
               right: 0px;
+            }
+
+            @media (max-width: 450px) {
+              // twice the width of the current pfp thats important
+              width: calc(var(--phonepfpsize) * 2);
             }
           }
         }
@@ -758,31 +765,33 @@ body {
           gap: 1px;
 
           .pfpborder {
+            // this being 100px is important
             width: 100px;
             aspect-ratio: 1 / 1;
             border-radius: 50%;
             background: linear-gradient(
               90deg,
               #be2647ff 0%,
-              #ec708fff 25%,
-              #c85b49 50%,
-              #ff2222ff 75%,
-              #ef5454ff 100%
+              #f7537cff 25%,
+              #eb87d7ff 50%,
+              #ff22b9ff 75%,
+              #783359ff 100%
             );
 
             // verified user pfp:
+            .userpfpborder {
+              background: linear-gradient(
+                90deg,
+                #60c4ff 5%,
+                #1e36ecff 15%,
+                #605bf7ff 38%,
+                #425d84ff 67%,
+                #d647d1ff 92%,
+                #60c4ffff 100%
+              ) !important;
+            }
 
-            // background: linear-gradient(
-            //   90deg,
-            //   #60c4ff 5%,
-            //   #1e36ecff 15%,
-            //   #605bf7ff 38%,
-            //   #425d84ff 67%,
-            //   #d647d1ff 92%,
-            //   #60c4ffff 100%
-            // );
-
-            padding: 5px;
+            padding: 3px;
             display: inline-block;
             .pfpdiv {
               width: 100%;
@@ -797,7 +806,7 @@ body {
               img {
                 height: auto;
 
-                width: 138%;
+                width: var(--imagescale);
                 height: auto;
                 position: relative;
 
@@ -1040,6 +1049,7 @@ body {
           border: 7px solid $blurb_border_color;
 
           div#pfp_and_username {
+            width: 100%;
             @include flexrow;
 
             align-items: flex-start;
@@ -1054,19 +1064,23 @@ body {
             height: 100px;
             gap: 1px;
 
-            .pfpdiv {
+            .pfpborder {
               width: 90px;
-              aspect-ratio: 1 / 1;
-              border: 0px solid black;
-              border-radius: 50%;
 
-              overflow: hidden;
-              z-index: 1;
-              flex-shrink: 0;
-              @include flexcol;
-              img {
-                margin-bottom: 10px;
-                width: 135%; /* scale image to parent width */
+              .pfpdiv {
+                width: 100%;
+                aspect-ratio: 1 / 1;
+                border: 0px solid black;
+                border-radius: 50%;
+
+                overflow: hidden;
+                z-index: 1;
+                flex-shrink: 0;
+                @include flexcol;
+                img {
+                  margin-bottom: 10px;
+                  width: 135%; /* scale image to parent width */
+                }
               }
             }
             .usernamediv {
@@ -1185,7 +1199,7 @@ body {
             margin-left: $usernamegap + $pfp_size + 10px;
           }
         }
-        @media (max-width: 400px) {
+        @media (max-width: 450px) {
           // by default blurbify div is flexcol
           width: 90%;
 
@@ -1205,35 +1219,38 @@ body {
               border: 3px solid transparent;
             }
             justify-content: flex-start;
-            padding-right: 20px;
+
             height: 100px;
             gap: 1px;
+            .pfpborder {
+              width: var(--phonepfpsize);
 
-            .pfpdiv {
-              width: 70px;
-              aspect-ratio: 1 / 1;
-              border: 0px solid black;
-              border-radius: 50%;
+              .pfpdiv {
+                width: 100%;
+                aspect-ratio: 1 / 1;
+                border: 0px solid black;
+                border-radius: 50%;
 
-              overflow: hidden;
-              z-index: 1;
-              flex-shrink: 0;
-              @include flexcol;
-              img {
-                height: auto;
+                overflow: hidden;
+                z-index: 1;
+                flex-shrink: 0;
+                @include flexcol;
+                img {
+                  height: auto;
 
-                width: 138%;
-                height: auto;
-                position: relative;
+                  width: var(--imagescale);
+                  height: auto;
+                  position: relative;
 
-                // twice as much top cause twice as big
-                top: 8px;
-                right: 0px;
+                  // twice as much top cause twice as big
+                  top: 8px;
+                  right: 0px;
+                }
               }
             }
             .usernamediv {
               height: 100%;
-              width: 400px;
+              width: 200px;
               // for the small screen it needs to pushed up
               margin-top: -13px;
 

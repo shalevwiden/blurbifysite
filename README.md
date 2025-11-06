@@ -35,3 +35,13 @@ Worth noting is my own image has custom width. 206px small one 412 adjustment on
 ### Nov 2, 2025
 
 Docs may be limited, but I should have a bunch of linkedin posts explaining the technicalities behind this stuff.
+
+### Nov 5, 2025
+
+I need to write a lot of docs for this
+Because theres a lot of technicalities.
+Using the 450px media quiery breakpoint for phone size stuff.
+
+The profile picture sizing is tricky since theres a preview div.
+The .adjustmentsdiv
+But since the pfp is smaller it needs to be adjusted proportionally.
