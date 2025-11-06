@@ -101,11 +101,10 @@ $debugborders: false;
 
           width: 100%;
 
-          @if $debugborders {
-            border: 3px solid rgb(0, 32, 128);
-          } @else {
-            border: 1px solid transparent;
-          }
+          border: 3px solid rgb(0, 32, 128);
+          margin-top: 30px;
+          border-radius: 26px;
+          padding: 15px 5px;
 
           .rotatesubclass {
             @if $debugborders {
@@ -262,6 +261,7 @@ div.flyingimagesdiv {
       // by 1default, its hidden so user cant see it
       // display: none;
       width: 200%;
+      border-radius: 19px;
 
       height: auto; /* keep aspect ratio */
       max-width: none; /* ignore previous max-width rules */
