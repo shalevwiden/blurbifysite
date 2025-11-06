@@ -30,7 +30,7 @@ flyingimageInput.addEventListener("change", () => {
 });
 function reset_flying_src() {
   resetflyingimage = document.getElementById("resetflyingimage");
-  defaultsrc = "../images/flyingimages/defaultflying.png";
+  defaultsrc = "../images/flyingimages/blurbifyplane.png";
   // now heres the logic for them
 
   resetflyingimage.addEventListener("click", () => {
@@ -60,19 +60,20 @@ function flyingsize() {
 
   // do later
 
-  function reset_flyingsize() {}
-  reset_flying_size_button = document.getElementById(
-    "reset_flying_size_button"
-  );
+  function reset_flyingsize() {
+    reset_flying_size_button = document.getElementById(
+      "reset_flying_size_button"
+    );
 
-  reset_flying_size_button.addEventListener("click", () => {
-    // re-sync slider to CSS value
-    console.log("resetting image size");
-    console.log(originalsize);
+    reset_flying_size_button.addEventListener("click", () => {
+      // re-sync slider to CSS value
+      console.log("resetting image size");
+      console.log(originalsize);
 
-    flying_size_input.value = originalsize;
-    flyingimage1.style.width = originalsize + "px";
-  });
+      flying_size_input.value = originalsize;
+      flyingimage1.style.width = originalsize + "px";
+    });
+  }
 
   reset_flyingsize();
 }
@@ -96,6 +97,20 @@ function flyingposition() {
     flying_y_slider.value = yposition;
     flyingimage1.style.top = originalyposition + -yposition + "px";
   });
+
+  function reset_flyingposition() {
+    reset_flying_position = document.getElementById("reset_flying_position");
+
+    reset_flying_position.addEventListener("click", () => {
+      // re-sync slider to CSS value
+      console.log("resetting positoin");
+      flying_y_px.value = originalyposition;
+      flying_y_slider.value = originalyposition;
+      flyingimage1.style.top = originalyposition;
+    });
+  }
+
+  reset_flyingposition();
 }
 
 // need to add reset button still

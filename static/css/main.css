@@ -473,6 +473,37 @@ input:checked + .slider::before {
   border: 3px solid orange;
   width: 50%;
   height: auto;
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+#flyingimage_specs ul#flying_specs li .radiodiv .option input[type=radio] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+#flyingimage_specs ul#flying_specs li .radiodiv .option input[type=radio]:checked + label {
+  border: 2px solid #ff8a00;
+  background: rgb(51, 157, 95);
+  box-shadow: 0 0 10px rgba(255, 138, 0, 0.3);
+  border-radius: 25px;
+}
+#flyingimage_specs ul#flying_specs li .radiodiv .option input[type=radio]:checked + label .radiotext {
+  color: #fff;
+}
+#flyingimage_specs ul#flying_specs li .radiodiv .option label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  height: 100%;
+}
+#flyingimage_specs ul#flying_specs li .radiodiv .option label img {
+  width: 80%;
+  height: auto;
+  border-radius: 30px;
 }
 
 div.flyingimagesdiv {
@@ -492,6 +523,7 @@ div.flyingimagesdiv #flying_wrapper1 #flyingimage1 {
   height: auto; /* keep aspect ratio */
   max-width: none; /* ignore previous max-width rules */
   position: absolute; /* keep animation working */
+  pointer-events: none;
 }
 @media (max-width: 400px) {
   div.flyingimagesdiv #flying_wrapper1 #flyingimage1 {

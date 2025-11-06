@@ -136,6 +136,37 @@
           border: 3px solid orange;
           width: 50%;
           height: auto;
+
+          background-color: rgba(255, 255, 255, 0.1);
+          cursor: pointer;
+          transition: all 0.25s ease;
+
+          // remove default
+          input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+          }
+          input[type="radio"]:checked + label {
+            border: 2px solid #ff8a00;
+            background: rgba(51, 157, 95, 1);
+            box-shadow: 0 0 10px rgba(255, 138, 0, 0.3);
+            border-radius: 25px;
+            .radiotext {
+              color: #fff;
+            }
+          }
+          label {
+            // the label is what users will click
+            @include flexcol;
+            width: 100%;
+            height: 100%;
+            img {
+              width: 80%;
+              height: auto;
+              border-radius: 30px;
+            }
+          }
         }
       }
     }
@@ -169,6 +200,7 @@ div.flyingimagesdiv {
       height: auto; /* keep aspect ratio */
       max-width: none; /* ignore previous max-width rules */
       position: absolute; /* keep animation working */
+      pointer-events: none;
 
       @media (max-width: 400px) {
         width: 250px !important;
