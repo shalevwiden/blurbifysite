@@ -1,5 +1,6 @@
 // this handles alot of animations and the views stuff
 window.flyingon = false;
+bg_anims = false;
 
 //
 
@@ -7,12 +8,14 @@ window.flyingon = false;
 
 const viewsicon = document.querySelector("#viewchart");
 
-const buttonsDiv = document.querySelector(".animation_buttons");
+const blurbifybutton = document.querySelector("#blurbifybutton");
+const blurb_bg_button = document.querySelector("#blurb_bg_button");
+const spinbutton = document.querySelector("#spin");
+const unblur_button = document.querySelector("#unblur_button");
+const zoomup_button = document.querySelector("#zoomup_button");
 
-const blurbifybutton = buttonsDiv.querySelector("#blurbifybutton");
-const blurb_bg_button = buttonsDiv.querySelector("#blurb_bg_button");
-const flyingbutton = buttonsDiv.querySelector("#flyingbutton");
-const spinbutton = buttonsDiv.querySelector("#spin");
+// flying button is in its own div rn:
+const flyingbutton = document.querySelector("#flyingbutton");
 
 const blurbdiv = document.querySelector(".blurbdiv");
 
@@ -30,9 +33,21 @@ flyingimage = document.querySelector("#flyingimage1");
 // now the toggling logic here
 
 blurb_bg_button.addEventListener("click", () => {
+  const originalText = "Blurb Background Animations";
+  const originalBackground = getComputedStyle(blurb_bg_button).background;
   console.log("toggling bg animations for blurb");
+
   // updates fr
+
   blurbify_bg_div.classList.toggle("div_background_class");
+  bg_anims = !bg_anims;
+  if (!bg_anims) {
+    blurb_bg_button.innerText = `${originalText} Off`;
+    blurb_bg_button.style.background = originalBackground;
+  } else {
+    blurb_bg_button.innerText = `${originalText} On`;
+    blurb_bg_button.style.background = "#564ce7ff";
+  }
 });
 
 flyingbutton.addEventListener("click", () => {
@@ -55,7 +70,11 @@ flyingbutton.addEventListener("click", () => {
 });
 
 spinbutton.addEventListener("click", () => {
+  const originalText = "Spin the Blurb";
+  const originalBackground = getComputedStyle(spinbutton).background;
   console.log("toggling spin");
+  spinbutton.innerText = `${originalText} On`;
+  spinbutton.style.background = "#564ce7ff";
 
   // Add the class
   blurbdiv.classList.add("spin_class");
@@ -63,7 +82,46 @@ spinbutton.addEventListener("click", () => {
   // Remove the class after animation duration so it can be retriggered
   setTimeout(() => {
     blurbdiv.classList.remove("spin_class");
+    spinbutton.innerText = `${originalText} Off`;
+    spinbutton.style.background = originalBackground;
   }, 7000); // 5000ms = your animation duration + the delay
+});
+
+unblur_button.addEventListener("click", () => {
+  const originalText = "Unblur Animation";
+  const originalBackground = getComputedStyle(unblur_button).background;
+  console.log("toggling unblur animation");
+  unblur_button.innerText = `${originalText} On`;
+  unblur_button.style.background = "#564ce7ff";
+
+  // Add the class
+  blurbdiv.classList.add("unblur_class");
+
+  // Remove the class after animation duration so it can be retriggered
+  setTimeout(() => {
+    blurbdiv.classList.remove("unblur_class");
+    unblur_button.innerText = `${originalText} Off`;
+    unblur_button.style.background = originalBackground;
+  }, 10000);
+});
+
+// a lot nicer styling
+zoomup_button.addEventListener("click", () => {
+  console.log("toggling zoom up animation");
+  const originalText = "Zoom Up";
+  const originalBackground = getComputedStyle(zoomup_button).background;
+  zoomup_button.innerText = `${originalText} On`;
+  zoomup_button.style.background = "#564ce7ff";
+
+  // Add the class
+  blurbdiv.classList.add("zoom_up_class");
+
+  // Remove the class after animation duration so it can be retriggered
+  setTimeout(() => {
+    blurbdiv.classList.remove("zoom_up_class");
+    zoomup_button.innerText = `${originalText} Off`;
+    zoomup_button.style.background = originalBackground;
+  }, 9000);
 });
 function easeOutQuad(t) {
   return t * (2 - t);

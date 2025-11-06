@@ -131,6 +131,31 @@
     transform: scale(1) rotate(0deg);
   }
 }
+@keyframes unblur {
+  0% {
+    filter: blur(0px);
+  }
+  10% {
+    filter: blur(15px);
+  }
+  100% {
+    filter: blur(1px);
+  }
+}
+@keyframes zoomup {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  10% {
+    transform: scale(0.1) rotate(0deg);
+  }
+  85% {
+    transform: scale(1.3) rotate(0deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
 .blurbify_class {
   animation: blurbify_animation 5s normal infinite;
 }
@@ -159,6 +184,16 @@
 
 .spin_class {
   animation: spin_lin 5s ease;
+  animation-delay: 2s;
+}
+
+.unblur_class {
+  animation: unblur 8s ease;
+  animation-delay: 2s;
+}
+
+.zoom_up_class {
+  animation: zoomup 6s ease;
   animation-delay: 2s;
 }
 
@@ -1614,8 +1649,8 @@ body .sitecontainer .animation_buttons {
   border-radius: 30px;
   height: auto;
   padding: 50px;
-  margin-top: 200px;
-  margin-bottom: 50px;
+  margin-top: 100px;
+  margin-bottom: 30px;
   background-color: rgb(255, 255, 255);
 }
 body .sitecontainer .animation_buttons button {
@@ -1641,7 +1676,7 @@ body .sitecontainer .animation_buttons button:hover {
     height: 150px;
     flex: none;
     width: 70%;
-    background-color: rgb(226, 47, 20);
+    background-color: rgb(20, 109, 226);
     color: white;
     border-radius: 20px;
     font-size: 15px;
@@ -1649,8 +1684,37 @@ body .sitecontainer .animation_buttons button:hover {
   }
   body .sitecontainer .animation_buttons button:hover {
     cursor: pointer;
-    background-color: rgb(255, 192, 116);
+    background-color: rgb(31, 106, 202);
   }
+}
+body .sitecontainer .animation_buttons#flying_buttons {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border: 6px solid rgb(69, 146, 254);
+  border-radius: 30px;
+  height: auto;
+  padding: 50px;
+  margin-top: 10px;
+  margin-bottom: 70px;
+}
+body .sitecontainer .animation_buttons#flying_buttons button {
+  height: 150px;
+  flex: none;
+  width: 75%;
+  color: white;
+  border-radius: 20px;
+  background-color: rgb(238, 44, 76);
+  border-radius: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+body .sitecontainer .animation_buttons#flying_buttons button:hover {
+  cursor: pointer;
+  background-color: rgb(191, 27, 134);
 }
 body .sitecontainer a#homebutton {
   width: 40%;
