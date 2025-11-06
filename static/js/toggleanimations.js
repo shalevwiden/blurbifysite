@@ -1,6 +1,7 @@
 // this handles alot of animations and the views stuff
 window.flyingon = false;
 bg_anims = false;
+border_anims = false;
 
 //
 
@@ -8,7 +9,7 @@ bg_anims = false;
 
 const viewsicon = document.querySelector("#viewchart");
 
-const blurbifybutton = document.querySelector("#blurbifybutton");
+const borderbutton = document.querySelector("#borderbutton");
 const blurb_bg_button = document.querySelector("#blurb_bg_button");
 const spinbutton = document.querySelector("#spin");
 const unblur_button = document.querySelector("#unblur_button");
@@ -18,6 +19,8 @@ const zoomup_button = document.querySelector("#zoomup_button");
 const flyingbutton = document.querySelector("#flyingbutton");
 
 const blurbdiv = document.querySelector(".blurbdiv");
+
+const og_button_bg = getComputedStyle(blurb_bg_button).backgroundColor;
 
 // dont declare it because its already declared in inputs.js and exported
 // const blurbify_bg_div = document.querySelector(".blurbify_bg_div");
@@ -34,7 +37,6 @@ flyingimage = document.querySelector("#flyingimage1");
 
 blurb_bg_button.addEventListener("click", () => {
   const originalText = "Blurb Background Animations";
-  const originalBackground = getComputedStyle(blurb_bg_button).background;
   console.log("toggling bg animations for blurb");
 
   // updates fr
@@ -43,7 +45,7 @@ blurb_bg_button.addEventListener("click", () => {
   bg_anims = !bg_anims;
   if (!bg_anims) {
     blurb_bg_button.innerText = `${originalText} Off`;
-    blurb_bg_button.style.background = originalBackground;
+    blurb_bg_button.style.background = og_button_bg;
   } else {
     blurb_bg_button.innerText = `${originalText} On`;
     blurb_bg_button.style.background = "#564ce7ff";
@@ -71,7 +73,6 @@ flyingbutton.addEventListener("click", () => {
 
 spinbutton.addEventListener("click", () => {
   const originalText = "Spin the Blurb";
-  const originalBackground = getComputedStyle(spinbutton).background;
   console.log("toggling spin");
   spinbutton.innerText = `${originalText} On`;
   spinbutton.style.background = "#564ce7ff";
@@ -83,13 +84,12 @@ spinbutton.addEventListener("click", () => {
   setTimeout(() => {
     blurbdiv.classList.remove("spin_class");
     spinbutton.innerText = `${originalText} Off`;
-    spinbutton.style.background = originalBackground;
+    spinbutton.style.background = og_button_bg;
   }, 7000); // 5000ms = your animation duration + the delay
 });
 
 unblur_button.addEventListener("click", () => {
   const originalText = "Unblur Animation";
-  const originalBackground = getComputedStyle(unblur_button).background;
   console.log("toggling unblur animation");
   unblur_button.innerText = `${originalText} On`;
   unblur_button.style.background = "#564ce7ff";
@@ -101,7 +101,7 @@ unblur_button.addEventListener("click", () => {
   setTimeout(() => {
     blurbdiv.classList.remove("unblur_class");
     unblur_button.innerText = `${originalText} Off`;
-    unblur_button.style.background = originalBackground;
+    unblur_button.style.background = og_button_bg;
   }, 10000);
 });
 
@@ -109,7 +109,6 @@ unblur_button.addEventListener("click", () => {
 zoomup_button.addEventListener("click", () => {
   console.log("toggling zoom up animation");
   const originalText = "Zoom Up";
-  const originalBackground = getComputedStyle(zoomup_button).background;
   zoomup_button.innerText = `${originalText} On`;
   zoomup_button.style.background = "#564ce7ff";
 
@@ -120,7 +119,7 @@ zoomup_button.addEventListener("click", () => {
   setTimeout(() => {
     blurbdiv.classList.remove("zoom_up_class");
     zoomup_button.innerText = `${originalText} Off`;
-    zoomup_button.style.background = originalBackground;
+    zoomup_button.style.background = og_button_bg;
   }, 9000);
 });
 function easeOutQuad(t) {
@@ -186,17 +185,26 @@ const viewcount = getViews(views);
 
 // starting up the animation will do a viewcount animation
 // add "yes this is what I do instead of sleeping..."
-blurbifybutton.addEventListener("click", () => {
-  setTimeout(() => {
-    console.log("toggling blurbify");
-    blurbdiv.classList.toggle("blurbify_class");
+borderbutton.addEventListener("click", () => {
+  blurbdiv.classList.toggle("border_class");
+  const originalText = "Border Animations";
+  console.log("toggling border animations for blurb");
 
-    // READ THIS - this line applies spin to the pfp
-    // pfpid.classList.toggle("spin_class");
+  // updates fr
+  // update state
+  border_anims = !border_anims;
+  if (!border_anims) {
+    borderbutton.innerText = `${originalText} Off`;
+    borderbutton.style.background = og_button_bg;
+  } else {
+    borderbutton.innerText = `${originalText} On`;
+    borderbutton.style.background = "#564ce7ff";
+  }
+  // READ THIS - this line applies spin to the pfp
+  // pfpid.classList.toggle("spin_class");
 
-    // this line adds the view count delay
-    // countUp(views, viewcount, 5000);
-  }, 1000); // 1000ms = 1 second
+  // this line adds the view count delay
+  // countUp(views, viewcount, 5000);
 });
 
 // Make the duration a little slower
