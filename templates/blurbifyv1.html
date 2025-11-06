@@ -411,14 +411,17 @@
             <p>Adjust flying image position (up or down)</p>
             <div class="range_and_number">
               <!-- range and number because you can adjust the number in pixels -->
-              <input
-                type="number"
-                id="flying_y_px"
-                min="-700"
-                max="700"
-                value="0"
-                step="5"
-              />
+              <div class="numdiv">
+                <input
+                  type="number"
+                  id="flying_y_px"
+                  min="-700"
+                  max="700"
+                  value="0"
+                  step="5"
+                />
+                <p>px</p>
+              </div>
 
               <div class="sliderdiv">
                 <input
@@ -442,14 +445,17 @@
             <div class="range_and_number">
               <!-- range and number because you can adjust the number in pixels -->
               <!-- min and max affect speed here lol -->
-              <input
-                type="number"
-                id="flying_speed"
-                min="1"
-                max="20"
-                value="5"
-                step="1"
-              />
+              <div class="numdiv">
+                <input
+                  type="number"
+                  id="flying_speed"
+                  min="1"
+                  max="20"
+                  value="5"
+                  step="1"
+                />
+                <p>Seconds</p>
+              </div>
 
               <div class="sliderdiv">
                 <input

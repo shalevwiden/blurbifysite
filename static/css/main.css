@@ -375,11 +375,22 @@ input:checked + .slider::before {
   align-items: flex-start;
   width: 100%;
 }
-#flyingimage_specs ul#flying_specs li .range_and_number input[type=number] {
+#flyingimage_specs ul#flying_specs li .range_and_number div.numdiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  justify-content: flex-start;
+  width: 100%;
+}
+#flyingimage_specs ul#flying_specs li .range_and_number div.numdiv input[type=number] {
   border-radius: 20px;
   border: 3px solid blue;
-  width: 100px;
+  width: 10%;
   height: 50px;
+  font-size: 30px;
+  padding-left: 10px;
 }
 #flyingimage_specs ul#flying_specs li .rotationsdiv {
   border: 3px solid pink;
