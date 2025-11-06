@@ -156,11 +156,6 @@
   display: block !important;
   animation: flyingobject_flipped 5s normal linear infinite;
 }
-@media (max-width: 400px) {
-  .flying_class_flipped {
-    animation: flyingobject_mobile 5s linear infinite;
-  }
-}
 
 .spin_class {
   animation: spin_lin 5s ease;
@@ -331,7 +326,7 @@ input:checked + .slider::before {
 #flyingimage_specs ul#flying_specs li.imageli #flying_image_preview {
   margin: 50px 0;
   margin-left: 30px;
-  width: 25%;
+  width: 30%;
   height: auto;
   border-radius: 35px;
 }
@@ -416,6 +411,10 @@ input:checked + .slider::before {
   height: auto;
   transition: transform 0.5s ease;
 }
+#flyingimage_specs ul#flying_specs li .rotationsdiv .previewdiv #rotation_object_preview {
+  margin-right: 30px;
+  width: 40%;
+}
 @media (max-width: 500px) {
   #flyingimage_specs ul#flying_specs li .rotationsdiv .previewdiv {
     gap: 15px;
@@ -454,7 +453,7 @@ div.flyingimagesdiv #flying_wrapper1 {
   width: 330px;
 }
 div.flyingimagesdiv #flying_wrapper1 #flyingimage1 {
-  width: 100%; /* force image width */
+  width: 200%;
   height: auto; /* keep aspect ratio */
   max-width: none; /* ignore previous max-width rules */
   position: absolute; /* keep animation working */
