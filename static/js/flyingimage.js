@@ -6,6 +6,7 @@ const flyingimageInput = document.getElementById("flyingimageInput");
 flying_image_preview = document.getElementById("flying_image_preview");
 let flyingimage1 = document.querySelector("#flyingimage1");
 flying_wrapper1 = document.querySelector("#flying_wrapper1");
+flyingimagesdiv = document.querySelector(".flyingimagesdiv");
 
 // for rotations()
 let arrow_preview = document.querySelector("#arrow_preview");
@@ -140,6 +141,32 @@ function flyingspeed() {
 
 flyingspeed();
 
+function zindex() {
+  const aboveblurb = document.querySelector("#aboveblurb");
+  const underblurb = document.querySelector("#underblurb");
+
+  aboveblurb.addEventListener("change", () => {
+    if (aboveblurb.checked) {
+      flyingimagesdiv.style.zIndex = "3"; // put on top
+      console.log("Set to ABOVE");
+    }
+  });
+
+  underblurb.addEventListener("change", () => {
+    if (underblurb.checked) {
+      flyingimagesdiv.style.zIndex = "0"; // put underneath
+      console.log("Set to UNDER");
+    }
+  });
+
+  // Optional: initialize state based on whichever is pre-checked
+  if (aboveblurb.checked) {
+    flyingimagesdiv.style.zIndex = "3";
+  } else if (underblurb.checked) {
+    flyingimagesdiv.style.zIndex = "0";
+  }
+}
+zindex();
 function rotations() {
   // rotations for arrow and for object
   //   Im flipping the actual image because the wrapper is what moves across the screen

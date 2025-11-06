@@ -388,7 +388,9 @@
             />
 
             <!-- this will reset it back to the Blurbify plane -->
-            <button class="resetbutton" id="resetflyingimage">Reset</button>
+            <button class="resetbutton" id="resetflyingimage">
+              Reset Image
+            </button>
           </li>
           <li>
             <!-- by default size will be like 300 or so -->
@@ -420,7 +422,7 @@
                   value="0"
                   step="5"
                 />
-                <p>px</p>
+                <p class="units">px</p>
               </div>
 
               <div class="sliderdiv">
@@ -454,7 +456,7 @@
                   value="5"
                   step="1"
                 />
-                <p>Seconds</p>
+                <p class="units">Seconds</p>
               </div>
 
               <div class="sliderdiv">
@@ -482,7 +484,7 @@
                 <input
                   type="radio"
                   id="aboveblurb"
-                  name="arrangement"
+                  name="order"
                   value="above"
                   checked
                 />
@@ -494,7 +496,7 @@
                 </label>
               </div>
               <div class="option">
-                <input type="radio" id="underblurb" name="arrangement" />
+                <input type="radio" id="underblurb" name="order" />
                 <!-- the labels make it clickable -->
 
                 <label for="underblurb" class="radio-box">

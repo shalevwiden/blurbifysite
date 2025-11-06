@@ -68,10 +68,15 @@
           input[type="number"] {
             border-radius: 20px;
             border: 3px solid blue;
-            width: 10%;
+            width: 90px;
             height: 50px;
             font-size: 30px;
             padding-left: 10px;
+          }
+          p.units {
+            font-style: normal;
+            font-size: 23px;
+            font-weight: 400;
           }
         }
       }
@@ -102,10 +107,12 @@
               gap: 10px;
               i {
                 font-size: 65px;
+                transition: 0.3s all;
 
                 color: rgb(17, 17, 184); /* changes the heart to blue */
                 &:hover {
                   cursor: pointer;
+                  transform: scale(1.07);
                 }
               }
             }
@@ -117,7 +124,7 @@
           align-items: center;
           width: 100%;
           height: auto;
-          gap: 70px;
+          gap: 60px;
           margin: 50px 0;
           img {
             width: 33%;
@@ -135,10 +142,24 @@
             margin-top: 30px;
           }
         }
+
+        @media (max-width: 600px) {
+          .buttonsdiv {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+          .previewdiv {
+            #rotation_object_preview {
+              margin-right: 30px;
+              width: 51%;
+            }
+          }
+        }
       }
       .radiodiv {
         width: 100%;
         @include flexrow;
+        margin-top: 20px;
         .option {
           @include flexcol;
           border: 3px solid orange;
@@ -156,7 +177,8 @@
             pointer-events: none;
           }
           input[type="radio"]:checked + label {
-            border: 2px solid #ff8a00;
+            // increase the border to make it bigger when clicked
+            border: 5px solid transparent;
             background: rgba(51, 157, 95, 1);
             box-shadow: 0 0 10px rgba(255, 138, 0, 0.3);
             border-radius: 25px;
@@ -166,13 +188,24 @@
           }
           label {
             // the label is what users will click
+            background-color: #87c4d1ff;
+            border: 1px solid transparent;
+
             @include flexcol;
             width: 100%;
             height: 100%;
+            p.radiotext {
+              font-size: 20px;
+              font-weight: normal;
+            }
             img {
               width: 80%;
               height: auto;
               border-radius: 30px;
+            }
+
+            &:hover {
+              cursor: pointer;
             }
           }
         }

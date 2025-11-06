@@ -387,10 +387,15 @@ input:checked + .slider::before {
 #flyingimage_specs ul#flying_specs li .range_and_number div.numdiv input[type=number] {
   border-radius: 20px;
   border: 3px solid blue;
-  width: 10%;
+  width: 90px;
   height: 50px;
   font-size: 30px;
   padding-left: 10px;
+}
+#flyingimage_specs ul#flying_specs li .range_and_number div.numdiv p.units {
+  font-style: normal;
+  font-size: 23px;
+  font-weight: 400;
 }
 #flyingimage_specs ul#flying_specs li .rotationsdiv {
   border: 3px solid pink;
@@ -435,10 +440,12 @@ input:checked + .slider::before {
 }
 #flyingimage_specs ul#flying_specs li .rotationsdiv .buttonsdiv .rotatesubclass .arrowsdiv i {
   font-size: 65px;
+  transition: 0.3s all;
   color: rgb(17, 17, 184); /* changes the heart to blue */
 }
 #flyingimage_specs ul#flying_specs li .rotationsdiv .buttonsdiv .rotatesubclass .arrowsdiv i:hover {
   cursor: pointer;
+  transform: scale(1.07);
 }
 #flyingimage_specs ul#flying_specs li .rotationsdiv .previewdiv {
   display: flex;
@@ -449,7 +456,7 @@ input:checked + .slider::before {
   align-items: center;
   width: 100%;
   height: auto;
-  gap: 70px;
+  gap: 60px;
   margin: 50px 0;
 }
 #flyingimage_specs ul#flying_specs li .rotationsdiv .previewdiv img {
@@ -467,6 +474,16 @@ input:checked + .slider::before {
     margin-top: 30px;
   }
 }
+@media (max-width: 600px) {
+  #flyingimage_specs ul#flying_specs li .rotationsdiv .buttonsdiv {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #flyingimage_specs ul#flying_specs li .rotationsdiv .previewdiv #rotation_object_preview {
+    margin-right: 30px;
+    width: 51%;
+  }
+}
 #flyingimage_specs ul#flying_specs li .radiodiv {
   width: 100%;
   display: flex;
@@ -474,6 +491,7 @@ input:checked + .slider::before {
   align-items: center;
   justify-content: center;
   gap: 20px;
+  margin-top: 20px;
 }
 #flyingimage_specs ul#flying_specs li .radiodiv .option {
   display: flex;
@@ -494,7 +512,7 @@ input:checked + .slider::before {
   pointer-events: none;
 }
 #flyingimage_specs ul#flying_specs li .radiodiv .option input[type=radio]:checked + label {
-  border: 2px solid #ff8a00;
+  border: 5px solid transparent;
   background: rgb(51, 157, 95);
   box-shadow: 0 0 10px rgba(255, 138, 0, 0.3);
   border-radius: 25px;
@@ -503,6 +521,8 @@ input:checked + .slider::before {
   color: #fff;
 }
 #flyingimage_specs ul#flying_specs li .radiodiv .option label {
+  background-color: #87c4d1;
+  border: 1px solid transparent;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -511,10 +531,17 @@ input:checked + .slider::before {
   width: 100%;
   height: 100%;
 }
+#flyingimage_specs ul#flying_specs li .radiodiv .option label p.radiotext {
+  font-size: 20px;
+  font-weight: normal;
+}
 #flyingimage_specs ul#flying_specs li .radiodiv .option label img {
   width: 80%;
   height: auto;
   border-radius: 30px;
+}
+#flyingimage_specs ul#flying_specs li .radiodiv .option label:hover {
+  cursor: pointer;
 }
 
 div.flyingimagesdiv {
@@ -900,9 +927,9 @@ body .sitecontainer div.specsdiv .toggle_menu {
   justify-content: center;
   gap: 20px;
   width: 100%;
-  height: 150px;
+  height: auto;
   justify-content: space-between;
-  padding: 10px 20px;
+  padding: 26px 20px;
 }
 body .sitecontainer div.specsdiv .toggle_menu h2 {
   color: rgb(16, 62, 231);
@@ -1063,9 +1090,7 @@ body .sitecontainer div.specsdiv .specs_ul li div.sliderdiv .resetbutton:active 
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    height: 150px;
     justify-content: space-between;
-    padding: 10px 20px;
   }
   body .sitecontainer div.specsdiv .toggle_menu h2 {
     color: rgb(16, 62, 231);
@@ -1691,7 +1716,7 @@ body .sitecontainer .animation_buttons {
   border: 6px solid rgb(69, 146, 254);
   border-radius: 30px;
   height: auto;
-  padding: 50px;
+  padding: 30px;
   margin-top: 100px;
   margin-bottom: 30px;
   background-color: rgb(255, 255, 255);
@@ -1713,7 +1738,8 @@ body .sitecontainer .animation_buttons button:hover {
 @media (max-width: 1050px) {
   body .sitecontainer .animation_buttons {
     flex-direction: column;
-    height: 1100px;
+    height: auto;
+    padding: 45px 30px;
   }
   body .sitecontainer .animation_buttons button {
     height: 150px;
@@ -1740,7 +1766,7 @@ body .sitecontainer .animation_buttons#flying_buttons {
   border: 6px solid rgb(69, 146, 254);
   border-radius: 30px;
   height: auto;
-  padding: 50px;
+  padding: 40px 30px;
   margin-top: 10px;
   margin-bottom: 70px;
 }
@@ -1758,6 +1784,14 @@ body .sitecontainer .animation_buttons#flying_buttons button {
 body .sitecontainer .animation_buttons#flying_buttons button:hover {
   cursor: pointer;
   background-color: rgb(191, 27, 134);
+}
+@media (max-width: 600px) {
+  body .sitecontainer .animation_buttons#flying_buttons {
+    padding: 30px 20px;
+  }
+  body .sitecontainer .animation_buttons#flying_buttons button {
+    width: 95%;
+  }
 }
 body .sitecontainer a#homebutton {
   width: 40%;
