@@ -366,7 +366,7 @@ input:checked + .slider::before {
   border-radius: 35px;
 }
 #flyingimage_specs ul#flying_specs li .range_and_number {
-  border: 3px solid green;
+  border: 1px solid transparent;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -398,7 +398,7 @@ input:checked + .slider::before {
   font-weight: 400;
 }
 #flyingimage_specs ul#flying_specs li .rotationsdiv {
-  border: 3px solid pink;
+  border: 1px solid transparent;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -417,7 +417,7 @@ input:checked + .slider::before {
   width: 100%;
 }
 #flyingimage_specs ul#flying_specs li .rotationsdiv .buttonsdiv .rotatesubclass {
-  border: 3px solid red;
+  border: 1px solid transparent;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -500,6 +500,7 @@ input:checked + .slider::before {
   justify-content: center;
   gap: 20px;
   border: 3px solid orange;
+  border: 1px solid transparent;
   width: 50%;
   height: auto;
   background-color: rgba(255, 255, 255, 0.1);

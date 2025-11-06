@@ -3,6 +3,8 @@
 @use "../utils/mixins" as *;
 @use "../utils/animations" as *;
 
+$debugborders: false;
+
 #flyingimage_specs {
   // this has all the styling of a specs div already
   // this extends from .specsdiv in bodytext.scss
@@ -54,7 +56,11 @@
     }
     li {
       .range_and_number {
-        border: 3px solid green;
+        @if $debugborders {
+          border: 3px solid green;
+        } @else {
+          border: 1px solid transparent;
+        }
         @include flexcol;
         // to left
         align-items: flex-start;
@@ -81,7 +87,11 @@
         }
       }
       .rotationsdiv {
-        border: 3px solid pink;
+        @if $debugborders {
+          border: 3px solid pink;
+        } @else {
+          border: 1px solid transparent;
+        }
         width: 100%;
         @include flexcol;
         align-items: flex-start;
@@ -89,11 +99,20 @@
         .buttonsdiv {
           @include flexrow;
 
-          border: 3px solid green;
           width: 100%;
 
+          @if $debugborders {
+            border: 3px solid rgb(0, 32, 128);
+          } @else {
+            border: 1px solid transparent;
+          }
+
           .rotatesubclass {
-            border: 3px solid red;
+            @if $debugborders {
+              border: 3px solid red;
+            } @else {
+              border: 1px solid transparent;
+            }
             @include flexcol;
             flex: 1;
 
@@ -163,6 +182,12 @@
         .option {
           @include flexcol;
           border: 3px solid orange;
+
+          @if $debugborders {
+            border: 3px solid orange;
+          } @else {
+            border: 1px solid transparent;
+          }
           width: 50%;
           height: auto;
 

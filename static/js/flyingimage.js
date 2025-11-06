@@ -104,7 +104,7 @@ function flyingposition() {
 
     reset_flying_position.addEventListener("click", () => {
       // re-sync slider to CSS value
-      console.log("resetting positoin");
+      console.log("resetting plane position");
       flying_y_px.value = originalyposition;
       flying_y_slider.value = originalyposition;
       flyingimage1.style.top = originalyposition;
@@ -120,6 +120,7 @@ flyingposition();
 
 function flyingspeed() {
   let originalspeed = 5;
+  // this is the number input
   flying_speed = document.querySelector("#flying_speed");
   flying_speed_slider = document.querySelector("#flying_speed_slider");
 
@@ -127,7 +128,7 @@ function flyingspeed() {
     speed = parseInt(flying_speed_slider.value);
     // update the number input value
     flying_speed.value = speed;
-    flyingimage1.style.animationDuration = speed + "s";
+    flying_wrapper1.style.animationDuration = speed + "s";
   });
 
   flying_speed.addEventListener("input", () => {
@@ -135,8 +136,22 @@ function flyingspeed() {
     const speed = parseInt(flying_speed.value);
     // update the slider value
     flying_speed_slider.value = speed;
-    flyingimage1.style.animationDuration = speed + "s";
+    flying_wrapper1.style.animationDuration = speed + "s";
   });
+
+  function reset_flyingspeed() {
+    reset_flying_speed = document.getElementById("reset_flying_speed");
+
+    reset_flying_speed.addEventListener("click", () => {
+      // re-sync slider to CSS value
+      console.log("resetting speed");
+      flying_speed_slider.value = originalspeed;
+      flying_speed.value = originalspeed;
+      flying_wrapper1.style.animationDuration = originalspeed + "s";
+    });
+  }
+
+  reset_flyingspeed();
 }
 
 flyingspeed();
