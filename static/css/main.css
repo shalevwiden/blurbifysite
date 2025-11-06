@@ -1132,28 +1132,36 @@ body .sitecontainer div.blurbify_bg_div .blurbdiv div#pfp_and_username {
   height: 100px;
   gap: 1px;
 }
-body .sitecontainer div.blurbify_bg_div .blurbdiv div#pfp_and_username .pfpdiv {
+body .sitecontainer div.blurbify_bg_div .blurbdiv div#pfp_and_username .pfpborder {
   width: 100px;
   aspect-ratio: 1/1;
-  border: 0px solid black;
   border-radius: 50%;
+  background: linear-gradient(90deg, #be2647 0%, #ec708f 25%, #c85b49 50%, #ff2222 75%, #ef5454 100%);
+  padding: 5px;
+  display: inline-block;
+}
+body .sitecontainer div.blurbify_bg_div .blurbdiv div#pfp_and_username .pfpborder .pfpdiv {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--pfpbackground);
   overflow: hidden;
   z-index: 1;
   flex-shrink: 0;
-  background-color: var(--pfpbackground);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 20px;
 }
-body .sitecontainer div.blurbify_bg_div .blurbdiv div#pfp_and_username .pfpdiv img {
+body .sitecontainer div.blurbify_bg_div .blurbdiv div#pfp_and_username .pfpborder .pfpdiv img {
   height: auto;
   width: 138%;
   height: auto;
   position: relative;
   top: 3px;
   right: 0px;
+  z-index: 0;
 }
 body .sitecontainer div.blurbify_bg_div .blurbdiv div#pfp_and_username .usernamediv {
   height: 100%;

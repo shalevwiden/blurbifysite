@@ -3,10 +3,15 @@
 const submitBtn = document.getElementById("submitBtn");
 const blurb = document.querySelector(".blurbdiv");
 
+const defaultname = "Blurbify Studio";
+const defaultusername = "blurbifystudio";
 submitBtn.addEventListener("click", () => {
   console.log("Submit clicked!"); //
 
   const nameinput = document.getElementById("nameInput").value;
+  if (!nameinput) {
+    nameinput = defaultname;
+  }
   //   verified is a boolean
   // make display none on the verified icon if the user selects no for the verification
 
@@ -14,6 +19,9 @@ submitBtn.addEventListener("click", () => {
   const usernameinput = document
     .getElementById("usernameInput")
     .value.toLowerCase();
+  if (!usernameinput) {
+    usernameinput = defaultusername;
+  }
   let contentinput = document.getElementById("contentInput").value;
 
   //   now get the blurb variables
