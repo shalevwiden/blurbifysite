@@ -8,7 +8,7 @@ const defaultusername = "blurbifystudio";
 submitBtn.addEventListener("click", () => {
   console.log("Submit clicked!"); //
 
-  const nameinput = document.getElementById("nameInput").value;
+  let nameinput = document.getElementById("nameInput").value;
   if (!nameinput) {
     nameinput = defaultname;
   }
@@ -16,7 +16,7 @@ submitBtn.addEventListener("click", () => {
   // make display none on the verified icon if the user selects no for the verification
 
   const verifiedinput = document.getElementById("verifiedInput").checked;
-  const usernameinput = document
+  let usernameinput = document
     .getElementById("usernameInput")
     .value.toLowerCase();
   if (!usernameinput) {
