@@ -235,6 +235,11 @@ $debugborders: false;
           }
         }
       }
+      p.disclaimer {
+        font-size: 20px;
+        font-style: italic;
+        font-weight: normal;
+      }
     }
   }
 }
@@ -261,7 +266,7 @@ div.flyingimagesdiv {
     #flyingimage1 {
       // by 1default, its hidden so user cant see it
       // display: none;
-      width: 200%;
+      width: 100%;
       border-radius: 19px;
 
       height: auto; /* keep aspect ratio */

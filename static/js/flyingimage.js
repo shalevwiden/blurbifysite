@@ -257,3 +257,24 @@ function rotations() {
 }
 
 rotations();
+
+// function updateFlyingVars() {
+//   const objectWidth = flyingimage1.offsetWidth;
+//   const start = -objectWidth - 20;
+//   const end = window.innerWidth + 20;
+
+//   flyingimage1.style.setProperty("--fly-start", `${start}px`);
+//   flyingimage1.style.setProperty("--fly-end", `${end}px`);
+// }
+
+// // Only update if animation is active
+// function safeUpdate() {
+//   if (window.flyingon) updateFlyingVars();
+// }
+
+// // Watch for changes in the flying image’s own size
+// const resizeObserver = new ResizeObserver(safeUpdate);
+// resizeObserver.observe(flyingimage1);
+
+// // Watch for changes in the viewport size
+// window.addEventListener("resize", safeUpdate);

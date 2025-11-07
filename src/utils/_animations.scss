@@ -3,6 +3,8 @@
   // now that its position absolute these can be 0
   --flyingy: 0px;
   --flyingymobile: 0px;
+  --fly-start: -90vw; /* fully off-screen left */
+  --fly-end: 80vw; /* fully off-screen right */
 }
 @keyframes border_animation {
   0% {
@@ -48,9 +50,10 @@
     background-color: rgba(60, 125, 60, 1);
   }
 }
+
 @keyframes flyingobject {
   0% {
-    transform: translateX(-90vw) translateY(var(--flyingy));
+    transform: translateX(var(--fly-start)) translateY(var(--flyingy));
   }
 
   50% {
@@ -58,7 +61,8 @@
   }
 
   100% {
-    transform: translateX(80vw) translateY(calc(var(--flyingy) - 10px));
+    transform: translateX(var(--fly-end))
+      translateY(calc(var(--flyingy) - 10px));
   }
 }
 
@@ -76,15 +80,15 @@
 
 @keyframes flyingobject_mobile {
   0% {
-    transform: translateX(-100vw) translateY(var(--flyingymobile));
+    transform: translateX(-105vw) translateY(var(--flyingymobile));
   }
 
   50% {
-    transform: translateX(-5vw) translateY(calc(var(--flyingymobile) + 50px));
+    transform: translateX(-10vw) translateY(calc(var(--flyingymobile) + 50px));
   }
 
   100% {
-    transform: translateX(95vw) translateY(calc(var(--flyingymobile) - 10px));
+    transform: translateX(85vw) translateY(calc(var(--flyingymobile) - 10px));
   }
 }
 
@@ -179,7 +183,7 @@
   height: auto !important;
 
   // for mobile theres a diferent animation class
-  @media (max-width: 400px) {
+  @media (max-width: 450px) {
     animation: flyingobject_mobile 5s linear infinite;
   }
 }

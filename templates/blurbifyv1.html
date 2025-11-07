@@ -392,23 +392,7 @@
               Reset Image
             </button>
           </li>
-          <li>
-            <!-- by default size will be like 300 or so -->
-            <p>Adjust flying image size</p>
-            <div class="sliderdiv">
-              <input
-                type="range"
-                id="flying_size_input"
-                class="sliderinput"
-                min="100"
-                max="1000"
-                step="10"
-              />
-              <button class="resetbutton" id="reset_flying_size_button">
-                Reset
-              </button>
-            </div>
-          </li>
+
           <li>
             <p>Adjust flying image position (up or down)</p>
             <div class="range_and_number">
@@ -541,6 +525,27 @@
                   id="arrow_preview"
                 />
               </div>
+            </div>
+          </li>
+          <li>
+            <!-- by default size will be like 300 or so -->
+            <p>Adjust flying image size</p>
+            <p class="disclaimer">
+              This works pretty bad on mobile and ruins things lowkey but works
+              well on computer. CSS is annoying.
+            </p>
+            <div class="sliderdiv">
+              <input
+                type="range"
+                id="flying_size_input"
+                class="sliderinput"
+                min="100"
+                max="1000"
+                step="10"
+              />
+              <button class="resetbutton" id="reset_flying_size_button">
+                Reset
+              </button>
             </div>
           </li>
 
