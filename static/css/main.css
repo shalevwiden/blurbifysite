@@ -569,6 +569,7 @@ div.flyingimagesdiv #flying_wrapper1 {
   width: 330px;
 }
 div.flyingimagesdiv #flying_wrapper1 #flyingimage1 {
+  display: none;
   width: 100%;
   border-radius: 19px;
   height: auto; /* keep aspect ratio */
