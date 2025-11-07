@@ -1497,7 +1497,7 @@ body .sitecontainer div.blurbify_bg_div .blurbdiv div.iconsdiv .righticons {
   }
   body .sitecontainer div.blurbify_bg_div .blurbdiv div#pfp_and_username .pfpborder .pfpdiv img {
     margin-bottom: 10px;
-    width: 135%; /* scale image to parent width */
+    width: var(--imagescale); /* scale image to parent width */
   }
   body .sitecontainer div.blurbify_bg_div .blurbdiv div#pfp_and_username .usernamediv {
     height: 100%;

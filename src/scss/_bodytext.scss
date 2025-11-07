@@ -1080,7 +1080,7 @@ body {
                 @include flexcol;
                 img {
                   margin-bottom: 10px;
-                  width: 135%; /* scale image to parent width */
+                  width: var(--imagescale); /* scale image to parent width */
                 }
               }
             }
@@ -1225,7 +1225,7 @@ body {
             gap: 1px;
             .pfpborder {
               width: var(--phonepfpsize);
-              aspect-ratio: 1 / 1;
+              height: var(--phonepfpsize);
 
               .pfpdiv {
                 width: 100%;
