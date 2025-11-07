@@ -262,10 +262,10 @@ div.flyingimagesdiv {
   #flying_wrapper1 {
     // a wrapper to apply styling on fr lol
     width: 330px;
+    display: none;
 
     #flyingimage1 {
       // by 1default, its hidden so user cant see it
-      display: none;
       width: 100%;
       border-radius: 19px;
 

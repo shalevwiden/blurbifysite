@@ -4,7 +4,7 @@
   --flyingy: 0px;
   --flyingymobile: 0px;
   --fly-start: -90vw; /* fully off-screen left */
-  --fly-end: 80vw; /* fully off-screen right */
+  --fly-end: 105vw; /* fully off-screen right */
 }
 @keyframes border_animation {
   0% {
@@ -57,7 +57,7 @@
   }
 
   50% {
-    transform: translateX(-5vw) translateY(calc(var(--flyingy) + 50px));
+    transform: translateX(15vw) translateY(calc(var(--flyingy) + 50px));
   }
 
   100% {

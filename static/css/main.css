@@ -25,7 +25,7 @@
   --flyingy: 0px;
   --flyingymobile: 0px;
   --fly-start: -90vw; /* fully off-screen left */
-  --fly-end: 80vw; /* fully off-screen right */
+  --fly-end: 105vw; /* fully off-screen right */
 }
 
 @keyframes border_animation {
@@ -74,7 +74,7 @@
     transform: translateX(var(--fly-start)) translateY(var(--flyingy));
   }
   50% {
-    transform: translateX(-5vw) translateY(calc(var(--flyingy) + 50px));
+    transform: translateX(15vw) translateY(calc(var(--flyingy) + 50px));
   }
   100% {
     transform: translateX(var(--fly-end)) translateY(calc(var(--flyingy) - 10px));
@@ -567,9 +567,9 @@ div.flyingimagesdiv {
 }
 div.flyingimagesdiv #flying_wrapper1 {
   width: 330px;
+  display: none;
 }
 div.flyingimagesdiv #flying_wrapper1 #flyingimage1 {
-  display: none;
   width: 100%;
   border-radius: 19px;
   height: auto; /* keep aspect ratio */
@@ -1616,7 +1616,7 @@ body .sitecontainer div.blurbify_bg_div .blurbdiv div.iconsdiv .righticons {
   }
   body .sitecontainer div.blurbify_bg_div .blurbdiv div#pfp_and_username .pfpborder {
     width: var(--phonepfpsize);
-    aspect-ratio: 1/1;
+    height: var(--phonepfpsize);
   }
   body .sitecontainer div.blurbify_bg_div .blurbdiv div#pfp_and_username .pfpborder .pfpdiv {
     width: 100%;
