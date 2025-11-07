@@ -1066,6 +1066,7 @@ body {
 
             .pfpborder {
               width: 90px;
+              aspect-ratio: 1 / 1;
 
               .pfpdiv {
                 width: 100%;
@@ -1224,6 +1225,7 @@ body {
             gap: 1px;
             .pfpborder {
               width: var(--phonepfpsize);
+              aspect-ratio: 1 / 1;
 
               .pfpdiv {
                 width: 100%;

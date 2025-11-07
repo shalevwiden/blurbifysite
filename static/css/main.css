@@ -1471,6 +1471,7 @@ body .sitecontainer div.blurbify_bg_div .blurbdiv div.iconsdiv .righticons {
   }
   body .sitecontainer div.blurbify_bg_div .blurbdiv div#pfp_and_username .pfpborder {
     width: 90px;
+    aspect-ratio: 1/1;
   }
   body .sitecontainer div.blurbify_bg_div .blurbdiv div#pfp_and_username .pfpborder .pfpdiv {
     width: 100%;
@@ -1607,6 +1608,7 @@ body .sitecontainer div.blurbify_bg_div .blurbdiv div.iconsdiv .righticons {
   }
   body .sitecontainer div.blurbify_bg_div .blurbdiv div#pfp_and_username .pfpborder {
     width: var(--phonepfpsize);
+    aspect-ratio: 1/1;
   }
   body .sitecontainer div.blurbify_bg_div .blurbdiv div#pfp_and_username .pfpborder .pfpdiv {
     width: 100%;
