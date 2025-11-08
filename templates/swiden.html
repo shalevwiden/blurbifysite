@@ -56,39 +56,31 @@
     <style>
       /* this is just the image styling */
       .adjustmentdiv img {
-        width: 412px !important;
-
+        width: 320px !important;
         height: auto !important;
         position: relative !important;
-
+        margin-right: 50px !important;
+        margin-top: 70px !important;
         /*twice as much top cause twice as big*/
-        margin-right: 14px !important;
-        margin-top: 34px !important;
+
         top: 0 !important;
       }
+      /* this is simple, then for mobile its gonna be mor complex */
+      /*  */
       .pfpdiv img {
-        width: 206px !important;
-        margin-right: 10px !important;
-        margin-top: 5px !important;
+        width: 160px !important;
+        margin-right: 25px !important;
+        margin-top: 35px !important;
         /*  */
       }
+      /* do all this math in python for the templates lowkey */
 
       @media (max-width: 400px) {
-        .pfpdiv {
-          width: 70px !important;
-          aspect-ratio: 1 / 1 !important;
-          border: 0px solid black !important;
-          border-radius: 50% !important;
-
-          overflow: hidden !important;
-          z-index: 1 !important;
-          flex-shrink: 0 !important;
-        }
         .pfpdiv img#pfpimage {
           margin-bottom: 10px !important;
-          width: 196% !important; /* scale image to parent width */
-          margin-right: 7px !important;
-          margin-top: 17px !important;
+          width: calc(var(--pfp-scale-ratio) * 155px) !important;
+          margin-right: 42px !important;
+          margin-top: 54px !important;
           top: 0 !important;
         }
       }
@@ -268,7 +260,7 @@
 
             <div class="adjustmentdiv">
               <img
-                src="../images/pfpoct.png"
+                src="../images/blue.png"
                 alt="adjustment img"
                 id="pfpimage_adjustment"
               />
@@ -337,19 +329,19 @@
       </div>
 
       <div class="blurbify_bg_div">
-        <div class="blurbifydiv">
+        <div class="blurbdiv">
           <div id="pfp_and_username">
-            <div class="pfpdiv" id="pfpid">
-              <img src="../images/pfpoct.png" alt="pfp gone" id="pfpimage" />
+            <div class="pfpborder userpfpborder">
+              <div class="pfpdiv" id="pfpid">
+                <img src="../images/blue.png" alt="pfp gone" id="pfpimage" />
+              </div>
             </div>
+
             <div class="usernamediv">
               <div class="align_them_div">
                 <span id="name"
                   >Shalev
-
-                  <!-- blurb verified -->
-
-                  <div id="verified" class="blurbverified"></div> </span
+                  <div id="verified" style="display: none"></div> </span
                 ><span id="username">@swiden.mp4</span>
               </div>
             </div>
@@ -384,48 +376,242 @@
             </div>
           </div>
         </div>
+        <div class="flyingimagesdiv">
+          <div id="flying_wrapper1">
+            <img
+              src="../images/flyingimages/blurbifyplane.png"
+              alt="FLYING"
+              id="flyingimage1"
+              class="flyingimage"
+            />
+          </div>
+        </div>
       </div>
+      <!-- flying image -->
 
       <!-- buttons to add animations -->
       <div class="animation_buttons">
-        <button id="blurbifybutton">Toggle Blurb Animations</button>
-        <button id="blurb_bg_button">Toggle Blurb Background Animations</button>
-        <button id="flyingbutton">Toggle Flying Object</button>
+        <button id="borderbutton">Blurb Border Animations</button>
+        <button id="blurb_bg_button">Blurb Background Animations</button>
         <button id="spin">Spin the Blurb</button>
-        <button id="wildbutton">Wild animations (does nothing for now)</button>
+        <button id="unblur_button">Unblur animation</button>
+        <button id="zoomup_button">Zoom Up</button>
+      </div>
+      <div class="animation_buttons" id="flying_buttons">
+        <button id="flyingbutton">Toggle Flying Object</button>
       </div>
       <!-- control flying image styling -->
       <div class="specsdiv" id="flyingimage_specs">
         <div class="toggle_menu">
-          <h2>PFP Adjustments</h2>
+          <h2>Flying Image Adustments</h2>
           <span
             class="material-symbols-outlined circle_down"
-            id="circle_down_pfpspecs"
+            id="circle_down_flying"
           >
             expand_circle_down
           </span>
         </div>
         <ul class="specs_ul" id="flying_specs">
-          <li>
-            <p>Adjust flying image size</p>
+          <li class="imageli">
+            <p>Upload a new flying image</p>
+            <label class="file-label" for="flyingimageInput"
+              >Choose Image</label
+            >
+            <!-- client side uploading only -->
+
+            <input type="file" id="flyingimageInput" accept="image/*" />
+            <img
+              id="flying_image_preview"
+              src="../images/flyingimages/blurbifyplane.png"
+            />
+
+            <!-- this will reset it back to the Blurbify plane -->
+            <button class="resetbutton" id="resetflyingimage">
+              Reset Image
+            </button>
           </li>
+
           <li>
             <p>Adjust flying image position (up or down)</p>
+            <div class="range_and_number">
+              <!-- range and number because you can adjust the number in pixels -->
+              <div class="numdiv">
+                <input
+                  type="number"
+                  id="flying_y_px"
+                  min="-700"
+                  max="700"
+                  value="0"
+                  step="5"
+                />
+                <p class="units">px</p>
+              </div>
+
+              <div class="sliderdiv">
+                <input
+                  type="range"
+                  id="flying_y_slider"
+                  class="sliderinput"
+                  min="-700"
+                  max="700"
+                  value="0"
+                  step="1"
+                />
+                <!-- this will reset the pixel count in the num input and the slider -->
+                <button class="resetbutton" id="reset_flying_position">
+                  Reset
+                </button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <p>Increase or Decrease Speed</p>
+            <div class="range_and_number">
+              <!-- range and number because you can adjust the number in pixels -->
+              <!-- min and max affect speed here lol -->
+              <div class="numdiv">
+                <input
+                  type="number"
+                  id="flying_speed"
+                  min="1"
+                  max="20"
+                  value="5"
+                  step="1"
+                />
+                <p class="units">Seconds</p>
+              </div>
+
+              <div class="sliderdiv">
+                <input
+                  type="range"
+                  id="flying_speed_slider"
+                  class="sliderinput"
+                  min="1"
+                  max="20"
+                  value="5"
+                  step="1"
+                />
+                <!-- this will reset the pixel count in the num input and the slider -->
+                <button class="resetbutton" id="reset_flying_speed">
+                  Reset
+                </button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <p>Order the Flying Image</p>
+            <!-- above or below the Blurb are the options -->
+            <div class="radiodiv">
+              <div class="option">
+                <input
+                  type="radio"
+                  id="aboveblurb"
+                  name="order"
+                  value="above"
+                  checked
+                />
+                <!-- the labels make it clickable -->
+                <label for="aboveblurb" class="radio-box">
+                  <p class="radiotext">Above the Blurb</p>
+
+                  <img src="../images/flyingspecs/above.png" alt="Above" />
+                </label>
+              </div>
+              <div class="option">
+                <input type="radio" id="underblurb" name="order" />
+                <!-- the labels make it clickable -->
+
+                <label for="underblurb" class="radio-box">
+                  <p class="radiotext">Under the Blurb</p>
+
+                  <img src="../images/flyingspecs/below.png" alt="Under" />
+                </label>
+              </div>
+            </div>
           </li>
           <li>
             <p>Set flying image rotations</p>
             <div class="rotationsdiv">
               <!-- these will be arrow type buttons -->
-              <button>Rotate image</button
-              ><button>rotate direction of flying</button>
+              <div class="buttonsdiv">
+                <div class="rotatesubclass" id="rotateobject">
+                  <p>Rotate the flying Object</p>
+                  <div class="arrowsdiv">
+                    <i class="fa-solid fa-circle-left" id="objectright"></i>
+
+                    <i class="fa-solid fa-circle-right" id="objectleft"></i>
+                  </div>
+                </div>
+                <div class="rotatesubclass" id="rotatemotion">
+                  <p>Rotate the Direction of Motion</p>
+                  <div class="arrowsdiv">
+                    <i class="fa-solid fa-circle-left" id="arrowleft"></i>
+
+                    <i class="fa-solid fa-circle-right" id="arrowright"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="previewdiv">
+                <img
+                  src="../images/flyingimages/blurbifyplane.png"
+                  alt=""
+                  id="rotation_object_preview"
+                />
+                <img
+                  src="../images/icons/blurbify_arrow.svg"
+                  alt=""
+                  id="arrow_preview"
+                />
+              </div>
             </div>
           </li>
           <li>
-            <p>Increase flying image count</p>
-            <div class="count_and_spacing"></div>
+            <!-- by default size will be like 300 or so -->
+            <p>Adjust flying image size</p>
+            <p class="disclaimer">
+              This works pretty bad on mobile and ruins things lowkey but works
+              well on computer. CSS is annoying.
+            </p>
+            <div class="sliderdiv">
+              <input
+                type="range"
+                id="flying_size_input"
+                class="sliderinput"
+                min="100"
+                max="1000"
+                step="10"
+              />
+              <button class="resetbutton" id="reset_flying_size_button">
+                Reset
+              </button>
+            </div>
           </li>
 
-          <li>
+          <!-- add this later too -->
+          <li style="display: none">
+            <p>Increase flying image count</p>
+            <div class="range_and_number">
+              <input type="number" id="flyingimage_count_number" />
+              <div class="sliderdiv">
+                <!-- this input will control the margins between the flying images so there can be multiple -->
+                <input
+                  type="range"
+                  id="flyingimage_count_input"
+                  class="sliderinput"
+                  min="1"
+                  max="10"
+                  value="1"
+                  step="1"
+                />
+                <button class="resetbutton" id="reset_flying_size">
+                  Reset
+                </button>
+              </div>
+            </div>
+          </li>
+
+          <!-- add this later -->
+          <li style="display: none">
             <p>Choose from sound effect</p>
             <div class="soundeffects_div">
               <button class="soundbutton" id="airplane"></button>
@@ -449,14 +635,6 @@
       <a href="../index.html" id="homebutton">
         <div class="linkdiv">Return to Start Screen</div></a
       >
-      <div class="flyingimagesdiv">
-        <img
-          src="../images/flyingimages/airbus-removebg-preview.png"
-          alt="FLYING"
-          id="flyingimage1"
-          class="flyingimage"
-        />
-      </div>
     </div>
     <script src="../static/js/toggleanimations.js"></script>
 
@@ -467,5 +645,6 @@
 
     <script src="../static/js/dropdown.js"></script>
     <script src="../static/js/icons.js"></script>
+    <script src="../static/js/flyingimage.js"></script>
   </body>
 </html>

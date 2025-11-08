@@ -32,6 +32,7 @@ $hideicons: false;
   --heartcolor: #cd1515ff;
   --phonepfpsize: 74px;
   --imagescale: 138%;
+  --pfp-scale-ratio: calc(74 / 100);
 }
 body {
   @include bodyStyling;
@@ -779,17 +780,6 @@ body {
             );
 
             // verified user pfp:
-            .userpfpborder {
-              background: linear-gradient(
-                90deg,
-                #60c4ff 5%,
-                #1e36ecff 15%,
-                #605bf7ff 38%,
-                #425d84ff 67%,
-                #d647d1ff 92%,
-                #60c4ffff 100%
-              ) !important;
-            }
 
             padding: 3px;
             display: inline-block;
@@ -1494,3 +1484,15 @@ body {
 }
 
 $pfp_size: 100px; // define your profile size
+
+.userpfpborder {
+  background: linear-gradient(
+    90deg,
+    #60c4ff 5%,
+    #1e36ecff 15%,
+    #605bf7ff 38%,
+    #425d84ff 67%,
+    #d647d1ff 92%,
+    #60c4ffff 100%
+  ) !important;
+}
