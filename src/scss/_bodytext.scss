@@ -25,7 +25,7 @@ $hideicons: false;
 }
 // change speeds here
 :root {
-  --border-thickness: 8px;
+  --border-thickness: 6.5px;
   --dropdown_time: 0.5s;
   --specs_droptime_time: 0.5s;
   --pfpbackground: #c2d9ffff;
@@ -1197,7 +1197,7 @@ body {
           padding: 18px;
           padding-left: 15px;
           // slightly less thick border
-          border: 6px solid $blurb_border_color;
+          border: 4.5px solid $blurb_border_color;
 
           div#pfp_and_username {
             @include flexrow;

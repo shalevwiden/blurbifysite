@@ -625,7 +625,7 @@ div.flyingimagesdiv #flying_wrapper1 #flyingimage1 {
 }
 
 :root {
-  --border-thickness: 8px;
+  --border-thickness: 6.5px;
   --dropdown_time: 0.5s;
   --specs_droptime_time: 0.5s;
   --pfpbackground: #c2d9ffff;
@@ -1598,7 +1598,7 @@ body .sitecontainer div.blurbify_bg_div .blurbdiv div.iconsdiv .righticons {
     width: 90%;
     padding: 18px;
     padding-left: 15px;
-    border: 6px solid #0f62df;
+    border: 4.5px solid #0f62df;
   }
   body .sitecontainer div.blurbify_bg_div .blurbdiv div#pfp_and_username {
     display: flex;
