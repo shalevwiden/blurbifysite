@@ -23,6 +23,8 @@
 :root {
   --flyingy: 0px;
   --flyingymobile: 0px;
+  --fly-start: -90vw; /* fully off-screen left */
+  --fly-end: 105vw; /* fully off-screen right */
 }
 
 @keyframes border_animation {
@@ -68,13 +70,13 @@
 }
 @keyframes flyingobject {
   0% {
-    transform: translateX(-90vw) translateY(var(--flyingy));
+    transform: translateX(var(--fly-start)) translateY(var(--flyingy));
   }
   50% {
-    transform: translateX(-5vw) translateY(calc(var(--flyingy) + 50px));
+    transform: translateX(15vw) translateY(calc(var(--flyingy) + 50px));
   }
   100% {
-    transform: translateX(80vw) translateY(calc(var(--flyingy) - 10px));
+    transform: translateX(var(--fly-end)) translateY(calc(var(--flyingy) - 10px));
   }
 }
 @keyframes flyingobject_flipped {
@@ -90,13 +92,13 @@
 }
 @keyframes flyingobject_mobile {
   0% {
-    transform: translateX(-100vw) translateY(var(--flyingymobile));
+    transform: translateX(-105vw) translateY(var(--flyingymobile));
   }
   50% {
-    transform: translateX(-5vw) translateY(calc(var(--flyingymobile) + 50px));
+    transform: translateX(-10vw) translateY(calc(var(--flyingymobile) + 50px));
   }
   100% {
-    transform: translateX(95vw) translateY(calc(var(--flyingymobile) - 10px));
+    transform: translateX(85vw) translateY(calc(var(--flyingymobile) - 10px));
   }
 }
 @keyframes spin {
@@ -170,7 +172,7 @@
   animation: flyingobject 5s normal linear infinite;
   height: auto !important;
 }
-@media (max-width: 400px) {
+@media (max-width: 450px) {
   .flying_class {
     animation: flyingobject_mobile 5s linear infinite;
   }

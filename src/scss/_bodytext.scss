@@ -1216,6 +1216,7 @@ body {
             .pfpborder {
               width: var(--phonepfpsize);
               height: var(--phonepfpsize);
+              padding: 2px;
 
               .pfpdiv {
                 width: 100%;
@@ -1485,6 +1486,7 @@ body {
 
 $pfp_size: 100px; // define your profile size
 
+// for verified users:
 .userpfpborder {
   background: linear-gradient(
     90deg,

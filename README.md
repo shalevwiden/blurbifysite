@@ -45,3 +45,8 @@ Using the 450px media quiery breakpoint for phone size stuff.
 The profile picture sizing is tricky since theres a preview div.
 The .adjustmentsdiv
 But since the pfp is smaller it needs to be adjusted proportionally.
+
+### Nov 11
+
+Need to add templates.
+And users for sure.

@@ -1615,6 +1615,7 @@ body .sitecontainer div.blurbify_bg_div .blurbdiv div.iconsdiv .righticons {
   body .sitecontainer div.blurbify_bg_div .blurbdiv div#pfp_and_username .pfpborder {
     width: var(--phonepfpsize);
     height: var(--phonepfpsize);
+    padding: 2px;
   }
   body .sitecontainer div.blurbify_bg_div .blurbdiv div#pfp_and_username .pfpborder .pfpdiv {
     width: 100%;
