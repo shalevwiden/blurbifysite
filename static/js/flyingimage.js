@@ -82,21 +82,24 @@ function flyingsize() {
 flyingsize();
 
 function flyingposition() {
-  let originalyposition = parseInt(window.getComputedStyle(flyingimage1).top);
+  // add the changes to flyingimagesdiv because thats the one that has the top values set
+  let originalyposition = parseInt(
+    window.getComputedStyle(flyingimagesdiv).top
+  );
   flying_y_px = document.querySelector("#flying_y_px");
   flying_y_slider = document.querySelector("#flying_y_slider");
 
   flying_y_slider.addEventListener("input", () => {
     yposition = parseInt(flying_y_slider.value);
     flying_y_px.value = yposition;
-    flyingimage1.style.top = originalyposition + -yposition + "px";
+    flyingimagesdiv.style.top = originalyposition + -yposition + "px";
   });
 
   flying_y_px.addEventListener("input", () => {
     // make negative for logical moving
     const yposition = parseInt(flying_y_px.value);
     flying_y_slider.value = yposition;
-    flyingimage1.style.top = originalyposition + -yposition + "px";
+    flyingimagesdiv.style.top = originalyposition + -yposition + "px";
   });
 
   function reset_flyingposition() {
@@ -107,7 +110,7 @@ function flyingposition() {
       console.log("resetting plane position");
       flying_y_px.value = originalyposition;
       flying_y_slider.value = originalyposition;
-      flyingimage1.style.top = originalyposition;
+      flyingimagesdiv.style.top = originalyposition;
     });
   }
 
