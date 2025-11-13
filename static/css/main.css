@@ -1869,4 +1869,18 @@ body .sitecontainer a#homebutton .linkdiv:hover {
 }
 .userpfpborder {
   background: linear-gradient(90deg, #60c4ff 5%, #1e36ec 15%, #605bf7 38%, #425d84 67%, #d647d1 92%, #60c4ff 100%) !important;
+}
+
+.navbar {
+  /* change this color to see it and make changes */
+  background-color: #8c9deb;
+  border: 3px solid black;
+  border-radius: 26px;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  filter: drop-shadow(4px 0px 2px rgb(67, 66, 66));
 }/*# sourceMappingURL=main.css.map */

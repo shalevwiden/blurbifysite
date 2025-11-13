@@ -49,4 +49,8 @@ But since the pfp is smaller it needs to be adjusted proportionally.
 ### Nov 11
 
 Need to add templates.
-And users for sure.
+And user accounts for sure.
+
+### Adding Navbar
+
+For SCSS, the underscore \_ tells scss not to compile it directly
