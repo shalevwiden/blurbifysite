@@ -1871,16 +1871,120 @@ body .sitecontainer a#homebutton .linkdiv:hover {
   background: linear-gradient(90deg, #60c4ff 5%, #1e36ec 15%, #605bf7 38%, #425d84 67%, #d647d1 92%, #60c4ff 100%) !important;
 }
 
-.navbar {
-  /* change this color to see it and make changes */
+/* change this color to see it and make changes */
+ul.navbar {
   background-color: #8c9deb;
   border: 3px solid black;
   border-radius: 26px;
-  width: 100%;
-  height: 100px;
+  width: 80%;
+  height: 150px;
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
+  gap: 20px;
   justify-content: space-between;
   filter: drop-shadow(4px 0px 2px rgb(67, 66, 66));
+}
+ul.navbar li {
+  border: 3px solid green;
+}
+ul.navbar li a {
+  color: red;
+}
+@media (max-width: 450px) {
+  ul.navbar {
+    width: 90%;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  gap: 10px;
+}
+
+.sitecontainer#indexpage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  justify-content: flex-start;
+  min-height: 100vh;
+  width: 100%;
+  border: 0px solid black;
+  background-color: #eee;
+  color: white;
+  padding: 30px;
+}
+.sitecontainer#indexpage #heading {
+  margin-top: 50px;
+  background: linear-gradient(90deg, #425d84, #605bf7, #60c4ff); /* standard gradient */
+  -webkit-background-clip: text; /* show background only inside text */
+  -webkit-text-fill-color: transparent; /* make text itself transparent */
+  font-weight: bold;
+  font-size: 150px;
+}
+@media (max-width: 1000px) {
+  .sitecontainer#indexpage #heading {
+    font-size: 120px;
+  }
+}
+@media (max-width: 600px) {
+  .sitecontainer#indexpage #heading {
+    font-size: 60px;
+  }
+}
+.sitecontainer#indexpage a.indexbutton {
+  width: 80%;
+  text-decoration: none;
+  color: navy;
+  margin-top: 100px;
+  margin-bottom: 26px;
+}
+.sitecontainer#indexpage a.indexbutton .linkdiv {
+  width: 100%;
+  height: 300px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border: 6px solid #988a88;
+  border-radius: 35px;
+  font-weight: bold;
+  font-size: 40px;
+  background-color: #7daef8;
+}
+.sitecontainer#indexpage a.indexbutton .linkdiv:hover {
+  background-color: rgb(248, 67, 67);
+  color: white;
+  border: 6px solid #d50303;
+}
+@media (max-width: 400px) {
+  .sitecontainer#indexpage a.indexbutton {
+    width: 70%;
+  }
+  .sitecontainer#indexpage a.indexbutton .linkdiv {
+    height: 200px;
+    margin-top: 150px;
+    font-size: 30px;
+  }
 }/*# sourceMappingURL=main.css.map */

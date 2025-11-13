@@ -1,6 +1,7 @@
 @use "../utils/mixins" as *;
 @use "../utils/icons" as *;
 @use "../utils/animations" as *;
+@use "./navbar";
 
 * {
   box-sizing: border-box;
@@ -13,7 +14,7 @@ $bodybg: #eee;
 body {
   @include bodyStyling;
 }
-.sitecontainer {
+.sitecontainer#indexpage {
   @include flexcol();
   justify-content: flex-start;
   min-height: 100vh;

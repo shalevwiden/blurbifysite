@@ -1,14 +1,26 @@
-.navbar {
-  /* change this color to see it and make changes */
+@use "../utils/mixins" as *;
+@use "../utils/animations" as *;
 
+/* change this color to see it and make changes */
+
+ul.navbar {
   background-color: #8c9debff;
   border: 3px solid black;
   border-radius: 26px;
-  width: 100%;
-  height: 100px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  width: 80%;
+  height: 150px;
+
+  @include flexrow;
   justify-content: space-between;
   filter: drop-shadow(4px 0px 2px rgb(67, 66, 66));
+
+  li {
+    border: 3px solid green;
+    a {
+      color: red;
+    }
+  }
+  @media (max-width: 450px) {
+    width: 90%;
+  }
 }
