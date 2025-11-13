@@ -44,7 +44,12 @@ body {
       font-size: 60px;
     }
   }
-  a.indexbutton {
+  div.blurbdemo {
+    width: 80%;
+    height: 300px;
+    @include border(black);
+  }
+  a.randombutton {
     width: 80%;
     text-decoration: none;
     color: navy;

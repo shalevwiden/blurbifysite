@@ -14,10 +14,6 @@
   gap: 20px;
 }
 
-@mixin blackborder {
-  border: 3px solid black;
-  border-radius: 15px;
-}
 @mixin bodyStyling {
   scroll-behavior: smooth;
   display: flex;

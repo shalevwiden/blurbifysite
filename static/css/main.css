@@ -1951,14 +1951,20 @@ body {
     font-size: 60px;
   }
 }
-.sitecontainer#indexpage a.indexbutton {
+.sitecontainer#indexpage div.blurbdemo {
+  width: 80%;
+  height: 300px;
+  border: 4px solid black;
+  border-radius: 26px;
+}
+.sitecontainer#indexpage a.randombutton {
   width: 80%;
   text-decoration: none;
   color: navy;
   margin-top: 100px;
   margin-bottom: 26px;
 }
-.sitecontainer#indexpage a.indexbutton .linkdiv {
+.sitecontainer#indexpage a.randombutton .linkdiv {
   width: 100%;
   height: 300px;
   padding: 30px;
@@ -1973,16 +1979,16 @@ body {
   font-size: 40px;
   background-color: #7daef8;
 }
-.sitecontainer#indexpage a.indexbutton .linkdiv:hover {
+.sitecontainer#indexpage a.randombutton .linkdiv:hover {
   background-color: rgb(248, 67, 67);
   color: white;
   border: 6px solid #d50303;
 }
 @media (max-width: 400px) {
-  .sitecontainer#indexpage a.indexbutton {
+  .sitecontainer#indexpage a.randombutton {
     width: 70%;
   }
-  .sitecontainer#indexpage a.indexbutton .linkdiv {
+  .sitecontainer#indexpage a.randombutton .linkdiv {
     height: 200px;
     margin-top: 150px;
     font-size: 30px;
