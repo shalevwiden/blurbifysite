@@ -54,3 +54,8 @@ And user accounts for sure.
 ### Adding Navbar
 
 For SCSS, the underscore \_ tells scss not to compile it directly
+
+### Nov 14
+
+Making a Jinja template now
+In the future with React I'll have to pivot.
