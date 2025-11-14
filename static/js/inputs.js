@@ -344,6 +344,7 @@ rangeInputs();
 function pfpSpecs() {
   const pfpimage_adjustment = document.querySelector("#pfpimage_adjustment");
   const pfpimage = blurb.querySelector("#pfpimage");
+  const pfpborder = blurb.querySelector(".pfpborder");
 
   const dragcircle = document.querySelector("#dragcircle");
 
@@ -407,11 +408,14 @@ function pfpSpecs() {
   reset_size_and_position.addEventListener("click", () => {
     // re-sync slider to CSS value
     // change this to make it wack
-    console.log("reset size button clicked");
+    console.log(
+      `reset size button clicked: \nOriginal size is ${originalsize}`
+    );
 
     pfp_size_slider.value = originalsize;
     pfpimage.style.width = originalsize + "px";
-    pfpimage_adjustment.style.width = originalsize * 2 + "px";
+    // + 11 for manual bug fix
+    pfpimage_adjustment.style.width = (originalsize + 11) * 2 + "px";
     // need to update rotation global.
     updateTransform(0, 0);
   });

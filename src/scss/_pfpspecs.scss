@@ -41,7 +41,7 @@
         // for the wrapper
         position: relative;
         display: inline-block;
-
+        // padding: 3px;
         @include flexcol;
         img {
           // same specifications as pfpdiv img
@@ -63,10 +63,13 @@
         }
       }
       div.dragdiv {
-        width: 100%;
+        width: 200px;
         height: 200px;
         border: 3px solid black;
         position: relative;
+        @include flexcol;
+        margin-top: 50px;
+        overflow: hidden;
 
         #dragcircle {
           background-color: blue;
@@ -74,6 +77,11 @@
           width: 100px;
           aspect-ratio: 1 / 1;
           position: relative;
+        }
+
+        @media (max-width: 450px) {
+          // twice the width of the current pfp thats important
+          width: calc(var(--phonepfpsize) * 2);
         }
       }
     }
