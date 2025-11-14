@@ -7,6 +7,7 @@ flying_image_preview = document.getElementById("flying_image_preview");
 let flyingimage1 = document.querySelector("#flyingimage1");
 flying_wrapper1 = document.querySelector("#flying_wrapper1");
 flyingimagesdiv = document.querySelector(".flyingimagesdiv");
+flyingimagesdiv_width = parseInt(getComputedStyle(flyingimagesdiv).width);
 
 // for rotations()
 let arrow_preview = document.querySelector("#arrow_preview");
@@ -49,7 +50,11 @@ reset_flying_src();
 function flyingsize() {
   flying_size_input = document.querySelector("#flying_size_input");
 
-  originalsize = parseInt(getComputedStyle(flyingimage1).width);
+  originalsize =
+    (parseInt(getComputedStyle(flyingimage1).width) / 100) *
+    flyingimagesdiv_width;
+
+  // this sets the value to originalsize for the user to see
   flying_size_input.value = originalsize;
   //   establish it right away
 
@@ -68,7 +73,9 @@ function flyingsize() {
 
     reset_flying_size_button.addEventListener("click", () => {
       // re-sync slider to CSS value
-      console.log("resetting image size");
+      console.log(
+        `reset flying size button clicked: \nOriginal size is ${originalsize}`
+      );
       console.log(originalsize);
 
       flying_size_input.value = originalsize;

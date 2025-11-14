@@ -59,3 +59,12 @@ For SCSS, the underscore \_ tells scss not to compile it directly
 
 Making a Jinja template now
 In the future with React I'll have to pivot.
+Doing this is great practice. Practice as in like routiine.
+`BASE_DIR = os.path.dirname(os.path.abspath(__file__))`
+
+Today added better pfp selecting.
+Fixed size bug.
+Fixed positioning slider bug.
+
+Hmm well I could use Flask.
+Or I could compute all of the css files and js file depths manually.

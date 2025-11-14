@@ -1,0 +1,31 @@
+<style>
+  /* this is just the image styling */
+  .blurbify_bg_div{
+    background-color: yellow;
+  }
+  .adjustmentdiv img {
+    width: {{ pfpwidth }} !important;
+    height: auto !important;
+    position: relative !important;
+    margin-right: {{ adjustment_marginright }} !important;
+    margin-top: {{ adjustment_margintop }} !important;
+    /*twice as much top cause twice as big*/
+    top: 0 !important;
+  }
+
+  .pfpdiv img {
+    width: {{ width }} !important;
+    margin-right: {{ marginright }} !important;
+    margin-top: {{ margintop }} !important;
+  }
+
+  @media (max-width: 400px) {
+    .pfpdiv img#pfpimage {
+      margin-bottom: 10px !important;
+      width: {{ phonewidth }} !important;
+      margin-right: {{ phone_marginright }} !important;
+      margin-top: {{ phone_margintop }} !important;
+      top: 0 !important;
+    }
+  }
+</style>

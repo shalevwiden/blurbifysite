@@ -20,15 +20,12 @@
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content=" The {{ name }} blurb template on Blurbify."
-    />
+    <meta name="description" content=" The Tiger blurb template on Blurbify." />
     <link rel="icon" href="../images/blurbifyverified.png" type="image/png" />
 
-    <title>{{ title }} Blurb Template</title>
+    <title>title Blurb Template</title>
 
-    <link rel="stylesheet" href="{{stylepath}}" />
+    <link rel="stylesheet" href="../../static/css/main.css" />
 
     <link
       rel="stylesheet"
@@ -52,7 +49,37 @@
     />
   </head>
   <body>
-    {{style}}
+    <style>
+      /* this is just the image styling */
+      .blurbify_bg_div {
+        background-color: yellow;
+      }
+      .adjustmentdiv img {
+        width: !important;
+        height: auto !important;
+        position: relative !important;
+        margin-right: 20px !important;
+        margin-top: 10px !important;
+        /*twice as much top cause twice as big*/
+        top: 0 !important;
+      }
+
+      .pfpdiv img {
+        width: 100px !important;
+        margin-right: 10px !important;
+        margin-top: 5px !important;
+      }
+
+      @media (max-width: 400px) {
+        .pfpdiv img#pfpimage {
+          margin-bottom: 10px !important;
+          width: 74px !important;
+          margin-right: 7.4px !important;
+          margin-top: 3.7px !important;
+          top: 0 !important;
+        }
+      }
+    </style>
     <div class="sitecontainer">
       <h1 id="heading">Blurbify</h1>
       <!-- inputs to change whats in the blurb -->
@@ -63,9 +90,9 @@
             <p>Name</p>
             <input
               type="text"
-              placeholder="{{ name }}"
+              placeholder="Tiger"
               id="nameInput"
-              value="{{ name }}"
+              value="Tiger"
               disabled
             />
           </li>
@@ -76,9 +103,9 @@
               <p id="at">@</p>
               <input
                 type="text"
-                placeholder="{{username}}"
+                placeholder="tiger_blurb"
                 id="usernameInput"
-                value="{{username}}"
+                value="tiger_blurb"
                 disabled
               />
             </div>
@@ -157,7 +184,7 @@
               type="color"
               name="blurb_border"
               id="blurb_border_input"
-              value="{{bordercolor}}"
+              value="#da2323"
             />
           </li>
           <li>
@@ -287,9 +314,9 @@
       </div>
 
       <div class="blurbify_bg_div">
-        <div class="blurbdiv" style="border-color: {{bordercolor }};">
+        <div class="blurbdiv" style="border-color: #da2323">
           <div id="pfp_and_username">
-            <div class="pfpborder {{ userpfpborder if realuser else '' }}">
+            <div class="pfpborder">
               <div class="pfpdiv" id="pfpid">
                 <img src="../images/nopfp.webp" alt="pfp gone" id="pfpimage" />
               </div>
@@ -336,12 +363,7 @@
         </div>
         <div class="flyingimagesdiv">
           <div id="flying_wrapper1">
-            <img
-              src="{{flyingimageurl}}"
-              alt="FLYING"
-              id="flyingimage1"
-              class="flyingimage"
-            />
+            <img src="" alt="FLYING" id="flyingimage1" class="flyingimage" />
           </div>
         </div>
       </div>
@@ -378,7 +400,7 @@
             <!-- client side uploading only -->
 
             <input type="file" id="flyingimageInput" accept="image/*" />
-            <img id="flying_image_preview" src="{{flyingimageurl}}" />
+            <img id="flying_image_preview" src="" />
 
             <!-- this will reset it back to the Blurbify plane -->
             <button class="resetbutton" id="resetflyingimage">
@@ -507,11 +529,7 @@
                 </div>
               </div>
               <div class="previewdiv">
-                <img
-                  src="{{flyingimageurl}}"
-                  alt=""
-                  id="rotation_object_preview"
-                />
+                <img src="" alt="" id="rotation_object_preview" />
                 <img
                   src="../images/icons/blurbify_arrow.svg"
                   alt=""
