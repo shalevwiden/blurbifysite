@@ -22,12 +22,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Create a blurb and choose from some features to animate it.
-    "
+      content=" The {{ name }} blurb template on Blurbify."
     />
     <link rel="icon" href="../images/blurbifyverified.png" type="image/png" />
 
-    <title>Create a Blurb</title>
+    <title>{{ title }} Blurb Template</title>
 
     <link rel="stylesheet" href="../static/css/main.css" />
 
@@ -60,26 +59,26 @@
         <ul id="input_ul">
           <!-- make all of these lis flex cols -->
           <li>
-            <p>Add text that will be the name</p>
-            <input type="text" placeholder="Add name" id="nameInput" />
+            <p>Name</p>
+            <input
+              type="text"
+              placeholder="{{ name }}"
+              id="nameInput"
+              value="{{ name }}"
+              disabled
+            />
           </li>
-          <li style="display: none">
-            <p>Verified?</p>
-            <!-- custom checkbox -->
-            <label class="checkbox-container">
-              <input type="checkbox" id="verifiedInput" />
-              <span class="checkmark"></span>
-              <span class="checkbox-label">Yes</span>
-            </label>
-          </li>
+
           <li>
             <p>Add text that will be the username</p>
             <div class="usernamediv">
               <p id="at">@</p>
               <input
                 type="text"
-                placeholder="Add username"
+                placeholder="{{username}}"
                 id="usernameInput"
+                value="{{username}}"
+                disabled
               />
             </div>
           </li>
@@ -100,16 +99,7 @@
               <span class="slider round"></span>
             </label>
           </li>
-          <li class="imageli" id="pfp_li">
-            <p>Add a pfp to the Blurb</p>
-
-            <!-- the label for file uploads -->
-            <label class="file-label" for="pfpInput">Choose Image</label>
-            <!-- client side uploading only -->
-
-            <input type="file" id="pfpInput" accept="image/*" />
-            <img id="pfp_preview" />
-          </li>
+          <!-- no pfp for template blurbs -->
           <li>
             <p>Add an image to the post?</p>
             <label class="switch" for="postimage_checkbox">
@@ -158,11 +148,21 @@
           <li>
             <p>Change Blurb Background Color</p>
 
-            <input type="color" name="blurb_bg_input" id="blurb_bg_input" />
+            <input
+              type="color"
+              name="blurb_bg_input"
+              id="blurb_bg_input"
+              value="{{backgroundcolor}}"
+            />
           </li>
           <li>
             <p>Change Blurb Border Color</p>
-            <input type="color" name="blurb_border" id="blurb_border_input" />
+            <input
+              type="color"
+              name="blurb_border"
+              id="blurb_border_input"
+              value="{{backgroundcolor}}"
+            />
           </li>
           <li>
             <p>Change Blurb Border Thickness</p>
@@ -603,7 +603,7 @@
     <!-- for profile pictures -->
 
     <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
-    <script src="../static/js/inputs.js"></script>
+    <script src="../static/js/template_inputs.js"></script>
 
     <script src="../static/js/dropdown.js"></script>
     <script src="../static/js/icons.js"></script>

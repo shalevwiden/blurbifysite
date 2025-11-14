@@ -108,9 +108,10 @@ function flyingposition() {
     reset_flying_position.addEventListener("click", () => {
       // re-sync slider to CSS value
       console.log("resetting plane position");
-      flying_y_px.value = originalyposition;
-      flying_y_slider.value = originalyposition;
-      flyingimagesdiv.style.top = originalyposition;
+      // make it 0
+      flying_y_px.value = originalyposition - originalyposition;
+      flying_y_slider.value = originalyposition - originalyposition;
+      flyingimagesdiv.style.top = originalyposition + "px";
     });
   }
 
