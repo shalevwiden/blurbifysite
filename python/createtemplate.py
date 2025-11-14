@@ -42,6 +42,7 @@ class Templates:
             adjustment_marginright=marginright*2
             adjustment_margintop=margintop*2
 
+            # the scale factor for Mobile screens
             scalefactor=74/100
             phonewidth=width*scalefactor
             phone_marginright=marginright*scalefactor
@@ -107,6 +108,20 @@ class Templates:
         with open(savehtmlpath,'w') as newtemplate:
             newtemplate.write(rendered)
 
+    def update_studio(self):
+        blurbtemplate = self.env.get_template("main.html")
+
+        # now deal with json stuff
+        studiojson=os.path.join(jsonfolder,'studio.json')
+
+        with open(studiojson) as jsondata:
+            data=json.load(jsondata)
+
+        studiopath = os.path.abspath(os.path.join(BASE_DIR, "blurbifystudio.html"))
+
+        rendered = blurbtemplate.render(data)
+        with open(studiopath,'w') as newtemplate:
+            newtemplate.write(rendered)
 
 
 def main():

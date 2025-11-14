@@ -1,0 +1,83 @@
+@use "../utils/mixins" as *;
+
+footer {
+  height: auto;
+  width: 100%;
+  background-color: #1b305eff;
+  color: rgb(255, 255, 255);
+
+  padding: 50px 10px;
+  font-size: 16px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  column-gap: 20%;
+
+  @media screen and (max-width: 500px) {
+    column-gap: 0;
+    #smalllogo {
+      width: 65px;
+      height: 65px;
+    }
+  }
+
+  font-family: Helvetica, sans-serif;
+
+  // for tooltip
+  position: relative; // ensure tooltip can overflow this box
+  overflow: visible; // don't clip the tooltip
+
+  .footerright {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    row-gap: 15px;
+
+    .links {
+      width: 100%;
+      @include flexcol;
+      align-items: flex-start;
+
+      column-gap: 35px;
+    }
+  }
+  .footerleft {
+    #smalllogo {
+      /* animation has been added in animations.css  */
+      width: 85px;
+      height: 85px;
+      border-radius: 10px;
+      border: 3px solid #081a75;
+    }
+    #statement {
+      font-family: "Barlow", sans-serif;
+
+      font-size: 25px;
+      margin: 0;
+      margin-top: 19px;
+      font-weight: 700;
+    }
+  }
+  a {
+    color: white;
+    font-family: Helvetica, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 23px;
+    text-decoration: none;
+
+    @media screen and (max-width: 500px) {
+      font-size: 19px;
+    }
+
+    &:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 4px;
+      text-underline-offset: 3px;
+    }
+  }
+}

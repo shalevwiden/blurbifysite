@@ -2029,4 +2029,82 @@ div.inputdiv #submitBtn:active {
   .specsdiv#pfp_specs .specs_ul#specs_pfp_ul li div.dragdiv {
     width: calc(var(--phonepfpsize) * 2);
   }
+}
+
+footer {
+  height: auto;
+  width: 100%;
+  background-color: #1b305e;
+  color: rgb(255, 255, 255);
+  padding: 50px 10px;
+  font-size: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 20%;
+       column-gap: 20%;
+  font-family: Helvetica, sans-serif;
+  position: relative;
+  overflow: visible;
+}
+@media screen and (max-width: 500px) {
+  footer {
+    -moz-column-gap: 0;
+         column-gap: 0;
+  }
+  footer #smalllogo {
+    width: 65px;
+    height: 65px;
+  }
+}
+footer .footerright {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  row-gap: 15px;
+}
+footer .footerright .links {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  align-items: flex-start;
+  -moz-column-gap: 35px;
+       column-gap: 35px;
+}
+footer .footerleft #smalllogo {
+  /* animation has been added in animations.css  */
+  width: 85px;
+  height: 85px;
+  border-radius: 10px;
+  border: 3px solid #081a75;
+}
+footer .footerleft #statement {
+  font-family: "Barlow", sans-serif;
+  font-size: 25px;
+  margin: 0;
+  margin-top: 19px;
+  font-weight: 700;
+}
+footer a {
+  color: white;
+  font-family: Helvetica, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 23px;
+  text-decoration: none;
+}
+@media screen and (max-width: 500px) {
+  footer a {
+    font-size: 19px;
+  }
+}
+footer a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 3px;
 }/*# sourceMappingURL=main.css.map */

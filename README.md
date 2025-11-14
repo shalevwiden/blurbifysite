@@ -68,3 +68,9 @@ Fixed positioning slider bug.
 
 Hmm well I could use Flask.
 Or I could compute all of the css files and js file depths manually.
+
+### Nov 14 again
+
+In the JSON theres a style and a scripts.
+The scripts should be updated based on the path.
+But there should be a check so if its left empty it does the default amount of scripts anyway.

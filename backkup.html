@@ -22,13 +22,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content=" The {{ name }} blurb template on Blurbify."
+      content="Create a blurb and choose from some features to animate it.
+    "
     />
     <link rel="icon" href="../images/blurbifyverified.png" type="image/png" />
 
-    <title>{{ title }} Blurb Template</title>
+    <title>Create a Blurb</title>
 
-    <link rel="stylesheet" href="{{stylepath}}" />
+    <link rel="stylesheet" href="../static/css/main.css" />
 
     <link
       rel="stylesheet"
@@ -52,7 +53,6 @@
     />
   </head>
   <body>
-    {{style}}
     <div class="sitecontainer">
       <h1 id="heading">Blurbify</h1>
       <!-- inputs to change whats in the blurb -->
@@ -60,26 +60,26 @@
         <ul id="input_ul">
           <!-- make all of these lis flex cols -->
           <li>
-            <p>Name</p>
-            <input
-              type="text"
-              placeholder="{{ name }}"
-              id="nameInput"
-              value="{{ name }}"
-              disabled
-            />
+            <p>Add text that will be the name</p>
+            <input type="text" placeholder="Add name" id="nameInput" />
           </li>
-
+          <li style="display: none">
+            <p>Verified?</p>
+            <!-- custom checkbox -->
+            <label class="checkbox-container">
+              <input type="checkbox" id="verifiedInput" />
+              <span class="checkmark"></span>
+              <span class="checkbox-label">Yes</span>
+            </label>
+          </li>
           <li>
             <p>Add text that will be the username</p>
             <div class="usernamediv">
               <p id="at">@</p>
               <input
                 type="text"
-                placeholder="{{username}}"
+                placeholder="Add username"
                 id="usernameInput"
-                value="{{username}}"
-                disabled
               />
             </div>
           </li>
@@ -93,7 +93,13 @@
               rows="6"
             ></textarea>
           </li>
-          {% if pfpenabled %}
+          <li>
+            <p>Toggle Icons</p>
+            <label class="switch" for="icons_checkbox">
+              <input type="checkbox" name="icons" id="icons_checkbox" checked />
+              <span class="slider round"></span>
+            </label>
+          </li>
           <li class="imageli" id="pfp_li">
             <p>Add a pfp to the Blurb</p>
 
@@ -104,15 +110,6 @@
             <input type="file" id="pfpInput" accept="image/*" />
             <img id="pfp_preview" />
           </li>
-          {% endif %}
-          <li>
-            <p>Toggle Icons</p>
-            <label class="switch" for="icons_checkbox">
-              <input type="checkbox" name="icons" id="icons_checkbox" checked />
-              <span class="slider round"></span>
-            </label>
-          </li>
-          <!-- no pfp for template blurbs -->
           <li>
             <p>Add an image to the post?</p>
             <label class="switch" for="postimage_checkbox">
@@ -165,12 +162,7 @@
           </li>
           <li>
             <p>Change Blurb Border Color</p>
-            <input
-              type="color"
-              name="blurb_border"
-              id="blurb_border_input"
-              value="{{bordercolor}}"
-            />
+            <input type="color" name="blurb_border" id="blurb_border_input" />
           </li>
           <li>
             <p>Change Blurb Border Thickness</p>
@@ -224,8 +216,8 @@
             <!-- This is going to be the resizing bounding box fr lmao  -->
             <p>Adjust Profile Picture</p>
             <p class="instructions">
-              Drag around to position, and adjust the sliders to resize and
-              rotate!
+              Drag the blue circle around to position, and adjust the sliders to
+              resize and rotate!
             </p>
 
             <div class="adjustmentdiv">
@@ -234,6 +226,9 @@
                 alt="adjustment img"
                 id="pfpimage_adjustment"
               />
+            </div>
+            <div class="dragdiv">
+              <div id="dragcircle"></div>
             </div>
           </li>
           <li>
@@ -248,7 +243,7 @@
                 id="pfp_size_slider"
                 min="70"
                 max="370"
-                value="100"
+                value="129"
                 step="1"
               />
               <button class="resetbutton" id="reset_pfp_size">Reset</button>
@@ -299,9 +294,9 @@
       </div>
 
       <div class="blurbify_bg_div">
-        <div class="blurbdiv" style="border-color: {{bordercolor }};">
+        <div class="blurbdiv">
           <div id="pfp_and_username">
-            <div class="pfpborder {{ userpfpborder if realuser else '' }}">
+            <div class="pfpborder">
               <div class="pfpdiv" id="pfpid">
                 <img src="../images/nopfp.webp" alt="pfp gone" id="pfpimage" />
               </div>
@@ -349,7 +344,7 @@
         <div class="flyingimagesdiv">
           <div id="flying_wrapper1">
             <img
-              src="{{flyingimageurl}}"
+              src="../images/flyingimages/blurbifyplane.png"
               alt="FLYING"
               id="flyingimage1"
               class="flyingimage"
@@ -390,7 +385,10 @@
             <!-- client side uploading only -->
 
             <input type="file" id="flyingimageInput" accept="image/*" />
-            <img id="flying_image_preview" src="{{flyingimageurl}}" />
+            <img
+              id="flying_image_preview"
+              src="../images/flyingimages/blurbifyplane.png"
+            />
 
             <!-- this will reset it back to the Blurbify plane -->
             <button class="resetbutton" id="resetflyingimage">
@@ -520,7 +518,7 @@
               </div>
               <div class="previewdiv">
                 <img
-                  src="{{flyingimageurl}}"
+                  src="../images/flyingimages/blurbifyplane.png"
                   alt=""
                   id="rotation_object_preview"
                 />
@@ -608,7 +606,7 @@
     <!-- for profile pictures -->
 
     <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
-    <script src="../static/js/template_inputs.js"></script>
+    <script src="../static/js/inputs.js"></script>
 
     <script src="../static/js/dropdown.js"></script>
     <script src="../static/js/icons.js"></script>
