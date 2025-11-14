@@ -357,23 +357,24 @@ function pfpSpecs() {
     updateTransform(translateX, translateY);
   });
 
+  // you cant drag it anymore
   // Position (InteractJS) this is the complicated one
-  interact(pfpimage_adjustment).draggable({
-    inertia: true,
-    modifiers: [
-      interact.modifiers.restrictRect({
-        restriction: "parent",
-        endOnly: true,
-      }),
-    ],
-    listeners: {
-      move(event) {
-        translateX += event.dx;
-        translateY += event.dy;
-        updateTransform(translateX, translateY);
-      },
-    },
-  });
+  //   interact(pfpimage_adjustment).draggable({
+  //     inertia: true,
+  //     modifiers: [
+  //       interact.modifiers.restrictRect({
+  //         restriction: "parent",
+  //         endOnly: true,
+  //       }),
+  //     ],
+  //     listeners: {
+  //       move(event) {
+  //         translateX += event.dx;
+  //         translateY += event.dy;
+  //         updateTransform(translateX, translateY);
+  //       },
+  //     },
+  //   });
 
   // Size
   pfp_size_slider.addEventListener("input", () => {

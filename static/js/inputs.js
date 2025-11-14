@@ -345,6 +345,8 @@ function pfpSpecs() {
   const pfpimage_adjustment = document.querySelector("#pfpimage_adjustment");
   const pfpimage = blurb.querySelector("#pfpimage");
 
+  const dragcircle = document.querySelector("#dragcircle");
+
   // default transform data
   let rotation = 0;
   let translateX = 0;
@@ -362,6 +364,7 @@ function pfpSpecs() {
     pfpimage_adjustment.style.transform = `translate(${translateX * 2}px, ${
       translateY * 2
     }px) rotate(${rotation}deg)`;
+    dragcircle.style.transform = `translate(${translateX}px, ${translateY}px)`;
   }
 
   // Rotation
@@ -371,7 +374,7 @@ function pfpSpecs() {
   });
 
   // Position (InteractJS) this is the complicated one
-  interact(pfpimage_adjustment).draggable({
+  interact(dragcircle).draggable({
     inertia: true,
     modifiers: [
       interact.modifiers.restrictRect({
@@ -425,6 +428,9 @@ function pfpSpecs() {
   });
 }
 
-pfpSpecs();
+// make sure content loads
+window.addEventListener("DOMContentLoaded", () => {
+  pfpSpecs();
+});
 // makes it global
 window.blurbify_bg_div = blurbify_bg_div;
