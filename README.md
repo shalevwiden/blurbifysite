@@ -74,3 +74,12 @@ Or I could compute all of the css files and js file depths manually.
 In the JSON theres a style and a scripts.
 The scripts should be updated based on the path.
 But there should be a check so if its left empty it does the default amount of scripts anyway.
+
+Inputs.js is for user JavaScript
+
+template_inputs is for template js, which doesnt have verified icons or pfp uploading in most cases.
+
+Update main.html so now its used for both Blurbify studio and for templates.
+The Blurbify studio json is "blurbifystudio.json" and it is only changed from that file.
+
+Now the templates and the studio can all be updated from updating main.html

@@ -91,27 +91,29 @@
           <!-- make all of these lis flex cols -->
           <li>
             <p>Name</p>
-            <input
-              type="text"
-              placeholder="Tiger"
-              id="nameInput"
-              value="Tiger"
-              disabled
-            />
+            <input type="text" placeholder="Tiger" id="nameInput" value="Tiger" disabled />
           </li>
 
           <li>
             <p>Add text that will be the username</p>
             <div class="usernamediv">
               <p id="at">@</p>
-              <input
-                type="text"
-                placeholder="tiger_blurb"
-                id="usernameInput"
-                value="tiger_blurb"
-                disabled
-              />
+              <input type="text" placeholder="tiger_blurb" id="usernameInput"
+              value="tiger_blurb" disabled />
             </div>
+          </li>
+          <!-- this is hidden, but still there in case it needs to be reffered to in the future
+           
+          Also its called in inputs.js
+          -->
+          <li style="display: none">
+            <p>Verified?</p>
+            <!-- custom checkbox -->
+            <label class="checkbox-container">
+              <input type="checkbox" id="verifiedInput" />
+              <span class="checkmark"></span>
+              <span class="checkbox-label">Yes</span>
+            </label>
           </li>
           <li>
             <p>Add content text</p>
@@ -180,7 +182,7 @@
           <li>
             <p>Change Blurb Background Color</p>
 
-            <input type="color" name="blurb_bg_input" id="blurb_bg_input" />
+            <input type="color" name="blurb_bg_input" id="blurb_bg_input"  value=#F79152;" />
           </li>
           <li>
             <p>Change Blurb Border Color</p>
@@ -188,7 +190,9 @@
               type="color"
               name="blurb_border"
               id="blurb_border_input"
-              value="#da2323"
+              
+              value="#da4823"
+              
             />
           </li>
           <li>
@@ -320,13 +324,13 @@
       <div
         class="blurbify_bg_div"
         
-        style="background-color: #000;"
+        style="background-color: #F79152;"
         
       >
         <div
           class="blurbdiv"
           
-          style="border-color: #da2323;"
+          style="border-color: #da4823;"
           
         >
           <div id="pfp_and_username">
@@ -339,9 +343,9 @@
             <div class="usernamediv">
               <div class="align_them_div">
                 <span id="name"
-                  >Blurbify Studio
+                  >Tiger
                   <div id="verified" style="display: none"></div> </span
-                ><span id="username">@blurbifystudio</span>
+                ><span id="username">@tiger_blurb</span>
               </div>
             </div>
           </div>

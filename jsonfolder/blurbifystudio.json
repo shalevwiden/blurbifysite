@@ -10,7 +10,7 @@
   "flyingimageurl": "",
   "pfpchanging": true,
   "realuser": false,
-  "stylepath": "../static/css/main.css",
+  "stylepath": "static/css/main.css",
   "style": "",
-  "scripts": "its in create template.py"
+  "scripts": "its in createtemplate.py"
 }

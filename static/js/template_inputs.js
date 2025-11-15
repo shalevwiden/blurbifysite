@@ -16,7 +16,9 @@ submitBtn.addEventListener("click", () => {
   //   verified is a boolean
   // make display none on the verified icon if the user selects no for the verification
 
-  const verifiedinput = document.getElementById("verifiedInput").checked;
+  // const verifiedinput = document.getElementById("verifiedInput").checked;
+  verifiedinput = null;
+
   let usernameinput = document
     .getElementById("usernameInput")
     .value.toLowerCase();
@@ -109,8 +111,10 @@ change_icons();
 // now dealing with all the image stuff right here
 
 const pfpInput = document.getElementById("pfpInput");
-const pfppreview = document.getElementById("pfp_preview");
 
+// no pfp preview since its in image_li, which is disabled
+// const pfppreview = document.getElementById("pfp_preview");
+pfppreview = null;
 // now handle the toggle for an image or not
 
 const postimageToggle = document.getElementById("postimage_checkbox");
@@ -165,10 +169,12 @@ submitBtn.addEventListener("click", () => {
 
   // check if the srcs exist if they dont then we set the defaults
   // which for me is my pfp for others the grey one
-  pfpsrcexists =
-    pfppreview.src &&
-    pfppreview.src.trim() !== "" &&
-    !pfppreview.src.endsWith("/");
+  // pfpsrcexists =
+  //   pfppreview.src &&
+  //   pfppreview.src.trim() !== "" &&
+  //   !pfppreview.src.endsWith("/");
+
+  pfpsrcexists = false;
 
   postimagesrcexists =
     postimagepreview.src &&
@@ -188,12 +194,12 @@ submitBtn.addEventListener("click", () => {
       pfpimage.src = pfppreview.src;
     } else {
       // this is where you set it lmao
-      console.log("on other template, leaving html pfp src");
+      console.log("putting default pfp src, passed in through json");
     }
   } else {
     // pass for now - this is for other templates not swiden
     if (pfpsrcexists) {
-      console.log("setting src to user pfp");
+      console.log("setting src to inputted pfp");
 
       pfpimage.src = pfppreview.src;
     } else {

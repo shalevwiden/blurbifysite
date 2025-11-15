@@ -16,6 +16,8 @@ submitBtn.addEventListener("click", () => {
   // make display none on the verified icon if the user selects no for the verification
 
   const verifiedinput = document.getElementById("verifiedInput").checked;
+  console.log(`verifiedinput: ${verifiedinput}`);
+
   let usernameinput = document
     .getElementById("usernameInput")
     .value.toLowerCase();

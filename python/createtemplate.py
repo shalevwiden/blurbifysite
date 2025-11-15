@@ -80,15 +80,18 @@ class Templates:
     <script src="{'../'*depth}static/js/flyingimage.js"></script>'''
 
         name='Tiger'
+        pfpurl=''
+        flyingimageurl=''
         data={
             "title": f"{name} Blurb Template",
             "name": name,
             "username": "tiger_blurb",
             "disabledinputs":True,
-            "bordercolor": "#da2323",
-            "blurbbackgroundcolor":'#000',
-            "pfpurl":"../",
-            "flyingimageurl":'',
+            "pfpchanging":False,
+            "bordercolor": "#da4823",
+            "blurbbackgroundcolor":"#F79152",
+            "pfpurl":pfpurl,
+            "flyingimageurl":flyingimageurl,
         # this will set the border around their pfp
             "realuser":False,
             "style":style,
@@ -125,12 +128,13 @@ class Templates:
 
         # now deal with json stuff
         # change it from the studio.json folder, it shouldnt change too much
-        studiojson=os.path.join(jsonfolder,'studio.json')
+        studiojson=os.path.join(jsonfolder,'blurbifystudio.json')
 
         with open(studiojson) as jsondata:
             data=json.load(jsondata)
         data.update(scripts='''<script src="static/js/toggleanimations.js"></script>
 
+                    
     <script src="static/js/inputs.js"></script>
 
     <script src="static/js/dropdown.js"></script>

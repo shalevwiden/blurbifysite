@@ -28,7 +28,7 @@
 
     <title>Blurbify Studio</title>
 
-    <link rel="stylesheet" href="../static/css/main.css" />
+    <link rel="stylesheet" href="static/css/main.css" />
 
     <link
       rel="stylesheet"
@@ -61,27 +61,29 @@
           <!-- make all of these lis flex cols -->
           <li>
             <p>Name</p>
-            <input
-              type="text"
-              placeholder="Blurbify Studio"
-              id="nameInput"
-              value="Blurbify Studio"
-              disabled
-            />
+            <input type="text" placeholder="Blurbify Studio" id="nameInput" value="Blurbify Studio"  />
           </li>
 
           <li>
             <p>Add text that will be the username</p>
             <div class="usernamediv">
               <p id="at">@</p>
-              <input
-                type="text"
-                placeholder="blurbifystudio"
-                id="usernameInput"
-                value="blurbifystudio"
-                disabled
-              />
+              <input type="text" placeholder="blurbifystudio" id="usernameInput"
+              value="blurbifystudio"  />
             </div>
+          </li>
+          <!-- this is hidden, but still there in case it needs to be reffered to in the future
+           
+          Also its called in inputs.js
+          -->
+          <li style="display: none">
+            <p>Verified?</p>
+            <!-- custom checkbox -->
+            <label class="checkbox-container">
+              <input type="checkbox" id="verifiedInput" />
+              <span class="checkmark"></span>
+              <span class="checkbox-label">Yes</span>
+            </label>
           </li>
           <li>
             <p>Add content text</p>
@@ -169,7 +171,7 @@
               type="color"
               name="blurb_border"
               id="blurb_border_input"
-              value=""
+              
             />
           </li>
           <li>
@@ -615,6 +617,7 @@
     <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
     <script src="static/js/toggleanimations.js"></script>
 
+                    
     <script src="static/js/inputs.js"></script>
 
     <script src="static/js/dropdown.js"></script>

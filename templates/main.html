@@ -73,6 +73,19 @@
               value="{{username}}" {{ 'disabled' if disabledinputs else '' }} />
             </div>
           </li>
+          <!-- this is hidden, but still there in case it needs to be reffered to in the future
+           
+          Also its called in inputs.js
+          -->
+          <li style="display: none">
+            <p>Verified?</p>
+            <!-- custom checkbox -->
+            <label class="checkbox-container">
+              <input type="checkbox" id="verifiedInput" />
+              <span class="checkmark"></span>
+              <span class="checkbox-label">Yes</span>
+            </label>
+          </li>
           <li>
             <p>Add content text</p>
             <!-- text area is for larger amounts of text and retains newlines -->
@@ -151,7 +164,9 @@
           <li>
             <p>Change Blurb Background Color</p>
 
-            <input type="color" name="blurb_bg_input" id="blurb_bg_input" />
+            <input type="color" name="blurb_bg_input" id="blurb_bg_input" {% if
+            blurbbackgroundcolor %} value={{ blurbbackgroundcolor }};" {% endif
+            %}/>
           </li>
           <li>
             <p>Change Blurb Border Color</p>
@@ -159,7 +174,14 @@
               type="color"
               name="blurb_border"
               id="blurb_border_input"
+              {%
+              if
+              bordercolor
+              %}
               value="{{bordercolor}}"
+              {%
+              endif
+              %}
             />
           </li>
           <li>
@@ -320,9 +342,9 @@
             <div class="usernamediv">
               <div class="align_them_div">
                 <span id="name"
-                  >Blurbify Studio
+                  >{{name}}
                   <div id="verified" style="display: none"></div> </span
-                ><span id="username">@blurbifystudio</span>
+                ><span id="username">@{{username}}</span>
               </div>
             </div>
           </div>
