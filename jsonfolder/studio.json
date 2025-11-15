@@ -2,10 +2,13 @@
   "title": "Blurbify Studio",
   "name": "Blurbify Studio",
   "username": "blurbifystudio",
+  "disabledinputs": false,
   "bordercolor": "",
   "blurbbackgroundcolor": "",
+
   "pfpurl": "",
   "flyingimageurl": "",
+  "pfpchanging": true,
   "realuser": false,
   "stylepath": "../static/css/main.css",
   "style": "",

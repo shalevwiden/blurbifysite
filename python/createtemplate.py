@@ -84,6 +84,7 @@ class Templates:
             "title": f"{name} Blurb Template",
             "name": name,
             "username": "tiger_blurb",
+            "disabledinputs":True,
             "bordercolor": "#da2323",
             "blurbbackgroundcolor":'#000',
             "pfpurl":"../",
@@ -123,6 +124,7 @@ class Templates:
         blurbtemplate = self.env.get_template("main.html")
 
         # now deal with json stuff
+        # change it from the studio.json folder, it shouldnt change too much
         studiojson=os.path.join(jsonfolder,'studio.json')
 
         with open(studiojson) as jsondata:

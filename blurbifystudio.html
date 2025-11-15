@@ -94,6 +94,17 @@
             ></textarea>
           </li>
           
+          <li class="imageli" id="pfp_li">
+            <p>Add a pfp to the Blurb</p>
+
+            <!-- the label for file uploads -->
+            <label class="file-label" for="pfpInput">Choose Image</label>
+            <!-- client side uploading only -->
+
+            <input type="file" id="pfpInput" accept="image/*" />
+            <img id="pfp_preview" />
+          </li>
+          
           <li>
             <p>Toggle Icons</p>
             <label class="switch" for="icons_checkbox">
@@ -287,8 +298,14 @@
         <!-- add an icon here that will add more margin bottom better -->
       </div>
 
-      <div class="blurbify_bg_div">
-        <div class="blurbdiv" style="border-color: ;">
+      <div
+        class="blurbify_bg_div"
+        
+      >
+        <div
+          class="blurbdiv"
+          
+        >
           <div id="pfp_and_username">
             <div class="pfpborder ">
               <div class="pfpdiv" id="pfpid">

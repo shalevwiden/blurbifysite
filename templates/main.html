@@ -61,26 +61,16 @@
           <!-- make all of these lis flex cols -->
           <li>
             <p>Name</p>
-            <input
-              type="text"
-              placeholder="{{ name }}"
-              id="nameInput"
-              value="{{ name }}"
-              disabled
-            />
+            <input type="text" placeholder="{{ name }}" id="nameInput" value="{{
+            name }}" {{ 'disabled' if disabledinputs else '' }} />
           </li>
 
           <li>
             <p>Add text that will be the username</p>
             <div class="usernamediv">
               <p id="at">@</p>
-              <input
-                type="text"
-                placeholder="{{username}}"
-                id="usernameInput"
-                value="{{username}}"
-                disabled
-              />
+              <input type="text" placeholder="{{username}}" id="usernameInput"
+              value="{{username}}" {{ 'disabled' if disabledinputs else '' }} />
             </div>
           </li>
           <li>
@@ -93,7 +83,7 @@
               rows="6"
             ></textarea>
           </li>
-          {% if pfpenabled %}
+          {% if pfpchanging %}
           <li class="imageli" id="pfp_li">
             <p>Add a pfp to the Blurb</p>
 
@@ -301,7 +291,6 @@
       <div
         class="blurbify_bg_div"
         {%
-        {%
         if
         blurbbackgroundcolor
         %}
@@ -312,7 +301,6 @@
       >
         <div
           class="blurbdiv"
-          {%
           {%
           if
           bordercolor
