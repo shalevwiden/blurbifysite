@@ -70,9 +70,19 @@ class Templates:
         stylepath=f"{'../'*depth}static/css/main.css"
         print(f'stylepath:{stylepath}')
 
+        scripts=f'''  
+        <script src="{'../'*depth}static/js/toggleanimations.js"></script>
+
+    <script src="{'../'*depth}static/js/template_inputs.js"></script>
+
+    <script src="{'../'*depth}static/js/dropdown.js"></script>
+    <script src="{'../'*depth}static/js/icons.js"></script>
+    <script src="{'../'*depth}static/js/flyingimage.js"></script>'''
+
+        name='Tiger'
         data={
-            "title": "title",
-            "name": "Tiger",
+            "title": f"{name} Blurb Template",
+            "name": name,
             "username": "tiger_blurb",
             "bordercolor": "#da2323",
             "blurbbackgroundcolor":'#000',
@@ -81,7 +91,8 @@ class Templates:
         # this will set the border around their pfp
             "realuser":False,
             "style":style,
-            "stylepath":stylepath
+            "stylepath":stylepath,
+            "scripts":scripts
         }
 
         save_json(data,newpath)
@@ -116,8 +127,17 @@ class Templates:
 
         with open(studiojson) as jsondata:
             data=json.load(jsondata)
+        data.update(scripts='''<script src="static/js/toggleanimations.js"></script>
 
-        studiopath = os.path.abspath(os.path.join(BASE_DIR, "blurbifystudio.html"))
+    <script src="static/js/inputs.js"></script>
+
+    <script src="static/js/dropdown.js"></script>
+    <script src="static/js/icons.js"></script>
+    <script src="static/js/flyingimage.js"></script>''')
+
+        root_dir = os.path.abspath(os.path.join(BASE_DIR, "..", ))
+
+        studiopath = os.path.abspath(os.path.join(root_dir, "blurbifystudio.html"))
 
         rendered = blurbtemplate.render(data)
         with open(studiopath,'w') as newtemplate:
@@ -130,5 +150,6 @@ def main():
     newtemplate=Templates()
     newtemplate.make_json(newpath)
     newtemplate.make_template(newpath)
+    newtemplate.update_studio()
 
 main()

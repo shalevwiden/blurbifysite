@@ -26,7 +26,7 @@
     />
     <link rel="icon" href="../images/blurbifyverified.png" type="image/png" />
 
-    <title>{{ title }} Blurb Template</title>
+    <title>{{ title }}</title>
 
     <link rel="stylesheet" href="{{stylepath}}" />
 
@@ -298,8 +298,30 @@
         <!-- add an icon here that will add more margin bottom better -->
       </div>
 
-      <div class="blurbify_bg_div">
-        <div class="blurbdiv" style="border-color: {{bordercolor }};">
+      <div
+        class="blurbify_bg_div"
+        {%
+        {%
+        if
+        blurbbackgroundcolor
+        %}
+        style="background-color: {{ blurbbackgroundcolor }};"
+        {%
+        endif
+        %}
+      >
+        <div
+          class="blurbdiv"
+          {%
+          {%
+          if
+          bordercolor
+          %}
+          style="border-color: {{ bordercolor }};"
+          {%
+          endif
+          %}
+        >
           <div id="pfp_and_username">
             <div class="pfpborder {{ userpfpborder if realuser else '' }}">
               <div class="pfpdiv" id="pfpid">
@@ -603,15 +625,10 @@
         <div class="linkdiv">Return to Start Screen</div></a
       >
     </div>
-    <script src="../static/js/toggleanimations.js"></script>
 
     <!-- for profile pictures -->
 
     <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
-    <script src="../static/js/template_inputs.js"></script>
-
-    <script src="../static/js/dropdown.js"></script>
-    <script src="../static/js/icons.js"></script>
-    <script src="../static/js/flyingimage.js"></script>
+    {{ scripts }}
   </body>
 </html>

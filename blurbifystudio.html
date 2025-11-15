@@ -22,12 +22,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Create a blurb and choose from some features to animate it.
-    "
+      content=" The Blurbify Studio blurb template on Blurbify."
     />
     <link rel="icon" href="../images/blurbifyverified.png" type="image/png" />
 
-    <title>Create a Blurb</title>
+    <title>Blurbify Studio</title>
 
     <link rel="stylesheet" href="../static/css/main.css" />
 
@@ -53,6 +52,7 @@
     />
   </head>
   <body>
+    
     <div class="sitecontainer">
       <h1 id="heading">Blurbify</h1>
       <!-- inputs to change whats in the blurb -->
@@ -60,26 +60,26 @@
         <ul id="input_ul">
           <!-- make all of these lis flex cols -->
           <li>
-            <p>Add text that will be the name</p>
-            <input type="text" placeholder="Add name" id="nameInput" />
+            <p>Name</p>
+            <input
+              type="text"
+              placeholder="Blurbify Studio"
+              id="nameInput"
+              value="Blurbify Studio"
+              disabled
+            />
           </li>
-          <li style="display: none">
-            <p>Verified?</p>
-            <!-- custom checkbox -->
-            <label class="checkbox-container">
-              <input type="checkbox" id="verifiedInput" />
-              <span class="checkmark"></span>
-              <span class="checkbox-label">Yes</span>
-            </label>
-          </li>
+
           <li>
             <p>Add text that will be the username</p>
             <div class="usernamediv">
               <p id="at">@</p>
               <input
                 type="text"
-                placeholder="Add username"
+                placeholder="blurbifystudio"
                 id="usernameInput"
+                value="blurbifystudio"
+                disabled
               />
             </div>
           </li>
@@ -93,6 +93,7 @@
               rows="6"
             ></textarea>
           </li>
+          
           <li>
             <p>Toggle Icons</p>
             <label class="switch" for="icons_checkbox">
@@ -100,16 +101,7 @@
               <span class="slider round"></span>
             </label>
           </li>
-          <li class="imageli" id="pfp_li">
-            <p>Add a pfp to the Blurb</p>
-
-            <!-- the label for file uploads -->
-            <label class="file-label" for="pfpInput">Choose Image</label>
-            <!-- client side uploading only -->
-
-            <input type="file" id="pfpInput" accept="image/*" />
-            <img id="pfp_preview" />
-          </li>
+          <!-- no pfp for template blurbs -->
           <li>
             <p>Add an image to the post?</p>
             <label class="switch" for="postimage_checkbox">
@@ -162,7 +154,12 @@
           </li>
           <li>
             <p>Change Blurb Border Color</p>
-            <input type="color" name="blurb_border" id="blurb_border_input" />
+            <input
+              type="color"
+              name="blurb_border"
+              id="blurb_border_input"
+              value=""
+            />
           </li>
           <li>
             <p>Change Blurb Border Thickness</p>
@@ -216,8 +213,8 @@
             <!-- This is going to be the resizing bounding box fr lmao  -->
             <p>Adjust Profile Picture</p>
             <p class="instructions">
-              Drag the blue circle around to position, and adjust the sliders to
-              resize and rotate!
+              Drag around to position, and adjust the sliders to resize and
+              rotate!
             </p>
 
             <div class="adjustmentdiv">
@@ -226,9 +223,6 @@
                 alt="adjustment img"
                 id="pfpimage_adjustment"
               />
-            </div>
-            <div class="dragdiv">
-              <div id="dragcircle"></div>
             </div>
           </li>
           <li>
@@ -243,7 +237,7 @@
                 id="pfp_size_slider"
                 min="70"
                 max="370"
-                value="129"
+                value="100"
                 step="1"
               />
               <button class="resetbutton" id="reset_pfp_size">Reset</button>
@@ -294,9 +288,9 @@
       </div>
 
       <div class="blurbify_bg_div">
-        <div class="blurbdiv">
+        <div class="blurbdiv" style="border-color: ;">
           <div id="pfp_and_username">
-            <div class="pfpborder">
+            <div class="pfpborder ">
               <div class="pfpdiv" id="pfpid">
                 <img src="../images/nopfp.webp" alt="pfp gone" id="pfpimage" />
               </div>
@@ -344,7 +338,7 @@
         <div class="flyingimagesdiv">
           <div id="flying_wrapper1">
             <img
-              src="../images/flyingimages/blurbifyplane.png"
+              src=""
               alt="FLYING"
               id="flyingimage1"
               class="flyingimage"
@@ -385,10 +379,7 @@
             <!-- client side uploading only -->
 
             <input type="file" id="flyingimageInput" accept="image/*" />
-            <img
-              id="flying_image_preview"
-              src="../images/flyingimages/blurbifyplane.png"
-            />
+            <img id="flying_image_preview" src="" />
 
             <!-- this will reset it back to the Blurbify plane -->
             <button class="resetbutton" id="resetflyingimage">
@@ -518,7 +509,7 @@
               </div>
               <div class="previewdiv">
                 <img
-                  src="../images/flyingimages/blurbifyplane.png"
+                  src=""
                   alt=""
                   id="rotation_object_preview"
                 />
@@ -601,15 +592,16 @@
         <div class="linkdiv">Return to Start Screen</div></a
       >
     </div>
-    <script src="../static/js/toggleanimations.js"></script>
 
     <!-- for profile pictures -->
 
     <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
-    <script src="../static/js/inputs.js"></script>
+    <script src="static/js/toggleanimations.js"></script>
 
-    <script src="../static/js/dropdown.js"></script>
-    <script src="../static/js/icons.js"></script>
-    <script src="../static/js/flyingimage.js"></script>
+    <script src="static/js/inputs.js"></script>
+
+    <script src="static/js/dropdown.js"></script>
+    <script src="static/js/icons.js"></script>
+    <script src="static/js/flyingimage.js"></script>
   </body>
 </html>

@@ -1,5 +1,5 @@
 {
-    "title": "title",
+    "title": "Tiger Blurb Template",
     "name": "Tiger",
     "username": "tiger_blurb",
     "bordercolor": "#da2323",
@@ -8,5 +8,6 @@
     "flyingimageurl": "",
     "realuser": false,
     "style": "<style>\n  /* this is just the image styling */\n  .blurbify_bg_div{\n    background-color: yellow;\n  }\n  .adjustmentdiv img {\n    width:  !important;\n    height: auto !important;\n    position: relative !important;\n    margin-right: 20px !important;\n    margin-top: 10px !important;\n    /*twice as much top cause twice as big*/\n    top: 0 !important;\n  }\n\n  .pfpdiv img {\n    width: 100px !important;\n    margin-right: 10px !important;\n    margin-top: 5px !important;\n  }\n\n  @media (max-width: 400px) {\n    .pfpdiv img#pfpimage {\n      margin-bottom: 10px !important;\n      width: 74.0px !important;\n      margin-right: 7.4px !important;\n      margin-top: 3.7px !important;\n      top: 0 !important;\n    }\n  }\n</style>",
-    "stylepath": "../../static/css/main.css"
+    "stylepath": "../../static/css/main.css",
+    "scripts": "  \n        <script src=\"../../static/js/toggleanimations.js\"></script>\n\n    <script src=\"../../static/js/template_inputs.js\"></script>\n\n    <script src=\"../../static/js/dropdown.js\"></script>\n    <script src=\"../../static/js/icons.js\"></script>\n    <script src=\"../../static/js/flyingimage.js\"></script>"
 }
