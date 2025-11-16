@@ -94,3 +94,4 @@ newpath='animals/elephant'
 Worked on new Nav Bar
 And on Random Blurb Button.
 Click the random blurb button, go to a random blurb template.
+Since I added images.json and images.js, that needs to be another argument in the create template file.

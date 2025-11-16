@@ -1,5 +1,6 @@
 {
   "logo": "https://your-bucket/logo.png",
   "hero_blurb": "https://your-bucket/hero.webp",
-  "iconUser": "https://your-bucket/icons/user.svg"
+  "iconUser": "https://your-bucket/icons/user.svg",
+  "direction_arrow": "https://storage.googleapis.com/blurbify-assets/images/direction_arrow.svg"
 }
