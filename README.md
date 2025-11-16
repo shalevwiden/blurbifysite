@@ -83,3 +83,8 @@ Update main.html so now its used for both Blurbify studio and for templates.
 The Blurbify studio json is "blurbifystudio.json" and it is only changed from that file.
 
 Now the templates and the studio can all be updated from updating main.html
+Main.html is the main template (no way).
+
+To make a new template just change newpath in createtemplate.py
+
+newpath='animals/elephant'

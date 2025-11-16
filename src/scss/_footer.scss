@@ -27,8 +27,8 @@ footer {
   font-family: Helvetica, sans-serif;
 
   // for tooltip
-  position: relative; // ensure tooltip can overflow this box
-  overflow: visible; // don't clip the tooltip
+  position: relative;
+  // ensure tooltip can overflow this box
 
   .footerright {
     display: flex;

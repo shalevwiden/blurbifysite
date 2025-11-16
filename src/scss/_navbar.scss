@@ -3,24 +3,39 @@
 
 /* change this color to see it and make changes */
 
-ul.navbar {
-  background-color: #8c9debff;
-  border: 3px solid black;
-  border-radius: 26px;
-  width: 80%;
-  height: 150px;
-
+nav.navbar {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  @include border(red);
+  // only one child
   @include flexrow;
-  justify-content: space-between;
-  filter: drop-shadow(4px 0px 2px rgb(67, 66, 66));
+  position: fixed;
 
-  li {
-    border: 3px solid green;
-    a {
-      color: red;
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #8c9debff;
+    border: 3px solid black;
+    border-radius: 26px;
+    width: 80%;
+    height: 150px;
+
+    @include flexrow;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px,
+      rgba(245, 73, 144, 0.5) 0px 10px 15px;
+    li {
+      border: 3px solid green;
+      a {
+        color: rgba(48, 20, 134, 1);
+        font-weight: bold;
+      }
     }
-  }
-  @media (max-width: 450px) {
-    width: 90%;
+    @media (max-width: 450px) {
+      width: 90%;
+    }
   }
 }

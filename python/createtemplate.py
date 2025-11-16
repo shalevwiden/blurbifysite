@@ -151,7 +151,7 @@ class Templates:
 
 
 def main():
-    newpath='animals/tiger'
+    newpath='animals/elephant'
 
     newtemplate=Templates()
     newtemplate.make_json(newpath)

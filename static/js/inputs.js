@@ -15,6 +15,7 @@ submitBtn.addEventListener("click", () => {
   //   verified is a boolean
   // make display none on the verified icon if the user selects no for the verification
 
+  // it exists on the pages
   const verifiedinput = document.getElementById("verifiedInput").checked;
   console.log(`verifiedinput: ${verifiedinput}`);
 
