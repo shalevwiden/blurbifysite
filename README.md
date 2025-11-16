@@ -88,3 +88,9 @@ Main.html is the main template (no way).
 To make a new template just change newpath in createtemplate.py
 
 newpath='animals/elephant'
+
+### Nov 16, 2025
+
+Worked on new Nav Bar
+And on Random Blurb Button.
+Click the random blurb button, go to a random blurb template.
