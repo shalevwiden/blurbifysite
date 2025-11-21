@@ -1,4 +1,5 @@
-fetch("./images.json")
+// gotta make the path right. Its on the root level
+fetch("/images.json")
   .then((res) => res.json())
   .then((images) => {
     // this will loop through and assign each one

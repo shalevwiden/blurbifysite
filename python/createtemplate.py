@@ -81,13 +81,17 @@ class Templates:
 
     <script src="{'../'*depth}static/js/flyingimage.js"></script>'''
 
-        name='Tiger'
+        name='Elephant'
         pfpurl=''
         flyingimageurl=''
+
+        # name shouldnt affect username
+        # because username has limit chars
+        
         data={
             "title": f"{name} Blurb Template",
             "name": name,
-            "username": "tiger_blurb",
+            "username": "elephant_blurb",
             "disabledinputs":True,
             "pfpchanging":False,
             "bordercolor": "#da4823",
@@ -125,6 +129,18 @@ class Templates:
         with open(savehtmlpath,'w') as newtemplate:
             newtemplate.write(rendered)
 
+    def update_templates(self):
+        '''
+        
+        Ok this is important. So what this does is it reads all the templates in the templates folder.
+
+        It will open up that templates respective JSON file.
+        (There cannot be JSON files with the same name)
+        
+        '''
+
+
+
     def update_studio(self):
         blurbtemplate = self.env.get_template("main.html")
 
@@ -155,6 +171,7 @@ class Templates:
 
 
 def main():
+    # this is what gets set. So itll make the json, and the template
     newpath='animals/elephant'
 
     newtemplate=Templates()
