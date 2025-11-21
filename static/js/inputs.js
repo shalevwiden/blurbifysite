@@ -5,6 +5,31 @@ const blurb = document.querySelector(".blurbdiv");
 
 const defaultname = "Blurbify Studio";
 const defaultusername = "blurbifystudio";
+function getBlurbElements() {
+  return {
+    name: blurb.querySelector("#name"),
+    username: blurb.querySelector("#username"),
+    textcontent: blurb.querySelector(".textcontent"),
+  };
+}
+
+// itll exist on load
+const { name, username, textcontent } = getBlurbElements();
+
+function setOnLoad() {
+  const url = window.location.pathname;
+  console.log("\ntrying set on load\n");
+  // Check if the page ends with blurbifystudio or blurbifystudio.html
+  if (url.endsWith("blurbifystudio") || url.endsWith("blurbifystudio.html")) {
+    if (name) name.innerText = defaultname;
+    if (username) username.innerText = defaultusername;
+    console.log("set default name and username in blurb for blurbifystudio");
+  }
+}
+
+// Run this when the page finishes loading
+window.addEventListener("load", setOnLoad);
+
 submitBtn.addEventListener("click", () => {
   console.log("Submit clicked!"); //
 
@@ -22,15 +47,15 @@ submitBtn.addEventListener("click", () => {
   let usernameinput = document
     .getElementById("usernameInput")
     .value.toLowerCase();
+  // this will never trigger on templates, because there is a name and username input which is unchangable
+  // unchangable by users
   if (!usernameinput) {
     usernameinput = defaultusername;
   }
   let contentinput = document.getElementById("contentInput").value;
 
   //   now get the blurb variables
-  const name = blurb.querySelector("#name");
-  const username = blurb.querySelector("#username");
-  const textcontent = blurb.querySelector(".textcontent");
+
   //   now change it
 
   // in the future this could be read from a database

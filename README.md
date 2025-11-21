@@ -108,3 +108,6 @@ And I as the number one user will certainly appreciate that.
 
 --
 Every time I come back to work on this theres some new bug that needs to be fixed.
+
+Going to set default placeholder name and username values with JavaScript.
+So that way if the file is on Blurbify Studio then it will be replaced.
