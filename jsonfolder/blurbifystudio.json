@@ -6,8 +6,8 @@
   "bordercolor": "",
   "blurbbackgroundcolor": "",
 
-  "pfpurl": "",
-  "flyingimageurl": "",
+  "pfpurl": "https://storage.googleapis.com/blurbify-assets/defaults/nopfp.webp",
+  "flyingimageurl": "https://storage.googleapis.com/blurbify-assets/defaults/blurbifyplane.png",
   "pfpchanging": true,
   "realuser": false,
   "stylepath": "static/css/main.css",

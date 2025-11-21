@@ -95,3 +95,13 @@ Worked on new Nav Bar
 And on Random Blurb Button.
 Click the random blurb button, go to a random blurb template.
 Since I added images.json and images.js, that needs to be another argument in the create template file.
+
+### Nov 21, 2025
+
+Not setting the flying images src in images.js
+Instead we are going to set it with the json which is passed in.
+This makes more sense because a user will pass a custom flying image to each of their templates as well.
+
+For flying images, I simply need to adjust their start and end vals for mobile.
+When the site is pivoted to React, then there should be a single "styling" bar which changes so the user doesnt have to move around to many different places to add styling.
+And I as the number one user will certainly appreciate that.

@@ -2,10 +2,10 @@ fetch("./images.json")
   .then((res) => res.json())
   .then((images) => {
     // this will loop through and assign each one
+    // no plane or pfp either
     const imageIds = [
       "hero_blurb",
-      "blurbifyplane",
-      "nopfp",
+
       "direction_arrow",
       "aboveblurb",
       "belowblurb",

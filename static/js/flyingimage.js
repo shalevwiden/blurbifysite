@@ -168,27 +168,27 @@ function flyingspeed() {
 flyingspeed();
 
 function zindex() {
-  const aboveblurb = document.querySelector("#aboveblurb");
-  const underblurb = document.querySelector("#underblurb");
+  const aboveblurbinput = document.querySelector("#aboveblurbinput");
+  const belowblurbinput = document.querySelector("#belowblurbinput");
 
-  aboveblurb.addEventListener("change", () => {
-    if (aboveblurb.checked) {
+  aboveblurbinput.addEventListener("change", () => {
+    if (aboveblurbinput.checked) {
       flyingimagesdiv.style.zIndex = "3"; // put on top
-      console.log("Set to ABOVE");
+      console.log("Set to above (high z index)");
     }
   });
 
-  underblurb.addEventListener("change", () => {
-    if (underblurb.checked) {
+  belowblurbinput.addEventListener("change", () => {
+    if (belowblurbinput.checked) {
       flyingimagesdiv.style.zIndex = "0"; // put underneath
-      console.log("Set to UNDER");
+      console.log("Set to below (low z index)");
     }
   });
 
   // Optional: initialize state based on whichever is pre-checked
-  if (aboveblurb.checked) {
+  if (aboveblurbinput.checked) {
     flyingimagesdiv.style.zIndex = "3";
-  } else if (underblurb.checked) {
+  } else if (belowblurbinput.checked) {
     flyingimagesdiv.style.zIndex = "0";
   }
 }
