@@ -105,3 +105,6 @@ This makes more sense because a user will pass a custom flying image to each of 
 For flying images, I simply need to adjust their start and end vals for mobile.
 When the site is pivoted to React, then there should be a single "styling" bar which changes so the user doesnt have to move around to many different places to add styling.
 And I as the number one user will certainly appreciate that.
+
+--
+Every time I come back to work on this theres some new bug that needs to be fixed.

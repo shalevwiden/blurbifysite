@@ -508,7 +508,7 @@ input:checked + .slider::before {
   border: 1px solid transparent;
   width: 50%;
   height: auto;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: transparent;
   cursor: pointer;
   transition: all 0.25s ease;
 }
@@ -521,7 +521,6 @@ input:checked + .slider::before {
   border: 5px solid transparent;
   background: rgb(51, 157, 95);
   box-shadow: 0 0 10px rgba(255, 138, 0, 0.3);
-  border-radius: 25px;
 }
 #flyingimage_specs ul#flying_specs li .radiodiv .option input[type=radio]:checked + label .radiotext {
   color: #fff;
@@ -529,6 +528,7 @@ input:checked + .slider::before {
 #flyingimage_specs ul#flying_specs li .radiodiv .option label {
   background-color: #87c4d1;
   border: 1px solid transparent;
+  border-radius: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1077,7 +1077,7 @@ body .sitecontainer div.blurbify_bg_div .blurbdiv div#pfp_and_username .username
 body .sitecontainer div.blurbify_bg_div .blurbdiv div#pfp_and_username .usernamediv div.align_them_div #username {
   color: grey;
   font-size: 28px;
-  margin-bottom: 4px;
+  margin-bottom: 3px;
 }
 body .sitecontainer div.blurbify_bg_div .blurbdiv div.textcontent {
   padding: 30px;
