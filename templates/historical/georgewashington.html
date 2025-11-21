@@ -22,13 +22,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content=" The Tiger blurb template on Blurbify."
+      content=" The George Washington blurb template on Blurbify."
     />
     <link rel="icon" href="../images/blurbifyverified.png" type="image/png" />
 
-    <title>Tiger Blurb Template</title>
+    <title></title>
 
-    <link rel="stylesheet" href="../../static/css/main.css" />
+    <link rel="stylesheet" href="" />
 
     <link
       rel="stylesheet"
@@ -52,37 +52,7 @@
     />
   </head>
   <body>
-    <style>
-  /* this is just the image styling */
-  .blurbify_bg_div{
-    background-color: yellow;
-  }
-  .adjustmentdiv img {
-    width:  !important;
-    height: auto !important;
-    position: relative !important;
-    margin-right: 20px !important;
-    margin-top: 10px !important;
-    /*twice as much top cause twice as big*/
-    top: 0 !important;
-  }
-
-  .pfpdiv img {
-    width: 100px !important;
-    margin-right: 10px !important;
-    margin-top: 5px !important;
-  }
-
-  @media (max-width: 400px) {
-    .pfpdiv img#pfpimage {
-      margin-bottom: 10px !important;
-      width: 74.0px !important;
-      margin-right: 7.4px !important;
-      margin-top: 3.7px !important;
-      top: 0 !important;
-    }
-  }
-</style>
+    
     <div class="sitecontainer">
       <h1 id="heading">Blurbify</h1>
       <!-- inputs to change whats in the blurb -->
@@ -91,7 +61,7 @@
           <!-- make all of these lis flex cols -->
           <li>
             <p>Name</p>
-            <input type="text" placeholder="Enter name" id="nameInput" value="Tiger" disabled />
+            <input type="text" placeholder="Enter name" id="nameInput" value="George Washington"  />
           </li>
 
           <li>
@@ -99,7 +69,7 @@
             <div class="usernamediv">
               <p id="at">@</p>
               <input type="text" placeholder="Enter username" id="usernameInput"
-              value="tiger_blurb" disabled />
+              value="@realgeorgew"  />
             </div>
           </li>
           <!-- this is hidden, but still there in case it needs to be reffered to in the future
@@ -182,7 +152,7 @@
           <li>
             <p>Change Blurb Background Color</p>
 
-            <input type="color" name="blurb_bg_input" id="blurb_bg_input"  value=#F79152;" />
+            <input type="color" name="blurb_bg_input" id="blurb_bg_input" />
           </li>
           <li>
             <p>Change Blurb Border Color</p>
@@ -191,7 +161,7 @@
               name="blurb_border"
               id="blurb_border_input"
               
-              value="#da4823"
+              value="#ffffff"
               
             />
           </li>
@@ -327,13 +297,11 @@
       <div
         class="blurbify_bg_div"
         
-        style="background-color: #F79152;"
-        
       >
         <div
           class="blurbdiv"
           
-          style="border-color: #da4823;"
+          style="border-color: #ffffff;"
           
         >
           <div id="pfp_and_username">
@@ -346,9 +314,9 @@
             <div class="usernamediv">
               <div class="align_them_div">
                 <span id="name"
-                  >Tiger
+                  >George Washington
                   <div id="verified" style="display: none"></div> </span
-                ><span id="username">@tiger_blurb</span>
+                ><span id="username">@@realgeorgew</span>
               </div>
             </div>
           </div>
@@ -650,13 +618,6 @@
     <!-- for profile pictures -->
 
     <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
-      
-        <script src="../../static/js/toggleanimations.js"></script>
-
-    <script src="../../static/js/template_inputs.js"></script>
-
-    <script src="../../static/js/dropdown.js"></script>
-    <script src="../../static/js/icons.js"></script>
-    <script src="../../static/js/flyingimage.js"></script>
+    
   </body>
 </html>

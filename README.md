@@ -113,6 +113,7 @@ Going to set default placeholder name and username values with JavaScript.
 So that way if the file is on Blurbify Studio then it will be replaced.
 
 **Ok more stuff**
+
 So I have to make all the templates update based on their json files whenever theres a change, not just when make_template and make_json is called.
 Im really doing a lot of extra stuff to make this all static.
 Hopefully it pays off lol.
@@ -122,3 +123,9 @@ And user templates too.
 
 I HAVE TO ADD USERS
 Like so bad lol.
+
+Going to try to add custom web sharing now.
+Ooooo also an idea make it so when the save button is clicked,
+the Blurb is saved to ones device.
+
+I also need to add a scaling bar for the entire blurb so that I dont have to resize, for Instagram, X, YouTube all that stuff

@@ -87,7 +87,7 @@ class Templates:
 
         # name shouldnt affect username
         # because username has limit chars
-        
+
         data={
             "title": f"{name} Blurb Template",
             "name": name,
@@ -136,8 +136,58 @@ class Templates:
 
         It will open up that templates respective JSON file.
         (There cannot be JSON files with the same name)
+
+        This will also allow me to go direct into the JSON folder and add a template
         
         '''
+
+        # json folder is set and no changed
+        
+        
+        jsonfiles = []
+
+        for root, dirs, files in os.walk(jsonfolder):
+            for file in files:
+                if file.endswith(".json"):
+                    fullpath=os.path.join(root,file)
+
+                    # Convert to a relative web path
+                    rel_path = fullpath.split("jsonfolder", 1)[1]
+                    rel_path = "jsonfolder" + rel_path  # Add folder back to front
+                    # windows too
+                    rel_path = rel_path.replace("\\", "/")  
+
+                    jsonfiles.append(rel_path)
+        
+        # this works and has all the jsonfile paths
+        print(jsonfiles)
+
+        def update_html_now(jsonfiles):
+            blurbtemplate = self.env.get_template("main.html")
+
+            for file in jsonfiles:
+                htmlfile=file.replace('jsonfolder','templates')
+                htmlfile=htmlfile.replace('.json','.html')
+
+                # make the dirs if they dont exist yet
+                savedirs = os.path.dirname(htmlfile)
+
+
+                # creates missing folders
+                os.makedirs(savedirs, exist_ok=True)
+
+                with open(file) as jsondata:
+                    data=json.load(jsondata)
+
+                
+
+                rendered = blurbtemplate.render(data)
+                with open(htmlfile,'w') as markup:
+                    markup.write(rendered)
+        update_html_now(jsonfiles)
+
+
+
 
 
 
@@ -174,9 +224,17 @@ def main():
     # this is what gets set. So itll make the json, and the template
     newpath='animals/elephant'
 
-    newtemplate=Templates()
-    newtemplate.make_json(newpath)
-    newtemplate.make_template(newpath)
-    newtemplate.update_studio()
+    templateObj=Templates()
+    def make_new(newpath):
+        templateObj.make_json(newpath)
+        templateObj.make_template(newpath)
+        
+    # make_new()
+
+    templateObj.update_templates()
+    # update studio regardless
+
+    templateObj.update_studio()
+
 
 main()

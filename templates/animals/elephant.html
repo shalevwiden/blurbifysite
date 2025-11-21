@@ -53,36 +53,36 @@
   </head>
   <body>
     <style>
-  /* this is just the image styling */
-  .blurbify_bg_div{
-    background-color: yellow;
-  }
-  .adjustmentdiv img {
-    width:  !important;
-    height: auto !important;
-    position: relative !important;
-    margin-right: 20px !important;
-    margin-top: 10px !important;
-    /*twice as much top cause twice as big*/
-    top: 0 !important;
-  }
+      /* this is just the image styling */
+      .blurbify_bg_div {
+        background-color: rgb(186, 103, 119);
+      }
+      .adjustmentdiv img {
+        width: !important;
+        height: auto !important;
+        position: relative !important;
+        margin-right: 20px !important;
+        margin-top: 10px !important;
+        /*twice as much top cause twice as big*/
+        top: 0 !important;
+      }
 
-  .pfpdiv img {
-    width: 100px !important;
-    margin-right: 10px !important;
-    margin-top: 5px !important;
-  }
+      .pfpdiv img {
+        width: 100px !important;
+        margin-right: 10px !important;
+        margin-top: 5px !important;
+      }
 
-  @media (max-width: 400px) {
-    .pfpdiv img#pfpimage {
-      margin-bottom: 10px !important;
-      width: 74.0px !important;
-      margin-right: 7.4px !important;
-      margin-top: 3.7px !important;
-      top: 0 !important;
-    }
-  }
-</style>
+      @media (max-width: 400px) {
+        .pfpdiv img#pfpimage {
+          margin-bottom: 10px !important;
+          width: 74px !important;
+          margin-right: 7.4px !important;
+          margin-top: 3.7px !important;
+          top: 0 !important;
+        }
+      }
+    </style>
     <div class="sitecontainer">
       <h1 id="heading">Blurbify</h1>
       <!-- inputs to change whats in the blurb -->
@@ -91,15 +91,26 @@
           <!-- make all of these lis flex cols -->
           <li>
             <p>Name</p>
-            <input type="text" placeholder="Enter name" id="nameInput" value="Elephant" disabled />
+            <input
+              type="text"
+              placeholder="Enter name"
+              id="nameInput"
+              value="Elephant"
+              disabled
+            />
           </li>
 
           <li>
             <p>Add text that will be the username</p>
             <div class="usernamediv">
               <p id="at">@</p>
-              <input type="text" placeholder="Enter username" id="usernameInput"
-              value="tiger_blurb" disabled />
+              <input
+                type="text"
+                placeholder="Enter username"
+                id="usernameInput"
+                value="elephant_blurb"
+                disabled
+              />
             </div>
           </li>
           <!-- this is hidden, but still there in case it needs to be reffered to in the future
@@ -125,7 +136,7 @@
               rows="6"
             ></textarea>
           </li>
-          
+
           <li>
             <p>Toggle Icons</p>
             <label class="switch" for="icons_checkbox">
@@ -182,7 +193,8 @@
           <li>
             <p>Change Blurb Background Color</p>
 
-            <input type="color" name="blurb_bg_input" id="blurb_bg_input"  value=#F79152;" />
+            <input type="color" name="blurb_bg_input" id="blurb_bg_input"
+            value=#528ff7ff;" />
           </li>
           <li>
             <p>Change Blurb Border Color</p>
@@ -190,9 +202,7 @@
               type="color"
               name="blurb_border"
               id="blurb_border_input"
-              
-              value="#da4823"
-              
+              value="#2345daff"
             />
           </li>
           <li>
@@ -324,20 +334,10 @@
         <!-- add an icon here that will add more margin bottom better -->
       </div>
 
-      <div
-        class="blurbify_bg_div"
-        
-        style="background-color: #F79152;"
-        
-      >
-        <div
-          class="blurbdiv"
-          
-          style="border-color: #da4823;"
-          
-        >
+      <div class="blurbify_bg_div" style="background-color: #528ff7ff">
+        <div class="blurbdiv" style="border-color: #2345daff">
           <div id="pfp_and_username">
-            <div class="pfpborder ">
+            <div class="pfpborder">
               <div class="pfpdiv" id="pfpid">
                 <img src="../images/nopfp.webp" alt="pfp gone" id="pfpimage" />
               </div>
@@ -348,7 +348,7 @@
                 <span id="name"
                   >Elephant
                   <div id="verified" style="display: none"></div> </span
-                ><span id="username">@tiger_blurb</span>
+                ><span id="username">@elephant_blurb</span>
               </div>
             </div>
           </div>
@@ -384,12 +384,7 @@
         </div>
         <div class="flyingimagesdiv">
           <div id="flying_wrapper1">
-            <img
-              src=""
-              alt="FLYING"
-              id="flyingimage1"
-              class="flyingimage"
-            />
+            <img src="" alt="FLYING" id="flyingimage1" class="flyingimage" />
           </div>
         </div>
       </div>
@@ -562,11 +557,7 @@
                 </div>
               </div>
               <div class="previewdiv">
-                <img
-                  src=""
-                  alt=""
-                  id="rotation_object_preview"
-                />
+                <img src="" alt="" id="rotation_object_preview" />
                 <img
                   src="../images/icons/blurbify_arrow.svg"
                   alt=""
@@ -650,8 +641,8 @@
     <!-- for profile pictures -->
 
     <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
-      
-        <script src="../../static/js/toggleanimations.js"></script>
+
+    <script src="../../static/js/toggleanimations.js"></script>
 
     <script src="../../static/js/template_inputs.js"></script>
 
