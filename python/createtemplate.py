@@ -77,6 +77,8 @@ class Templates:
 
     <script src="{'../'*depth}static/js/dropdown.js"></script>
     <script src="{'../'*depth}static/js/icons.js"></script>
+    <script src="{'../'*depth}static/js/images.js"></script>
+
     <script src="{'../'*depth}static/js/flyingimage.js"></script>'''
 
         name='Tiger'
@@ -139,6 +141,8 @@ class Templates:
 
     <script src="static/js/dropdown.js"></script>
     <script src="static/js/icons.js"></script>
+    <script src="static/js/images.js"></script>
+
     <script src="static/js/flyingimage.js"></script>''')
 
         root_dir = os.path.abspath(os.path.join(BASE_DIR, "..", ))

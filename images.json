@@ -1,6 +1,12 @@
 {
-  "logo": "https://your-bucket/logo.png",
   "hero_blurb": "https://your-bucket/hero.webp",
-  "iconUser": "https://your-bucket/icons/user.svg",
-  "direction_arrow": "https://storage.googleapis.com/blurbify-assets/images/direction_arrow.svg"
+
+  "blurbifyplane": "https://storage.googleapis.com/blurbify-assets/defaults/blurbifyplane.png",
+  "nopfp": "https://storage.googleapis.com/blurbify-assets/defaults/nopfp.webp",
+
+  "direction_arrow": "https://storage.googleapis.com/blurbify-assets/images/direction_arrow.svg",
+  "aboveblurb": "https://storage.googleapis.com/blurbify-assets/images/aboveblurb.png",
+  "belowblurb": "https://storage.googleapis.com/blurbify-assets/images/belowblurb.png",
+  "blurbifyverified": "https://storage.googleapis.com/blurbify-assets/images/blurbifyverified.png",
+  "verified": "https://storage.googleapis.com/blurbify-assets/images/verified.png"
 }
