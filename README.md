@@ -129,3 +129,32 @@ Ooooo also an idea make it so when the save button is clicked,
 the Blurb is saved to ones device.
 
 I also need to add a scaling bar for the entire blurb so that I dont have to resize, for Instagram, X, YouTube all that stuff
+
+Now I have to code up a way to upload files to google cloud very efficiently.
+
+### Overall Site Plan:
+
+Heres the plan for the site:
+
+- keep templates largely static
+- thats cause I want Millions of users on them, everyday.
+- Then build out a real Blurbify site. Where users can come on and create templates. And simply see other users templates.
+
+### Flask Plan:
+
+- sign up form with email and main username and main name.
+
+User comes on without setting any data like colors or pfp and is greeted with a single default blurbify template. User will also have a "page" which details all of their templates.
+
+Each template will have the Blurb preview, and a little description about what it is.
+
+Then user can set their profile picture on actual Blurbify, and a bio.
+Very limited social networking features, but there WILL be accounts. Which I think is cool. The templates will be in boxes, and the main template will have that nice gradient that goes around the pfp also on the Template.
+
+Not by college probs, but lowkey it kinda is just gonna be for college students.
+Why? Cause I'm going to Blurbify the entire course catalog of many schools, and put it on Degreeview.
+
+Then allow users to create 5 more templates. These templates will have the green, yellow, orangish, blue gradients.
+
+I wanna build a form that me as the Dev can use to create a ton of templates.
+That same form will be slightly repurposed and use by USERS to create new templates.

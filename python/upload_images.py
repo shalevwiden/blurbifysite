@@ -29,6 +29,32 @@ def make_images_dict():
 
     return images_dict
 
+def upload_pfp_andflying(path,flyingimg,pfpimg):
+    # this is for templates
+    # and for when users create more Blurb templates.
+    '''
+    Each Blurb template should have its own folder
+    Thats why there can be the same name "flying.png" across the different folders
+
+    Can use this to override if I set the same path.
+    '''
+
+    flying_blob = bucket.blob(f"{path}/flying.png")
+    # upload from filename reads it on the local machine and uploads
+    flying_blob.upload_from_filename(flyingimg)
+    print(f"Uploaded flying image to {flying_blob.name}")
+
+    # Upload profile image
+    pfp_blob = bucket.blob(f"{path}/pfp.png")
+    pfp_blob.upload_from_filename(pfpimg)
+    print(f"Uploaded profile image to {pfp_blob.name}")
+    
+
+
+
+def upload_pfp_image_user():
+    pass
+
 # example usage
 if __name__ == "__main__":
     images = make_images_dict()
