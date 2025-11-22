@@ -8,75 +8,81 @@ from google.cloud import storage
 # finish this tmr
 PROJECT_ID = "blurbify"
 BUCKET_NAME = "blurbify-assets"
+# use this command to set it:
+# gcloud auth application-default set-quota-project blurbify
+
 
 # initialize client
 client = storage.Client(project=PROJECT_ID)
 
 # get bucket
+# only working in one bucket at a time.
 bucket = client.get_bucket(BUCKET_NAME)
 
 class upload:
     def __init__(self):
         pass
-def initialize(self):
+    def initialize(self):
 
-    subprocess.run(["gcloud", "config", "set", "project", "blurbify"], check=True)
+        subprocess.run(["gcloud", "config", "set", "project", "blurbify"], check=True)
 
-    # Show authenticated accounts
-    result = subprocess.run(["gcloud", "auth", "list"], capture_output=True, text=True)
-    
-    buckets = list(client.list_buckets())
-    print([b.name for b in buckets])
+        # Show authenticated accounts
+        result = subprocess.run(["gcloud", "auth", "list"], capture_output=True, text=True)
+        
+        buckets = list(client.list_buckets())
+        print([b.name for b in buckets])
 
-def make_images_dict(self):
-    """
-    Purpose: Make a dictionary of image names -> public URLs from a GCS bucket
-    Input: None
-    Output: dict {image_name: public_url}
-    """
-    images_dict = {}
+    def make_images_dict(self):
+        """
+        Purpose: Make a dictionary of image names -> public URLs from a GCS bucket
+        Input: None
+        Output: dict {image_name: public_url}
+        """
+        images_dict = {}
 
-    # list all blobs in bucket
-    for blob in bucket.list_blobs():
-        # get key without extension
-        key = blob.name.rsplit('.', 1)[0]  # removes file extension
-        # construct public url
-        public_url = f"https://storage.googleapis.com/{BUCKET_NAME}/{blob.name}"
-        images_dict[key] = public_url
+        # list all blobs in bucket
+        for blob in bucket.list_blobs():
+            # get key without extension
+            print(f'Blob: {blob}')
+            key = blob.name.rsplit('.', 1)[0]  # removes file extension
+            # construct public url
+            public_url = f"https://storage.googleapis.com/{BUCKET_NAME}/{blob.name}"
+            images_dict[key] = public_url
 
-    return images_dict
+        return images_dict
 
-def upload_pfp_andflying(self, path,flyingimg,pfpimg):
-    # this is for templates
-    # and for when users create more Blurb templates.
-    '''
-    Each Blurb template should have its own folder
-    Thats why there can be the same name "flying.png" across the different folders
+    def upload_pfp_andflying(self, path,flyingimg,pfpimg):
+        # this is for templates
+        # and for when users create more Blurb templates.
+        '''
+        Each Blurb template should have its own folder
+        Thats why there can be the same name "flying.png" across the different folders
 
-    Can use this to override if I set the same path.
-    GCS has flat storage too.
-    '''
+        Can use this to override if I set the same path.
+        GCS has flat storage too.
+        '''
 
-    flying_blob = bucket.blob(f"{path}/flying.png")
-    # upload from filename reads it on the local machine and uploads
-    flying_blob.upload_from_filename(flyingimg)
-    print(f"Uploaded flying image to {flying_blob.name}")
+        flying_blob = bucket.blob(f"{path}/flying.png")
+        # upload from filename reads it on the local machine and uploads
+        flying_blob.upload_from_filename(flyingimg)
+        print(f"Uploaded flying image to {flying_blob.name}")
 
-    # Upload profile image
-    pfp_blob = bucket.blob(f"{path}/pfp.png")
-    pfp_blob.upload_from_filename(pfpimg)
-    print(f"Uploaded profile image to {pfp_blob.name}")
-    
+        # Upload profile image
+        pfp_blob = bucket.blob(f"{path}/pfp.png")
+        pfp_blob.upload_from_filename(pfpimg)
+        print(f"Uploaded profile image to {pfp_blob.name}")
+        
 
 
 
-    def upload_pfp_image_user(self):
-        pass
+        def upload_pfp_image_user(self):
+            pass
 
 # example usage
 def main():
     uploadobj=upload()
-    upload.initialize()
+    uploadobj.initialize()
+    imagesdict=uploadobj.make_images_dict()
 
 if __name__ == "__main__":
     
