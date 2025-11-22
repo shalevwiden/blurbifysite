@@ -1,9 +1,13 @@
+import os
+import subprocess
+import json
+
 from google.cloud import storage
 
 # set your project ID and bucket name
 # finish this tmr
-PROJECT_ID = "your-project-id"
-BUCKET_NAME = "your-bucket-name"
+PROJECT_ID = "blurbify"
+BUCKET_NAME = "blurbify-assets"
 
 # initialize client
 client = storage.Client(project=PROJECT_ID)
@@ -11,7 +15,20 @@ client = storage.Client(project=PROJECT_ID)
 # get bucket
 bucket = client.get_bucket(BUCKET_NAME)
 
-def make_images_dict():
+class upload:
+    def __init__(self):
+        pass
+def initialize(self):
+
+    subprocess.run(["gcloud", "config", "set", "project", "blurbify"], check=True)
+
+    # Show authenticated accounts
+    result = subprocess.run(["gcloud", "auth", "list"], capture_output=True, text=True)
+    
+    buckets = list(client.list_buckets())
+    print([b.name for b in buckets])
+
+def make_images_dict(self):
     """
     Purpose: Make a dictionary of image names -> public URLs from a GCS bucket
     Input: None
@@ -29,7 +46,7 @@ def make_images_dict():
 
     return images_dict
 
-def upload_pfp_andflying(path,flyingimg,pfpimg):
+def upload_pfp_andflying(self, path,flyingimg,pfpimg):
     # this is for templates
     # and for when users create more Blurb templates.
     '''
@@ -37,6 +54,7 @@ def upload_pfp_andflying(path,flyingimg,pfpimg):
     Thats why there can be the same name "flying.png" across the different folders
 
     Can use this to override if I set the same path.
+    GCS has flat storage too.
     '''
 
     flying_blob = bucket.blob(f"{path}/flying.png")
@@ -52,10 +70,14 @@ def upload_pfp_andflying(path,flyingimg,pfpimg):
 
 
 
-def upload_pfp_image_user():
-    pass
+    def upload_pfp_image_user(self):
+        pass
 
 # example usage
+def main():
+    uploadobj=upload()
+    upload.initialize()
+
 if __name__ == "__main__":
-    images = make_images_dict()
-    print(images)
+    
+    main()
