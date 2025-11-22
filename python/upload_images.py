@@ -83,6 +83,7 @@ def main():
     uploadobj=upload()
     uploadobj.initialize()
     imagesdict=uploadobj.make_images_dict()
+    print(f'Images dict is {imagesdict}')
 
 if __name__ == "__main__":
     
