@@ -171,4 +171,8 @@ And then have a on hover animation, like if the user hovers it scales and the te
 
 ### Nov 23, 2025
 
-Working on Template Section a lot
+Working on Template Section a lot.
+Worked on about page.
+New footer.
+
+Templates page is the most pressing issue currently.

@@ -2081,7 +2081,7 @@ footer.sitefooter .topborder {
 }
 footer.sitefooter .footercontent {
   width: 100%;
-  background: linear-gradient(57deg, #1b305e 0%, #2d4370 20%, #425d84 30%, #556cf8 60%, #d2e1ef 60%, #eee 100%);
+  background: linear-gradient(57deg, #1b305e 0%, #2d4370 20%, #1951a0 40%, #556cf8 60%, #d2e1ef 60%, #eee 100%);
   color: white;
   padding: 60px 8%;
   display: flex;
@@ -2385,6 +2385,10 @@ body {
   }
 }
 
+* {
+  box-sizing: border-box;
+}
+
 #aboutpage {
   display: flex;
   flex-direction: column;
@@ -2407,11 +2411,20 @@ body {
   font-weight: 700;
 }
 #aboutpage .about_text {
+  border: 3px solid blue;
+  border-radius: 25px;
+  width: 90%;
+  height: auto;
+  padding: 60px;
+  margin: 90px 0px;
+}
+#aboutpage .about_text .text_section {
   max-width: 900px;
-  margin: 0 auto 70px auto;
+  padding: 50px 0;
   font-size: 22px;
   line-height: 1.6;
   color: #1b2430;
+  text-align: left;
 }
 #aboutpage .about_feature {
   width: 90%;

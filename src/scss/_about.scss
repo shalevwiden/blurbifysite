@@ -1,4 +1,6 @@
 @use "../utils/mixins" as *;
+@use "../utils/icons" as *;
+@use "../utils/animations" as *;
 @use "./navbar";
 
 // this uses card stuff
@@ -7,7 +9,9 @@ $bodybg: #eee;
 $about-gradient: linear-gradient(90deg, #425d84, #605bf7, #60c4ff);
 $card-bg: #7daef8;
 $text-dark: #1b2430;
-
+* {
+  box-sizing: border-box;
+}
 #aboutpage {
   @include flexcol;
   width: 100%;
@@ -27,11 +31,21 @@ $text-dark: #1b2430;
   }
 
   .about_text {
-    max-width: 900px;
-    margin: 0 auto 70px auto;
-    font-size: 22px;
-    line-height: 1.6;
-    color: $text-dark;
+    border: 3px solid blue;
+    border-radius: 25px;
+    width: 90%;
+    height: auto;
+    padding: 60px;
+    margin: 90px 0px;
+
+    .text_section {
+      max-width: 900px;
+      padding: 50px 0;
+      font-size: 22px;
+      line-height: 1.6;
+      color: $text-dark;
+      text-align: left;
+    }
   }
 
   .about_feature {
