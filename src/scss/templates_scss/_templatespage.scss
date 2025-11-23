@@ -1,0 +1,49 @@
+@use "../../utils/mixins" as *;
+@use "../../utils/icons" as *;
+@use "../../utils/animations" as *;
+@use "../../utils/slider" as *;
+@use "../../utils/hidestuff" as *;
+@use "../../utils/dropdown" as *;
+
+@use "../flying_specs" as *;
+@use "./templates_ul" as *;
+:root {
+  --templates-border-thickness: 2px;
+  --templates-border-color: rgba(255, 255, 255, 1);
+}
+
+#templates_container {
+  #templatesheading {
+    margin-top: 50px;
+    font-size: 100px;
+    font-weight: bold;
+
+    @media (max-width: 1000px) {
+      font-size: 80px;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 60px;
+    }
+    #blurbifytext {
+      background: linear-gradient(90deg, #425d84ff, #605bf7ff, #60c4ffff);
+
+      /* standard gradient */
+      -webkit-background-clip: text; /* show background only inside text */
+      -webkit-text-fill-color: transparent; /* make text itself transparent */
+    }
+
+    .templates_span {
+      -webkit-background-clip: initial;
+      -webkit-text-fill-color: initial;
+      color: #3293e3ff;
+      letter-spacing: 8px;
+
+      text-shadow: calc(var(--templates-border-thickness) * 0.4)
+          var(--templates-border-thickness) 0 var(--templates-border-color),
+        calc(var(--templates-border-thickness) * 1.8)
+          calc(var(--templates-border-thickness) * 2.6) 0
+          var(--templates-border-color);
+    }
+  }
+}

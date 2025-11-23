@@ -1,0 +1,79 @@
+.schoolist-ul {
+  width: 90%;
+  height: auto;
+  background-color: #eee;
+  list-style-type: none;
+  padding: 45px 35px;
+  border-radius: 26px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  /* 1/3 width for each column. Use media quieries to change width */
+  /* finish this later */
+}
+.schoolist-ul .schoolist-column {
+  /*  add padding too */
+  /* regenerate the  */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.schoolist-ul .schoolist-column a {
+  background-color: #d45c21;
+  width: 100%;
+  height: 190px;
+  border-radius: 25px;
+  padding: 25px 30px 30px 40px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  transition: background-color 0.4s border 0.4s;
+}
+.schoolist-ul .schoolist-column a .schoolnamediv {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 25px;
+}
+.schoolist-ul .schoolist-column a:hover {
+  background-color: #bf5701;
+  border: 2px solid white;
+}
+@media (min-width: 1000px) {
+  .schoolist-ul {
+    /* this is the width that it will be 3 columns until */
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 550px) {
+  .schoolist-ul {
+    grid-template-columns: repeat(1, 90%);
+    justify-content: center;
+  }
+  .schoolist-ul .schoolist-column a {
+    padding: 25px 15px 30px 18px;
+  }
+  .schoolist-ul .schoolist-column a .schoolnamediv {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 550px) and (max-width: 375px) {
+  .schoolist-ul .schoolist-column a .schoolnamediv {
+    word-break: break-all;
+  }
+}
+/* this div contains all the a's *//*# sourceMappingURL=templates_ul.css.map */

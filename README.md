@@ -161,4 +161,14 @@ That same form will be slightly repurposed and use by USERS to create new templa
 
 ### Nov 22, 2025
 
-Gotta work on a user profile page
+Gotta work on a user profile page.
+Users will have Blurb "templates".
+On each of their template selectors we will need to have a preview of how the Blurb looks.
+So we could craft it dynamically as like a mini blurb or save as a photo.
+
+Nah I think crafting it dynamically as a mini blurb is the best idea.
+And then have a on hover animation, like if the user hovers it scales and the text content also changes.
+
+### Nov 23, 2025
+
+Working on Template Section a lot

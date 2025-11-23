@@ -23,6 +23,7 @@
 
     <!-- I need to add the heckin favicon now bro -->
     <link rel="icon" href="images/blurbifyverified.png" type="image/png" />
+    <link rel="stylesheet" href="static/css/main.css" />
 
     <title>Blurbify Templates</title>
     <meta
@@ -31,17 +32,45 @@
     "
     />
     <!-- I know this is obsolete but eh fuk it -->
-    <meta name="keywords" content="cotent, design, Blurb, Blurbify" />
+    <meta name="keywords" content="content, design, Blurb, Blurbify" />
 
     <link rel="stylesheet" href="static/css/index.css" />
   </head>
   <body>
-    <div class="sitecontainer">
-      <h1 id="heading">Templates</h1>
+    <div class="sitecontainer" id="templates_container">
+      <h1 id="templatesheading">
+        <span id="blurbifytext">Blurbify</span>
+        <span class="templates_span">Templates</span>
+      </h1>
 
-      <a href="blurbifystudio.html" class="indexbutton">
-        <div class="linkdiv">Make a Blurb</div></a
-      >
+      <nav class="navbar">
+        <ul>
+          <li class="navlink"><a href="about.html">About</a></li>
+
+          <li class="navlink">
+            <a href="blurbifystudio.html">Blurbify Studio</a>
+          </li>
+          <li class="navlink">
+            <a href="blurbifyplane.html">Blurbify Templates</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="template_section">
+        <p class="templatesdescription">
+          What are Blurb templates? Blurb templates come with preassigned, non
+          changable usernames, names, and profile pictures, but with updateable
+          content to create a variety of blurbs. Each Blurb template comes with
+          default color styling which can be changed.
+          <br /><br />In addition, each Blurb template comes with a unique
+          default flyingimage. The flying image can also be changed.
+        </p>
+        <ul class="templates_ul">
+          <li class="templates_category">Historical Templates</li>
+          <li class="templates_category">Animal Templates</li>
+          <li class="templates_category">Astronomy Templates</li>
+        </ul>
+      </div>
     </div>
 
     <!-- check vercel speed stuff -->
