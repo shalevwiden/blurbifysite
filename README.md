@@ -158,3 +158,7 @@ Then allow users to create 5 more templates. These templates will have the green
 
 I wanna build a form that me as the Dev can use to create a ton of templates.
 That same form will be slightly repurposed and use by USERS to create new templates.
+
+### Nov 22, 2025
+
+Gotta work on a user profile page
