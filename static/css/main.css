@@ -1670,105 +1670,6 @@ nav.navbar.hidden {
   pointer-events: none;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  scroll-behavior: smooth;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  gap: 10px;
-}
-
-.sitecontainer#indexpage {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  justify-content: flex-start;
-  min-height: 100vh;
-  width: 100%;
-  border: 0px solid black;
-  background-color: #eee;
-  color: white;
-  padding: 30px;
-}
-.sitecontainer#indexpage #heading {
-  margin-top: 50px;
-  margin-bottom: 40px;
-  background: linear-gradient(90deg, #425d84, #605bf7, #60c4ff); /* standard gradient */
-  -webkit-background-clip: text; /* show background only inside text */
-  -webkit-text-fill-color: transparent; /* make text itself transparent */
-  font-weight: bold;
-  font-size: 150px;
-}
-@media (max-width: 1000px) {
-  .sitecontainer#indexpage #heading {
-    font-size: 120px;
-  }
-}
-@media (max-width: 600px) {
-  .sitecontainer#indexpage #heading {
-    font-size: 60px;
-  }
-}
-.sitecontainer#indexpage div.blurbdemo {
-  width: 80%;
-  height: 300px;
-  border: 4px solid black;
-  border-radius: 26px;
-}
-.sitecontainer#indexpage a.randombutton {
-  width: 80%;
-  text-decoration: none;
-  color: navy;
-  margin-top: 100px;
-  margin-bottom: 26px;
-}
-.sitecontainer#indexpage a.randombutton .linkdiv {
-  width: 100%;
-  height: 300px;
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  border: 6px solid #8dc2ff;
-  border-radius: 35px;
-  font-weight: bold;
-  font-size: 40px;
-  background-color: #7daef8;
-  transition: all 0.3s;
-}
-.sitecontainer#indexpage a.randombutton .linkdiv:hover {
-  background-color: rgb(248, 67, 67);
-  color: white;
-  border: 6px solid #d50303;
-}
-@media (max-width: 400px) {
-  .sitecontainer#indexpage a.randombutton {
-    width: 70%;
-  }
-  .sitecontainer#indexpage a.randombutton .linkdiv {
-    height: 200px;
-    margin-top: 150px;
-    font-size: 30px;
-  }
-}
-
 div.inputdiv {
   width: 80%;
   height: auto;
@@ -2162,29 +2063,50 @@ footer a:hover {
   text-underline-offset: 3px;
 }
 
-.schoolist-ul {
+.template_section {
+  width: 90%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border: 4px solid red;
+  border-radius: 26px;
+}
+.template_section .templatesdescription {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.template_section .templates_ul {
   width: 90%;
   height: auto;
-  background-color: #eee;
+  background-color: #edccc8;
   list-style-type: none;
   padding: 45px 35px;
   border-radius: 26px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
+  border: 4px solid navy;
+  border-radius: 26px;
   /* 1/3 width for each column. Use media quieries to change width */
   /* finish this later */
 }
-.schoolist-ul .schoolist-column {
+.template_section .templates_ul .templates_category {
   /*  add padding too */
   /* regenerate the  */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 20px;
 }
-.schoolist-ul .schoolist-column a {
-  background-color: #d45c21;
+.template_section .templates_ul .templates_category a {
+  background-color: rgb(230, 82, 80);
   width: 100%;
   height: 190px;
   border-radius: 25px;
@@ -2199,44 +2121,35 @@ footer a:hover {
   align-items: flex-start;
   justify-content: center;
   transition: background-color 0.4s border 0.4s;
-}
-.schoolist-ul .schoolist-column a .schoolnamediv {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: white;
   text-decoration: none;
   font-weight: bold;
   font-size: 25px;
 }
-.schoolist-ul .schoolist-column a:hover {
-  background-color: #bf5701;
+.template_section .templates_ul .templates_category a:hover {
+  background-color: rgb(233, 73, 48);
   border: 2px solid white;
 }
 @media (min-width: 1000px) {
-  .schoolist-ul {
+  .template_section .templates_ul {
     /* this is the width that it will be 3 columns until */
     grid-template-columns: repeat(3, 1fr);
   }
 }
 @media screen and (max-width: 550px) {
-  .schoolist-ul {
+  .template_section .templates_ul {
     grid-template-columns: repeat(1, 90%);
     justify-content: center;
   }
-  .schoolist-ul .schoolist-column a {
+  .template_section .templates_ul .schoolist-column a {
     padding: 25px 15px 30px 18px;
   }
-  .schoolist-ul .schoolist-column a .schoolnamediv {
+  .template_section .templates_ul .schoolist-column a .schoolnamediv {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 550px) and (max-width: 375px) {
-  .schoolist-ul .schoolist-column a .schoolnamediv {
+  .template_section .templates_ul .schoolist-column a .schoolnamediv {
     word-break: break-all;
   }
 }
@@ -2250,6 +2163,7 @@ footer a:hover {
   margin-top: 50px;
   font-size: 100px;
   font-weight: bold;
+  margin-bottom: 50px;
 }
 @media (max-width: 1000px) {
   #templates_container #templatesheading {
@@ -2273,4 +2187,181 @@ footer a:hover {
   color: #3293e3;
   letter-spacing: 8px;
   text-shadow: calc(var(--templates-border-thickness) * 0.4) var(--templates-border-thickness) 0 var(--templates-border-color), calc(var(--templates-border-thickness) * 1.8) calc(var(--templates-border-thickness) * 2.6) 0 var(--templates-border-color);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  gap: 10px;
+}
+
+.sitecontainer#indexpage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  justify-content: flex-start;
+  min-height: 100vh;
+  width: 100%;
+  border: 0px solid black;
+  background-color: #eee;
+  color: white;
+  padding: 30px;
+}
+.sitecontainer#indexpage #heading {
+  margin-top: 50px;
+  margin-bottom: 40px;
+  background: linear-gradient(90deg, #425d84, #605bf7, #60c4ff); /* standard gradient */
+  -webkit-background-clip: text; /* show background only inside text */
+  -webkit-text-fill-color: transparent; /* make text itself transparent */
+  font-weight: bold;
+  font-size: 150px;
+}
+@media (max-width: 1000px) {
+  .sitecontainer#indexpage #heading {
+    font-size: 120px;
+  }
+}
+@media (max-width: 600px) {
+  .sitecontainer#indexpage #heading {
+    font-size: 60px;
+  }
+}
+.sitecontainer#indexpage div.blurbdemo {
+  width: 80%;
+  height: 300px;
+  border: 4px solid black;
+  border-radius: 26px;
+}
+.sitecontainer#indexpage a.randombutton {
+  width: 80%;
+  text-decoration: none;
+  color: navy;
+  margin-top: 100px;
+  margin-bottom: 26px;
+}
+.sitecontainer#indexpage a.randombutton .linkdiv {
+  width: 100%;
+  height: 300px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border: 6px solid #8dc2ff;
+  border-radius: 35px;
+  font-weight: bold;
+  font-size: 40px;
+  background-color: #7daef8;
+  transition: all 0.3s;
+}
+.sitecontainer#indexpage a.randombutton .linkdiv:hover {
+  background-color: rgb(248, 67, 67);
+  color: white;
+  border: 6px solid #d50303;
+}
+@media (max-width: 400px) {
+  .sitecontainer#indexpage a.randombutton {
+    width: 70%;
+  }
+  .sitecontainer#indexpage a.randombutton .linkdiv {
+    height: 200px;
+    margin-top: 150px;
+    font-size: 30px;
+  }
+}
+
+#aboutpage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #eee;
+  padding: 40px;
+  color: #1b2430;
+  text-align: center;
+}
+#aboutpage #aboutheading {
+  background: linear-gradient(90deg, #425d84, #605bf7, #60c4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: clamp(50px, 9vw, 120px);
+  margin: 60px 0 30px 0;
+  font-weight: 700;
+}
+#aboutpage .about_text {
+  max-width: 900px;
+  margin: 0 auto 70px auto;
+  font-size: 22px;
+  line-height: 1.6;
+  color: #1b2430;
+}
+#aboutpage .about_feature {
+  width: 90%;
+  max-width: 1200px;
+  padding: 30px;
+  margin: 40px auto;
+  background: #7daef8;
+  border-radius: 28px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  text-align: left;
+  color: white;
+  transition: transform 0.3s ease;
+}
+#aboutpage .about_feature:hover {
+  transform: translateY(-6px);
+}
+#aboutpage .about_feature img {
+  width: 45%;
+  border-radius: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 4px solid white;
+  border-radius: 26px;
+}
+#aboutpage .about_feature div {
+  width: 55%;
+}
+#aboutpage .about_feature div h2 {
+  font-size: 35px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+#aboutpage .about_feature div p {
+  font-size: 20px;
+  line-height: 1.5;
+}
+@media (max-width: 900px) {
+  #aboutpage .about_feature {
+    flex-direction: column;
+  }
+  #aboutpage .about_feature img,
+  #aboutpage .about_feature div {
+    width: 100%;
+    text-align: center;
+  }
+  #aboutpage .about_feature div h2 {
+    font-size: 28px;
+  }
 }/*# sourceMappingURL=main.css.map */

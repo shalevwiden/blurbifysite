@@ -6,7 +6,7 @@
 @use "../../utils/dropdown" as *;
 
 @use "../flying_specs" as *;
-@use "./templates_ul" as *;
+@use "./template_section" as *;
 :root {
   --templates-border-thickness: 2px;
   --templates-border-color: rgba(255, 255, 255, 1);
@@ -17,6 +17,7 @@
     margin-top: 50px;
     font-size: 100px;
     font-weight: bold;
+    margin-bottom: 50px;
 
     @media (max-width: 1000px) {
       font-size: 80px;
@@ -45,5 +46,7 @@
           calc(var(--templates-border-thickness) * 2.6) 0
           var(--templates-border-color);
     }
+  }
+  .navbar {
   }
 }
