@@ -39,6 +39,14 @@
     <meta name="keywords" content="cotent, design, Blurb, Blurbify" />
 
     <link rel="stylesheet" href="static/css/main.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-…(hash)…"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <div class="sitecontainer" id="aboutpage">
@@ -88,37 +96,57 @@
       </section>
 
       <section class="about_feature">
-        <img src="images/about3.png" alt="Blurbify Plane Feature" />
+        <img src="images/about3.png" alt="Blurbify Plane" />
         <div>
-          <h2>Share Anywhere</h2>
+          <h2>Customizable Flying Image</h2>
           <p>
-            Export blurbs as slick visuals and send them anywhere —
-            presentations, apps, or the web. You write. We style.
+            Toggle a flying image that will fly across the screen. Change (or
+            keep) the default Blurbify plane, and specify speed, position, and
+            size of the flying image.
           </p>
         </div>
       </section>
     </div>
     <!-- borrow DegreeView footer real quick lol -->
-    <footer>
-      <div class="footerleft">
-        <img
-          id="smalllogo"
-          src="https://storage.googleapis.com/degreeview/degreeviewimages/minilogo.png"
-          alt="smalldegreeviewlogo"
-        />
-        <p id="statement">Blurbify 2025</p>
-        <div class="platformsbox"></div>
-      </div>
+    <footer class="sitefooter">
+      <div class="topborder"></div>
 
-      <div class="footerright">
-        <div class="links">
-          <a href="aboutpage.html">About</a>
+      <div class="footercontent">
+        <div class="footerleft">
+          <img
+            id="footerlogo"
+            src="images/blurbifyverified.png"
+            alt="Blurbify Logo"
+          />
+          <p class="footerstatement">Blurbify 2025</p>
 
-          <a href="#heading">Home</a>
+          <div class="socials">
+            <a href="#" aria-label="Instagram" class="socialicon">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#" aria-label="TikTok" class="socialicon">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+            <a href="#" aria-label="X" class="socialicon">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+          </div>
+        </div>
 
-          <a href="exceltemplates.html">Blurbify Plane</a>
-          <!-- the templates page will be like a home page for Templates -->
-          <a href="templates.html">Blurbify Templates</a>
+        <div class="footerright">
+          <div class="footerlinks">
+            <div class="column">
+              <a href="blurbifyplane.html">Home</a>
+              <a href="about.html">About</a>
+              <a href="templates.html">Templates</a>
+            </div>
+
+            <div class="column">
+              <a href="blurbifystudio.html">Studio</a>
+              <a href="#">Privacy Policy</a>
+              <a href="#">Contact</a>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
