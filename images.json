@@ -1,5 +1,5 @@
 {
-  "hero_blurb": "https://your-bucket/hero.webp",
+  "homepageblurb": "https://storage.googleapis.com/blurbify-assets/images/homepageblurb.png",
 
   "blurbifyplane": "https://storage.googleapis.com/blurbify-assets/defaults/blurbifyplane.png",
   "nopfp": "https://storage.googleapis.com/blurbify-assets/defaults/nopfp.webp",

@@ -5,7 +5,7 @@ fetch("/images.json")
     // this will loop through and assign each one
     // no plane or pfp either
     const imageIds = [
-      "hero_blurb",
+      "homepageblurb",
 
       "direction_arrow",
       "aboveblurb",
