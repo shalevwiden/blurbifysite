@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- google analytics to see how many people visit the site -->
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-RL64E8KXE0"
+    ></script>
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-RL64E8KXE0");
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content=" The Pecan Tree blurb template on Blurbify."
+    />
+    <link rel="icon" href="../images/blurbifyverified.png" type="image/png" />
+
+    <title>Pecan Tree Blurb Template</title>
+
+    <link rel="stylesheet" href="../../static/css/main.css" />
+    <!-- for development -->
+    <link rel="stylesheet" href="../static/css/main.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-…(hash)…"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- material icons -->
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <!-- Rounded up in here too -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <body>
+    <style>
+  /* this is just the image styling */
+  /* this actually wont work because inline styles will beat this out.  */
+  .blurbify_bg_div{
+    background-color: rgb(255, 0, 0);
+  }
+  .adjustmentdiv img {
+    width:  !important;
+    height: auto !important;
+    position: relative !important;
+    margin-right: 20px !important;
+    margin-top: 10px !important;
+    /*twice as much top cause twice as big*/
+    top: 0 !important;
+  }
+
+  .pfpdiv img {
+    width: 100px !important;
+    margin-right: 10px !important;
+    margin-top: 5px !important;
+  }
+
+  @media (max-width: 400px) {
+    .pfpdiv img#pfpimage {
+      margin-bottom: 10px !important;
+      width: 74.0px !important;
+      margin-right: 7.4px !important;
+      margin-top: 3.7px !important;
+      top: 0 !important;
+    }
+  }
+</style>
+    <div class="sitecontainer">
+      <h1 id="heading">Blurbify</h1>
+      <!-- inputs to change whats in the blurb -->
+      <div class="inputdiv">
+        <ul id="input_ul">
+          <!-- make all of these lis flex cols -->
+          <li>
+            <p>Name</p>
+            <input type="text" placeholder="Enter name" id="nameInput" value="Pecan Tree" disabled />
+          </li>
+
+          <li>
+            <p>Add text that will be the username</p>
+            <div class="usernamediv">
+              <p id="at">@</p>
+              <input type="text" placeholder="Enter username" id="usernameInput"
+              value="pecantree_blurb" disabled />
+            </div>
+          </li>
+          <!-- this is hidden, but still there in case it needs to be reffered to in the future
+           
+          Also its called in inputs.js
+          -->
+          <li style="display: none">
+            <p>Verified?</p>
+            <!-- custom checkbox -->
+            <label class="checkbox-container">
+              <input type="checkbox" id="verifiedInput" />
+              <span class="checkmark"></span>
+              <span class="checkbox-label">Yes</span>
+            </label>
+          </li>
+          <li>
+            <p>Add content text</p>
+            <div class="contentbuttons">
+              <button class="contentbutton" id="pastetext">Paste</button>
+              <button class="contentbutton" id="clearcontent">
+                Clear Text
+              </button>
+            </div>
+            <!-- text area is for larger amounts of text and retains newlines -->
+            <textarea
+              placeholder="Content of the blurb here"
+              id="contentInput"
+              class="textarea_input"
+              rows="6"
+            ></textarea>
+          </li>
+          
+          <li>
+            <p>Toggle Icons</p>
+            <label class="switch" for="icons_checkbox">
+              <input type="checkbox" name="icons" id="icons_checkbox" checked />
+              <span class="slider round"></span>
+            </label>
+          </li>
+          <!-- no pfp for template blurbs -->
+          <li>
+            <p>Add an image to the post?</p>
+            <label class="switch" for="postimage_checkbox">
+              <input
+                type="checkbox"
+                name="icons"
+                id="postimage_checkbox"
+                checked
+              />
+              <span class="slider round"></span>
+            </label>
+          </li>
+
+          <li class="imageli" id="post_image_li">
+            <p>Upload Post Image</p>
+
+            <!-- the label for file uploads -->
+            <label class="file-label" for="postimageInput">Choose Image</label>
+            <!-- client side uploading only -->
+
+            <input type="file" id="postimageInput" accept="image/*" />
+            <img id="post_image_preview" />
+          </li>
+        </ul>
+        <!-- submit, need to style this mf -->
+        <button id="submitBtn">Submit Blurb</button>
+      </div>
+
+      <!-- there can be multiple specs divs. 
+       
+      -->
+      <!-- the specs divs will be drop down menus -->
+
+      <div class="specsdiv" id="color_specs">
+        <!-- specs ul has the stuff -->
+        <div class="toggle_menu">
+          <h2>Customization Panel</h2>
+          <span
+            class="material-symbols-outlined circle_down"
+            id="circle_down_colorspecs"
+          >
+            expand_circle_down
+          </span>
+        </div>
+        <ul class="specs_ul" id="specs_color_ul">
+          <li>
+            <p>Change Blurb Background Color</p>
+
+            <input type="color" name="blurb_bg_input" id="blurb_bg_input"  value=#BBAE76;" />
+          </li>
+          <li>
+            <p>Change Blurb Border Color</p>
+            <input
+              type="color"
+              name="blurb_border"
+              id="blurb_border_input"
+              
+              value="#16793c"
+              
+            />
+          </li>
+          <li>
+            <p>Change Blurb Border Thickness</p>
+            <div class="sliderdiv">
+              <input
+                type="range"
+                id="border_size_input"
+                class="sliderinput"
+                min="0"
+                max="20"
+                value="5"
+                step="1"
+              />
+              <button class="resetbutton" id="reset_border">Reset</button>
+            </div>
+          </li>
+          <li>
+            <p>Change Content Text Size</p>
+            <div class="sliderdiv">
+              <input
+                type="range"
+                id="contenttext_size_input"
+                class="sliderinput"
+                min="10"
+                max="50"
+                value="28"
+                step="1"
+              />
+              <button class="resetbutton" id="reset_text">Reset</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- hmmm I think this one is gonna be commetned out for now -->
+      <div class="specsdiv" id="pfp_specs">
+        <!-- this one is necessary fr. To get the pfps on lock ngl -->
+        <!-- this one will be incredibly useful fr lmao -->
+        <div class="toggle_menu">
+          <h2>PFP Adjustments</h2>
+          <span
+            class="material-symbols-outlined circle_down"
+            id="circle_down_pfpspecs"
+          >
+            expand_circle_down
+          </span>
+        </div>
+        <!--  -->
+        <!-- style all of this lowkey -->
+        <ul class="specs_ul" id="specs_pfp_ul">
+          <li>
+            <!-- This is going to be the resizing bounding box fr lmao  -->
+            <p>Adjust Profile Picture</p>
+            <p class="instructions">
+              Drag the blue circle around to position, and adjust the sliders to
+              resize and rotate!
+            </p>
+
+            <div class="adjustmentdiv">
+              <img
+                src="../images/nopfp.webp"
+                alt="adjustment img"
+                id="pfpimage_adjustment"
+              />
+            </div>
+            <div class="dragdiv">
+              <div id="dragcircle"></div>
+            </div>
+          </li>
+          <li>
+            <p>Change Profile Picture Size</p>
+
+            <!-- the value here is the adjustment div width -->
+            <div class="sliderdiv">
+              <input
+                type="range"
+                class="sliderinput"
+                name="pfp_size_slider"
+                id="pfp_size_slider"
+                min="70"
+                max="370"
+                value="100"
+                step="1"
+              />
+              <button class="resetbutton" id="reset_pfp_size">Reset</button>
+            </div>
+          </li>
+
+          <li>
+            <!-- this will be the last li since I assume thats what users will use the most.
+            make it a 2px or 3px adjustment per click lmao. 
+            -->
+            <p>Rotate Profile Picture</p>
+
+            <!-- the value here is the adjustment div width -->
+            <div class="sliderdiv">
+              <input
+                type="range"
+                class="sliderinput"
+                name="pfp_rotation slider"
+                id="pfp_rotation_slider"
+                min="0"
+                max="360"
+                value="0"
+                step="1"
+              />
+              <button class="resetbutton" id="reset_rotation">Reset</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- 3rd specsdiv -->
+      <div class="specsdiv" id="sizing_specs">
+        <ul class="spec_sul">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+
+      <!-- add another specs div for pfp stuff -->
+      <!-- output of the form -->
+      <div class="pointerdiv">
+        <h2 id="blurbpointer">The <span>Blurb</span>:</h2>
+        <span class="material-symbols-outlined" id="circle_down_blurb">
+          expand_circle_down
+        </span>
+        <!-- add an icon here that will add more margin bottom better -->
+      </div>
+
+      <div
+        class="blurbify_bg_div"
+        
+        style="background-color: #BBAE76;"
+        
+      >
+        <div
+          class="blurbdiv"
+          
+          style="border-color: #16793c;"
+          
+        >
+          <div id="pfp_and_username">
+            <div class="pfpborder ">
+              <div class="pfpdiv" id="pfpid">
+                <img src="../images/nopfp.webp" alt="pfp gone" id="pfpimage" />
+              </div>
+            </div>
+
+            <div class="usernamediv">
+              <div class="align_them_div">
+                <span id="name"
+                  >Pecan Tree
+                  <div id="verified" style="display: none"></div> </span
+                ><span id="username">@pecantree_blurb</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="textcontent">
+            <!-- use .gradient_text to add gradienttext -->
+            <p>This is where the text content of the blurb will go.</p>
+            <!-- use span with class of bottom to add margin top lmao -->
+          </div>
+          <section id="imagesection">
+            <img src="" alt="not here yet" id="postimage" />
+            <!-- <video src="../images/demovid.mov" controls id="postvid"></video> -->
+          </section>
+
+          <!-- icons here -->
+
+          <div class="iconsdiv">
+            <!-- can change everything in these icons and animate the fuck out of them lets goo -->
+            <i class="fa-regular fa-comment"></i>
+
+            <i class="fa-regular fa-heart" id="heart_icon"></i>
+            <div class="statsarea">
+              <span class="material-symbols-outlined stats" id="viewchart">
+                bar_chart
+              </span>
+              <span id="count">2.6k</span>
+            </div>
+            <div class="righticons">
+              <span class="material-symbols-rounded bookmark"> bookmark </span>
+              <span class="material-symbols-outlined share"> ios_share </span>
+            </div>
+          </div>
+        </div>
+        <div class="flyingimagesdiv">
+          <div id="flying_wrapper1">
+            <img
+              src=""
+              alt="FLYING"
+              id="flyingimage1"
+              class="flyingimage"
+            />
+          </div>
+        </div>
+      </div>
+      <!-- flying image -->
+
+      <!-- buttons to add animations -->
+      <div class="animation_buttons">
+        <button id="borderbutton">Blurb Border Animations</button>
+        <button id="blurb_bg_button">Blurb Background Animations</button>
+        <button id="spin">Spin the Blurb</button>
+        <button id="unblur_button">Unblur animation</button>
+        <button id="zoomup_button">Zoom Up</button>
+      </div>
+      <div class="animation_buttons" id="flying_buttons">
+        <button id="flyingbutton">Toggle Flying Object</button>
+      </div>
+      <!-- control flying image styling -->
+      <div class="specsdiv" id="flyingimage_specs">
+        <div class="toggle_menu">
+          <h2>Flying Image Adustments</h2>
+          <span
+            class="material-symbols-outlined circle_down"
+            id="circle_down_flying"
+          >
+            expand_circle_down
+          </span>
+        </div>
+        <ul class="specs_ul" id="flying_specs">
+          <li class="imageli">
+            <p>Upload a new flying image</p>
+            <label class="file-label" for="flyingimageInput"
+              >Choose Image</label
+            >
+            <!-- client side uploading only -->
+
+            <input type="file" id="flyingimageInput" accept="image/*" />
+            <img id="flying_image_preview" src="" />
+
+            <!-- this will reset it back to the Blurbify plane -->
+            <button class="resetbutton" id="resetflyingimage">
+              Reset Image
+            </button>
+            <button class="resetbutton" id="addplane">
+              <!-- users can click this button to add the Blurbify plane -->
+              <!-- no matter which template theyre in -->
+              <!-- and then reset image will reset it to the default flying image -->
+              <p>Blurbify Plane</p>
+              <img src="" alt="planepreview" id="planepreview" />
+            </button>
+          </li>
+
+          <li>
+            <p>Adjust flying image position (up or down)</p>
+            <div class="range_and_number">
+              <!-- range and number because you can adjust the number in pixels -->
+              <div class="numdiv">
+                <input
+                  type="number"
+                  id="flying_y_px"
+                  min="-700"
+                  max="700"
+                  value="0"
+                  step="5"
+                />
+                <p class="units">px</p>
+              </div>
+
+              <div class="sliderdiv">
+                <input
+                  type="range"
+                  id="flying_y_slider"
+                  class="sliderinput"
+                  min="-700"
+                  max="700"
+                  value="0"
+                  step="1"
+                />
+                <!-- this will reset the pixel count in the num input and the slider -->
+                <button class="resetbutton" id="reset_flying_position">
+                  Reset
+                </button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <p>Increase or Decrease Speed</p>
+            <div class="range_and_number">
+              <!-- range and number because you can adjust the number in pixels -->
+              <!-- min and max affect speed here lol -->
+              <div class="numdiv">
+                <input
+                  type="number"
+                  id="flying_speed"
+                  min="1"
+                  max="20"
+                  value="5"
+                  step="1"
+                />
+                <p class="units">Seconds</p>
+              </div>
+
+              <div class="sliderdiv">
+                <input
+                  type="range"
+                  id="flying_speed_slider"
+                  class="sliderinput"
+                  min="1"
+                  max="20"
+                  value="5"
+                  step="1"
+                />
+                <!-- this will reset the pixel count in the num input and the slider -->
+                <button class="resetbutton" id="reset_flying_speed">
+                  Reset
+                </button>
+              </div>
+            </div>
+          </li>
+          <li>
+            <p>Order the Flying Image</p>
+            <!-- above or below the Blurb are the options -->
+            <div class="radiodiv">
+              <div class="option">
+                <input
+                  type="radio"
+                  id="aboveblurbinput"
+                  name="order"
+                  value="above"
+                  checked
+                />
+                <!-- the labels make it clickable -->
+                <label for="aboveblurbinput" class="radio-box">
+                  <p class="radiotext">Above the Blurb</p>
+
+                  <img src="" alt="Above" id="aboveblurb" />
+                </label>
+              </div>
+              <div class="option">
+                <input type="radio" id="belowblurbinput" name="order" />
+                <!-- the labels make it clickable -->
+
+                <label for="belowblurbinput" class="radio-box">
+                  <p class="radiotext">Under the Blurb</p>
+
+                  <img src="" alt="Under" id="belowblurb" />
+                </label>
+              </div>
+            </div>
+          </li>
+          <li>
+            <p>Set flying image rotations</p>
+            <div class="rotationsdiv">
+              <!-- these will be arrow type buttons -->
+              <div class="buttonsdiv">
+                <div class="rotatesubclass" id="rotateobject">
+                  <p>Rotate the flying Object</p>
+                  <div class="arrowsdiv">
+                    <i class="fa-solid fa-circle-left" id="objectright"></i>
+
+                    <i class="fa-solid fa-circle-right" id="objectleft"></i>
+                  </div>
+                </div>
+                <div class="rotatesubclass" id="rotatemotion">
+                  <p>Rotate the Direction of Motion</p>
+                  <div class="arrowsdiv">
+                    <i class="fa-solid fa-circle-left" id="arrowleft"></i>
+
+                    <i class="fa-solid fa-circle-right" id="arrowright"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="previewdiv">
+                <img
+                  src=""
+                  alt=""
+                  id="rotation_object_preview"
+                />
+                <img
+                  src="../images/icons/blurbify_arrow.svg"
+                  alt=""
+                  id="direction_arrow"
+                />
+              </div>
+            </div>
+          </li>
+          <li>
+            <!-- by default size will be like 300 or so -->
+            <p>Adjust flying image size</p>
+            <p class="disclaimer">
+              Resizing the image on mobile makes the motion of it not as smooth.
+              Works well on computer, not mobile screens.
+            </p>
+            <div class="sliderdiv">
+              <input
+                type="range"
+                id="flying_size_input"
+                class="sliderinput"
+                min="100"
+                max="1000"
+                step="10"
+              />
+              <button class="resetbutton" id="reset_flying_size_button">
+                Reset
+              </button>
+            </div>
+          </li>
+
+          <!-- add this later too -->
+          <li style="display: none">
+            <p>Increase flying image count</p>
+            <div class="range_and_number">
+              <input type="number" id="flyingimage_count_number" />
+              <div class="sliderdiv">
+                <!-- this input will control the margins between the flying images so there can be multiple -->
+                <input
+                  type="range"
+                  id="flyingimage_count_input"
+                  class="sliderinput"
+                  min="1"
+                  max="10"
+                  value="1"
+                  step="1"
+                />
+                <button class="resetbutton" id="reset_flying_size">
+                  Reset
+                </button>
+              </div>
+            </div>
+          </li>
+
+          <!-- add this later -->
+          <li style="display: none">
+            <p>Choose from sound effect</p>
+            <div class="soundeffects_div">
+              <button class="soundbutton" id="airplane"></button>
+              <button class="soundbutton" id="falling">
+                Add the pheeeew sound effect
+              </button>
+              <button class="soundbutton" id="aahh">
+                Add the ahhh sound effect
+              </button>
+              <button class="soundbutton" id="f1">
+                Add the f1 car sound effect
+              </button>
+              <!-- no sound effect now -->
+              <button class="soundbutton" id="none">No sound effect</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- return home button -->
+
+      <a href="../index.html" id="homebutton">
+        <div class="linkdiv">Return to Start Screen</div></a
+      >
+    </div>
+
+    <!-- for profile pictures -->
+
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+      
+        <script src="../../static/js/toggleanimations.js"></script>
+
+    <script src="../../static/js/template_inputs.js"></script>
+
+    <script src="../../static/js/dropdown.js"></script>
+    <script src="../../static/js/icons.js"></script>
+    <script src="../../static/js/images.js"></script>
+
+    <script src="../../static/js/flyingimage.js"></script>
+  </body>
+</html>

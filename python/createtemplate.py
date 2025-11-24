@@ -81,7 +81,7 @@ class Templates:
 
     <script src="{'../'*depth}static/js/flyingimage.js"></script>'''
 
-        name='Elephant'
+        name='Pecan Tree'
         pfpurl=''
         flyingimageurl=''
 
@@ -91,11 +91,11 @@ class Templates:
         data={
             "title": f"{name} Blurb Template",
             "name": name,
-            "username": "elephant_blurb",
+            "username": "pecantree_blurb",
             "disabledinputs":True,
             "pfpchanging":False,
-            "bordercolor": "#da4823",
-            "blurbbackgroundcolor":"#F79152",
+            "bordercolor": "#16793c",
+            "blurbbackgroundcolor":"#BBAE76",
             "pfpurl":pfpurl,
             "flyingimageurl":flyingimageurl,
         # this will set the border around their pfp
@@ -200,28 +200,33 @@ class Templates:
 
             fulltemplatesfolder=os.path.join(templatesfolder,foldername)
             templatesectionname=f'{foldername}templates.html'
-            templatesectionfilepath=os.path.join(templatesfolder,templatesectionname)
+            templatesectionfilepath=os.path.join(fulltemplatesfolder,templatesectionname)
+            print(f'templatesectionfilepath: \n{templatesectionfilepath}')
+            print(f'foldername :\n {foldername}')
 
             
-            
-            data={
-                "sectionname":foldername
-            }
+            def make_templatesection_data():
+                data={
+                    "sectionname":foldername
+                }
 
-            # get all the URL's, exclude the index type one we're building in this function
-            templateurls=[file for file in os.listdir(fulltemplatesfolder) if "templates" not in file]
-            templatenames=[url.replace("html","") for url in templateurls]
+                # get all the URL's, exclude the index type one we're building in this function
+                templateurls=[file for file in os.listdir(fulltemplatesfolder) if "templates" not in file]
+                templatenames=[url.replace("html","") for url in templateurls]
 
-            # build the dict dynamically
-            sectiondict = {
-                name: url for name, url in zip(templatenames, templateurls)
-            }
-            data.update(sectiondict)
+                # build the dict dynamically
+                sectiondict = {
+                    name: url for name, url in zip(templatenames, templateurls)
+                }
+                data["sectiondict"]=sectiondict
+                return data
+            data = make_templatesection_data()
 
-            rendered = templatesection_template.render()
-            with open(templatesectionfilepath,'w') as markup:
-                markup.write(rendered)
-
+            def renderit():
+                rendered = templatesection_template.render(data)
+                with open(templatesectionfilepath,'w') as markup:
+                    markup.write(rendered)
+            renderit()
 
 
 
@@ -258,14 +263,14 @@ class Templates:
 
 def main():
     # this is what gets set. So itll make the json, and the template
-    newpath='animals/elephant'
+    newpath='plants/pecantree'
 
     templateObj=Templates()
     def make_new(newpath):
         templateObj.make_json(newpath)
         templateObj.make_template(newpath)
         
-    # make_new()
+    # make_new(newpath)
 
     templateObj.update_templates()
     # update studio regardless
