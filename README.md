@@ -176,3 +176,9 @@ Worked on about page.
 New footer.
 
 Templates page is the most pressing issue currently.
+
+Heres the idea:
+
+- have a template for the template_subsection page
+- Assign it to a folder. For example for the historical one, assign it to that historical one too.
+  Create it by reading all of the
