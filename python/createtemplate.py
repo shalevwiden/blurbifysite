@@ -160,7 +160,7 @@ class Templates:
                     jsonfiles.append(rel_path)
         
         # this works and has all the jsonfile paths
-        print(jsonfiles)
+        # print(jsonfiles)
 
         def update_html_now(jsonfiles):
             blurbtemplate = self.env.get_template("main.html")
@@ -196,18 +196,30 @@ class Templates:
         ]
         print(f'templatesections:\n{ templatesections}')
         # the sections come from the json folder automatically
-        for folderpath in templatesections:
+        for foldername in templatesections:
 
-            htmlfile=folderpath.replace('jsonfolder','templates')
-            htmlfile=htmlfile.replace('.json','.html')            
-            data={}
+            fulltemplatesfolder=os.path.join(templatesfolder,foldername)
+            templatesectionname=f'{foldername}templates.html'
+            templatesectionfilepath=os.path.join(templatesfolder,templatesectionname)
 
-            sectiondict={   
+            
+            
+            data={
+                "sectionname":foldername
+            }
+
+            # get all the URL's, exclude the index type one we're building in this function
+            templateurls=[file for file in os.listdir(fulltemplatesfolder) if "templates" not in file]
+            templatenames=[url.replace("html","") for url in templateurls]
+
+            # build the dict dynamically
+            sectiondict = {
+                name: url for name, url in zip(templatenames, templateurls)
             }
             data.update(sectiondict)
 
             rendered = templatesection_template.render()
-            with open(htmlfile,'w') as markup:
+            with open(templatesectionfilepath,'w') as markup:
                 markup.write(rendered)
 
 
@@ -255,7 +267,7 @@ def main():
         
     # make_new()
 
-    # templateObj.update_templates()
+    templateObj.update_templates()
     # update studio regardless
 
     # templateObj.update_studio()
