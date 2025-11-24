@@ -26,8 +26,10 @@ nav.navbar {
     border: 1px solid rgb(214, 238, 248);
     border-radius: 26px;
     width: 90%;
-    height: 150px;
-    padding: 20px 23px;
+    height: 100px;
+
+    // increasing this padding value would decrease the height of the boxes
+    padding: 15px 23px;
     background: rgba(229, 230, 255, 0.2);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);

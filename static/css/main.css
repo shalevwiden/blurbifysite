@@ -1614,8 +1614,8 @@ nav.navbar ul {
   border: 1px solid rgb(214, 238, 248);
   border-radius: 26px;
   width: 90%;
-  height: 150px;
-  padding: 20px 23px;
+  height: 100px;
+  padding: 15px 23px;
   background: rgba(229, 230, 255, 0.2);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -2412,7 +2412,8 @@ body {
   font-weight: 700;
 }
 #aboutpage .about_text {
-  border: 3px solid blue;
+  border: 3px solid rgb(17, 87, 237);
+  border-style: dashed;
   border-radius: 25px;
   width: 90%;
   height: auto;

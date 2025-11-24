@@ -186,6 +186,30 @@ class Templates:
                     markup.write(rendered)
         update_html_now(jsonfiles)
 
+    def template_sections(self):
+        templatesection_template = self.env.get_template("templatesection.html")
+        # section dict will have the template name and the url
+        # for the url they will all be in the same folder
+        templatesections = [
+            folder for folder in os.listdir(jsonfolder)
+            if os.path.isdir(os.path.join(jsonfolder, folder))
+        ]
+        print(f'templatesections:\n{ templatesections}')
+        # the sections come from the json folder automatically
+        for folderpath in templatesections:
+
+            htmlfile=folderpath.replace('jsonfolder','templates')
+            htmlfile=htmlfile.replace('.json','.html')            
+            data={}
+
+            sectiondict={   
+            }
+            data.update(sectiondict)
+
+            rendered = templatesection_template.render()
+            with open(htmlfile,'w') as markup:
+                markup.write(rendered)
+
 
 
 
@@ -231,10 +255,11 @@ def main():
         
     # make_new()
 
-    templateObj.update_templates()
+    # templateObj.update_templates()
     # update studio regardless
 
-    templateObj.update_studio()
+    # templateObj.update_studio()
+    templateObj.template_sections()
 
 
 main()
