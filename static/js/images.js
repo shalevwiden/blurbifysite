@@ -11,6 +11,9 @@ fetch("/images.json")
       "aboveblurb",
       "belowblurb",
       "verified",
+      "about1",
+      "about2",
+      "about3",
     ];
 
     // Loop through IDs and assign .src safely

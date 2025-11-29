@@ -8,5 +8,8 @@
   "aboveblurb": "https://storage.googleapis.com/blurbify-assets/images/aboveblurb.png",
   "belowblurb": "https://storage.googleapis.com/blurbify-assets/images/belowblurb.png",
   "blurbifyverified": "https://storage.googleapis.com/blurbify-assets/images/blurbifyverified.png",
-  "verified": "https://storage.googleapis.com/blurbify-assets/images/verified.png"
+  "verified": "https://storage.googleapis.com/blurbify-assets/images/verified.png",
+  "about1": "https://storage.googleapis.com/blurbify-assets/images/about1.png",
+  "about2": "https://storage.googleapis.com/blurbify-assets/images/about2.png",
+  "about3": "https://storage.googleapis.com/blurbify-assets/images/about3.png"
 }
