@@ -46,16 +46,28 @@ body {
     }
   }
   div.blurbdemo {
-    width: 80%;
-    height: 300px;
-    @include border(black);
+    width: 85%;
+    height: auto;
+    // @include border(black);
+    margin: 100px 0;
+    padding: 30px;
+    color: transparent;
+
+    img#homepageblurb {
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+      transition: 0.5s all;
+      &:hover {
+        transform: scale(1.03) translateY(-10px);
+      }
+    }
   }
   a.randombutton {
     width: 80%;
     text-decoration: none;
     color: navy;
 
-    margin-top: 100px;
     margin-bottom: 26px;
 
     .linkdiv {
