@@ -1,6 +1,6 @@
 // Grab elements
 const pasteBtn = document.getElementById("pastetext");
-const clearBtn = document.getElementById("clearcontent");
+const clearBtn = document.getElementById("cleartext");
 const contentInput = document.getElementById("contentInput");
 
 async function pasteText() {
