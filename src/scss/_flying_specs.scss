@@ -8,6 +8,8 @@ $debugborders: false;
 #flyingimage_specs {
   // this has all the styling of a specs div already
   // this extends from .specsdiv in bodytext.scss
+  border: 9px solid rgba(227, 22, 93, 1);
+
   margin-bottom: 100px;
   .toggle_menu {
   }

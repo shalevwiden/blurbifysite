@@ -57,6 +57,18 @@
     
     <div class="sitecontainer">
       <h1 id="heading">Blurbify</h1>
+      <nav class="navbar" style="position: relative">
+        <ul>
+          <li class="navlink">
+            <a href="templates.html">Blurbify Plane</a>
+          </li>
+
+          <li class="navlink">
+            <a href="blurbifystudio.html">Home</a>
+          </li>
+          <li class="navlink"><a href="about.html">About</a></li>
+        </ul>
+      </nav>
       <!-- inputs to change whats in the blurb -->
       <div class="inputdiv">
         <ul id="input_ul">
@@ -408,7 +420,7 @@
             <button class="resetbutton" id="resetflyingimage">
               Reset Image
             </button>
-            <button class="resetbutton" id="addplane">
+            <button class="resetbutton" id="addplane" style="display: none">
               <!-- users can click this button to add the Blurbify plane -->
               <!-- no matter which template theyre in -->
               <!-- and then reset image will reset it to the default flying image -->
@@ -618,10 +630,52 @@
       </div>
       <!-- return home button -->
 
-      <a href="../index.html" id="homebutton">
-        <div class="linkdiv">Return to Start Screen</div></a
+      <a href="#heading" id="homebutton">
+        <div class="linkdiv">Go to top of page</div></a
       >
     </div>
+    <footer class="sitefooter">
+      <div class="topborder"></div>
+
+      <div class="footercontent">
+        <div class="footerleft">
+          <img
+            id="footerlogo"
+            src="images/blurbifyverified.png"
+            alt="Blurbify Logo"
+          />
+          <p class="footerstatement">Blurbify 2025</p>
+
+          <div class="socials">
+            <a href="#" aria-label="Instagram" class="socialicon">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#" aria-label="TikTok" class="socialicon">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+            <a href="#" aria-label="X" class="socialicon">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="footerright">
+          <div class="footerlinks">
+            <div class="column">
+              <a href="index.html">Home</a>
+              <a href="about.html">About</a>
+            </div>
+
+            <div class="column">
+              <a href="blurbifystudio.html">Blurbify Studio</a>
+              <a href="blurbifyplane.html">Blurbify Plane</a>
+              <!-- this works -->
+              <a href="mailto:hello@blurbifyapp.com">Contact</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <!-- for profile pictures -->
 

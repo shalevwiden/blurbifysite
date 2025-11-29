@@ -1,4 +1,7 @@
+// this makes the navbar hide after 100vh
+
 const nav = document.querySelector("nav.navbar");
+
 const hideVal = window.innerHeight; // this = 100vh in px
 
 window.addEventListener("scroll", () => {

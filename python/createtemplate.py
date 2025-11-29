@@ -19,7 +19,8 @@ jsonfolder = os.path.join(BASE_DIR, "../jsonfolder")
 class Templates:
     def __init__(self):
         # templates env
-        self.env=Environment(loader=FileSystemLoader(templatesfolder))
+        self.env=Environment(loader=FileSystemLoader(templatesfolder),auto_reload=True
+)
 
     def make_json(self,newpath):
 
@@ -249,16 +250,23 @@ class Templates:
     <script src="static/js/dropdown.js"></script>
     <script src="static/js/icons.js"></script>
     <script src="static/js/images.js"></script>
+    <script src="static/js/navbar.js"></script>
 
-    <script src="static/js/flyingimage.js"></script>''')
+
+    <script src="static/js/flyingimage.js"></script>
+    <script src="static/js/pasteclear.js"></script>
+
+                    ''')
+        # print(f'data:\n{data}')
 
         root_dir = os.path.abspath(os.path.join(BASE_DIR, "..", ))
 
         studiopath = os.path.abspath(os.path.join(root_dir, "blurbifystudio.html"))
 
         rendered = blurbtemplate.render(data)
-        with open(studiopath,'w') as newtemplate:
-            newtemplate.write(rendered)
+
+        with open(studiopath,'w') as studiomarkup:
+            studiomarkup.write(rendered)
 
 
 def main():
@@ -275,7 +283,7 @@ def main():
     templateObj.update_templates()
     # update studio regardless
 
-    # templateObj.update_studio()
+    templateObj.update_studio()
     templateObj.template_sections()
 
 
