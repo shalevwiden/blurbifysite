@@ -29,7 +29,7 @@ footer.sitefooter {
     display: flex;
     justify-content: space-between;
     gap: 80px;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
   }
   .footerleft {
     display: flex;
@@ -110,9 +110,13 @@ footer.sitefooter {
     justify-content: center;
 
     .footerright .footerlinks {
-      flex-direction: column;
+      // flex-direction: column;
       gap: 30px;
       align-items: center;
+
+      .column a {
+        font-size: 10px;
+      }
     }
   }
 }

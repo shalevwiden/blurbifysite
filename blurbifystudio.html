@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="static/css/main.css" />
     <!-- for development -->
     <link rel="stylesheet" href="../static/css/main.css" />
+    <!-- for locally hosted fa icons stuff -->
     <link rel="stylesheet" href="assets/css/all.min.css" />
 
     <link
@@ -61,7 +62,7 @@
           </li>
 
           <li class="navlink">
-            <a href="blurbifystudio.html">Home</a>
+            <a href="index.html">Home</a>
           </li>
           <li class="navlink"><a href="about.html">About</a></li>
         </ul>
@@ -316,11 +317,17 @@
       <!-- output of the form -->
       <div class="pointerdiv">
         <h2 id="blurbpointer">The <span>Blurb</span>:</h2>
-        <span class="material-symbols-outlined" id="circle_down_blurb">
+        <span
+          class="material-symbols-outlined circle_down"
+          id="circle_down_blurb"
+        >
           expand_circle_down
         </span>
 
-        <button id="saveblurb">Save Blurb</button>
+        <button id="saveblurb">
+          Save Blurb
+          <span class="material-symbols-outlined download"> download </span>
+        </button>
         <!-- add an icon here that will add more margin bottom better -->
       </div>
 
@@ -349,7 +356,7 @@
           </div>
           <section id="imagesection">
             <img src="" alt="not here yet" id="postimage" />
-            <!-- <video src="../images/demovid.mov" controls id="postvid"></video> -->
+            <!-- <video src="../images/demovid.mov" controls id="blurbvid"></video> -->
           </section>
 
           <!-- icons here -->

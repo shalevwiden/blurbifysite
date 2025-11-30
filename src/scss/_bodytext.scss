@@ -339,6 +339,7 @@ body {
       height: auto;
       padding: 10px;
       justify-content: flex-start;
+      text-align: left;
 
       @if $debugborders {
         border: 3px solid rgba(73, 70, 230, 1);
@@ -348,14 +349,13 @@ body {
 
       width: 100%;
       // distance above the BLurb
-      margin-bottom: 20px;
+      // margin-bottom: 20px;
 
       h2#blurbpointer {
         font-size: 50px;
-        text-decoration: underline;
-        text-decoration-color: navy;
-        text-decoration-thickness: 4px;
-        text-underline-offset: 10px;
+        text-align: left;
+        @include flexrow;
+        gap: 0;
 
         span {
           // this makes it gradient textg
@@ -369,17 +369,73 @@ body {
           // -webkit-background-clip: text;
           // -webkit-text-fill-color: transparent;
 
-          color: rgb(36, 110, 221);
+          color: rgba(15, 104, 238, 1);
+          // for in between letter spacing now
+          margin-left: 12px;
         }
 
-        padding-left: 100px;
+        padding-left: 60px;
+
+        @media (max-width: 1000px) {
+          font-size: 40px;
+          padding-left: 10px;
+        }
+      }
+      span#circle_down_blurb {
+        margin-left: -5px;
+        font-size: 45px !important;
+      }
+      padding: 10px 20px;
+      #saveblurb {
+        margin-left: auto;
+        margin-right: 30px;
+
+        @include flexcol;
+        gap: 5px;
+
+        font-size: 16px;
+        font-weight: 600;
+        color: #002bffff;
+        background-color: #bbd0ffff; /* dark blue */
+        border: none;
+        border-radius: 26px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        height: 100px;
+        width: 130px;
+
+        @media (max-width: 600px) {
+          margin-right: 0;
+        }
+
+        .download {
+          font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 200, "opsz" 48;
+          font-size: 34px;
+
+          color: rgb(10, 10, 97);
+          display: inline-block;
+        }
+
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Active / pressed effect */
+        &:active {
+          transform: translateY(0);
+          box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+        }
       }
 
       @media (max-width: 400px) {
         h2#blurbpointer {
           font-size: 35px;
-          padding-left: 30px;
+          span {
+            margin-left: 9px;
+          }
         }
+        padding-left: 0;
       }
     }
 

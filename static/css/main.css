@@ -911,25 +911,85 @@ body .sitecontainer div.pointerdiv {
   height: auto;
   padding: 10px;
   justify-content: flex-start;
+  text-align: left;
   border: 1px solid transparent;
   width: 100%;
-  margin-bottom: 20px;
+  padding: 10px 20px;
 }
 body .sitecontainer div.pointerdiv h2#blurbpointer {
   font-size: 50px;
-  text-decoration: underline;
-  text-decoration-color: navy;
-  text-decoration-thickness: 4px;
-  text-underline-offset: 10px;
-  padding-left: 100px;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  gap: 0;
+  padding-left: 60px;
 }
 body .sitecontainer div.pointerdiv h2#blurbpointer span {
-  color: rgb(36, 110, 221);
+  color: rgb(15, 104, 238);
+  margin-left: 12px;
+}
+@media (max-width: 1000px) {
+  body .sitecontainer div.pointerdiv h2#blurbpointer {
+    font-size: 40px;
+    padding-left: 10px;
+  }
+}
+body .sitecontainer div.pointerdiv span#circle_down_blurb {
+  margin-left: -5px;
+  font-size: 45px !important;
+}
+body .sitecontainer div.pointerdiv #saveblurb {
+  margin-left: auto;
+  margin-right: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  gap: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #002bff;
+  background-color: #bbd0ff; /* dark blue */
+  border: none;
+  border-radius: 26px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  height: 100px;
+  width: 130px;
+  /* Active / pressed effect */
+}
+@media (max-width: 600px) {
+  body .sitecontainer div.pointerdiv #saveblurb {
+    margin-right: 0;
+  }
+}
+body .sitecontainer div.pointerdiv #saveblurb .download {
+  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 200, "opsz" 48;
+  font-size: 34px;
+  color: rgb(10, 10, 97);
+  display: inline-block;
+}
+body .sitecontainer div.pointerdiv #saveblurb:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+body .sitecontainer div.pointerdiv #saveblurb:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
 @media (max-width: 400px) {
+  body .sitecontainer div.pointerdiv {
+    padding-left: 0;
+  }
   body .sitecontainer div.pointerdiv h2#blurbpointer {
     font-size: 35px;
-    padding-left: 30px;
+  }
+  body .sitecontainer div.pointerdiv h2#blurbpointer span {
+    margin-left: 9px;
   }
 }
 body .sitecontainer div.blurbify_bg_div {
@@ -1641,6 +1701,7 @@ nav.navbar ul li {
   align-items: center;
   justify-content: center;
   gap: 20px;
+  padding: 0 10px;
   background: rgba(157, 197, 242, 0.6);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -1657,14 +1718,14 @@ nav.navbar ul li a {
   text-decoration: none;
   font-size: 22px;
 }
-@media (max-width: 450px) {
-  nav.navbar ul {
+@media (max-width: 650px) {
+  nav.navbar {
     width: 100%;
   }
-  nav.navbar ul ul {
+  nav.navbar ul {
     width: 92%;
   }
-  nav.navbar ul ul li a {
+  nav.navbar ul li a {
     font-size: 15px;
   }
 }
@@ -2125,7 +2186,6 @@ footer.sitefooter .footercontent {
   display: flex;
   justify-content: space-between;
   gap: 80px;
-  flex-wrap: wrap;
 }
 footer.sitefooter .footerleft {
   display: flex;
@@ -2194,9 +2254,11 @@ footer.sitefooter .footerright .footerlinks .column a:hover {
     justify-content: center;
   }
   footer.sitefooter .footerright .footerlinks {
-    flex-direction: column;
     gap: 30px;
     align-items: center;
+  }
+  footer.sitefooter .footerright .footerlinks .column a {
+    font-size: 10px;
   }
 }
 
