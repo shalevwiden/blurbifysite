@@ -2496,7 +2496,12 @@ body {
 }
 .sitecontainer#indexpage a.randombutton .linkdiv {
   width: 100%;
-  height: 100px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
   padding: 30px;
   border: 6px solid #8dc2ff;
   border-radius: 35px;

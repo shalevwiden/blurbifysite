@@ -81,8 +81,8 @@ body {
 
     .linkdiv {
       width: 100%;
-      height: 100px;
-
+      height: 200px;
+      @include flexcol;
       padding: 30px;
 
       border: 6px solid #8dc2ffff;
