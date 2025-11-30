@@ -185,7 +185,12 @@ Heres the idea:
 
 ### Nov 29, 2025
 
-Made a lot of progress
+Made a lot of progress.
+
+Mostly worked on save blurb button.
+
+And it STILL doesnt work in production.
+It does in development though.
 
 What I still need to do:
 
