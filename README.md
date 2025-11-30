@@ -182,3 +182,13 @@ Heres the idea:
 - have a template for the template_subsection page
 - Assign it to a folder. For example for the historical one, assign it to that historical one too.
   Create it by reading all of the
+
+### Nov 29, 2025
+
+Made a lot of progress
+
+What I still need to do:
+
+- Make the Blurbify plane page on the site instead of redirecting to the external site
+- make the footer better.
+- Other than that we've certainly made progress.
