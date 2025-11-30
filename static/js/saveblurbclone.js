@@ -10,7 +10,18 @@ saveblurb.addEventListener("click", () => {
     removedPostImage = true;
     postImage.remove();
   }
-  blurb_and_bg = document.querySelector(".blurbify_bg_div");
+  const blurb_and_bg = blurbify_bg_div.cloneNode(true);
+
+  sitecontainer = document.querySelector(".sitecontainer");
+
+  const container = document.createElement("div");
+  container.style.position = "absolute";
+  //   make it off screen
+  container.style.left = "-9999px";
+  container.appendChild(blurb_and_bg);
+  sitecontainer.appendChild(container);
+
+  copyAllComputedStyles(blurbify_bg_div, blurb_and_bg); // copy from original → clone
 
   blurbdiv2 = blurb_and_bg.querySelector(".blurbdiv");
   const computed = getComputedStyle(blurbdiv2);
@@ -18,21 +29,20 @@ saveblurb.addEventListener("click", () => {
 
   //   already globally declared
   oldStyle = blurbdiv2.getAttribute("style") || "";
-  oldbgStyle = blurb_and_bg.getAttribute("style") || "";
 
   if (window.innerWidth <= 450) {
     // Scale blurb
     blurbdiv2.style.margin = "10px";
     blurbdiv2.style.transform = "scale(.9)";
     // Padding around container
-    blurb_and_bg.style.paddingTop = "20x";
-    blurb_and_bg.style.paddingBottom = "20px";
+    blurb_and_bg.style.paddingTop = "100px";
+    blurb_and_bg.style.paddingBottom = "100px";
     blurb_and_bg.style.paddingLeft = "20px";
     blurb_and_bg.style.paddingRight = "20px";
   } else {
-    blurbdiv2.style.margin = "20px";
-    blurb_and_bg.style.paddingTop = "10px";
-    blurb_and_bg.style.paddingBottom = "10px";
+    blurbdiv2.style.margin = "10px";
+    blurb_and_bg.style.paddingTop = "100px";
+    blurb_and_bg.style.paddingBottom = "100px";
     blurb_and_bg.style.paddingLeft = "0px";
     blurb_and_bg.style.paddingRight = "0px";
   }
@@ -44,13 +54,14 @@ saveblurb.addEventListener("click", () => {
       imgPlaceholder: "", // ignore broken image instead of throwing,
     })
     .then((dataUrl) => {
+      sitecontainer.removeChild(container); // clean up
+
       // put back post image
       if (removedPostImage) {
         document.getElementById("imagesection").appendChild(postImage);
       }
 
       blurbdiv2.setAttribute("style", oldStyle);
-      blurb_and_bg.setAttribute("style", oldbgStyle);
 
       const link = document.createElement("a");
       link.download = "blurb.png";
