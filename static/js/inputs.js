@@ -22,7 +22,7 @@ function setOnLoad() {
   // Check if the page ends with blurbifystudio or blurbifystudio.html
   if (url.endsWith("blurbifystudio") || url.endsWith("blurbifystudio.html")) {
     if (name) name.innerText = defaultname;
-    if (username) username.innerText = defaultusername;
+    if (username) username.innerText = "@" + defaultusername;
     console.log("set default name and username in blurb for blurbifystudio");
   }
 }
@@ -192,6 +192,7 @@ postimageInput.addEventListener("change", () => {
   // when file is read, show preview
   reader.onload = (e) => {
     postimagepreview.src = e.target.result; // this is a base64 data URL
+    postimage.style.display = "inline";
   };
 
   reader.readAsDataURL(file); // reads file as Base64

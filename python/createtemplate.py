@@ -255,6 +255,9 @@ class Templates:
 
     <script src="static/js/flyingimage.js"></script>
     <script src="static/js/pasteclear.js"></script>
+    <!-- saving images -->
+    <script src="https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.min.js"></script>
+    <script src="static/js/saveblurb.js"></script>
 
                     ''')
         # print(f'data:\n{data}')

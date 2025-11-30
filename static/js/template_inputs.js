@@ -155,6 +155,7 @@ postimageInput.addEventListener("change", () => {
   // when file is read, show preview
   reader.onload = (e) => {
     postimagepreview.src = e.target.result; // this is a base64 data URL
+    postimage.style.display = "inline";
   };
 
   reader.readAsDataURL(file); // reads file as Base64

@@ -26,11 +26,12 @@
     />
     <link rel="icon" href="../images/blurbifyverified.png" type="image/png" />
 
-    <title></title>
+    <title>Blurbify Studio</title>
 
     <link rel="stylesheet" href="static/css/main.css" />
     <!-- for development -->
     <link rel="stylesheet" href="../static/css/main.css" />
+    <link rel="stylesheet" href="assets/css/all.min.css" />
 
     <link
       rel="stylesheet"
@@ -103,9 +104,7 @@
             <p>Add content text</p>
             <div class="contentbuttons">
               <button class="contentbutton" id="pastetext">Paste</button>
-              <button class="contentbutton" id="clearcontent">
-                Clear Text
-              </button>
+              <button class="contentbutton" id="cleartext">Clear Text</button>
             </div>
             <!-- text area is for larger amounts of text and retains newlines -->
             <textarea
@@ -320,6 +319,8 @@
         <span class="material-symbols-outlined" id="circle_down_blurb">
           expand_circle_down
         </span>
+
+        <button id="saveblurb">Save Blurb</button>
         <!-- add an icon here that will add more margin bottom better -->
       </div>
 
@@ -687,6 +688,9 @@
     <!-- for profile pictures -->
 
     <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+    <!-- saving images -->
+    <script src="https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.min.js"></script>
+
     its in createtemplate.py
   </body>
 </html>
