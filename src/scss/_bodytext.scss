@@ -396,7 +396,7 @@ body {
         font-size: 16px;
         font-weight: 600;
         color: #002bffff;
-        background-color: #bbd0ffff; /* dark blue */
+        background-color: #d4e2ffff; /* dark blue */
         border: none;
         border-radius: 26px;
         cursor: pointer;
@@ -412,7 +412,7 @@ body {
           font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 200, "opsz" 48;
           font-size: 34px;
 
-          color: rgb(10, 10, 97);
+          color: rgba(255, 255, 255, 1) !important;
           display: inline-block;
         }
 

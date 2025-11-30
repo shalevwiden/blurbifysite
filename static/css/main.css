@@ -953,7 +953,7 @@ body .sitecontainer div.pointerdiv #saveblurb {
   font-size: 16px;
   font-weight: 600;
   color: #002bff;
-  background-color: #bbd0ff; /* dark blue */
+  background-color: #d4e2ff; /* dark blue */
   border: none;
   border-radius: 26px;
   cursor: pointer;
@@ -970,7 +970,7 @@ body .sitecontainer div.pointerdiv #saveblurb {
 body .sitecontainer div.pointerdiv #saveblurb .download {
   font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 200, "opsz" 48;
   font-size: 34px;
-  color: rgb(10, 10, 97);
+  color: rgb(255, 255, 255) !important;
   display: inline-block;
 }
 body .sitecontainer div.pointerdiv #saveblurb:hover {
