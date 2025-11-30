@@ -1109,6 +1109,7 @@ body .sitecontainer div.blurbify_bg_div .blurbdiv section#imagesection img#posti
   border-radius: 30px;
   opacity: 0;
   transition: opacity 2s ease;
+  display: none;
 }
 body .sitecontainer div.blurbify_bg_div .blurbdiv section#imagesection video#postvid {
   width: 100%;
@@ -1295,7 +1296,6 @@ body .sitecontainer div.blurbify_bg_div .blurbdiv div.iconsdiv .righticons {
     width: 100%;
     height: 0;
     border-radius: 25px;
-    display: none;
   }
   body .sitecontainer div.blurbify_bg_div .blurbdiv section#imagesection video#blurbvid {
     width: 100%;
