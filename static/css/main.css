@@ -2182,7 +2182,7 @@ footer.sitefooter .footercontent {
   width: 100%;
   background: linear-gradient(57deg, #1b305e 0%, #2d4370 20%, #1951a0 40%, #556cf8 60%, #d2e1ef 60%, #eee 100%);
   color: white;
-  padding: 60px 8%;
+  padding: 50px 0;
   display: flex;
   justify-content: space-between;
   gap: 80px;
@@ -2190,7 +2190,12 @@ footer.sitefooter .footercontent {
 footer.sitefooter .footerleft {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  align-items: flex-start;
   gap: 22px;
+  padding-left: 10vw;
 }
 footer.sitefooter .footerleft #footerlogo {
   width: 95px;
@@ -2201,10 +2206,14 @@ footer.sitefooter .footerleft #footerlogo {
 footer.sitefooter .footerleft .footerstatement {
   font-size: 22px;
   font-weight: bold;
+  margin-left: 7px;
 }
 footer.sitefooter .footerleft .socials {
   display: flex;
   gap: 16px;
+}
+footer.sitefooter .footerleft .socials #tiktokicon {
+  display: none;
 }
 footer.sitefooter .footerleft .socials .socialicon {
   font-size: 28px;
@@ -2225,9 +2234,15 @@ footer.sitefooter .footerleft .socials .socialicon:hover {
 footer.sitefooter .footerright {
   display: flex;
   align-items: flex-start;
+  padding-right: 4vw;
 }
 footer.sitefooter .footerright .footerlinks {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  align-items: flex-start;
   gap: 60px;
 }
 footer.sitefooter .footerright .footerlinks .column {
@@ -2253,9 +2268,11 @@ footer.sitefooter .footerright .footerlinks .column a:hover {
     text-align: center;
     justify-content: center;
   }
+  footer.sitefooter .footerleft {
+    padding-left: 20px;
+  }
   footer.sitefooter .footerright .footerlinks {
     gap: 30px;
-    align-items: center;
   }
   footer.sitefooter .footerright .footerlinks .column a {
     font-size: 10px;

@@ -25,16 +25,18 @@ footer.sitefooter {
     );
 
     color: white;
-    padding: 60px 8%;
+    padding: 50px 0;
     display: flex;
     justify-content: space-between;
     gap: 80px;
     // flex-wrap: wrap;
   }
   .footerleft {
-    display: flex;
-    flex-direction: column;
+    @include flexcol;
+    align-items: flex-start;
+
     gap: 22px;
+    padding-left: 10vw;
 
     #footerlogo {
       width: 95px;
@@ -46,11 +48,15 @@ footer.sitefooter {
     .footerstatement {
       font-size: 22px;
       font-weight: bold;
+      margin-left: 7px;
     }
 
     .socials {
       display: flex;
       gap: 16px;
+      #tiktokicon {
+        display: none;
+      }
 
       .socialicon {
         font-size: 28px;
@@ -76,9 +82,11 @@ footer.sitefooter {
   .footerright {
     display: flex;
     align-items: flex-start;
+    padding-right: 4vw;
 
     .footerlinks {
-      display: flex;
+      @include flexrow;
+      align-items: flex-start;
       gap: 60px;
 
       .column {
@@ -109,10 +117,13 @@ footer.sitefooter {
     text-align: center;
     justify-content: center;
 
+    .footerleft {
+      padding-left: 20px;
+    }
+
     .footerright .footerlinks {
       // flex-direction: column;
       gap: 30px;
-      align-items: center;
 
       .column a {
         font-size: 10px;
