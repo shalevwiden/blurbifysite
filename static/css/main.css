@@ -952,7 +952,7 @@ body .sitecontainer div.pointerdiv #saveblurb {
   gap: 5px;
   font-size: 16px;
   font-weight: 600;
-  color: #002bff;
+  color: #d92109;
   background-color: #d4e2ff; /* dark blue */
   border: none;
   border-radius: 26px;
@@ -968,9 +968,9 @@ body .sitecontainer div.pointerdiv #saveblurb {
   }
 }
 body .sitecontainer div.pointerdiv #saveblurb .download {
-  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 200, "opsz" 48;
+  font-variation-settings: "FILL" 1, "wght" 300, "GRAD" 200, "opsz" 48;
   font-size: 34px;
-  color: rgb(255, 255, 255) !important;
+  color: rgb(137, 60, 126) !important;
   display: inline-block;
 }
 body .sitecontainer div.pointerdiv #saveblurb:hover {
