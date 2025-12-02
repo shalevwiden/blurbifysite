@@ -960,6 +960,7 @@ body .sitecontainer div.pointerdiv #saveblurb {
   transition: all 0.2s ease-in-out;
   height: 100px;
   width: 130px;
+  display: none;
   /* Active / pressed effect */
 }
 @media (max-width: 600px) {

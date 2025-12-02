@@ -404,6 +404,9 @@ body {
         height: 100px;
         width: 130px;
 
+        // remove when fixed
+        display: none;
+
         @media (max-width: 600px) {
           margin-right: 0;
         }
