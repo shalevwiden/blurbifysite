@@ -67,23 +67,24 @@
     height: auto !important;
     position: relative !important;
     margin-right: 20px !important;
-    margin-top: 10px !important;
+    margin-top: -10px !important;
     /*twice as much top cause twice as big*/
     top: 0 !important;
   }
 
+  /* this means the image (img) inside pfpdiv */
   .pfpdiv img {
-    width: 100px !important;
+    width: 136px !important;
     margin-right: 10px !important;
-    margin-top: 5px !important;
+    margin-top: -5px !important;
   }
 
   @media (max-width: 400px) {
     .pfpdiv img#pfpimage {
       margin-bottom: 10px !important;
-      width: 74.0px !important;
+      width: 100.64px !important;
       margin-right: 7.4px !important;
-      margin-top: 3.7px !important;
+      margin-top: -3.7px !important;
       top: 0 !important;
     }
   }
@@ -274,7 +275,7 @@
 
             <div class="adjustmentdiv">
               <img
-                src="../images/nopfp.webp"
+                src="https://storage.googleapis.com/personalblurbs/currentchordscapepfp.png"
                 alt="adjustment img"
                 id="pfpimage_adjustment"
               />
@@ -366,7 +367,11 @@
           <div id="pfp_and_username">
             <div class="pfpborder userpfpborder">
               <div class="pfpdiv" id="pfpid">
-                <img src="../images/nopfp.webp" alt="pfp gone" id="pfpimage" />
+                <img
+                  src="https://storage.googleapis.com/personalblurbs/currentchordscapepfp.png"
+                  alt="blurb pfp"
+                  id="pfpimage"
+                />
               </div>
             </div>
 
@@ -412,7 +417,7 @@
         <div class="flyingimagesdiv">
           <div id="flying_wrapper1">
             <img
-              src=""
+              src="https://storage.googleapis.com/personalblurbs/piano.webp"
               alt="FLYING"
               id="flyingimage1"
               class="flyingimage"
@@ -453,7 +458,7 @@
             <!-- client side uploading only -->
 
             <input type="file" id="flyingimageInput" accept="image/*" />
-            <img id="flying_image_preview" src="" />
+            <img id="flying_image_preview" src="https://storage.googleapis.com/personalblurbs/piano.webp" />
 
             <!-- this will reset it back to the Blurbify plane -->
             <button class="resetbutton" id="resetflyingimage">
@@ -475,7 +480,7 @@
               <div class="numdiv">
                 <input
                   type="number"
-                  id="flying_y_px"
+                  id="flying_y_px_input"
                   min="-700"
                   max="700"
                   value="0"
@@ -590,7 +595,7 @@
               </div>
               <div class="previewdiv">
                 <img
-                  src=""
+                  src="https://storage.googleapis.com/personalblurbs/piano.webp"
                   alt=""
                   id="rotation_object_preview"
                 />

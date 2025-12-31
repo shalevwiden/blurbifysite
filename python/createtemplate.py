@@ -63,7 +63,8 @@ class Templates:
         # Call the function
         styletemplate=self.env.get_template("styletag.html")
 
-        size_data = get_pfp_data(100, 10, 5)
+        size_specs=[136, 10, -5]
+        size_data = get_pfp_data(*size_specs)
 
         style=styletemplate.render(size_data)
 
@@ -83,8 +84,8 @@ class Templates:
     <script src="{'../'*depth}static/js/flyingimage.js"></script>'''
 
         name='ChordScape'
-        pfpurl=''
-        flyingimageurl=''
+        pfpurl='https://storage.googleapis.com/personalblurbs/currentchordscapepfp.png'
+        flyingimageurl='https://storage.googleapis.com/personalblurbs/piano.webp'
 
         # name shouldnt affect username
         # because username has limit chars
@@ -103,7 +104,8 @@ class Templates:
             "realuser":True,
             "style":style,
             "stylepath":stylepath,
-            "scripts":scripts
+            "scripts":scripts,
+            "size_specs":size_specs
         }
 
         save_json(data,newpath)

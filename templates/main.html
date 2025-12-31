@@ -262,7 +262,7 @@
 
             <div class="adjustmentdiv">
               <img
-                src="../images/nopfp.webp"
+                src="{{ pfpurl if pfpurl else '../../images/nopfp.webp' }}"
                 alt="adjustment img"
                 id="pfpimage_adjustment"
               />
@@ -364,7 +364,12 @@
           <div id="pfp_and_username">
             <div class="pfpborder {% if realuser %}userpfpborder{% endif %}">
               <div class="pfpdiv" id="pfpid">
-                <img src="../images/nopfp.webp" alt="pfp gone" id="pfpimage" />
+                <img
+                  src="{{ pfpurl if pfpurl else '../../images/nopfp.webp'
+                }}"
+                  alt="blurb pfp"
+                  id="pfpimage"
+                />
               </div>
             </div>
 
