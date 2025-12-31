@@ -47,7 +47,10 @@ class Templates:
             scalefactor=74/100
             phonewidth=width*scalefactor
             phone_marginright=marginright*scalefactor
-            phone_margintop=margintop*scalefactor
+            # for some reason 13.3 is the one that works
+            # maybe scale factor does work with margin right
+            # but not margin top
+            phone_margintop=margintop+13.3
             return {
                 "width": f"{width}px",
                 "marginright": f"{marginright}px",
