@@ -204,3 +204,7 @@ This needs Flask, badly
 I wanted to do this static so I could have thousands of templates
 
 I'll do that later, for now I need Flask for real users.
+
+Maybe while I have this set up I can create hundreds of random templates tho
+
+Then theyll all be deprecated in the future
