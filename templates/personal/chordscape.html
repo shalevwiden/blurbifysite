@@ -22,13 +22,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content=" The  blurb template on Blurbify."
+      content=" The ChordScape blurb template on Blurbify."
     />
     <link rel="icon" href="../images/blurbifyverified.png" type="image/png" />
 
-    <title>Blurbify Studio</title>
+    <title>ChordScape Blurb Template</title>
 
-    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="../../static/css/main.css" />
     <!-- for development -->
     <link rel="stylesheet" href="../static/css/main.css" />
     <!-- for locally hosted fa icons stuff -->
@@ -56,7 +56,38 @@
     />
   </head>
   <body>
-    
+    <style>
+  /* this is just the image styling */
+  /* this actually wont work because inline styles will beat this out.  */
+  .blurbify_bg_div{
+    background-color: rgb(255, 0, 0);
+  }
+  .adjustmentdiv img {
+    width:  !important;
+    height: auto !important;
+    position: relative !important;
+    margin-right: 20px !important;
+    margin-top: 10px !important;
+    /*twice as much top cause twice as big*/
+    top: 0 !important;
+  }
+
+  .pfpdiv img {
+    width: 100px !important;
+    margin-right: 10px !important;
+    margin-top: 5px !important;
+  }
+
+  @media (max-width: 400px) {
+    .pfpdiv img#pfpimage {
+      margin-bottom: 10px !important;
+      width: 74.0px !important;
+      margin-right: 7.4px !important;
+      margin-top: 3.7px !important;
+      top: 0 !important;
+    }
+  }
+</style>
     <div class="sitecontainer">
       <h1 id="heading">Blurbify</h1>
       <nav class="navbar" style="position: relative">
@@ -77,7 +108,7 @@
           <!-- make all of these lis flex cols -->
           <li>
             <p>Name</p>
-            <input type="text" placeholder="Enter name" id="nameInput" value=""  />
+            <input type="text" placeholder="Enter name" id="nameInput" value="ChordScape" disabled />
           </li>
 
           <li>
@@ -85,7 +116,7 @@
             <div class="usernamediv">
               <p id="at">@</p>
               <input type="text" placeholder="Enter username" id="usernameInput"
-              value=""  />
+              value="chordscapepiano" disabled />
             </div>
           </li>
           <!-- this is hidden, but still there in case it needs to be reffered to in the future
@@ -114,17 +145,6 @@
               class="textarea_input"
               rows="6"
             ></textarea>
-          </li>
-          
-          <li class="imageli" id="pfp_li">
-            <p>Add a pfp to the Blurb</p>
-
-            <!-- the label for file uploads -->
-            <label class="file-label" for="pfpInput">Choose Image</label>
-            <!-- client side uploading only -->
-
-            <input type="file" id="pfpInput" accept="image/*" />
-            <img id="pfp_preview" />
           </li>
           
           <li>
@@ -183,7 +203,7 @@
           <li>
             <p>Change Blurb Background Color</p>
 
-            <input type="color" name="blurb_bg_input" id="blurb_bg_input" />
+            <input type="color" name="blurb_bg_input" id="blurb_bg_input"  value=#A5C3F6;" />
           </li>
           <li>
             <p>Change Blurb Border Color</p>
@@ -191,6 +211,8 @@
               type="color"
               name="blurb_border"
               id="blurb_border_input"
+              
+              value="#0029ae"
               
             />
           </li>
@@ -332,13 +354,17 @@
       <div
         class="blurbify_bg_div"
         
+        style="background-color: #A5C3F6;"
+        
       >
         <div
           class="blurbdiv"
           
+          style="border-color: #0029ae;"
+          
         >
           <div id="pfp_and_username">
-            <div class="pfpborder ">
+            <div class="pfpborder userpfpborder">
               <div class="pfpdiv" id="pfpid">
                 <img src="../images/nopfp.webp" alt="pfp gone" id="pfpimage" />
               </div>
@@ -347,9 +373,9 @@
             <div class="usernamediv">
               <div class="align_them_div">
                 <span id="name"
-                  >
+                  >ChordScape
                   <div id="verified" style="display: none"></div> </span
-                ><span id="username">@</span>
+                ><span id="username">@chordscapepiano</span>
               </div>
             </div>
           </div>
@@ -386,7 +412,7 @@
         <div class="flyingimagesdiv">
           <div id="flying_wrapper1">
             <img
-              src="https://storage.googleapis.com/blurbify-assets/defaults/blurbifyplane.png"
+              src=""
               alt="FLYING"
               id="flyingimage1"
               class="flyingimage"
@@ -427,7 +453,7 @@
             <!-- client side uploading only -->
 
             <input type="file" id="flyingimageInput" accept="image/*" />
-            <img id="flying_image_preview" src="https://storage.googleapis.com/blurbify-assets/defaults/blurbifyplane.png" />
+            <img id="flying_image_preview" src="" />
 
             <!-- this will reset it back to the Blurbify plane -->
             <button class="resetbutton" id="resetflyingimage">
@@ -564,7 +590,7 @@
               </div>
               <div class="previewdiv">
                 <img
-                  src="https://storage.googleapis.com/blurbify-assets/defaults/blurbifyplane.png"
+                  src=""
                   alt=""
                   id="rotation_object_preview"
                 />
@@ -709,23 +735,15 @@
     <!-- saving images -->
     <script src="https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.min.js"></script>
 
-    <script src="static/js/toggleanimations.js"></script>
+      
+        <script src="../../static/js/toggleanimations.js"></script>
 
-                    
-    <script src="static/js/inputs.js"></script>
+    <script src="../../static/js/template_inputs.js"></script>
 
-    <script src="static/js/dropdown.js"></script>
-    <script src="static/js/icons.js"></script>
-    <script src="static/js/images.js"></script>
-    <script src="static/js/navbar.js"></script>
+    <script src="../../static/js/dropdown.js"></script>
+    <script src="../../static/js/icons.js"></script>
+    <script src="../../static/js/images.js"></script>
 
-
-    <script src="static/js/flyingimage.js"></script>
-    <script src="static/js/pasteclear.js"></script>
-    <!-- saving images -->
-    <script src="https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.min.js"></script>
-    <script src="static/js/saveblurb.js"></script>
-
-                    
+    <script src="../../static/js/flyingimage.js"></script>
   </body>
 </html>

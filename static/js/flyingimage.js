@@ -93,18 +93,22 @@ function flyingposition() {
   let originalyposition = parseInt(
     window.getComputedStyle(flyingimagesdiv).top
   );
-  flying_y_px = document.querySelector("#flying_y_px");
+
+  // this is the number input
+  flying_y_px_input = document.querySelector("#flying_y_px_input");
   flying_y_slider = document.querySelector("#flying_y_slider");
 
   flying_y_slider.addEventListener("input", () => {
     yposition = parseInt(flying_y_slider.value);
-    flying_y_px.value = yposition;
+    flying_y_px_input.value = yposition;
     flyingimagesdiv.style.top = originalyposition + -yposition + "px";
   });
 
-  flying_y_px.addEventListener("input", () => {
+  flying_y_px_input.addEventListener("input", () => {
     // make negative for logical moving
-    const yposition = parseInt(flying_y_px.value);
+    // ie when user makes value bigger it goes higher
+    // this can easily be switched
+    const yposition = parseInt(flying_y_px_input.value);
     flying_y_slider.value = yposition;
     flyingimagesdiv.style.top = originalyposition + -yposition + "px";
   });
@@ -116,7 +120,7 @@ function flyingposition() {
       // re-sync slider to CSS value
       console.log("resetting plane position");
       // make it 0
-      flying_y_px.value = originalyposition - originalyposition;
+      flying_y_px_input.value = originalyposition - originalyposition;
       flying_y_slider.value = originalyposition - originalyposition;
       flyingimagesdiv.style.top = originalyposition + "px";
     });

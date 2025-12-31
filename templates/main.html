@@ -362,7 +362,7 @@
           %}
         >
           <div id="pfp_and_username">
-            <div class="pfpborder {{ userpfpborder if realuser else '' }}">
+            <div class="pfpborder {% if realuser %}userpfpborder{% endif %}">
               <div class="pfpdiv" id="pfpid">
                 <img src="../images/nopfp.webp" alt="pfp gone" id="pfpimage" />
               </div>
@@ -473,7 +473,7 @@
               <div class="numdiv">
                 <input
                   type="number"
-                  id="flying_y_px"
+                  id="flying_y_px_input"
                   min="-700"
                   max="700"
                   value="0"

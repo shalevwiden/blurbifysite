@@ -197,3 +197,10 @@ What I still need to do:
 - Make the Blurbify plane page on the site instead of redirecting to the external site
 - make the footer better.
 - Other than that we've certainly made progress.
+
+### Dec 30, 2025
+
+This needs Flask, badly
+I wanted to do this static so I could have thousands of templates
+
+I'll do that later, for now I need Flask for real users.

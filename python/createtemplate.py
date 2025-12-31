@@ -82,7 +82,7 @@ class Templates:
 
     <script src="{'../'*depth}static/js/flyingimage.js"></script>'''
 
-        name='Pecan Tree'
+        name='ChordScape'
         pfpurl=''
         flyingimageurl=''
 
@@ -92,15 +92,15 @@ class Templates:
         data={
             "title": f"{name} Blurb Template",
             "name": name,
-            "username": "pecantree_blurb",
+            "username": "chordscapepiano",
             "disabledinputs":True,
             "pfpchanging":False,
-            "bordercolor": "#16793c",
-            "blurbbackgroundcolor":"#BBAE76",
+            "bordercolor": "#0029ae",
+            "blurbbackgroundcolor":"#A5C3F6",
             "pfpurl":pfpurl,
             "flyingimageurl":flyingimageurl,
         # this will set the border around their pfp
-            "realuser":False,
+            "realuser":True,
             "style":style,
             "stylepath":stylepath,
             "scripts":scripts
@@ -125,6 +125,7 @@ class Templates:
 
         with open(currentjson) as jsondata:
             data=json.load(jsondata)
+        print(f'Data: {data}')
 
         rendered = blurbtemplate.render(data)
         with open(savehtmlpath,'w') as newtemplate:
@@ -274,20 +275,22 @@ class Templates:
 
 def main():
     # this is what gets set. So itll make the json, and the template
-    newpath='plants/pecantree'
+    newpath='personal/chordscape'
 
     templateObj=Templates()
+    # this simply calls methods from templateObj
     def make_new(newpath):
         templateObj.make_json(newpath)
         templateObj.make_template(newpath)
         
-    # make_new(newpath)
+    make_new(newpath)
 
+    # call this when json is changed or new json added
     templateObj.update_templates()
     # update studio regardless
 
     templateObj.update_studio()
-    templateObj.template_sections()
+    # templateObj.template_sections()
 
 
 main()
