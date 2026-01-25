@@ -30,9 +30,9 @@
 
     <link rel="stylesheet" href="{{stylepath}}" />
     <!-- for development -->
-    <link rel="stylesheet" href="../static/css/main.css" />
+    <!-- <link rel="stylesheet" href="../static/css/main.css" /> -->
     <!-- for locally hosted fa icons stuff -->
-    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <link rel="stylesheet" href="../../assets/css/all.min.css" />
 
     <link
       rel="stylesheet"
@@ -185,7 +185,7 @@
             <p>Change Blurb Background Color</p>
 
             <input type="color" name="blurb_bg_input" id="blurb_bg_input" {% if
-            blurbbackgroundcolor %} value={{ blurbbackgroundcolor }};" {% endif
+            blurbbackgroundcolor %} value="{{ blurbbackgroundcolor }}" {% endif
             %}/>
           </li>
           <li>
@@ -598,7 +598,7 @@
                   id="rotation_object_preview"
                 />
                 <img
-                  src="../images/icons/blurbify_arrow.svg"
+                  src="../../images/icons/blurbify_arrow.svg"
                   alt=""
                   id="direction_arrow"
                 />
@@ -683,7 +683,7 @@
         <div class="footerleft">
           <img
             id="footerlogo"
-            src="images/blurbifyverified.png"
+            src="../../images/blurbifyverified.png"
             alt="Blurbify Logo"
           />
           <p class="footerstatement">Blurbify 2025</p>

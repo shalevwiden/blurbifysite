@@ -9,10 +9,6 @@ flying_wrapper1 = document.querySelector("#flying_wrapper1");
 flyingimagesdiv = document.querySelector(".flyingimagesdiv");
 flyingimagesdiv_width = parseInt(getComputedStyle(flyingimagesdiv).width);
 
-// for rotations()
-let arrow_preview = document.querySelector("#arrow_preview");
-rotation_object_preview = document.querySelector("#rotation_object_preview");
-
 flyingimageInput.addEventListener("change", () => {
   const file = flyingimageInput.files[0]; // get the post image uploaded file
   if (!file) return;
@@ -68,13 +64,13 @@ function flyingsize() {
 
   function reset_flyingsize() {
     reset_flying_size_button = document.getElementById(
-      "reset_flying_size_button"
+      "reset_flying_size_button",
     );
 
     reset_flying_size_button.addEventListener("click", () => {
       // re-sync slider to CSS value
       console.log(
-        `reset flying size button clicked: \nOriginal size is ${originalsize}`
+        `reset flying size button clicked: \nOriginal size is ${originalsize}`,
       );
       console.log(originalsize);
 
@@ -91,7 +87,7 @@ flyingsize();
 function flyingposition() {
   // add the changes to flyingimagesdiv because thats the one that has the top values set
   let originalyposition = parseInt(
-    window.getComputedStyle(flyingimagesdiv).top
+    window.getComputedStyle(flyingimagesdiv).top,
   );
 
   // this is the number input
@@ -225,15 +221,22 @@ function rotations() {
     });
   }
   flyingrotations();
+
   function arrowrotations() {
+    // for rotations()
+    let direction_arrow = document.querySelector("#direction_arrow");
+
+    rotation_object_preview = document.querySelector(
+      "#rotation_object_preview",
+    );
     arrowright = document.querySelector("#arrowright");
     arrowleft = document.querySelector("#arrowleft");
 
     arrowright.addEventListener("click", () => {
       console.log("trying to rotate arrow right");
-      arrow_preview.style.transform = "none";
+      direction_arrow.style.transform = "none";
 
-      arrow_preview.style.transform = "scaleX(1)";
+      direction_arrow.style.transform = "scaleX(1)";
       //   now set actual logic for the flyingobject animation
       //   right is normal
       window.switch_animationDirection = false;
@@ -251,9 +254,9 @@ function rotations() {
     });
 
     arrowleft.addEventListener("click", () => {
-      arrow_preview.style.transform = "none";
+      direction_arrow.style.transform = "none";
 
-      arrow_preview.style.transform = "scaleX(-1)";
+      direction_arrow.style.transform = "scaleX(-1)";
       window.switch_animationDirection = true;
 
       if (

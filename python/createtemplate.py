@@ -83,8 +83,11 @@ class Templates:
     <script src="{'../'*depth}static/js/dropdown.js"></script>
     <script src="{'../'*depth}static/js/icons.js"></script>
     <script src="{'../'*depth}static/js/images.js"></script>
+        <script src="{'../'*depth}static/js/pasteclear.js"></script>
+
 
     <script src="{'../'*depth}static/js/flyingimage.js"></script>'''
+        
 
         name='ChordScape'
         pfpurl='https://storage.googleapis.com/personalblurbs/currentchordscapepfp.png'

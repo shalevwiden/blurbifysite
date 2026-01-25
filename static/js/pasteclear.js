@@ -1,4 +1,5 @@
 // Grab elements
+
 const pasteBtn = document.getElementById("pastetext");
 const clearBtn = document.getElementById("cleartext");
 const contentInput = document.getElementById("contentInput");
@@ -14,6 +15,7 @@ async function pasteText() {
 }
 
 function clearText() {
+  console.log("Trying to clear text");
   contentInput.value = "";
 }
 // Add functionality
